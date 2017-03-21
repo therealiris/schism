@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+bower_components/
+node/public/
+
+# testing
+coverage
+
+# production
+build
+dist/
+
+# misc
+.DS_Store
+.env
+npm-debug.log
+
