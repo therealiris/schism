@@ -6,13 +6,15 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
  */
 import { App } from '../components/appComponent'
 import Demo from '../components/demoComponent'
-
+import  Profile  from '../components/profileComponent'
+import Welcome from '../components/welcomeComponent'
 /**
  * The application routes
  */
 const routes = (
    <Route path="/" component={App}>
-     <Route path="demo" component={Demo}></Route>
+     <Route path="welcome" component={Welcome}></Route>
+     <Route path="profile" component={Profile}></Route>
    </Route>
 )
 

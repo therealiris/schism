@@ -25,7 +25,7 @@ injectTapEventPlugin();
  * Mount the root component wrapped with Redux provider
  */
 ReactDOM.render(
-  <Root store={store} history={browserHistory} routes={routes} />
+  <Root store={store} history={hashHistory} routes={routes} />
   ,document.getElementById('app-mount-point')
 );
 
