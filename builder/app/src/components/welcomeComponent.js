@@ -115,8 +115,8 @@ export default class Welcome extends React.Component {
             <MenuItem>My Connections</MenuItem>
             <MenuItem>Invite</MenuItem>
           </Drawer>
-          {this.props.children}
         </div>
+
       </MuiThemeProvider>
 
     )

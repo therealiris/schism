@@ -90,7 +90,7 @@ export default {
       {test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]'},
       {test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream&name=fonts/[name].[ext]'},
       {test: /\.svg(\?v=\d+.\d+.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml&name=[name].[ext]'},
-      {test: /\.(jpe?g|png|gif)$/i, loader: 'file?name=images/[name].[ext]'},
+      {test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file?name=images/[name].[ext]'},
       {test: /\.ico$/, loader: 'file?name=images/[name].[ext]'},
       {test: /(\.css|\.scss)$/, loader: ExtractTextPlugin.extract('css?sourceMap!postcss!sass?sourceMap')},
       {test: /\.json$/, loader: "json"}

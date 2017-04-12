@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Pin from 'material-ui/svg-icons/maps/pin-drop';
 import { TextField,Tabs,Tab,FontIcon,Drawer,MenuItem,RaisedButton,ListItem,Avatar } from 'material-ui';
@@ -7,6 +8,7 @@ import { bindActionCreators } from 'redux'
 import { connect, Provider } from 'react-redux';
 import * as Actions from '../actions/actions';
 import SwipeableViews from 'react-swipeable-views';
+
 const styles = {
   headline: {
     fontSize: 24,
@@ -155,7 +157,7 @@ componentDidMount(){
         </SwipeableViews>
       </div>
     </div>
-      </MuiThemeProvider>
+    </MuiThemeProvider>
     )
   }
 }

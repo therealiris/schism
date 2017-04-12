@@ -1,0 +1,36 @@
+<!-- index.html -->
+<html>
+<head></head>
+<body>
+		
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	    <script src="./javascripts/telegramApi.min.js"></script> 
+	    <script>
+	    	telegramApi.setConfig({
+  app: {
+    id: 175952
+, /* App ID */
+    hash: 'f4e5de40bf3eca03290c532b046650c2', /* App hash */
+    version: '0.0.0' /* App version */
+  },
+  server: {
+    test: [
+      {
+        id: 2, /* DC ID */
+        host: '149.154.167.40',
+        port: 443
+      }
+    ],
+    production: [
+      {
+        id: 2, /* DC ID */
+        host: '149.154.167.50',
+        port: 443
+      }
+    ]
+  }
+});
+	    </script>
+</html>

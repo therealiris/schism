@@ -19,7 +19,7 @@ export default class DemoComponent extends React.Component {
 
   render () {
     return (
-      <div></div>
+      <div>Hello there</div>
     )
   }
 }

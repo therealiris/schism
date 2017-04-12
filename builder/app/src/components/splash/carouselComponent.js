@@ -38,25 +38,25 @@ export default class Carousel extends React.Component {
                 <div style={{paddingTop:'1.5em'}}>
                   <span style={{fontSize:'14px'}}>Connect with professionals and Entrepreneurs</span>
                 </div>
-                  <img src='../../images/splash/splash1.svg' style={{width:'inherit'}}/>
+                  <img src='../../images/splash1.svg' style={{width:'inherit'}}/>
               </Paper>
               <Paper style={style} zDepth={3}>
                 <div style={{paddingTop:'1.5em'}}>
                   <span style={{fontSize:'14px'}}>Refer and Rate people based on their expertise to collect points</span>
                 </div>
-                  <img src='../../images/splash/splash2.svg' style={{width:'inherit'}}/>
+                  <img src='../../images/splash2.svg' style={{width:'inherit'}}/>
               </Paper>
               <Paper style={style} zDepth={3}>
                 <div style={{paddingTop:'1.5em'}}>
                   <span style={{fontSize:'14px'}}>Redeem your points for exclusive coupons and offers</span>
                 </div>
-                  <img src='../../images/splash/splash3.svg' style={{width:'inherit'}}/>
+                  <img src='../../images/splash3.svg' style={{width:'inherit'}}/>
               </Paper>
               <Paper style={style} zDepth={3}>
                 <div style={{paddingTop:'1.5em'}}>
                   <span style={{fontSize:'14px'}}>Recieve live notifications for your favourite hobbies and interests</span>
                 </div>
-                  <img src='../../images/splash/splash4.svg' style={{width:'inherit'}}/>
+                  <img src='../../images/splash4.svg' style={{width:'inherit'}}/>
               </Paper>
             </Slider>
             <div className="row" style={{textAlign:'center'}}>

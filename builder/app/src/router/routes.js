@@ -13,8 +13,9 @@ import Welcome from '../components/welcomeComponent'
  */
 const routes = (
    <Route path="/" component={App}>
-     <Route path="welcome" component={Welcome}></Route>
+     <IndexRoute component={Welcome}/>
      <Route path="profile" component={Profile}></Route>
+     <Route path="demo" component={Demo}></Route>
    </Route>
 )
 
