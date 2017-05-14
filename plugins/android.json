@@ -7,17 +7,29 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
-        "cordova-plugin-android-permissions": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
-        "cordova-opentok-android-permissions": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
-        "cordova-plugin-webrtc": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
     "dependent_plugins": {}

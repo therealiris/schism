@@ -1,0 +1,44 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Discover</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openModal()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="points" style="height:2vh">
+    <span *ngIf="showPoints"> +2 Points</span> 
+  </div>
+  <ion-slides class="dsc-slides" (ionSlideDidChange)="slideChanged()">
+    
+    <ion-slide *ngFor="let item of items" (click)="itemTapped($event, item)" class="iris-slide">
+      <ion-card>
+        <ion-card-content>
+          <div class="discover-thumb">
+            <img src="{{item.pictureUrl}}" class="discover-pic">
+          </div>
+          <ion-card-title class="discover-title">
+            {{item.fullName}}
+            </ion-card-title>
+          <p class="headline">
+            {{item.headline}}
+          </p>
+          <p class="hobbies">
+           <ion-icon name="md-thumbs-up" class="hobbies"></ion-icon> 3 Hobbies
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+  <div class="connect-btn">
+    <button ion-button round (click)="connect()">Connect</button>
+  </div>
+  
+</ion-content>

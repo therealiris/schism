@@ -1,0 +1,45 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Discover</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openModal()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+      <ion-card >
+        <ion-card-content class="request-card">
+          <div class="discover-thumb">
+            <img src="{{item.pictureUrl}}" class="discover-pic">
+          </div>
+          <ion-card-title class="discover-title">
+            {{item.fullName}}
+            </ion-card-title>
+          <p class="headline">
+            Application Developer at Reverie Language Technologies
+          </p>
+          <p class="hobbies">
+           <ion-icon name="md-thumbs-up" class="hobbies"></ion-icon> 3 Hobbies
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <div class="question-section">
+        <span class="request-question">
+          Why would you like to get in touch?
+        </span>
+      </div>
+      <ion-item>
+        <ion-label>Select Reason</ion-label>
+        <ion-select [(ngModel)]="toppings" multiple="true">
+          <ion-option>Random Thoughts exchange</ion-option>
+          <ion-option>I am feeling professional</ion-option>
+          <ion-option>Need a little extra cheese</ion-option>
+        </ion-select>
+      </ion-item>
+</ion-content>

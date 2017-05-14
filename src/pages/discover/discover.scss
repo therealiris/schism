@@ -1,0 +1,56 @@
+discover-list {
+	ion-slider{
+		text-align:center;
+		width: 60vw;
+	},
+	.iris-slide{
+		background:transparent;
+		height:50vh;
+	}
+	.iris-slide.swiper-slide{
+		width:90vw !important;
+		margin:5vw;
+		padding: 0 2vw
+	}
+
+
+}
+.discover-pic{
+	display:inline;
+	border:none;
+	border-radius:50%;
+	min-height:20vh;
+	height:20vh !important;
+}
+.discover-thumb{
+	text-align:center
+}
+.discover-title{
+	font-weight:500 !important;
+	font-size : 22px !important;
+}
+.hobbies{
+	color:#0062f5 !important;
+}
+
+.points{
+	color:#fff;
+	text-align:center;
+	transition: all 0.5s ease-in;
+}
+.dsc-slides{
+	height:55vh;
+}
+.connect-btn{
+	text-align:center;
+}
+.content{
+  background: rgba(116,203,253,1);
+background: -moz-linear-gradient(top, rgba(116,203,253,1) 0%, rgba(101,157,241,1) 54%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(116,203,253,1)), color-stop(54%, rgba(101,157,241,1)), color-stop(55%, rgba(255,255,255,1)), color-stop(55%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+background: -webkit-linear-gradient(top, rgba(116,203,253,1) 0%, rgba(101,157,241,1) 54%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 100%);
+background: -o-linear-gradient(top, rgba(116,203,253,1) 0%, rgba(101,157,241,1) 54%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 100%);
+background: -ms-linear-gradient(top, rgba(116,203,253,1) 0%, rgba(101,157,241,1) 54%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 100%);
+background: linear-gradient(to bottom, rgba(116,203,253,1) 0%, rgba(101,157,241,1) 54%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74cbfd', endColorstr='#ffffff', GradientType=0 );
+}

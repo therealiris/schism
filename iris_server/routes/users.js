@@ -18,38 +18,14 @@ router.get('/', function(req, res, next) {
 
 router.post('/data', function(req, res, next) {
 	var userData = req.body
-
+	console.log(userData.fullName)
 	db.users.find({"uid":userData.id}).toArray(function(err, user){
 		if(!err)
 			{
 
 				if(user.length==0)
 					{
-						var newuser = {
-						  "uid":userData.id,
-						  "email":"",
-						  "pictureUrl":userData.pictureUrl,
-						  "numConnections":userData.numConnections,
-						  "firstName":userData.firstName,
-						  "lastName":userData.lastName,
-						  "fullName":userData.firstName+" "+userData.lastName,
-						  "headline":userData.headline,
-						  "hobbies":[],
-						  "connections":[],
-						  "requested":[],
-						  "requests":[],
-						  "lastLoginLocation":"latlngString",
-						  "chatId":"",
-						  "dob":"",
-						  "gender":"",
-						  "work":{
-						    "designation":"",
-						    "currentlyWorking":"",
-						    "skills":""
-						  },
-						  "rating":0,
-						  "score":0
-						}
+						var newuser = userData
 						db.users.insert(newuser,function(err,result){
 							if(!err)
 								{

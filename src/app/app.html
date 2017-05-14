@@ -1,0 +1,23 @@
+<ion-menu [content]="content">
+  <ion-content>
+    <ion-list>
+      <div class="item item-avatar">
+        <img src="{{user.pictureUrl}}" class="avatar-pic">
+          <ion-icon name="ios-create-outline" class="avatar-edit" (click)="getClicked()"></ion-icon>
+        <p class="avatar-name">{{user.fullName}}</p>
+        <p class="avatar-headline">Application Developer at Reverie Language Technologies</p>
+      </div>
+      <ion-item menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" class="menu-button">
+
+        <button menuClose ion-item class="menu-button">
+          <ion-icon name={{p.iconName}} class="menu-icon"></ion-icon>
+          {{p.title}}
+        </button>
+      </ion-item>
+      
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

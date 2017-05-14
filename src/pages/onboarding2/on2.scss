@@ -1,0 +1,30 @@
+onboarding-two{
+	
+}
+.item-select{
+	padding-top:1em;
+}
+.typeCheck{
+	display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 2em;
+    border-radius: 20px;
+    background: #488aff;
+    color: white;
+    outline: none;
+    font-size: 15px;
+    margin: 3vw;
+}
+.typeBox{
+	display:flex;
+	text-align:center;
+	background:#fff;
+}
+.checktick{
+	margin:0 !important;
+}
+.checkbox-md .checkbox-icon{
+	border:none;
+	background:#488aff;
+}

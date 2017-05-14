@@ -1,0 +1,43 @@
+
+<ion-content>
+    <ion-item class="onboarding-thumb">
+      <div class="onboarding-thumb">
+        <!-- <img src="../assets/img/faces/sid.jpg" class="discover-pic"> -->
+        <img src="{{user.pictureUrl}}" class="discover-pic">
+      </div>
+    </ion-item>
+    <div class="form-content">
+      <ion-item>
+      <ion-label floating class="form-label">Name</ion-label>
+      <!-- <ion-input type="text" (focusout) = "itemTapped($event)" [(ngModel)]="fullName" value='Sidharth Sahu'></ion-input> -->
+      <ion-input type="text" [(ngModel)]="fullName" value={{user.fullName}}></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating class="form-label">Email Id</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="form-label">Date Of Birth</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="dob"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label  class="form-label">Gender</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="male">Male</ion-option>
+        <ion-option value="female">Female</ion-option>
+      </ion-select>
+    </ion-item>
+    </div>
+    
+    <ion-item class="onboarding-range">
+      <ion-range step="1" [(ngModel)]="rangeVal" color="primary" pin="true">
+        <ion-label range-left>0</ion-label>
+        <ion-label range-right>100</ion-label>
+      </ion-range>
+    </ion-item>
+    <div class="onboarding-next">
+      <button ion-button round right (click)="nextClick()">Next</button>
+    </div>
+  
+
+</ion-content>
