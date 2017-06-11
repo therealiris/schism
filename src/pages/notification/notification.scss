@@ -1,0 +1,36 @@
+notification {
+.content{
+	background:deepskyblue;
+}
+
+
+}
+
+.notification-container{
+	padding:1em;
+}
+.notification-item{
+    margin: 1em 0;
+    border-radius: 4px;
+    box-shadow: 0px 0px 31px 1px grey;
+    color:grey;
+    font-weight:500;
+}
+.remove-notification{
+	float: right;
+    color: #c74d00;
+    padding: 1px 10px;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 20px;
+    margin:4px;
+}
+.accept-notification{
+	float: right;
+    color: green;
+    padding: 1px 10px;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 20px;
+    margin:4px;
+}

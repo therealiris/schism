@@ -2,7 +2,7 @@
 <ion-content>
     <ion-item class="onboarding-thumb">
       <div class="onboarding-thumb">
-        <img src="{{user.pictureUrl}}" class="discover-pic">
+        <img src="{{user.pictureUrl}}" class="onboard-pic">
       </div>
     </ion-item>
     <div class="typeBox">
@@ -27,7 +27,7 @@
     </ion-item>
     <ion-item>
       <ion-label>Industry</ion-label>
-      <ion-select [(ngModel)]="industry" multiple="true">
+      <ion-select [(ngModel)]="industry" multiple="true" class="industry">
         <ion-option value="software">Software</ion-option>
         <ion-option value="Deep Learning">Deep Learning</ion-option>
         <ion-option value="Dev Ops">Dev Ops</ion-option>

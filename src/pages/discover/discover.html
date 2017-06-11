@@ -5,21 +5,20 @@
     </button>
     <ion-title>Discover</ion-title>
     <ion-buttons end>
-      <button ion-button (click)="openModal()">
-        <ion-icon name="person"></ion-icon>
+      <button ion-button (click)="openNotifications()">
+        <ion-icon name="notifications"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <div class="points" style="height:2vh">
+  <div class="points" style="height:3vh">
     <span *ngIf="showPoints"> +2 Points</span> 
   </div>
   <ion-slides class="dsc-slides" (ionSlideDidChange)="slideChanged()">
-    
-    <ion-slide *ngFor="let item of items" (click)="itemTapped($event, item)" class="iris-slide">
-      <ion-card>
+    <ion-slide *ngFor="let item of items" class="iris-slide">
+      <ion-card class="discover-card">
         <ion-card-content>
           <div class="discover-thumb">
             <img src="{{item.pictureUrl}}" class="discover-pic">
@@ -28,8 +27,18 @@
             {{item.fullName}}
             </ion-card-title>
           <p class="headline">
-            {{item.headline}}
+            {{item.designation}} at {{item.currentWorkplace}},
           </p>
+          <p class="headline">
+            {{item.distance}} km away.
+          </p>
+          <div class="rating" data-rating="1">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+          </div>
           <p class="hobbies">
            <ion-icon name="md-thumbs-up" class="hobbies"></ion-icon> 3 Hobbies
           </p>
@@ -38,7 +47,7 @@
     </ion-slide>
   </ion-slides>
   <div class="connect-btn">
-    <button ion-button round (click)="connect()">Connect</button>
+    <button ion-button round [disabled]=isConnected (click)="connect()">{{isConnected?'Request Sent':'Connect'}}</button>
   </div>
   
 </ion-content>

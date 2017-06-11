@@ -11,13 +11,17 @@ import { OnboardingTwo } from '../pages/onboarding2/on2';
 import { OnboardingThree } from '../pages/onboarding3/on3';
 import { sendRequest } from '../pages/sendRequest/sendRequest';
 import { Connections } from '../pages/connections/connections';
+import { NotificationPage } from '../pages/notification/notification';
 import { IonicStorageModule } from '@ionic/storage';    
 import { HttpModule } from '@angular/http';
 import { PeopleService } from '../providers/people-service'
-
-
+import { ChatPage } from '../pages/chat/chat'
+import { Calendar } from '../pages/calendar/calendar'
+import { PlannerOne } from '../pages/planner1/plannerOne'
+import { PlannerTwo } from '../pages/planner2/plannerTwo'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -36,6 +40,11 @@ const cloudSettings: CloudSettings = {
     OnboardingThree,
     sendRequest,
     Connections,
+    ChatPage,
+    NotificationPage,
+    Calendar,
+    PlannerOne,
+    PlannerTwo
   ],
   imports: [
     BrowserModule,
@@ -55,6 +64,12 @@ const cloudSettings: CloudSettings = {
     OnboardingThree,
     sendRequest,
     Connections,
+    ChatPage,
+    NotificationPage,
+    Calendar,
+    PlannerOne,
+    PlannerTwo
+
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,36 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Notifications</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="notification-container">
+    <ion-item *ngIf="notifications?.length<1" class="notification-item">
+      No Notifications
+    </ion-item>
+    <ion-item *ngFor="let notification of notifications; let i=index" text-wrap class="notification-item" >
+      <span *ngIf="notification.type==1">
+        {{notification.fullName}}, {{notification.headline}}, would like to connect with you for "{{notification.reason}}"
+      </span>
+      <span *ngIf="notification.type==2">
+        {{notification.eventObject.with.fullName}} has requested a meeting from {{notification.eventObject.from}} to {{notification.eventObject.to}}. Agenda : {{notification.eventObject.agenda}}
+      </span>
+      
+          <div>
+            <div class="accept-notification" *ngIf = "notification.type==1 || notification.type==2">
+              <span [attr.data-uid]="notification.uid" [attr.data-index]="i"  (click)="acceptConnect($event)">Accept</span>
+            </div>
+            <div class="remove-notification" *ngIf = "notification.type==1 || notification.type==2">
+              <span [attr.data-uid]="notification.uid" [attr.data-index]="i" (click)="rejectConnect($event)">Reject</span>
+            </div>
+            <div class="accept-notification" *ngIf = "notification.type==0">
+              <span>remove</span>
+            </div>
+          </div>
+    </ion-item>
+  </div>
+</ion-content>

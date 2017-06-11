@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, Nav, App, ViewController, LoadingController } from 'ionic-angular';
-import { DiscoverPage } from '../discover/discover';
-import { PeopleService } from '../../providers/people-service'
+import { NavController, NavParams, Nav, LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { PeopleService } from '../../providers/people-service'
 
 
 @Component({
@@ -40,26 +39,28 @@ export class OnboardingThree {
     console.log(this.user)
     this.people.sendData(this.user,(response)=>{
       console.log(response)
-      this.storage.ready().then(()=>{
+      this.storage.ready()
+      .then(()=>{
         this.storage.set('currentUser',JSON.stringify(this.user))
         this.presentLoadingDefault()
-        window.location.reload()
       })
-      
-      
     })
     // this.navCtrl.setRoot(DiscoverPage)
+  }
+  removeHobby(index){
+    console.log(index)
+    this.hobbies.splice(index,1)
   }
   presentLoadingDefault() {
     let loading = this.loadingCtrl.create({
       spinner:"crescent",
-      content: 'Please wait...'
+      content: 'Configuring account..Please wait...'
     });
-
     loading.present();
-
     setTimeout(() => {
       loading.dismiss();
-    }, 5000);
+      window.location.reload()
+    }, 2000);
+    
   }
 }

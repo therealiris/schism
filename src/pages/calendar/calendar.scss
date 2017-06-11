@@ -1,0 +1,22 @@
+.no-event{
+	padding:1em;
+	text-align:center;
+}
+calendar{
+	.content {
+	
+		background:linear-gradient(to bottom, #00a9ff 0%, #2b6ad8 100%, #ffffff 30%, #ffffff 30%, #ffffff 100%) !important;
+	}
+}
+
+.calendar-image{
+	border-radius:50%;
+	width:10vh
+}
+.calendar-content{
+	text-align:left;
+	padding-top:5%;
+	padding-left:5%;
+	color:grey;
+	font-size:16px;
+}

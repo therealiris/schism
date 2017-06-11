@@ -7,8 +7,10 @@ import { HomePage } from '../pages/home/home';
 import { DiscoverPage } from '../pages/discover/discover';
 import { Connections } from '../pages/connections/connections'
 import { OnboardingOne } from '../pages/onboarding1/on1';
-
+import { Calendar } from '../pages/calendar/calendar';
+import { PlannerTwo } from '../pages/planner2/plannerTwo'
 import { Storage } from '@ionic/storage';
+import Peer from "../../node_modules/peerjs/lib/peer";
 
 
 
@@ -20,7 +22,6 @@ export class MyApp {
   rootPage: any ;
   user : any;
   pages: Array<{title: string, component: any , iconName : string }>;
-
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private toastCtrl: ToastController, public storage:Storage) {
     this.initializeApp();
     this.user = {fullName:'',pictureUrl:''}
@@ -33,8 +34,6 @@ export class MyApp {
         }
         else{
           this.rootPage = HomePage
-
-
         }
       })
     })
@@ -46,7 +45,7 @@ export class MyApp {
       { title: 'Discover', component: DiscoverPage, iconName:'ios-search-outline' },
       { title: 'Profile', component: DiscoverPage, iconName:'md-person' },
       { title: 'My Connections', component: Connections, iconName:'ios-people-outline' },
-      { title: 'Planner', component: DiscoverPage, iconName:'ios-calendar-outline' },
+      { title: 'Planner', component: Calendar, iconName:'ios-calendar-outline' },
       { title: 'Settings', component: DiscoverPage, iconName:'ios-settings' }
 
     ];
@@ -59,6 +58,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
     });
   }
   openPage(page) {

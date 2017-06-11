@@ -2,26 +2,26 @@
 <ion-content>
     <ion-item class="onboarding-thumb">
       <div class="onboarding-thumb">
-        <!-- <img src="../assets/img/faces/sid.jpg" class="discover-pic"> -->
-        <img src="{{user.pictureUrl}}" class="discover-pic">
+        <!-- <img src="../assets/img/faces/sid.jpg" class="onboard-pic"> -->
+        <img src="{{user.pictureUrl}}" class="onboard-pic">
       </div>
     </ion-item>
     <div class="form-content">
       <ion-item>
-      <ion-label floating class="form-label">Name</ion-label>
+      <ion-label floating >Name</ion-label>
       <!-- <ion-input type="text" (focusout) = "itemTapped($event)" [(ngModel)]="fullName" value='Sidharth Sahu'></ion-input> -->
       <ion-input type="text" [(ngModel)]="fullName" value={{user.fullName}}></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating class="form-label">Email Id</ion-label>
+      <ion-label floating >Email Id</ion-label>
       <ion-input type="email" [(ngModel)]="email"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label class="form-label">Date Of Birth</ion-label>
+    <ion-item class="datetime">
+      <ion-label >Date Of Birth</ion-label>
       <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="dob"></ion-datetime>
     </ion-item>
     <ion-item>
-      <ion-label  class="form-label">Gender</ion-label>
+      <ion-label  >Gender</ion-label>
       <ion-select [(ngModel)]="gender">
         <ion-option value="male">Male</ion-option>
         <ion-option value="female">Female</ion-option>
@@ -31,8 +31,6 @@
     
     <ion-item class="onboarding-range">
       <ion-range step="1" [(ngModel)]="rangeVal" color="primary" pin="true">
-        <ion-label range-left>0</ion-label>
-        <ion-label range-right>100</ion-label>
       </ion-range>
     </ion-item>
     <div class="onboarding-next">

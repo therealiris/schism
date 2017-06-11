@@ -22,7 +22,7 @@ export class OnboardingOne {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService) {
-    this.rangeVal = 1
+    this.rangeVal = 0
     // this.user = {
     // "uid" : "", 
     // "email" : "", 
@@ -55,7 +55,6 @@ export class OnboardingOne {
   itemTapped(event) {
     console.log(event.target.value)
     // That's right, we're pushing to ourselves!
-    
     console.log("tried tap")
   }
   nextClick(){
@@ -64,7 +63,6 @@ export class OnboardingOne {
     this.user.dob = this.dob
     this.user.gender = this.gender
     this.user.email = this.email
-    
     this.navCtrl.push(OnboardingTwo, {
       item: 40,
       userObject : JSON.stringify(this.user)

@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { OnboardingOne } from '../onboarding1/on1';
 import { Auth, User } from '@ionic/cloud-angular';
 import { Storage } from '@ionic/storage';
+import { PeopleService } from '../../providers/people-service'
+import { DiscoverPage } from '../discover/discover'
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  providers: [PeopleService]
 })
 export class HomePage {
 
   appUser:any;
-  constructor(public navCtrl: NavController, public auth: Auth, public user: User, public storage: Storage) {
+  constructor(public navCtrl: NavController, public people: PeopleService, public auth: Auth, public user: User, public storage: Storage, public loadingCtrl: LoadingController) {
 
     this.appUser = {
     "uid" : "", 
@@ -26,7 +29,9 @@ export class HomePage {
     "hobbies":[],
     "connections" : [], 
     "requested" : [], 
-    "requests" : [], 
+    "requests" : [],
+    "notifications":[],
+    "events":[], 
     "lastLoginLocation" : "", 
     "chatId" : "",
     "rating":0,
@@ -35,23 +40,28 @@ export class HomePage {
     }
   }
   login(){
-  	// this.navCtrl.push(OnboardingOne,{
-   //      name:'Sidhaf Sahu',
-   //      pictureUrl:'../assets/img/faces/sid.jpg'
-   //    });
   	this.auth.login('linkedin').then(()=>{
       this.appUser.fullName = this.user.social.linkedin.data.full_name;
       this.appUser.pictureUrl = this.user.social.linkedin.data.profile_picture;
       this.appUser.uid = this.user.social.linkedin.uid;
-
-      // this.navCtrl.push(OnboardingOne, {
-      //   userObject : JSON.stringify(this.appUser)
-      // });
-      this.storage.ready().then(()=>{
-        this.storage.set('currentUser',JSON.stringify(this.appUser))
-        this.navCtrl.push(OnboardingOne, {
-          userObject : JSON.stringify(this.appUser)
-        });
+      this.people.updateCurrentUser(this.appUser.uid,(response)=>{ 
+        if(response.status===1){
+          //if user already logged-in
+          this.appUser = response.userObject
+          this.storage.ready().then(()=>{
+            this.storage.set('currentUser',JSON.stringify(this.appUser))
+            this.navCtrl.push(DiscoverPage);
+          })
+        }
+        else{
+          this.storage.ready().then(()=>{
+            //create a new user object locally
+            this.storage.set('currentUser',JSON.stringify(this.appUser))
+            this.navCtrl.push(OnboardingOne, {
+              userObject : JSON.stringify(this.appUser)
+            });
+          })
+        }  
       })
     });
   }

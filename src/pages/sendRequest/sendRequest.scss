@@ -1,47 +1,16 @@
-discover-list {
-	ion-slider{
-		text-align:center;
-		width: 60vw;
-	},
-	.iris-slide{
-		background:transparent;
-		height:50vh;
-	}
-	.iris-slide.swiper-slide{
-		width:90vw !important;
-		margin:5vw;
-		padding: 0 2vw
-	}
 
-
-}
 .request-card{
 	text-align:center;
 }
 .question-section{
 	text-align:center;
-	padding-top:4em;
+	padding-top:1em;
 }
 .request-question{
 	font-size:18px;
 	font-weight:500;
 }
 
-.discover-pic{
-	display:inline;
-	border:none;
-	border-radius:50%;
-	min-height:20vh;
-	height:20vh !important;
-	width:auto;
-}
-.discover-thumb{
-	text-align:center
-}
-.discover-title{
-	font-weight:500 !important;
-	font-size : 22px !important;
-}
 .hobbies{
 	color:#0062f5 !important;
 }
@@ -62,4 +31,24 @@ discover-list {
 background: -moz-linear-gradient(top, #00a9ff 0%, #2b6ad8 30%, #ffffff 30%, #ffffff 30%, #ffffff 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, #00a9ff 0%,#2b6ad8 30%,#ffffff 30%,#ffffff 30%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, #00a9ff 0%,#2b6ad8 30%,#ffffff 30%,#ffffff 30%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.requestCard{
+	max-width:65vw;
+	display:inline-block !important; 
+}
+.requestSpace{
+	text-align:center;
+}
+.request-pic{
+	display:inline;
+	height: 20vh !important;
+    width: auto;
+    padding: 1em;
+    border-radius: 50%;
+}
+.request-btn{
+	padding-top:2em;
+}
+.requestBtn{
+	margin:1em 2em;
 }

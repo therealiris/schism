@@ -8,6 +8,7 @@ on-one {
 
 .onboarding-thumb{
 	text-align: center;
+	padding-top:2vh;
 }
 .onboarding-input{
 	padding-top:1em;
@@ -43,4 +44,17 @@ ion-button{
 	font-size:16px;
 	font-weight:600;
 
+}
+.datetime{
+	padding-top:1em;
+}
+.range-pin{
+	display:none !important;
+}
+.range-knob{
+	display:none;
+}
+.range-bar{
+	height:8px !important;
+	border-radius:2em;
 }

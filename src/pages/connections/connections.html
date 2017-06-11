@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>My Connections(3)</ion-title>
+    <ion-title>My Connections({{numberOfConnections}})</ion-title>
     <ion-buttons end>
       <button ion-button (click)="openModal()">
         <ion-icon name="calendar"></ion-icon>
@@ -14,171 +14,31 @@
 <ion-content>
   <ion-searchbar (ionInput)="getItems($event)" class="conn-search"></ion-searchbar>
   <ion-list class="conn-list">
-
-  <ion-item-sliding #item class="conn-slide">
+  <div>{{id}}</div>
+  <ion-item-sliding #item class="conn-slide" *ngFor="let connection of connections; let i=index" >
     <ion-item>
       <div class="conn-list-item">
        <div class="thumbnail">
-         <img src="../assets/img/faces/marc.jpg" alt="">
+         <img src={{connection.pictureUrl}} class="connection-image">
        </div>
        <div class="conn-content">
-         <span>Marc Jeveus</span> <br>
-         <span>Meeting : 7:00 P.M to 10 P.M</span>
+         <span>{{connection.fullName}}</span> <br>
+         <!-- <span>Meeting : 7:00 P.M to 10 P.M</span> -->
        </div> 
-        
       </div>
     </ion-item>
 
     <ion-item-options side="right">
-      <button class="slide-button" ion-button (click)="unread(item)">
+      <button class="slide-button" ion-button (click)="createChat(i)">
         <ion-icon name="chatboxes"></ion-icon>
         Chat
       </button>
-      <button ion-button class="slide-button" (click)="unread(item)">
+      <button ion-button class="slide-button" (click)="createCall(i)">
         <ion-icon name="call"></ion-icon>
-        Chat
-      </button><button class="slide-button" ion-button (click)="unread(item)">
+        Call
+      </button><button class="slide-button" ion-button (click)="schedule(i)">
         <ion-icon name="calendar"></ion-icon>
-        Chat
-      </button>
-    </ion-item-options>
-  </ion-item-sliding>
-  <ion-item-sliding #item class="conn-slide">
-    <ion-item>
-      <div class="conn-list-item">
-       <div class="thumbnail">
-         <img src="../assets/img/faces/ash.jpg" alt="">
-       </div>
-       <div class="conn-content">
-         <span>Tim McCarthy</span> <br>
-         <span>Meeting : 7:00 P.M to 10 P.M</span>
-       </div> 
-        
-      </div>
-    </ion-item>
-
-    <ion-item-options side="right">
-      <button class="slide-button" ion-button (click)="unread(item)">
-        <ion-icon name="chatboxes"></ion-icon>
-        Chat
-      </button>
-      <button ion-button class="slide-button" (click)="unread(item)">
-        <ion-icon name="call"></ion-icon>
-        Chat
-      </button><button class="slide-button" ion-button (click)="unread(item)">
-        <ion-icon name="calendar"></ion-icon>
-        Chat
-      </button>
-    </ion-item-options>
-  </ion-item-sliding><ion-item-sliding #item class="conn-slide">
-    <ion-item>
-      <div class="conn-list-item">
-       <div class="thumbnail">
-         <img src="../assets/img/faces/bae.jpg" alt="">
-       </div>
-       <div class="conn-content">
-         <span>Lisa Denver</span> <br>
-         <span>Meeting : 7:00 P.M to 10 P.M</span>
-       </div> 
-        
-      </div>
-    </ion-item>
-
-    <ion-item-options side="right">
-      <button class="slide-button" ion-button (click)="unread(item)">
-        <ion-icon name="chatboxes"></ion-icon>
-        Chat
-      </button>
-      <button ion-button class="slide-button" (click)="unread(item)">
-        <ion-icon name="call"></ion-icon>
-        Chat
-      </button><button class="slide-button" ion-button (click)="unread(item)">
-        <ion-icon name="calendar"></ion-icon>
-        Chat
-      </button>
-    </ion-item-options>
-  </ion-item-sliding>
-  <ion-item-sliding #item class="conn-slide">
-    <ion-item>
-      <div class="conn-list-item">
-       <div class="thumbnail">
-         <img src="../assets/img/faces/mike.jpg" alt="">
-       </div>
-       <div class="conn-content">
-         <span>Luke Hannigan</span> <br>
-         <span>Meeting : 7:00 P.M to 10 P.M</span>
-       </div> 
-        
-      </div>
-    </ion-item>
-
-    <ion-item-options side="right">
-      <button class="slide-button" ion-button (click)="unread(item)">
-        <ion-icon name="chatboxes"></ion-icon>
-        Chat
-      </button>
-      <button ion-button class="slide-button" (click)="unread(item)">
-        <ion-icon name="call"></ion-icon>
-        Chat
-      </button><button class="slide-button" ion-button (click)="unread(item)">
-        <ion-icon name="calendar"></ion-icon>
-        Chat
-      </button>
-    </ion-item-options>
-  </ion-item-sliding>
-  <ion-item-sliding #item class="conn-slide">
-    <ion-item>
-      <div class="conn-list-item">
-       <div class="thumbnail">
-         <img src="../assets/img/faces/sid.jpg" alt="">
-       </div>
-       <div class="conn-content">
-         <span>Luke Hannigan</span> <br>
-         <span>Meeting : 7:00 P.M to 10 P.M</span>
-       </div> 
-        
-      </div>
-    </ion-item>
-
-    <ion-item-options side="right">
-      <button class="slide-button" ion-button (click)="unread(item)">
-        <ion-icon name="chatboxes"></ion-icon>
-        Chat
-      </button>
-      <button ion-button class="slide-button" (click)="unread(item)">
-        <ion-icon name="call"></ion-icon>
-        Chat
-      </button><button class="slide-button" ion-button (click)="unread(item)">
-        <ion-icon name="calendar"></ion-icon>
-        Chat
-      </button>
-    </ion-item-options>
-  </ion-item-sliding>
-  <ion-item-sliding #item class="conn-slide">
-    <ion-item>
-      <div class="conn-list-item">
-       <div class="thumbnail">
-         <img src="../assets/img/faces/marc.jpg" alt="">
-       </div>
-       <div class="conn-content">
-         <span>Luke Hannigan</span> <br>
-         <span>Meeting : 7:00 P.M to 10 P.M</span>
-       </div> 
-        
-      </div>
-    </ion-item>
-
-    <ion-item-options side="right">
-      <button class="slide-button" ion-button (click)="unread(item)">
-        <ion-icon name="chatboxes"></ion-icon>
-        Chat
-      </button>
-      <button ion-button class="slide-button" (click)="unread(item)">
-        <ion-icon name="call"></ion-icon>
-        Chat
-      </button><button class="slide-button" ion-button (click)="unread(item)">
-        <ion-icon name="calendar"></ion-icon>
-        Chat
+        Meet
       </button>
     </ion-item-options>
   </ion-item-sliding>

@@ -2,16 +2,18 @@
 <ion-content>
     <ion-item class="onboarding-thumb">
       <div class="onboarding-thumb">
-        <img src="{{user.pictureUrl}}" class="discover-pic">
+        <img src="{{user.pictureUrl}}" class="onboard-pic">
       </div>
     </ion-item>
     <ion-item>
-      <ion-label floating>Hobbies (Please add 3 or more hobbies/interests)</ion-label>
+      <ion-label floating>Hobbies (Please add 3 hobbies/interests)</ion-label>
       <ion-input type="text" (keypress) = "itemTapped($event)"></ion-input>
     </ion-item>
     <ion-item>
       <div style="padding:1em 0">
-        <span *ngFor="let hobby of hobbies" class="hobby">{{hobby}} </span>
+        <span *ngFor="let hobby of hobbies;let i=index" class="hobby">{{hobby}} 
+          <ion-icon class="item-remove" name="close" (click)="removeHobby(i)"></ion-icon>
+        </span>
       </div>
       
     </ion-item>
