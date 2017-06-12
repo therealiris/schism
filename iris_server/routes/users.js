@@ -216,4 +216,14 @@ router.post("/events", function(req,res){
 	})
 
 })
+router.get("/events", function(req,res){
+
+	var uid = req.param("uid")
+	db.users.find({"uid":uid},{"events":1}).toArray(function(err, user){
+		if(!err){
+			res.send(user[0].events)
+		}
+	})
+
+})
 module.exports = router;

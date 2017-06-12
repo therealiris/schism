@@ -5,36 +5,26 @@
     </button>
     <ion-title>Planner</ion-title>
     <ion-buttons end>
-      <button ion-button>
-        <ion-icon name="person"></ion-icon>
+      <button ion-button (click)="openNotifications()">
+        <ion-icon name="notifications"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-<ion-card>
+<ion-card  *ngFor="let event of eventList; let i=index">
    <ion-item>
     <div class="conn-list-item">
      <div class="thumbnail">
-       <img src="../../assets/img/faces/ash.jpg" class="calendar-image">
+       <img src="{{event.with.pictureUrl}}" class="calendar-image">
      </div>
      <div class="calendar-content">
-       <span>Ashley King</span> <br>
-       <span>Meeting : 7:00 P.M to 10 P.M</span>
-     </div> 
-    </div>
-  </ion-item> 
-</ion-card>
-<ion-card>
-   <ion-item>
-    <div class="conn-list-item">
-     <div class="thumbnail">
-       <img src="../../assets/img/faces/marc.jpg" class="calendar-image">
-     </div>
-     <div class="calendar-content">
-       <span>Marc Coleson</span> <br>
-       <span>Meeting : 9:00 P.M to 10 P.M</span>
+       <span>{{event.with.fullName}}</span> <br>
+       <span>From : {{event.from}}</span><br>
+       <span>To : {{event.to}}</span><br>
+       <span>Agenda : {{event.agenda}}</span><br>
+       <span>Venue : {{event.venue}}</span>
      </div> 
     </div>
   </ion-item> 
@@ -48,7 +38,7 @@
     </ion-card-content>
   </ion-card> -->
    <ion-fab right bottom>
-     <button ion-fab color="light" (click)="plan()"><ion-icon name="add"></ion-icon></button>
+     <button ion-fab color="primary" (click)="plan()"><ion-icon name="add"></ion-icon></button>
    </ion-fab>
 </ion-content>
 

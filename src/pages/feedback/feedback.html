@@ -1,0 +1,34 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Feedback</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openNotifications()">
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+ <ion-list>
+  <ion-item>
+    <ion-label>Category</ion-label>
+    <ion-select [(ngModel)]="category">
+      <ion-option value="UI">UI</ion-option>
+      <ion-option value="Feature">Feature</ion-option>
+      <ion-option value="Enhancement">Enhancement</ion-option>
+      <ion-option value="Bug">Bug</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item style="padding-top:3em">
+    <ion-label stacked>Your Feedback</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <div class="onboarding-next">
+    <button ion-button round right (click)="submitFeedback()">Submit</button>
+  </div>
+</ion-list>
+</ion-content>

@@ -17,10 +17,12 @@ import { HttpModule } from '@angular/http';
 import { PeopleService } from '../providers/people-service'
 import { ChatPage } from '../pages/chat/chat'
 import { Calendar } from '../pages/calendar/calendar'
+import { Profile } from '../pages/profile/profile'
 import { PlannerOne } from '../pages/planner1/plannerOne'
 import { PlannerTwo } from '../pages/planner2/plannerTwo'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Feedback } from '../pages/feedback/feedback';
 
 
 const cloudSettings: CloudSettings = {
@@ -44,7 +46,9 @@ const cloudSettings: CloudSettings = {
     NotificationPage,
     Calendar,
     PlannerOne,
-    PlannerTwo
+    PlannerTwo,
+    Profile,
+    Feedback
   ],
   imports: [
     BrowserModule,
@@ -68,7 +72,9 @@ const cloudSettings: CloudSettings = {
     NotificationPage,
     Calendar,
     PlannerOne,
-    PlannerTwo
+    PlannerTwo,
+    Profile,
+    Feedback
 
   ],
   providers: [

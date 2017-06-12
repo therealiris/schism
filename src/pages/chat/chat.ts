@@ -15,19 +15,19 @@ export class ChatPage {
   peer : any;
   sendingConnect : any;
   connectionId: string;
+  displayMessage : any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public people: PeopleService) {
     // If we navigated to this page, we will have an item available as a nav param
     this.chatItem = navParams.data
+    console.log(this.chatItem)
     this.peer = new Peer({key: '8fli63luazrjatt9'});
     setTimeout(()=>{
       this.setup(this.peer.id)
     },2000)
     this.peer.on('connection', (conn)=> {
-      let connId = conn.peer
-      this.sendingConnect = this.peer.connect(conn.peer)
       conn.on('data', function(data) 
       {
-        fakeMessage(data)
+        this.displayMessage(data)
         });
     });
     
@@ -73,7 +73,7 @@ $(window).on('keydown', function(e) {
 
 
 
-function fakeMessage(msg) {
+this.displayMessage= function fakeMessage(msg) {
 
   if ($('.message-input').val() != '') {
     return false;
@@ -93,10 +93,26 @@ function fakeMessage(msg) {
 }
 }
 setup(id){
-  alert(id)
   this.people.updateChatId(this.chatItem.myId, id, (res)=>{
     console.log("done")
+    this.tryConnect()
   })
-  
+}
+tryConnect(){
+
+  this.people.getChatId(this.chatItem.connect.uid,(res)=>{
+      this.connectionId = res.chatId
+      this.sendingConnect = this.peer.connect(this.connectionId)
+      var self = this
+      setTimeout(()=>{
+        console.log(self.sendingConnect)
+        if(!self.sendingConnect.open)
+          self.tryConnect()
+      },2000)
+      // self.sendingConnect.on('data', function(data) 
+      // {
+      //   self.displayMessage(data)
+      //   });
+    })
 }
 }

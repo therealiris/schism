@@ -8,7 +8,10 @@ import { DiscoverPage } from '../pages/discover/discover';
 import { Connections } from '../pages/connections/connections'
 import { OnboardingOne } from '../pages/onboarding1/on1';
 import { Calendar } from '../pages/calendar/calendar';
+import { Profile } from '../pages/profile/profile';
+import { Feedback } from '../pages/feedback/feedback';
 import { PlannerTwo } from '../pages/planner2/plannerTwo'
+import { PlannerOne } from '../pages/planner1/plannerOne'
 import { Storage } from '@ionic/storage';
 import Peer from "../../node_modules/peerjs/lib/peer";
 
@@ -34,6 +37,7 @@ export class MyApp {
         }
         else{
           this.rootPage = HomePage
+
         }
       })
     })
@@ -43,10 +47,10 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Discover', component: DiscoverPage, iconName:'ios-search-outline' },
-      { title: 'Profile', component: DiscoverPage, iconName:'md-person' },
+      { title: 'Profile', component: Profile, iconName:'md-person' },
       { title: 'My Connections', component: Connections, iconName:'ios-people-outline' },
       { title: 'Planner', component: Calendar, iconName:'ios-calendar-outline' },
-      { title: 'Settings', component: DiscoverPage, iconName:'ios-settings' }
+      { title: 'Feedback', component: Feedback, iconName:'ios-settings' }
 
     ];
 

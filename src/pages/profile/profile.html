@@ -3,15 +3,72 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
+    <ion-title>Profile</ion-title>
     <ion-buttons end>
-      <button ion-button>
-        <ion-icon name="person"></ion-icon>
+      <button ion-button (click)="openNotifications()">
+        <ion-icon name="notifications"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
- No Events Ahead
+<div class="discover-thumb fixed-content">
+  <img src="{{user.pictureUrl}}"  class="discover-pic">
+</div>
+<div padding class="profile-content">
+   <ion-segment [(ngModel)]="profile">
+    <ion-segment-button value="personal">
+      Personal
+    </ion-segment-button>
+    <ion-segment-button value="work">
+      Work
+    </ion-segment-button>
+  </ion-segment>
+
+
+<div [ngSwitch]="profile">
+  <ion-list *ngSwitchCase="'personal'">
+    <ion-item>
+      <ion-label stacked>Full Name</ion-label>
+      <ion-input type="text" value="{{user.fullName}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>E-Mail</ion-label>
+      <ion-input type="text"  value="{{user.email}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Date Of Birth</ion-label>
+      <ion-input type="text"  value="{{user.dob}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Gender</ion-label>
+      <ion-input type="text"  value="{{user.gender}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Hobbies</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-list>
+        <span>Swimming</span>
+      </ion-list>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'work'">
+   <ion-item>
+      <ion-label stacked>Designation</ion-label>
+      <ion-input type="text"  value="{{user.designation}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Current Workplace</ion-label>
+      <ion-input type="text" value="{{user.currentWorkplace}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Industry</ion-label>
+      <ion-input type="text" ></ion-input>
+    </ion-item>
+  </ion-list>
+</div>
+</div>
 </ion-content>
