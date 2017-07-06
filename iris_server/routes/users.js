@@ -1,8 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var db = require("../db/mongo.js")
+var axios = require('axios')
 const WebSocket = require('ws');
 const wss = new WebSocket.Server({ port: 9001 });
+var fileupload = require("express-fileupload");
+var multer = require('multer')
 wss.on('connection', function connection(ws) {
   ws.on('message', function incoming(message) {
     console.log('Arjun can see the ', message);
@@ -224,6 +227,21 @@ router.get("/events", function(req,res){
 			res.send(user[0].events)
 		}
 	})
+
+})
+router.get('/otp', function(req,res){
+	var phone = req.param('phone')
+	var otp = req.param('otp')
+	axios.get('https://control.msg91.com/api/sendhttp.php?authkey=161105AIyLFPqYo594a86f6&mobiles='+phone+'&message=Use%20OTP%20'+otp+'%20to%20successfully%20login%20to%20IRIS&sender=TMIRIS&route=4&country=0')
+	.then(response=>{
+		if(response!=null)
+		res.send({status:1})
+	})
+
+})
+router.post('/uploadPic',function(req,res){
+	console.log(req.files)
+	res.send({status : 1})
 
 })
 module.exports = router;
