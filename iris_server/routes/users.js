@@ -239,9 +239,19 @@ router.get('/otp', function(req,res){
 	})
 
 })
-router.post('/uploadPic',function(req,res){
-	console.log(req.files)
-	res.send({status : 1})
+router.post("/updatePushRegistration",function(req,res){
+	let key = req.body.key, uid = req.body.uid
 
+	db.users.find({"uid":uid}).toArray(user=>{
+		if(user[0].pushId===key)
+			res.send({status:1})
+		else
+			db.users.update({"uid":uid},{"$set":{"pushId":key}},function(err,result){
+				if(!err)
+					res.send({status:1})
+				else
+					res.send({status:0})
+			})
+	})
 })
 module.exports = router;
