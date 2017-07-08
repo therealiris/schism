@@ -51,12 +51,14 @@ router.get('/discover', function(req, res, next) {
 	var currentUser = req.param("uid")
 	var entries = 10*page
 	var usrId = [currentUser]
-	console.log(entries,usrId)
-	db.users.find({"uid":currentUser},{"connections":1}).toArray(function(err,user){
+	db.users.find({"uid":currentUser},{"connections":1,"requests":1,"requested":1}).toArray(function(err,user){
 		if(!err){
-			var dontFind = user[0].connections;
+			var dontFind = new Array()
 			dontFind.push(currentUser)
-			console.log(currentUser, dontFind)
+			dontFind = dontFind.concat(user[0].connections)
+			dontFind = dontFind.concat(user[0].requests)
+			dontFind = dontFind.concat(user[0].requested)
+			console.log(user[0], dontFind)
 			db.users.find({"uid":{"$nin":dontFind}},{"fullName":1,"headline":1,"pictureUrl":1,"score":1,"rating":1,"uid":1, "designation":1, "currentWorkplace":1,"lastLoginLocation":1}).limit(10).toArray(function(err,users){
 				if(!err)
 					res.send(users)
@@ -241,8 +243,10 @@ router.get('/otp', function(req,res){
 })
 router.post("/updatePushRegistration",function(req,res){
 	let key = req.body.key, uid = req.body.uid
-
-	db.users.find({"uid":uid}).toArray(user=>{
+	console.log(typeof(req.body.uid))
+	if(uid!="")
+	db.users.find({"uid":uid}).toArray(function(err,user){
+		// console.log(err,user)
 		if(user[0].pushId===key)
 			res.send({status:1})
 		else
@@ -253,5 +257,7 @@ router.post("/updatePushRegistration",function(req,res){
 					res.send({status:0})
 			})
 	})
+	else
+		res.send({status:-1})
 })
 module.exports = router;
