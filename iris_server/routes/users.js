@@ -91,11 +91,14 @@ router.get('/user/contact', function(req, res) {
 });
 
 router.put("/request",function(req,res){
+	let pushKey = ""
 	console.log(req.body)
 	db.users.update({"uid":req.body.id},{"$push":{
 		"requests":req.body.uid,
 		"notifications":{
+					"notificationId":(+new Date).toString(36),
 					"uid":req.body.uid,
+					"pictureUrl":req.body.pictureUrl,
 					"fullName":req.body.fullName,
 					"headline":req.body.headline,
 					"reason" : req.body.reason,
@@ -105,6 +108,25 @@ router.put("/request",function(req,res){
 			}, 
 	function(err,result){
 		if(!err){
+			db.users.find({"uid":req.body.id},{"pushId":1}).toArray(function(err,user){
+				if(!err)
+					{
+					let pushId = user[0].pushId,
+					notification = { "notification": {
+									    "title": "New Connection Request",
+									    "body": req.body.fullName+ " wants to connect with you",
+									    "sound":"default"
+									  },
+									  "to" : pushId
+									},
+					pushHeader = {"Authorization":pushKey}
+					axios.post("https://fcm.googleapis.com/fcm/send",notification,{"headers":pushHeader}).then(res=>{
+						console.log("Pushed Notification")
+					})
+				}
+			})
+			
+			
 			console.log(result.result)
 			db.users.update({"uid":req.body.uid},{"$push":{"requested":req.body.id}},function(err, response){
 				if(!err)
