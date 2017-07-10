@@ -1,9 +1,11 @@
 notification {
 .content{
-	background:deepskyblue;
+	background:white;
 }
 
-
+.toolbar-background{
+    background:#5e8af2;
+}
 }
 
 .notification-container{
@@ -18,19 +20,21 @@ notification {
 }
 .remove-notification{
 	float: right;
-    color: #c74d00;
-    padding: 1px 10px;
+    color: #5e8af2;
+    padding: 4px 8px;
     border-style: solid;
     border-width: thin;
     border-radius: 20px;
     margin:4px;
+    font-size:12px;
 }
 .accept-notification{
 	float: right;
-    color: green;
-    padding: 1px 10px;
+    color: #5e8af2;
+    padding: 4px 8px;
     border-style: solid;
     border-width: thin;
     border-radius: 20px;
     margin:4px;
+    font-size:12px;
 }

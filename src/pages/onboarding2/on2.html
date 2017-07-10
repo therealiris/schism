@@ -1,47 +1,22 @@
-
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Select Industry</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="passSkills()">
+        <span>Done</span>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 <ion-content>
-    <ion-item class="onboarding-thumb">
-      <div class="onboarding-thumb">
-        <img src="{{user.pictureUrl}}" class="onboard-pic">
-      </div>
-    </ion-item>
-    <div class="typeBox">
-      <ion-item class="typeCheck" (click)="checkType('professional')">
-        <ion-label>Professional</ion-label>
-        <ion-checkbox [(ngModel)]="pr" class="checktick"></ion-checkbox>
-      </ion-item>
-
-      <ion-item class="typeCheck" (click)="checkType('entrepreneur')">
-        <ion-label>Entrepreneur</ion-label>
-        <ion-checkbox [(ngModel)]="ent" class="checktick"></ion-checkbox>
-      </ion-item>
-    </div>
-    
-    <ion-item>
-      <ion-label floating>Designation</ion-label>
-      <ion-input type="text" [(ngModel)]="designation"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Current Workplace</ion-label>
-      <ion-input type="text" [(ngModel)]="currentWorkplace"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Industry</ion-label>
-      <ion-select [(ngModel)]="industry" multiple="true" class="industry">
-        <ion-option value="software">Software</ion-option>
-        <ion-option value="Deep Learning">Deep Learning</ion-option>
-        <ion-option value="Dev Ops">Dev Ops</ion-option>
-        <ion-option value="Embedded Systems">Embedded Systems</ion-option>
-        <ion-option value="Fashion">Fashion</ion-option>
-        <ion-option value="Other">Other</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item class="onboarding-range">
-      <ion-range step="1" [(ngModel)]="rangeVal" color="primary" pin="true"></ion-range>
-    </ion-item>
-    <div class="onboarding-next">
-      <button ion-button round right (click)="nextClick()">Next</button>
-    </div>
-  
-
+<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-list>
+  <ion-item *ngFor="let item of items">
+    <ion-label>{{item}}</ion-label>
+    <ion-checkbox (ionChange)="updateList(item, $event)"></ion-checkbox>
+  </ion-item>
+</ion-list>
 </ion-content>

@@ -1,0 +1,18 @@
+<ion-header no-border>
+  
+</ion-header>
+
+<ion-content>
+  <div class="otp-container" *ngIf="!numberSent">
+    <h5 style="padding-top: 2em; color:#5e8af2; font-weight: 400;">Login Securely</h5>
+    <h5 style="padding-top: 2em; color:#5e8af2; font-weight: 300;">Please enter your phone number</h5>
+    <input [(ngModel)]="phone" type="number" style="margin: 1em; color:#5e8af2;font-size: 2em; font-weight: 300;text-align:center; border:none; border-bottom: solid; border-width: thin; border-color: #5e8af2;background: none;width:70vw">
+    <button style="background: #5e8af2; border:none;border-radius: 1em; padding: 0.5em 1em; font-size: 1.2em;color: #fff;" (click)="sendNumber()">verify</button>
+  </div>
+  <div class="otp-container" *ngIf="numberSent">
+    <h5 style="padding-top: 2em; color:#5e8af2; font-weight: 400;">Login Securely</h5>  
+    <h5 style="padding-top: 2em; color:#5e8af2; font-weight: 300;">Please enter the otp sent to your mobile number.</h5>
+    <input [(ngModel)]="otpField" type="number" style="margin: 1em; color:#5e8af2;font-size: 2em; font-weight: 300;text-align:center; border:none; border-bottom: solid; border-width: thin; border-color: #5e8af2;background: none; width:70vw">
+    <button style="background: #5e8af2; border:none;border-radius: 1em; padding: 0.5em 1em; font-size: 1.2em;color: #fff;" (click)="validate()">submit</button>
+  </div>
+</ion-content>

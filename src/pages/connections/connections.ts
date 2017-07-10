@@ -2,7 +2,6 @@ import { Component, ChangeDetectorRef } from '@angular/core';
 import { NavController, NavParams, Nav, App, ViewController } from 'ionic-angular';
 import { PeopleService } from '../../providers/people-service'
 import { Storage } from '@ionic/storage';
-import Peer from "../../../node_modules/peerjs/lib/peer";
 import { ChatPage } from "../chat/chat"
 
 @Component({
@@ -23,12 +22,6 @@ export class Connections {
         if(data!=null)
           {
             this.user = JSON.parse(data)
-            // this.peer = new Peer(this.user.uid,{key: '8fli63luazrjatt9'});
-            // this.peer.on('connection', function(conn) {
-            //   conn.on('data', function(data) {
-            //       alert(data);
-            //     });
-            // });
             people.getConnections(this.user.uid,(connections)=>{
             	this.connections = connections;
              this.numberOfConnections = this.connections.length
@@ -67,15 +60,5 @@ export class Connections {
     let toChat = this.connections[index]
     this.navCtrl.push(ChatPage,{"myId":this.user.uid,"connect":toChat})
   }
-
-
-
-
-
-
-
-
-
-
 
 }

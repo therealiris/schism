@@ -16,7 +16,7 @@ export class PeopleService {
   }
 
   sendData(userObject, callback){
-  	this.http.post('http://192.168.0.103:9003/users/data',userObject)
+  	this.http.post('http://192.168.1.5:9003/users/data',userObject)  
   	.map(response => response.json())
     .subscribe( response => {
      console.log(response)	
@@ -25,7 +25,7 @@ export class PeopleService {
   }
 
   discover(uid, callback){
-  	this.http.get('http://192.168.0.103:9003/users/discover?uid='+uid)
+  	this.http.get('http://192.168.1.5:9003/users/discover?uid='+uid)
   	.map(response => response.json())
     .subscribe( response => {
      console.log(response)	
@@ -38,10 +38,11 @@ export class PeopleService {
       "uid":sender.uid,
       "id":sendee,
       "fullName":sender.fullName,
+      "pictureUrl":sender.pictureUrl,
       "headline":sender.designation +" at "+sender.currentWorkplace,
       "reason": reason
     }
-    this.http.put('http://192.168.0.103:9003/users/request',requestObject)
+    this.http.put('http://192.168.1.5:9003/users/request',requestObject)
     .map(response => response.json())
     .subscribe( response => {
      console.log(response)  
@@ -49,7 +50,7 @@ export class PeopleService {
     });
   }
   updateCurrentUser(uid, callback){
-    this.http.get('http://192.168.0.103:9003/users/user?uid='+uid)
+    this.http.get('http://192.168.1.5:9003/users/user?uid='+uid)
     .map(response => response.json())
     .subscribe( response => {
      console.log(response)  
@@ -57,7 +58,7 @@ export class PeopleService {
     });
   }
   getNotifications(uid, callback){
-    this.http.get('http://192.168.0.103:9003/users/notifications?uid='+uid)
+    this.http.get('http://192.168.1.5:9003/users/notifications?uid='+uid)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
@@ -65,7 +66,7 @@ export class PeopleService {
   }
   acceptConnect(uid,acceptId,callback){
     var acceptObject={"uid":uid,"acceptId":acceptId}
-    this.http.post('http://192.168.0.103:9003/users/acceptConnect',acceptObject)
+    this.http.post('http://192.168.1.5:9003/users/acceptConnect',acceptObject)
     .map(response => response.json())
     .subscribe( response => {
      console.log(response)  
@@ -73,7 +74,7 @@ export class PeopleService {
     });
   }
   getConnections(uid,callback){
-    this.http.get('http://192.168.0.103:9003/users/connections?uid='+uid)
+    this.http.get('http://192.168.1.5:9003/users/connections?uid='+uid)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
@@ -81,7 +82,7 @@ export class PeopleService {
   }
   updateLocation(uid,location,callback){
     let updateObject = {"uid":uid,"location":location}
-    this.http.put('http://192.168.0.103:9003/users/updateLocation',updateObject)
+    this.http.put('http://192.168.1.5:9003/users/updateLocation',updateObject)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
@@ -89,21 +90,21 @@ export class PeopleService {
   }
   updateChatId(uid,chatid,callback){
     let updateObject = {"uid":uid,"chatid":chatid}
-    this.http.put('http://192.168.0.103:9003/users/chatId',updateObject)
+    this.http.put('http://192.168.1.5:9003/users/chatId',updateObject)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
     });
   }
   getChatId(uid,callback){
-    this.http.get('http://192.168.0.103:9003/users/chatId?uid='+uid)
+    this.http.get('http://192.168.1.5:9003/users/chatId?uid='+uid)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
     });
   }
   getEvents(uid,callback){
-    this.http.get('http://192.168.0.103:9003/users/events?uid='+uid)
+    this.http.get('http://192.168.1.5:9003/users/events?uid='+uid)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
@@ -111,11 +112,25 @@ export class PeopleService {
   }
 
   pushEvent(meetingObject,callback){
-    this.http.post('http://192.168.0.103:9003/users/events',meetingObject)
+    this.http.post('http://192.168.1.5:9003/users/events',meetingObject)
     .map(response => response.json())
     .subscribe( response => {
      console.log(response)  
      callback(response);
     });
+  }
+  sendOtp(number,otp,callback){
+    this.http.get('http://192.168.1.5:9003/users/otp?phone='+number+'&otp='+otp)
+    .map(response => response.json())
+    .subscribe( response => { 
+     callback(response);
+    });
+  }
+  updatePushRegistration(key,callback){
+    this.http.post("http://192.168.1.5:9003/users/updatePushRegistration",key)
+    .map(response=>response.json())
+    .subscribe(response=>{
+      callback(response);
+    })
   }
 }

@@ -1,13 +1,15 @@
-<ion-header no-border>
+<ion-header >
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <ion-title>Notifications</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<!-- <ion-content>
   <div class="notification-container">
     <ion-item *ngIf="notifications?.length<1" class="notification-item">
       No Notifications
@@ -33,4 +35,77 @@
           </div>
     </ion-item>
   </div>
+</ion-content> -->
+<ion-content>
+  <ion-segment [(ngModel)]="notificationType" style="background:#5e8af2">
+    <ion-segment-button value="connections" style="color:#fff">
+      Connections
+    </ion-segment-button>
+    <ion-segment-button value="meetings" style="color:#fff">
+      Meetings
+    </ion-segment-button>
+    <ion-segment-button value="general" style="color:#fff">
+      General
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="notificationType">
+  <ion-list *ngSwitchCase="'connections'">
+    <ion-item *ngFor="let request of requests; let i=index" style="border-bottom-style: solid;border-bottom-width: thin;border-bottom-color: #dadada">
+      <div>
+        <ion-avatar item-start style="display: flex!important;">
+          <img src="{{request.pictureUrl}}">
+          <div style="width: 80vw; margin-left: 2vw">
+            <span style="padding: 8px 0;white-space: normal;text-align: right; font-size: 12px; color:#666">{{request.fullName}} wants to connect with you</span>
+             <div>
+              <div class="accept-notification" >
+                <span (click)="acceptConnect($event)" [attr.data-uid]="request.uid" [attr.data-index]="i">Accept</span>
+              </div>
+              <div class="remove-notification" >
+                <span (click)="rejectConnect($event)" [attr.data-uid]="request.uid" [attr.data-index]="i">Reject</span>
+              </div>
+            </div>
+          </div>
+        </ion-avatar>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'meetings'">
+    <ion-item style="border-bottom-style: solid;border-bottom-width: thin;border-bottom-color: #dadada">
+      <div>
+        <ion-avatar item-start style="display: flex!important;">
+          <img src="../../assets/img/faces/ash.jpg">
+          <div style="width: 80vw; margin-left: 2vw">
+            <span style="padding: 8px 0;white-space: normal;text-align: right; font-size: 12px; color:#666">Anubhav Satpathy has scheduled a call with you at 12:45 PM, Sunday</span>
+             <div>
+              <div class="accept-notification" >
+                <span (click)="acceptConnect($event)" [attr.data-uid]="notification.uid" [attr.data-index]="i">Accept</span>
+              </div>
+              <div class="remove-notification" >
+                <span (click)="rejectConnect($event)" [attr.data-uid]="notification.uid" [attr.data-index]="i">Reject</span>
+              </div>
+              <div class="remove-notification" >
+                <span (click)="rejectConnect($event)" [attr.data-uid]="notification.uid" [attr.data-index]="i">Reschedule</span>
+              </div>
+            </div>
+          </div>
+        </ion-avatar>
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngSwitchCase="'general'">
+    <ion-item style="border-bottom-style: solid;border-bottom-width: thin;border-bottom-color: #dadada">
+      <div>
+        <div style="width: 90vw; margin-left: 2vw">
+          <span style="padding: 8px 0;white-space: normal;text-align: right; font-size: 12px; color:#666">A general notification text</span>
+           <div>
+            <div class="accept-notification" >
+              <span (click)="acceptConnect($event)">Remove</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+</div>
 </ion-content>

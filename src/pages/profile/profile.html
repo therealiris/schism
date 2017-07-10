@@ -31,26 +31,19 @@
   <ion-list *ngSwitchCase="'personal'">
     <ion-item>
       <ion-label stacked>Full Name</ion-label>
-      <ion-input type="text" value="{{user.fullName}}"></ion-input>
+      <ion-input type="text" value="{{user.fullName}}" disabled="true"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>E-Mail</ion-label>
-      <ion-input type="text"  value="{{user.email}}"></ion-input>
+      <ion-input type="text"  value="{{user.email}}" disabled="true"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Date Of Birth</ion-label>
-      <ion-input type="text"  value="{{user.dob}}"></ion-input>
+      <ion-input type="text"  value="{{user.dob}}" disabled="true"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Gender</ion-label>
-      <ion-input type="text"  value="{{user.gender}}"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label stacked>Hobbies</ion-label>
-      <ion-input type="text"></ion-input>
-      <ion-list>
-        <span>Swimming</span>
-      </ion-list>
+      <ion-input type="text"  value="{{user.gender}}" disabled="true"></ion-input>
     </ion-item>
 
   </ion-list>
@@ -58,15 +51,19 @@
   <ion-list *ngSwitchCase="'work'">
    <ion-item>
       <ion-label stacked>Designation</ion-label>
-      <ion-input type="text"  value="{{user.designation}}"></ion-input>
+      <ion-input type="text"  value="{{user.designation}}" disabled="true"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Current Workplace</ion-label>
-      <ion-input type="text" value="{{user.currentWorkplace}}"></ion-input>
+      <ion-input type="text" value="{{user.currentWorkplace}}" disabled="true"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Industry</ion-label>
-      <ion-input type="text" ></ion-input>
+      <ion-input *ngFor="let industry of user.industry" type="text" value={{industry}} disabled="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Skill</ion-label>
+      <ion-input *ngFor="let skill of user.skills" type="text" value={{skill.skill}} disabled="true"></ion-input>
     </ion-item>
   </ion-list>
 </div>

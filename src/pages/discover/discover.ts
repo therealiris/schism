@@ -87,16 +87,16 @@ export class DiscoverPage {
     return deg * (Math.PI/180)
   }
   slideChanged(){
-      this.showPoints = true
+      // this.showPoints = true
 
-      setTimeout(()=>{
-        this.showPoints = false
-      },800)
-      this.currentIndex = this.slides.getActiveIndex();
-      if(this.items[this.currentIndex])
-      if(this.user.requested.indexOf(this.items[this.currentIndex]['uid'])>-1)
-        this.isConnected=true
-      else this.isConnected = false
+      // setTimeout(()=>{
+      //   this.showPoints = false
+      // },800)
+      // this.currentIndex = this.slides.getActiveIndex();
+      // if(this.items[this.currentIndex])
+      // if(this.user.requested.indexOf(this.items[this.currentIndex]['uid'])>-1)
+      //   this.isConnected=true
+      // else this.isConnected = false
     
   }
   connect(){

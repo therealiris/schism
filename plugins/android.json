@@ -7,10 +7,31 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
         "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-filepath": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-sms-receiver": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
         "cordova-plugin-splashscreen": {
@@ -22,27 +43,28 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-inappbrowser": {
+        "cordova-sms-plugin": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
         "cordova-sqlite-storage": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
-        "cordova-plugin-geolocation": {
+        "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
-        "de.appplant.cordova.plugin.local-notification": {
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "1056346035559",
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
     "dependent_plugins": {
-        "cordova-plugin-compat": {
+        "cordova-plugin-app-event": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
-        "cordova-plugin-app-event": {
+        "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     }

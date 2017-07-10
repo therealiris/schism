@@ -8,13 +8,14 @@ on-one {
 
 .onboarding-thumb{
 	text-align: center;
-	padding-top:2vh;
+	padding-top:1vh;
 }
 .onboarding-input{
 	padding-top:1em;
 }
 .range-md .range-knob-handle .range-pin {
-  transform: translate3d(0, 0, 0) scale(1); }
+  transform: translate3d(0, 0, 0) scale(1);
+  }
 
 .range-md:not(.range-has-pin) .range-knob-handle .range-knob {
   transform: scale(1); }
@@ -28,7 +29,7 @@ on-one {
 }
 .onboarding-range{
 	
-	padding-top: 2.2em;
+	padding-top: 1em;
 }
 .item-select{
 	padding-top:1em;
@@ -38,7 +39,7 @@ ion-button{
 }
 .form-content{
 	width:100vw;
-	padding:2em;
+	padding:0 1em;
 }
 .form-label{
 	font-size:16px;

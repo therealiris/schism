@@ -15,6 +15,7 @@ export class sendRequest {
   showPoints : boolean;
   allow : boolean;
   reasons : any;
+  reasonMessage :string;
   user : {"uid": string};
   constructor(public navCtrl: NavController, public navParams: NavParams,public people: PeopleService,public storage:Storage) {
     // If we navigated to this page, we will have an item available as a nav param
@@ -41,9 +42,8 @@ export class sendRequest {
     this.navCtrl.pop()
   }
   connect(){
-    var reasonString = ""
-    for(var i=0;i<this.reasons.length;i++)
-        reasonString += this.reasons[i] + ", " 
+    var reasonString = this.reasons + "||" + this.reasonMessage
+    
     this.people.sendRequest(this.user,this.item.uid, reasonString,(res)=>{
       if(res.status==1)
         this.navCtrl.pop()

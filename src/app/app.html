@@ -3,18 +3,16 @@
     <ion-list>
       <div class="item item-avatar">
         <img src="{{user.pictureUrl}}" class="avatar-pic">
-          <ion-icon name="ios-create-outline" class="avatar-edit" (click)="getClicked()"></ion-icon>
+        <!-- <ion-icon name="ios-create-outline" class="avatar-edit" (click)="getClicked()"></ion-icon> -->
         <p class="avatar-name">{{user.fullName}}</p>
         <p class="avatar-headline">{{user.designation}} at {{user.currentWorkplace}}</p>
       </div>
       <ion-item menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" class="menu-button">
-
         <button menuClose ion-item class="menu-button">
           <ion-icon name={{p.iconName}} class="menu-icon"></ion-icon>
           {{p.title}}
         </button>
       </ion-item>
-      
     </ion-list>
   </ion-content>
 </ion-menu>

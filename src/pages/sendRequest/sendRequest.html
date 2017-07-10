@@ -31,13 +31,17 @@
   </div>
   <ion-item>
     <ion-label>Select Reason</ion-label>
-    <ion-select [(ngModel)]="reasons" multiple="true" (ngModelChange)='enableConnect()'>
+    <ion-select [(ngModel)]="reasons" (ngModelChange)='enableConnect()'>
       <ion-option>Ideation and Planning</ion-option>
       <ion-option>Professional Query</ion-option>
       <ion-option>Experience</ion-option>
       <ion-option>Collaboration</ion-option>
     </ion-select>
   </ion-item>
+  <ion-item *ngIf="allow">
+      <ion-label stacked>Message</ion-label>
+      <ion-input type="text" [(ngModel)]="reasonMessage"></ion-input>
+    </ion-item>
   <div class="request-btn">
     <button ion-button round (click)="cancel()" class="requestBtn">Cancel</button>
     <button ion-button round [disabled]=!allow (click)="connect()" class="requestBtn">Connect</button>

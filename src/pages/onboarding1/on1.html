@@ -6,28 +6,77 @@
         <img src="{{user.pictureUrl}}" class="onboard-pic">
       </div>
     </ion-item>
-    <div class="form-content">
+    <div [ngSwitch]="form">
+      <div class="form-content" *ngSwitchCase="'on1'">
+        <ion-item>
+        <ion-label floating >Name</ion-label>
+        <!-- <ion-input type="text" (focusout) = "itemTapped($event)" [(ngModel)]="fullName" value='Sidharth Sahu'></ion-input> -->
+        <ion-input type="text" [(ngModel)]="fullName" value={{user.fullName}}></ion-input>
+      </ion-item>
       <ion-item>
-      <ion-label floating >Name</ion-label>
-      <!-- <ion-input type="text" (focusout) = "itemTapped($event)" [(ngModel)]="fullName" value='Sidharth Sahu'></ion-input> -->
-      <ion-input type="text" [(ngModel)]="fullName" value={{user.fullName}}></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating >Email Id</ion-label>
-      <ion-input type="email" [(ngModel)]="email"></ion-input>
-    </ion-item>
-    <ion-item class="datetime">
-      <ion-label >Date Of Birth</ion-label>
-      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="dob"></ion-datetime>
-    </ion-item>
-    <ion-item>
-      <ion-label  >Gender</ion-label>
-      <ion-select [(ngModel)]="gender">
-        <ion-option value="male">Male</ion-option>
-        <ion-option value="female">Female</ion-option>
-      </ion-select>
-    </ion-item>
+        <ion-label floating >Email Id</ion-label>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item class="datetime">
+        <ion-label >Date Of Birth</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="dob"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label  >Gender</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="male">Male</ion-option>
+          <ion-option value="female">Female</ion-option>
+        </ion-select>
+      </ion-item>
+      </div>
+      <div *ngSwitchCase="'on2'">
+        <div class="typeBox">
+          <ion-item class="typeCheck" (click)="checkType('professional')">
+            <ion-label>Professional</ion-label>
+            <ion-checkbox [(ngModel)]="pr" class="checktick"></ion-checkbox>
+          </ion-item>
+
+          <ion-item class="typeCheck" (click)="checkType('entrepreneur')">
+            <ion-label>Entrepreneur</ion-label>
+            <ion-checkbox [(ngModel)]="ent" class="checktick"></ion-checkbox>
+          </ion-item>
+        </div>
+        
+        <ion-item>
+          <ion-label floating>Designation</ion-label>
+          <ion-input type="text" [(ngModel)]="designation"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Current Workplace</ion-label>
+          <ion-input type="text" [(ngModel)]="currentWorkplace"></ion-input>
+        </ion-item>
+        <div style="padding:1em">
+          <span style="padding: 0 60vw 0 0;color: #999999;">Industry</span>
+          <span style="border-radius: 20px;background: #488aff;padding: 4px 7px;color: #fff;font-size: 12px;" (click)="selectIndustry()">Add +</span>
+        </div>
+        <div style="padding:1em 0">
+            <div *ngFor="let ind of industry;let i=index" class="industry" style="max-width:100% !important;padding:4px 1em 0; display: flex">
+              <div class="industryName" style="width:50vw; color:#999999; font-weight: 500" >{{ind}}</div> 
+              <ion-icon class="item-remove" name="close" (click)="removeIndustry(i)" style="margin-left: 35vw"></ion-icon>
+            </div>
+          </div>
+      </div>
+      <div *ngSwitchCase="'on3'">
+        <ion-item>
+          <ion-label floating>Skillset (Please add your top 3 skills)</ion-label>
+          <ion-input type="text" (keypress) = "itemTapped($event)"></ion-input>
+        </ion-item>
+        <ion-item>
+          <div style="padding:1em 0">
+            <div *ngFor="let skill of skills;let i=index" class="industry" style="max-width:100% !important;padding:0 1em 0; display: flex">
+              <div class="industryName" style="width:50vw; color: #999999; font-weight: 500" >{{skill.skill}} </div> 
+              <ion-icon class="item-remove" name="close" (click)="removeHobby(i)" style="margin-left: 35vw"></ion-icon>
+            </div>
+          </div>
+        </ion-item>
+      </div>
     </div>
+    
     
     <ion-item class="onboarding-range">
       <ion-range step="1" [(ngModel)]="rangeVal" color="primary" pin="true">

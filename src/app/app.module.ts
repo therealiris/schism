@@ -23,7 +23,14 @@ import { PlannerTwo } from '../pages/planner2/plannerTwo'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Feedback } from '../pages/feedback/feedback';
-
+import { LoginPage } from '../pages/login/login';
+import { UploadPic } from '../pages/uploadPic/uploadPic';
+import { File } from '@ionic-native/file';
+import { Transfer } from '@ionic-native/transfer';
+import { FilePath } from '@ionic-native/file-path';
+import { Camera } from '@ionic-native/camera';
+import { LocalNotifications } from '@ionic-native/local-notifications';
+import { Push } from '@ionic-native/push';
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -48,7 +55,9 @@ const cloudSettings: CloudSettings = {
     PlannerOne,
     PlannerTwo,
     Profile,
-    Feedback
+    Feedback,
+    LoginPage,
+    UploadPic
   ],
   imports: [
     BrowserModule,
@@ -74,13 +83,22 @@ const cloudSettings: CloudSettings = {
     PlannerOne,
     PlannerTwo,
     Profile,
-    Feedback
+    Feedback,
+    LoginPage,
+    UploadPic
 
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Push,
+    File,
+    Transfer,
+    Camera,
+    FilePath,
+    LocalNotifications,    
     {provide: ErrorHandler, useClass: IonicErrorHandler}
+    
   ]
 })
 export class AppModule {}
