@@ -59,7 +59,7 @@ router.get('/discover', function(req, res, next) {
 			dontFind = dontFind.concat(user[0].requests)
 			dontFind = dontFind.concat(user[0].requested)
 			console.log(user[0], dontFind)
-			db.users.find({"uid":{"$nin":dontFind}},{"fullName":1,"headline":1,"pictureUrl":1,"score":1,"rating":1,"uid":1, "designation":1, "currentWorkplace":1,"lastLoginLocation":1}).limit(10).toArray(function(err,users){
+			db.users.find({"uid":{"$nin":dontFind}},{"fullName":1,"headline":1,"pictureUrl":1,"score":1,"rating":1,"uid":1, "designation":1, "skills":1 ,"currentWorkplace":1,"lastLoginLocation":1}).limit(10).toArray(function(err,users){
 				if(!err)
 					res.send(users)
 			})
@@ -111,18 +111,19 @@ router.put("/request",function(req,res){
 			db.users.find({"uid":req.body.id},{"pushId":1}).toArray(function(err,user){
 				if(!err)
 					{
-					let pushId = user[0].pushId,
-					notification = { "notification": {
-									    "title": "New Connection Request",
-									    "body": req.body.fullName+ " wants to connect with you",
-									    "sound":"default"
-									  },
-									  "to" : pushId
-									},
-					pushHeader = {"Authorization":pushKey}
-					axios.post("https://fcm.googleapis.com/fcm/send",notification,{"headers":pushHeader}).then(res=>{
-						console.log("Pushed Notification")
-					})
+					sendPush(user[0].pushId, 1, {"fullName":req.body.fullName} )
+					// let pushId = user[0].pushId,
+					// notification = { "notification": {
+					// 				    "title": "New Connection Request",
+					// 				    "body": req.body.fullName+ " wants to connect with you",
+					// 				    "sound":"default"
+					// 				  },
+					// 				  "to" : pushId
+					// 				},
+					// pushHeader = {"Authorization":pushKey}
+					// axios.post("https://fcm.googleapis.com/fcm/send",notification,{"headers":pushHeader}).then(res=>{
+					// 	console.log("Pushed Notification")
+					// })
 				}
 			})
 			
@@ -181,6 +182,27 @@ router.get("/connections",function(req,res){
 			}
 	})
 })
+router.post("/acceptMeeting",function(req,res){
+	db.users.update({"uid":req.body.uid},{"$push":{"events":req.body.eventObject},"$pull":{"notifications":{"notificationId":req.body.eventObject.eventId}}},function(err,result){
+		if(!err){
+			db.users.update({"uid":req.body.eventObject.with.uid,"events.eventId":req.body.eventObject.eventId},{"$set":{"events.$.pending":false}},function(err,result){
+				res.send({"status":1})
+			})
+			
+		}
+	})
+
+})
+router.post("/rejectMeeting",function(req,res){
+	db.users.update({"uid":req.body.uid},{"$pull":{"notifications":{"notificationId":req.body.eventObject.eventId}}},function(err,result){
+		if(!err){
+			db.users.update({"uid":req.body.eventObject.with.uid},{"$pull":{"events":{"eventId":req.body.eventObject.eventId}}},function(err,result){
+				res.send({"status":1})
+			})
+			
+		}
+	})
+})
 router.post("/acceptConnect",function(req,res){
 	var uid = req.body.uid
 	var acceptId = req.body.acceptId
@@ -212,7 +234,7 @@ router.post("/rejectConnect",function(req,res){
 		{"$pull":{"requests":rejectId,"notifications":{"uid":rejectId}}},
 		function(err,response){
 				if(!err)
-					db.users.update({"uid":acceptId},
+					db.users.update({"uid":rejectId},
 					{
 						"$pull":{"requested":uid}
 					},function(err, response){
@@ -223,8 +245,9 @@ router.post("/rejectConnect",function(req,res){
 			})
 })
 router.post("/events", function(req,res){
-
-	var uid = req.body.uid, eventObject = req.body.event
+	console.log(req.body)
+	var uid = req.body.uid, eventObject = req.body.event, eventId = (+new Date).toString(36)
+	eventObject.eventId = eventId
 	db.users.update({"uid":uid},{"$push":{"events":eventObject}},function(err, result){
 		if(!err){
 			db.users.find({"uid":uid},{"uid":1,"fullName":1,"pictureUrl":1}).toArray(function(err,user){
@@ -233,10 +256,15 @@ router.post("/events", function(req,res){
 					console.log(withObject)
 					var withUser = eventObject.with.uid
 					eventObject.with = withObject
-					db.users.update({"uid":withUser},{"$push":{"notifications":{"type":2,"notificationId":(+new Date).toString(36), "eventObject":eventObject}}}, function(err,result){
+					db.users.update({"uid":withUser},{"$push":{"notifications":{"type":2,"notificationId":eventId, "eventObject":eventObject}}}, function(err,result){
 						if(!err)
 							res.send({"status":1})
 					})
+					db.users.find({"uid":withUser},{"pushId":1}).toArray(function(err,send){
+						if(!err)
+							sendPush(send[0].pushId, 2, {"fullName":withObject.fullName,"eventType":eventObject.type} )
+					})
+					
 				}
 			})
 		}
@@ -282,4 +310,28 @@ router.post("/updatePushRegistration",function(req,res){
 	else
 		res.send({status:-1})
 })
+function sendPush(pushId, notificationType, notificationDetail ){
+	let message = "",title=""
+
+	if(notificationType === 1){
+		title = "New Connection Request"
+		message = notificationDetail.fullName + " wants to connect with you"
+	}
+	if(notificationType === 2){
+		title = "New Meeting Request"
+		message = notificationDetail.fullName + " has scheduled a " + notificationDetail.eventType + " with you"
+	}
+	let pushKey = "key=AAAA9fMhVWc:APA91bE6AqkJnpwmMWEbU0vf6WB21OsGlSQTPPDuglRa0Y2XL0IF_NEa07ZZ_ASbUYcSnK4IJ1OtHSk3x3p9_KbHw7_z3sd0QuAkaS5Lo9m-XDRHuo5iVFvlo8iFxVlpuW4WJVJDFw_Y"
+	let notification = { "notification": {
+					    "title": title,
+					    "body": message,
+					    "sound":"default"
+					  },
+					  "to" : pushId
+					},
+	pushHeader = {"Authorization":pushKey}
+	axios.post("https://fcm.googleapis.com/fcm/send",notification,{"headers":pushHeader}).then(res=>{
+		console.log("Pushed Notification")
+	})
+}
 module.exports = router;
