@@ -71,22 +71,22 @@
   </ion-list>
 
   <ion-list *ngSwitchCase="'meetings'">
-    <ion-item style="border-bottom-style: solid;border-bottom-width: thin;border-bottom-color: #dadada">
+    <ion-item *ngFor="let meeting of meetings; let i=index" style="border-bottom-style: solid;border-bottom-width: thin;border-bottom-color: #dadada">
       <div>
         <ion-avatar item-start style="display: flex!important;">
-          <img src="../../assets/img/faces/ash.jpg">
+          <img src="{{meeting.eventObject.with.pictureUrl}}">
           <div style="width: 80vw; margin-left: 2vw">
-            <span style="padding: 8px 0;white-space: normal;text-align: right; font-size: 12px; color:#666">Anubhav Satpathy has scheduled a call with you at 12:45 PM, Sunday</span>
+            <span style="padding: 8px 0;white-space: normal;text-align: right; font-size: 12px; color:#666">{{meeting.eventObject.with.fullName}} has scheduled a {{meeting.eventObject.type}} with you on {{meeting.eventObject.from}}</span>
              <div>
               <div class="accept-notification" >
-                <span (click)="acceptConnect($event)" [attr.data-uid]="notification.uid" [attr.data-index]="i">Accept</span>
+                <span (click)="acceptMeeting($event)" [attr.data-uid]="meeting.notificationId" [attr.data-index]="i">Accept</span>
               </div>
               <div class="remove-notification" >
-                <span (click)="rejectConnect($event)" [attr.data-uid]="notification.uid" [attr.data-index]="i">Reject</span>
+                <span (click)="rejectMeeting($event)" [attr.data-uid]="meeting.notificationId" [attr.data-index]="i">Reject</span>
               </div>
-              <div class="remove-notification" >
-                <span (click)="rejectConnect($event)" [attr.data-uid]="notification.uid" [attr.data-index]="i">Reschedule</span>
-              </div>
+              <!-- <div class="remove-notification" >
+                <span (click)="rescheduleMeeting($event)" [attr.data-uid]="meeting.notificationId" [attr.data-index]="i">Reschedule</span>
+              </div> -->
             </div>
           </div>
         </ion-avatar>

@@ -165,7 +165,7 @@ uploadFirebase(){
      let pictureUrl = "https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/"+filename+".jpg?alt=media"
      this.appUser.pictureUrl = pictureUrl
      loading.dismiss()
-     this.navCtrl.push(OnboardingOne, this.appUser)
+     this.navCtrl.push(OnboardingOne, this.appUser, { animate: true, direction: 'forward' })
     });
 }
 }

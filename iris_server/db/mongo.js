@@ -14,7 +14,7 @@ var userDb;
 MongoClient.connect(url, function(err, database) {
 
   assert.equal(null, err);
-  exports.users = database.collection('iris_users')
+  exports.users = database.collection('users')
   console.log("Connected successfully to server");
   // database.close();
 });

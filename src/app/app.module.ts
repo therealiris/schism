@@ -31,6 +31,7 @@ import { FilePath } from '@ionic-native/file-path';
 import { Camera } from '@ionic-native/camera';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { Push } from '@ionic-native/push';
+import { Ionic2RatingModule } from 'ionic2-rating';
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -61,6 +62,7 @@ const cloudSettings: CloudSettings = {
   ],
   imports: [
     BrowserModule,
+    Ionic2RatingModule,
     IonicModule.forRoot(MyApp),
     CloudModule.forRoot(cloudSettings),
     IonicStorageModule.forRoot(),

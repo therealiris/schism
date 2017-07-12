@@ -7,7 +7,9 @@ import 'rxjs/add/operator/map';
 
   See https://angular.io/docs/ts/latest/guide/dependency-injection.html
   for more info on providers and Angular 2 DI.
+
 */
+const apiUrl = "http://139.162.5.76:9003"
 @Injectable()
 export class PeopleService {
 
@@ -16,7 +18,7 @@ export class PeopleService {
   }
 
   sendData(userObject, callback){
-  	this.http.post('http://192.168.1.5:9003/users/data',userObject)  
+  	this.http.post(apiUrl+'/users/data',userObject)  
   	.map(response => response.json())
     .subscribe( response => {
      console.log(response)	
@@ -25,7 +27,7 @@ export class PeopleService {
   }
 
   discover(uid, callback){
-  	this.http.get('http://192.168.1.5:9003/users/discover?uid='+uid)
+  	this.http.get(apiUrl+'/users/discover?uid='+uid)
   	.map(response => response.json())
     .subscribe( response => {
      console.log(response)	
@@ -42,7 +44,7 @@ export class PeopleService {
       "headline":sender.designation +" at "+sender.currentWorkplace,
       "reason": reason
     }
-    this.http.put('http://192.168.1.5:9003/users/request',requestObject)
+    this.http.put(apiUrl+'/users/request',requestObject)
     .map(response => response.json())
     .subscribe( response => {
      console.log(response)  
@@ -50,7 +52,7 @@ export class PeopleService {
     });
   }
   updateCurrentUser(uid, callback){
-    this.http.get('http://192.168.1.5:9003/users/user?uid='+uid)
+    this.http.get(apiUrl+'/users/user?uid='+uid)
     .map(response => response.json())
     .subscribe( response => {
      console.log(response)  
@@ -58,7 +60,7 @@ export class PeopleService {
     });
   }
   getNotifications(uid, callback){
-    this.http.get('http://192.168.1.5:9003/users/notifications?uid='+uid)
+    this.http.get(apiUrl+'/users/notifications?uid='+uid)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
@@ -66,7 +68,32 @@ export class PeopleService {
   }
   acceptConnect(uid,acceptId,callback){
     var acceptObject={"uid":uid,"acceptId":acceptId}
-    this.http.post('http://192.168.1.5:9003/users/acceptConnect',acceptObject)
+    this.http.post(apiUrl+'/users/acceptConnect',acceptObject)
+    .map(response => response.json())
+    .subscribe( response => {
+     console.log(response)  
+     callback(response);
+    });
+  }
+  rejectConnect(uid,rejectId,callback){
+    var rejectObject={"uid":uid,"rejectId":rejectId}
+    this.http.post(apiUrl+'/users/rejectConnect',rejectObject)
+    .map(response => response.json())
+    .subscribe( response => {
+     console.log(response)  
+     callback(response);
+    });
+  }
+  acceptMeeting(acceptObject,callback){
+    this.http.post(apiUrl+'/users/acceptMeeting',acceptObject)
+    .map(response => response.json())
+    .subscribe( response => {
+     console.log(response)  
+     callback(response);
+    });
+  }
+  rejectMeeting(rejectObject,callback){
+    this.http.post(apiUrl+'/users/rejectMeeting',rejectObject)
     .map(response => response.json())
     .subscribe( response => {
      console.log(response)  
@@ -74,7 +101,7 @@ export class PeopleService {
     });
   }
   getConnections(uid,callback){
-    this.http.get('http://192.168.1.5:9003/users/connections?uid='+uid)
+    this.http.get(apiUrl+'/users/connections?uid='+uid)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
@@ -82,7 +109,7 @@ export class PeopleService {
   }
   updateLocation(uid,location,callback){
     let updateObject = {"uid":uid,"location":location}
-    this.http.put('http://192.168.1.5:9003/users/updateLocation',updateObject)
+    this.http.put(apiUrl+'/users/updateLocation',updateObject)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
@@ -90,21 +117,21 @@ export class PeopleService {
   }
   updateChatId(uid,chatid,callback){
     let updateObject = {"uid":uid,"chatid":chatid}
-    this.http.put('http://192.168.1.5:9003/users/chatId',updateObject)
+    this.http.put(apiUrl+'/users/chatId',updateObject)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
     });
   }
   getChatId(uid,callback){
-    this.http.get('http://192.168.1.5:9003/users/chatId?uid='+uid)
+    this.http.get(apiUrl+'/users/chatId?uid='+uid)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
     });
   }
   getEvents(uid,callback){
-    this.http.get('http://192.168.1.5:9003/users/events?uid='+uid)
+    this.http.get(apiUrl+'/users/events?uid='+uid)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
@@ -112,7 +139,7 @@ export class PeopleService {
   }
 
   pushEvent(meetingObject,callback){
-    this.http.post('http://192.168.1.5:9003/users/events',meetingObject)
+    this.http.post(apiUrl+'/users/events',meetingObject)
     .map(response => response.json())
     .subscribe( response => {
      console.log(response)  
@@ -120,14 +147,14 @@ export class PeopleService {
     });
   }
   sendOtp(number,otp,callback){
-    this.http.get('http://192.168.1.5:9003/users/otp?phone='+number+'&otp='+otp)
+    this.http.get(apiUrl+'/users/otp?phone='+number+'&otp='+otp)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);
     });
   }
   updatePushRegistration(key,callback){
-    this.http.post("http://192.168.1.5:9003/users/updatePushRegistration",key)
+    this.http.post(apiUrl+'/users/updatePushRegistration',key)
     .map(response=>response.json())
     .subscribe(response=>{
       callback(response);

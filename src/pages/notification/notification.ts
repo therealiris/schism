@@ -51,9 +51,34 @@ export class NotificationPage {
   }
   rejectConnect(e){
     let index = e.target.dataset.index
-    let uid = e.target.dataset.uid
-    this.requests.splice(index,1)
+    let rejectId = e.target.dataset.uid
+    this.people.rejectConnect(this.uid,rejectId,(response)=>{
+      if(response.status==1)
+        this.requests.splice(index,1)
+    })
     console.log("remove"+e.target.dataset.uid)
+  }
+  acceptMeeting(e){
+    let index = e.target.dataset.index
+    this.meetings[index].eventObject.pending = false
+    let acceptObject = {"uid":this.uid,"eventObject":this.meetings[index].eventObject}
+
+    this.people.acceptMeeting(acceptObject,(response)=>{
+      if(response.status==1)
+        this.meetings.splice(index,1)
+    })
+  }
+  rejectMeeting(e){
+    let index = e.target.dataset.index
+    let rejectObject = {"uid":this.uid,"eventObject":this.meetings[index].eventObject}
+
+    this.people.rejectMeeting(rejectObject,(response)=>{
+      if(response.status==1)
+        this.meetings.splice(index,1)
+    })
+  }
+  rescheduleMeeting(e){
+
   }
   dismiss(){
     this.navCtrl.popToRoot()

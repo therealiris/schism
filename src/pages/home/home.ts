@@ -39,11 +39,12 @@ export class HomePage {
     "pushId":"",
     "rating":0,
     "ranking":0,
-    "score":0
+    "score":0,
+    "pendingRatings":[]
     }
   }
   login(){
-    this.navCtrl.push(LoginPage,this.appUser)
+    this.navCtrl.push(LoginPage,this.appUser,{ animate: true, direction: 'forward' })
     // this.auth.login('linkedin').then(()=>{
    //    this.appUser.fullName = this.user.social.linkedin.data.full_name;
    //    this.appUser.pictureUrl = this.user.social.linkedin.data.profile_picture;

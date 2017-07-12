@@ -1,4 +1,18 @@
-
+rating{
+	ul {
+  padding: 0px;
+ 
+  &.rating li {
+    padding: 5px 5px !important;
+    background: none;
+    color: #ffb400;
+ 
+    ion-icon {
+      font-size: 1.3em;
+    }
+  }
+}
+}
 
 @font-face {
   font-family: "Roboto";
@@ -37,7 +51,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74cbfd', end
 	display: inline;
     height: 20vh !important;
     border-radius: 50%;
-    margin: 4vh;
+    margin: 2vh 0 0;
 }
 .card-content{
 	padding:0 !important;

@@ -17,7 +17,7 @@
     <span *ngIf="showPoints"> +2 Points</span> 
   </div>
   <ion-slides class="dsc-slides" (ionSlideDidChange)="slideChanged()">
-    <ion-slide *ngFor="let item of items" class="iris-slide">
+    <ion-slide *ngFor="let item of items; let i=index" class="iris-slide">
       <ion-card class="discover-card">
         <ion-card-content>
           <div class="discover-thumb">
@@ -27,21 +27,16 @@
             {{item.fullName}}
             </ion-card-title>
           <p class="headline">
-            {{item.designation}} at {{item.currentWorkplace}},
+            {{item.designation}} at {{item.currentWorkplace}}
           </p>
           <p class="headline">
             {{item.distance}} km away.
           </p>
-          <div class="rating" data-rating="1">
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
+          <rating [(ngModel)]='rate[i]' readOnly="false"></rating>
+          <div style="width:80%;margin-left: 10%;padding-bottom: 1em">
+            <div *ngFor="let skillItem of item.skills" style="border-radius: 30px;display: inline-block;color: #656565;padding: 2px 7px;margin:2px; font-size:12px;background: #dadada;">{{skillItem.skill}}</div>
           </div>
-          <p class="hobbies">
-           <ion-icon name="md-thumbs-up" class="hobbies"></ion-icon> 3 Skills
-          </p>
+          
         </ion-card-content>
       </ion-card>
     </ion-slide>

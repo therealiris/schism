@@ -39,8 +39,8 @@
     </ion-select>
   </ion-item>
   <ion-item *ngIf="allow">
-      <ion-label stacked>Message</ion-label>
-      <ion-input type="text" [(ngModel)]="reasonMessage"></ion-input>
+      <ion-label stacked>Your message here..</ion-label>
+      <ion-input type="text" [(ngModel)]="reasonMessage" ></ion-input>
     </ion-item>
   <div class="request-btn">
     <button ion-button round (click)="cancel()" class="requestBtn">Cancel</button>

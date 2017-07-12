@@ -22,10 +22,11 @@ export class DiscoverPage {
   currentIndex: number;
   isConnected : boolean;
   lat: number;
-  long: number
+  long: number;
+  rate : number[]
   constructor(public navCtrl: NavController,public loadingCtrl: LoadingController, public navParams: NavParams,public people: PeopleService,public storage:Storage) {
     this.currentIndex = 0
-    
+    this.rate = []
     // If we navigated to this page, we will have an item available as a nav param
     this.showPoints = false
     let loading = this.loadingCtrl.create({
@@ -33,6 +34,7 @@ export class DiscoverPage {
         content: 'Loading profiles..'
       });
     loading.present()
+
     storage.ready().then(()=>{
       storage.get('currentUser').then((data)=>{
         if(data!=null)
@@ -51,12 +53,19 @@ export class DiscoverPage {
                 people.discover(this.user.uid, (discoverList)=>{
                   this.items = discoverList
                   for(var i=0;i<this.items.length;i++){
+                    var totalRating = 0
+                    this.items[i].skills.forEach(skill=>{
+                      totalRating+=skill.rating
+                    })
+                    var avgRating = totalRating/this.items[i].skills.length
+                    this.rate.push(avgRating)
                     var locationArr = this.items[i].lastLoginLocation.split(",")
                     var distance = this.getDistanceFromLatLonInKm(this.lat,this.long, parseFloat(locationArr[0]),parseFloat(locationArr[1]))
                     var numDist  = distance.toFixed(2)
                     this.items[i].distance = numDist
                   }
                   loading.dismiss();
+                  console.log(this.rate)
                 })
               }).catch((error) => {
                 alert("error in locating")

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams,LoadingController } from 'ionic-angular';
 import { PeopleService } from '../../providers/people-service'
 import { Storage } from '@ionic/storage';
 import { DiscoverPage } from '../discover/discover'
@@ -19,21 +19,33 @@ export class LoginPage {
   smses : any;
   otpField: any;
   appUser :any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public people : PeopleService, public storage: Storage) {
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController,public navParams: NavParams, public people : PeopleService, public storage: Storage) {
     this.numberSent = false;
     this.appUser = this.navParams.data
     // console.log(this.appUser)
   }
   sendNumber(){
+    let loading = this.loadingCtrl.create({
+        spinner:"crescent",
+        content: 'Sending OTP to your phone..'
+      });
+    loading.present()
     this.otp = Math.floor(1000 + Math.random() * 9000)
     this.people.sendOtp(this.phone, this.otp, (response)=>{
       if(null!=response){
         this.numberSent = true;
+        loading.dismiss()
       }
     })
   }
   validate(){
+    let loading = this.loadingCtrl.create({
+        spinner:"crescent",
+        content: 'Validating OTP..'
+      });
+    loading.present()
     if(this.otpField.toString()===this.otp.toString()){
+      loading.dismiss()
        this.appUser.uid = md5(this.phone)
        this.people.updateCurrentUser(this.appUser.uid,(response)=>{ 
         if(response.status===1){
@@ -48,7 +60,7 @@ export class LoginPage {
           this.storage.ready().then(()=>{
             //create a new user object locally
             this.storage.set('currentUser',JSON.stringify(this.appUser))
-            this.navCtrl.push(UploadPic, this.appUser);
+            this.navCtrl.push(UploadPic, this.appUser, { animate: true, direction: 'forward' });
           })
         }  
       })
