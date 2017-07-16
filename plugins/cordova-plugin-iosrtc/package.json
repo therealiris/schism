@@ -1,0 +1,120 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-iosrtc@^3.2.2",
+        "scope": null,
+        "escapedName": "cordova-plugin-iosrtc",
+        "name": "cordova-plugin-iosrtc",
+        "rawSpec": "^3.2.2",
+        "spec": ">=3.2.2 <4.0.0",
+        "type": "range"
+      },
+      "/Users/sidharth/Documents/Dev/irisapp/node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-iosrtc@>=3.2.2 <4.0.0",
+  "_id": "cordova-plugin-iosrtc@3.2.2",
+  "_inCache": true,
+  "_location": "/cordova-plugin-iosrtc",
+  "_nodeVersion": "4.6.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-iosrtc-3.2.2.tgz_1481888448063_0.09037553449161351"
+  },
+  "_npmUser": {
+    "name": "saghul",
+    "email": "saghul@gmail.com"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-iosrtc@^3.2.2",
+    "scope": null,
+    "escapedName": "cordova-plugin-iosrtc",
+    "name": "cordova-plugin-iosrtc",
+    "rawSpec": "^3.2.2",
+    "spec": ">=3.2.2 <4.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-iosrtc/-/cordova-plugin-iosrtc-3.2.2.tgz",
+  "_shasum": "ab8cb565072b21ddffa4ea3dca6a6f49edd7c842",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-iosrtc@^3.2.2",
+  "_where": "/Users/sidharth/Documents/Dev/irisapp/node_modules",
+  "author": {
+    "name": "Iñaki Baz Castillo at eFace2Face, inc.",
+    "url": "https://eface2face.com"
+  },
+  "bugs": {
+    "url": "https://github.com/eface2face/cordova-plugin-iosrtc/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-iosrtc",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "domready": "^1.0.8",
+    "random-number": "^0.0.7",
+    "yaeti": "^0.0.6"
+  },
+  "description": "Cordova iOS plugin exposing the full WebRTC W3C JavaScript APIs",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "gulp": "git+https://github.com/gulpjs/gulp.git#4.0",
+    "gulp-header": "^1.8.7",
+    "gulp-jscs": "^4.0.0",
+    "gulp-jscs-stylish": "^1.4.0",
+    "gulp-jshint": "^2.0.1",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "~2.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "ab8cb565072b21ddffa4ea3dca6a6f49edd7c842",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-iosrtc/-/cordova-plugin-iosrtc-3.2.2.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova-ios",
+      "version": ">=3.8.0"
+    }
+  ],
+  "gitHead": "cc12b89de3c4ea8fc13f968d6f85293d7205f710",
+  "homepage": "https://github.com/eface2face/cordova-plugin-iosrtc",
+  "keywords": [
+    "ecosystem:cordova",
+    "webrtc",
+    "ios"
+  ],
+  "license": "MIT",
+  "main": "js/iosrtc.js",
+  "maintainers": [
+    {
+      "name": "ibc",
+      "email": "ibc@aliax.net"
+    },
+    {
+      "name": "saghul",
+      "email": "saghul@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-iosrtc",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eface2face/cordova-plugin-iosrtc.git"
+  },
+  "scripts": {},
+  "version": "3.2.2"
+}

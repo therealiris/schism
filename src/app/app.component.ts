@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, ToastController } from 'ionic-angular';
+import { Nav, Platform, ToastController, ViewController, Events, NavController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
@@ -18,6 +18,12 @@ import { Storage } from '@ionic/storage';
 import Peer from "../../node_modules/peerjs/lib/peer";
 import { Push, PushObject, PushOptions } from '@ionic-native/push';
 import { PeopleService } from '../providers/people-service'
+import { ChatsPage } from '../pages';
+import { CallService, LoginService } from '../services';
+import { CallModalTrigger } from '../components';
+import * as moment from 'moment';
+
+declare var cordova:any;
 
 @Component({
   templateUrl: 'app.html',
@@ -28,19 +34,50 @@ export class MyApp {
   rootPage: any ;
   user : any;
   pages: Array<{title: string, component: any , iconName : string }>;
-  constructor(public people: PeopleService,public platform: Platform, public push: Push, public statusBar: StatusBar, public splashScreen: SplashScreen, private toastCtrl: ToastController, public storage:Storage) {
+  isInCall = false
+  constructor(callService: CallService, private loginService: LoginService, events: Events, callModal: CallModalTrigger,public people: PeopleService,public platform: Platform, public push: Push, public statusBar: StatusBar, public splashScreen: SplashScreen, private toastCtrl: ToastController, public storage:Storage) {
+    moment.locale('en', {
+      relativeTime: {
+        future: 'now',
+        past: '%s',
+        s: 'now',
+        m: '1 m',
+        mm: '%d m',
+        h: '1 h',
+        hh: '%d h',
+        d: '1 d',
+        dd: '%d d',
+        M: '1 m',
+        MM: '%d m',
+        y: '1 y',
+        yy: '%d y'
+      }
+    });
     this.initializeApp();
     this.user = {fullName:'',pictureUrl:''}
+    this.loginService.logout()
     storage.ready().then(()=>{
       storage.get('currentUser').then((data)=>{
         if(data!=null)
           {
-          this.rootPage = DiscoverPage
+          this.rootPage = ChatsPage
           this.user = JSON.parse(data)
           this.pushsetup();
+          this.loginService.login({"username":this.user.uid,"password":"apptoken"}).then(() => {
+            this.loginService.complete.then(user => {})
+          }, data => {
+              console.log(data);
+            });
         }
         else{
-          this.rootPage = HomePage
+          this.loginService.login({"username":"758118e811e19b9ee236d467838a977a","password":"apptoken"}).then(() => {
+            this.loginService.complete.then(user => {
+              this.nav.setRoot(ChatsPage,{})
+            })
+          }, data => {
+              console.log("1",data);
+            });
+          
           
 
         }
@@ -53,11 +90,15 @@ export class MyApp {
     this.pages = [
       { title: 'Discover', component: DiscoverPage, iconName:'ios-search-outline' },
       { title: 'Profile', component: Profile, iconName:'md-person' },
-      { title: 'My Connections', component: Connections, iconName:'ios-people-outline' },
+      { title: 'My Connections', component: ChatsPage, iconName:'ios-people-outline' },
       { title: 'Planner', component: Calendar, iconName:'ios-calendar-outline' },
       { title: 'Feedback', component: Feedback, iconName:'ios-settings' }
 
     ];
+    events.subscribe('call.status.isincall', status => {
+      console.debug('call status changed to ', status);
+      this.isInCall = status;
+    });
 
   }
 

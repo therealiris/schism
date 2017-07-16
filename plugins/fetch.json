@@ -152,5 +152,43 @@
         "variables": {
             "SENDER_ID": "1056346035559"
         }
+    },
+    "cordova-plugin-crosswalk-webview": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-crosswalk-webview@^2.3.0"
+        },
+        "is_top_level": true,
+        "variables": {
+            "XWALK_VERSION": "23+",
+            "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+            "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+            "XWALK_MODE": "embedded",
+            "XWALK_MULTIPLEAPK": "true"
+        }
+    },
+    "cordova-plugin-iosrtc": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-iosrtc@^3.2.2"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-nativeaudio": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-nativeaudio@^3.0.9"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-nativestorage": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-nativestorage@^2.1.0"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

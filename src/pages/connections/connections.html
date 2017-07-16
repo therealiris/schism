@@ -14,7 +14,6 @@
 <ion-content>
   <ion-searchbar (ionInput)="getItems($event)" class="conn-search"></ion-searchbar>
   <ion-list class="conn-list">
-  <div>{{id}}</div>
   <ion-item-sliding #item class="conn-slide" *ngFor="let connection of connections; let i=index" >
     <ion-item>
       <div class="conn-list-item">

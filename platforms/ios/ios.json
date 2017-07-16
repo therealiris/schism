@@ -75,6 +75,18 @@
                         {
                             "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"iosrtcPlugin\"><param name=\"ios-package\" value=\"iosrtcPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NativeAudio\"><param name=\"ios-package\" value=\"NativeAudio\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NativeStorage\"><param name=\"ios-package\" value=\"NativeStorage\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -205,6 +217,18 @@
         },
         "phonegap-plugin-push": {
             "SENDER_ID": "1056346035559",
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-iosrtc": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-nativeaudio": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-nativestorage": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
@@ -579,6 +603,40 @@
             "clobbers": [
                 "PushNotification"
             ]
+        },
+        {
+            "id": "cordova-plugin-iosrtc.Plugin",
+            "file": "plugins/cordova-plugin-iosrtc/dist/cordova-plugin-iosrtc.js",
+            "pluginId": "cordova-plugin-iosrtc",
+            "clobbers": [
+                "cordova.plugins.iosrtc"
+            ]
+        },
+        {
+            "id": "cordova-plugin-nativeaudio.nativeaudio",
+            "file": "plugins/cordova-plugin-nativeaudio/www/nativeaudio.js",
+            "pluginId": "cordova-plugin-nativeaudio",
+            "clobbers": [
+                "window.plugins.NativeAudio"
+            ]
+        },
+        {
+            "id": "cordova-plugin-nativestorage.mainHandle",
+            "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
+            "pluginId": "cordova-plugin-nativestorage",
+            "clobbers": [
+                "NativeStorage"
+            ]
+        },
+        {
+            "id": "cordova-plugin-nativestorage.LocalStorageHandle",
+            "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
+            "pluginId": "cordova-plugin-nativestorage"
+        },
+        {
+            "id": "cordova-plugin-nativestorage.NativeStorageError",
+            "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
+            "pluginId": "cordova-plugin-nativestorage"
         }
     ],
     "plugin_metadata": {
@@ -600,6 +658,10 @@
         "cordova-sqlite-storage": "2.0.4",
         "de.appplant.cordova.plugin.local-notification": "0.8.5",
         "ionic-plugin-keyboard": "2.2.1",
-        "phonegap-plugin-push": "1.10.3"
+        "phonegap-plugin-push": "1.10.3",
+        "cordova-plugin-crosswalk-webview": "2.3.0",
+        "cordova-plugin-iosrtc": "3.2.2",
+        "cordova-plugin-nativeaudio": "3.0.9",
+        "cordova-plugin-nativestorage": "2.2.2"
     }
 }

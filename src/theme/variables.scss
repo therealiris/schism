@@ -35,6 +35,100 @@ $colors: (
 .iris-header{
 	background: transparent
 }
+page-contacts {
+	.chat-list .item {
+		border: 0.5px solid rgba(150,150,150,.15);
+		border-left: none;
+		border-right: none;
+		border-top: none;
+	}
+}
+
+page-chats {
+	.chat-list .item {
+		border: 0.5px solid rgba(150,150,150,.15);
+		border-left: none;
+		border-right: none;
+		border-top: none;
+	}
+
+	.chat-list .item .last-time {
+		color: #888;
+	}
+}
+
+page-chat {
+	.chat-item p {
+		background: #ebeaf2;
+		color: #666;
+	}
+
+	.chat-to p {
+		background: #817ecc;
+		color: #fff;
+	}
+
+	.text-input {
+		background: #fff;
+	}
+}
+
+.message-bar .input-wrapper {
+	background: #fff;
+	border-radius: 6px;
+}
+
+.message-bar ion-toolbar {
+	padding: 12px;
+}
+
+.message-bar .item {
+	min-height: auto;
+}
+
+.message-bar input {
+	font-size: 0.8em;
+}
+
+modal-contact {
+	ion-content {
+		background: transparent !important;
+		background-color: transparent !important;
+	}
+
+	.contact-card {
+		background: #817ecb;
+		width: 90vw;
+		height: 400px;
+		max-width: 300px;
+		margin: 20vh auto 0;
+		text-align: center;
+		border-radius: 8px;
+		position: relative !important;
+		padding: 25px;
+	}
+
+	h2 {
+		color: #fff;
+	}
+
+	button.close {
+		color: #fff;
+	}
+}
+
+.md .modal-wrapper {
+	box-shadow: none;
+}
+
+page-chat {
+	.tail svg {
+		fill: #817ecb;
+	}
+	.chat-from .tail svg {
+		fill: #ebeaf2;
+	}
+}
 $text-input-highlight-color-valid: #fff;
 // App iOS Variables
 // --------------------------------------------------

@@ -122,4 +122,14 @@
     <feature name="PushNotification">
         <param name="ios-package" value="PushPlugin" />
     </feature>
+    <feature name="iosrtcPlugin">
+        <param name="ios-package" value="iosrtcPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="NativeAudio">
+        <param name="ios-package" value="NativeAudio" />
+    </feature>
+    <feature name="NativeStorage">
+        <param name="ios-package" value="NativeStorage" />
+    </feature>
 </widget>

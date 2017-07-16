@@ -1,10 +1,22 @@
 {
     "ImageIO.framework": 1,
-    "CoreLocation.framework": 2,
-    "AVFoundation.framework": 1,
+    "CoreLocation.framework": 3,
+    "AVFoundation.framework": 3,
     "MessageUI.framework": 1,
     "UserNotifications.framework": 1,
     "AddressBook.framework": 1,
     "libsqlite3.tbd": 1,
-    "libz.tbd": 1
+    "libz.tbd": 1,
+    "CoreMedia.framework": 1,
+    "GLKit.framework": 1,
+    "OpenGLES.framework": 1,
+    "CoreVideo.framework": 1,
+    "CoreAudio.framework": 1,
+    "QuartzCore.framework": 1,
+    "AudioToolbox.framework": 2,
+    "libc++.dylib": 1,
+    "libstdc++.dylib": 1,
+    "libsqlite3.0.dylib": 1,
+    "VideoToolbox.framework": 1,
+    "Foundation.framework": 1
 }

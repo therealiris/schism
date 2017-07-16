@@ -15,7 +15,7 @@ import { NotificationPage } from '../pages/notification/notification';
 import { IonicStorageModule } from '@ionic/storage';    
 import { HttpModule } from '@angular/http';
 import { PeopleService } from '../providers/people-service'
-import { ChatPage } from '../pages/chat/chat'
+// import { ChatPage } from '../pages/chat/chat'
 import { Calendar } from '../pages/calendar/calendar'
 import { Profile } from '../pages/profile/profile'
 import { PlannerOne } from '../pages/planner1/plannerOne'
@@ -32,6 +32,10 @@ import { Camera } from '@ionic-native/camera';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { Push } from '@ionic-native/push';
 import { Ionic2RatingModule } from 'ionic2-rating';
+import { ChatsPage, ChatPage, AccountPage, ContactsPage } from '../pages';
+import { CallModal, ContactModal, UserImage, CallModalTrigger, ContactAddModal, KeyboardAttach } from '../components';
+import { AttachmentService, AudioService, CallService, ChatService, ContactService, LoginService, SocketService, VideoService} from '../services';
+import { MomentModule } from 'angular2-moment';
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -58,7 +62,15 @@ const cloudSettings: CloudSettings = {
     Profile,
     Feedback,
     LoginPage,
-    UploadPic
+    UploadPic,
+    ChatsPage,
+    AccountPage,
+    CallModal,
+    ContactModal,
+    UserImage,
+    ContactsPage,
+    ContactAddModal,
+    KeyboardAttach
   ],
   imports: [
     BrowserModule,
@@ -66,7 +78,8 @@ const cloudSettings: CloudSettings = {
     IonicModule.forRoot(MyApp),
     CloudModule.forRoot(cloudSettings),
     IonicStorageModule.forRoot(),
-    HttpModule
+    HttpModule,
+    MomentModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -79,7 +92,6 @@ const cloudSettings: CloudSettings = {
     OnboardingThree,
     sendRequest,
     Connections,
-    ChatPage,
     NotificationPage,
     Calendar,
     PlannerOne,
@@ -87,10 +99,19 @@ const cloudSettings: CloudSettings = {
     Profile,
     Feedback,
     LoginPage,
-    UploadPic
+    UploadPic,
+    ChatsPage,
+    ChatPage,
+    AccountPage,
+    CallModal,
+    ContactModal,
+    UserImage,
+    ContactsPage,
+    ContactAddModal
 
   ],
   providers: [
+    AttachmentService, CallModalTrigger, LoginService, AudioService, SocketService, CallService, ContactService, VideoService, ChatService,
     StatusBar,
     SplashScreen,
     Push,
