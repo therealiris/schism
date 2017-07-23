@@ -1,5 +1,18 @@
-onboarding-two{
-	
+on-two{
+	.item-md{
+		font-size:0.8em;
+	}
+	.content{
+		background:#fff;
+	}
+	.toolbar-title{
+		color:#5e8af2;
+		font-weight:400;
+	}
+	.searchbar .searchbar-input{
+		color:#676767;
+		font-size:1em;
+	}	
 }
 .item-select{
 	padding-top:1em;
@@ -9,11 +22,11 @@ onboarding-two{
     display: -ms-flexbox;
     display: flex;
     border-radius: 26px;
-    background: #488aff;
+    background: #5e8af2;
     color: white;
     outline: none;
     font-size: 12px;
-    margin: 0 7vw;
+    margin: 0 1em;
 }
 .typeBox{
 	display:flex;
@@ -24,8 +37,9 @@ onboarding-two{
 	margin:0 !important;
 }
 .checkbox-md .checkbox-icon{
-	border:none;
-	background:#488aff;
+	border-style:thin;
+	border-color:#5e8af2;
+	border-radius:1em;
 }
 .industry{
 	max-width:80% !important;

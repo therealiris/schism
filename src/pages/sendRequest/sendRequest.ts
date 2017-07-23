@@ -46,7 +46,7 @@ export class sendRequest {
     
     this.people.sendRequest(this.user,this.item.uid, reasonString,(res)=>{
       if(res.status==1)
-        this.navCtrl.pop()
+        this.navCtrl.popToRoot()
     })
   }
 }

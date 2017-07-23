@@ -1,29 +1,19 @@
-
+<ion-header no-border>
+  <ion-navbar>
+    <ion-title>Select Skills</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="passSkills()">
+        <span style="color:#5e8af2;">Done</span>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 <ion-content>
-    <ion-item class="onboarding-thumb">
-      <div class="onboarding-thumb">
-        <img src="{{user.pictureUrl}}" class="onboard-pic">
-      </div>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Hobbies (Please add 3 hobbies/interests)</ion-label>
-      <ion-input type="text" (keypress) = "itemTapped($event)"></ion-input>
-    </ion-item>
-    <ion-item>
-      <div style="padding:1em 0">
-        <span *ngFor="let hobby of hobbies;let i=index" class="hobby">{{hobby}} 
-          <ion-icon class="item-remove" name="close" (click)="removeHobby(i)"></ion-icon>
-        </span>
-      </div>
-      
-    </ion-item>
-
-    <ion-item class="onboarding-range">
-      <ion-range step="1" [(ngModel)]="rangeVal" color="primary" pin="true"></ion-range>
-    </ion-item>
-    <div class="onboarding-next">
-      <button ion-button round right (click)="nextClick()">Next</button>
-    </div>
-  
-
+<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-list>
+  <ion-item *ngFor="let item of items">
+    <ion-label>{{item}}</ion-label>
+    <ion-checkbox (ionChange)="updateList(item, $event)" checked="filled[item]"></ion-checkbox>
+  </ion-item>
+</ion-list>
 </ion-content>

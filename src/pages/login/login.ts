@@ -47,6 +47,7 @@ export class LoginPage {
     if(this.otpField.toString()===this.otp.toString()){
       loading.dismiss()
        this.appUser.uid = md5(this.phone)
+       this.appUser.username = this.appUser.uid
        this.people.updateCurrentUser(this.appUser.uid,(response)=>{ 
         if(response.status===1){
           //if user already logged-in

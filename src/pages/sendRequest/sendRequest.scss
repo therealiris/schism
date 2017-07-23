@@ -1,4 +1,8 @@
-
+sendRequest{
+	.item{
+		padding: 1em 2em;
+	}
+}
 .request-card{
 	text-align:center;
 }
@@ -41,8 +45,8 @@ background: linear-gradient(to bottom, #00a9ff 0%,#2b6ad8 30%,#ffffff 30%,#fffff
 }
 .request-pic{
 	display:inline;
-	height: 20vh !important;
-    width: auto;
+	height: 11em !important;
+	width: 11em !important;
     padding: 1em;
     border-radius: 50%;
 }

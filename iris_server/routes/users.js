@@ -20,7 +20,79 @@ wss.on('connection', function connection(ws) {
 router.get('/', function(req, res, next) {
     res.send('respond with a resource');
 });
+router.post("/filterDiscover", function(req,res){
 
+    let industry = req.body.industry, skills = req.body.skills.map(sk=>{
+        return sk.skill
+    }),
+     type = req.body.type
+    let matchQuery = {}
+    let unwindQuery = {}
+    
+    if(industry.length>0)
+    {
+        let industryQuery = {"$in":industry}
+        matchQuery["industry"] = industryQuery
+    }
+    if(type.length>0)
+    {
+        let typeQuery = {"$in":type}
+        matchQuery["type"] = typeQuery
+    }
+    if(skills.length>0)
+    {
+        let skillQuery = {"$in":skills}
+        matchQuery["skills.skill"] = skillQuery
+        unwindQuery["$unwind"] = "$skills"
+        // console.log(JSON.stringify(unwindQuery),JSON.stringify(matchQuery))
+        db.users.aggregate(unwindQuery,{"$match":matchQuery},function(err, users){
+            let filteredUser = new Array()
+            users.forEach(user=>{
+                let discoverUser = {}
+                discoverUser = {
+                    "fullName": user.fullName,
+                    "headline": user.headline,
+                    "pictureUrl": user.pictureUrl,
+                    "score": user.score,
+                    "rating": user.rating,
+                    "uid": user.uid,
+                    "designation": user.designation,
+                    "skills": [user.skills],
+                    "currentWorkplace": user.currentWorkplace,
+                    "lastLoginLocation": user.lastLoginLocation
+                }
+                filteredUser.push(discoverUser)
+            })
+            res.send(filteredUser)
+        })
+    }
+    else
+    {
+        console.log(JSON.stringify(matchQuery))
+        db.users.aggregate({"$match":matchQuery},function(err, users){
+            let filteredUser = new Array()
+            users.forEach(user=>{
+                let discoverUser = {}
+                discoverUser = {
+                    "fullName": user.fullName,
+                    "headline": user.headline,
+                    "pictureUrl": user.pictureUrl,
+                    "score": user.score,
+                    "rating": user.rating,
+                    "uid": user.uid,
+                    "designation": user.designation,
+                    "skills": user.skills,
+                    "currentWorkplace": user.currentWorkplace,
+                    "lastLoginLocation": user.lastLoginLocation
+                }
+                filteredUser.push(discoverUser)
+            })
+            res.send(filteredUser)
+        })
+    }
+     
+
+})
 router.post('/data', function(req, res, next) {
     var userData = req.body
     console.log(userData.fullName)

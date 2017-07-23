@@ -20,9 +20,11 @@
         "@angular/platform-browser": "4.0.2",
         "@angular/platform-browser-dynamic": "4.0.2",
         "@angular/platform-server": "2.2.1",
+        "@ionic-native/android-permissions": "^4.0.1",
         "@ionic-native/camera": "^3.12.1",
         "@ionic-native/core": "^3.4.2",
         "@ionic-native/file-path": "^3.12.1",
+        "@ionic-native/file-transfer": "^4.0.1",
         "@ionic-native/local-notifications": "^3.12.1",
         "@ionic-native/push": "^3.13.1",
         "@ionic-native/sms": "^3.12.1",
@@ -39,6 +41,7 @@
         "axios": "^0.16.2",
         "cordova-android": "^6.2.3",
         "cordova-ios": "^4.4.0",
+        "cordova-plugin-android-permissions": "^1.0.0",
         "cordova-plugin-app-event": "file:node_modules/cordova-plugin-app-event",
         "cordova-plugin-camera": "^2.4.1",
         "cordova-plugin-compat": "^1.1.0",
@@ -62,6 +65,7 @@
         "de.appplant.cordova.plugin.local-notification": "^0.8.5",
         "express": "^4.14.1",
         "ionic-angular": "3.1.1",
+        "ionic-image-loader": "^4.1.1",
         "ionic-native": "2.4.1",
         "ionic-plugin-keyboard": "~2.2.1",
         "ionic2-rating": "^1.2.2",
@@ -138,7 +142,8 @@
             "cordova-plugin-file-transfer": {},
             "phonegap-plugin-push": {
                 "SENDER_ID": "1056346035559"
-            }
+            },
+            "cordova-plugin-android-permissions": {}
         },
         "platforms": [
             "android",

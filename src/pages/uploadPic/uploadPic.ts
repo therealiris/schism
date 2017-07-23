@@ -28,6 +28,7 @@ export class UploadPic {
     storageBucket: "iris-b029c.appspot.com",
     messagingSenderId: "1056346035559"
   }
+  console.log(this.lastImage)
 
       firebase.initializeApp(firebaseConfig);
   }
@@ -86,7 +87,7 @@ takePicture(sourceType) {
       this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
     }
   }, (err) => {
-    this.presentToast('Error while selecting image.');
+    this.presentToast('Unable to select picture. Try again');
   });
 }
 // Create a new name for the image
@@ -99,7 +100,6 @@ createFileName() {
 getBase64Image(img) {
     // Create an empty canvas element
     var canvas = document.createElement("canvas");
-    console.log(img.naturalWidth)
     canvas.width = img.width
     canvas.height = img.width;
 
@@ -112,7 +112,6 @@ getBase64Image(img) {
     // guess the original format, but be aware the using "image/jpg"
     // will re-encode the image.
     var dataURL = canvas.toDataURL("image/jpg");
-    console.log(dataURL)
     return dataURL
 }
 // Copy the image to a local folder
@@ -153,17 +152,15 @@ uploadFirebase(){
   let imageStr = this.getBase64Image(img)
   let storageRef = firebase.storage().ref();
   // Create a timestamp as filename
-  console.log(storageRef)
   const filename = Math.floor(Date.now() / 1000);
-
   // Create a reference to 'images/todays-date.jpg'
   const imageRef = storageRef.child(`${filename}.jpg`);
-  console.log(imageRef)
   imageRef.putString(imageStr, firebase.storage.StringFormat.DATA_URL).then((snapshot)=> {
      // Do something here when the data is succesfully uploaded!
      // alert("Set your profile picture successfully")
      let pictureUrl = "https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/"+filename+".jpg?alt=media"
      this.appUser.pictureUrl = pictureUrl
+     this.appUser.image = pictureUrl
      loading.dismiss()
      this.navCtrl.push(OnboardingOne, this.appUser, { animate: true, direction: 'forward' })
     });

@@ -21,8 +21,8 @@
 font-family: AppFont;
 src: url("../assets/fonts/Roboto-Regular.ttf");
 }
-.item-avatar{
-  background-color:rgba(87,125,215,1);;
+.item-avatar-menu{
+  background-color:rgba(87,125,215,1) !important;
   text-align:center;
   padding:1.5em;
   .avatar-pic{

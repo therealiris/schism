@@ -11,16 +11,71 @@ export class OnboardingTwo {
   searchQuery: string = '';
   selectedList: string[];
   filler : any
+  filled : any
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl:ViewController) {
     // If we navigated to this page, we will have an item available as a nav param
-    this.initializeItems();
-    this.selectedList = []
+    this.filled = {}
+    // this.selectedList = []
+    this.selectedList = this.navParams.data.list
     // this.filler = this.navParams.data.callback
-    console.log(this)
+    this.selectedList.forEach(item=>{
+      this.filled[item] = true
+    })
+    this.initializeItems();
   }
   initializeItems() {
-    this.items = ["Fashion","Information Technology","UI Design","UX Design","Language Technology",
-    "Hybrid Apps","Reactive WebApps","Cloud Services","Android Apps"]
+    this.items = [
+    "Automotive",
+    "Manufacturing",
+    "Consulting",
+    "Advisory Services",
+    "Assurance Services",
+    "Change and Sustainibility Services",
+    "Taxation Services",
+    "Transaction Services",
+    "Corporate Banking",
+    "Education & Training",
+    "Food & Beverage",
+    "Food Processing",
+    "Information Technology",
+    "Artificial Intelligence",
+    "Computer Hardware",
+    "Computer Software",
+    "E-Commerce",
+    "Game Development",
+    "Graphic Designer",
+    "Internet Services",
+    "Management Information Systems (MIS)",
+    "Mobile Applications",
+    "Network and Security",
+    "Technology Startup",
+    "Telecom Equipment",
+    "Testing and Quality Assurance",
+    "UI Design",
+    "UX Design",
+    "Web Design",
+    "Investment Banking",
+    "Legal",
+    "Media & Entertaintment",
+    "Oil & Gas ",
+    "Retail",
+    "Consumer Packaged Goods (CPG)",
+    "Jewelry",
+    "Designer Wear",
+    "Fashion and Apparel Wear",
+    "Fast Moving Consumer Goods (FMCG)",
+    "Retail Banking",
+    "Telecom",
+    "Human Resources",
+    "Real Estate",
+    "Architecture",
+    "Building and Construction",
+    "Interior Designer",
+    "Medicine",
+    "Pharmaceuticals",
+    "Insurance",
+    "Personal Finance"
+    ]
   }
   getItems(ev: any) {
     // Reset items back to all of the items
@@ -54,7 +109,7 @@ export class OnboardingTwo {
       }
     }
     
-      console.log(this.selectedList) 
+      // console.log(this.selectedList) 
     }
     passSkills(){
       this.viewCtrl.dismiss({"industryList":this.selectedList})

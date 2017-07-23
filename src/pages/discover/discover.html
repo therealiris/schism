@@ -13,15 +13,16 @@
 </ion-header>
 
 <ion-content>
-  <div class="points" style="height:3vh">
+  <!-- <div class="points" style="height:3vh">
     <span *ngIf="showPoints"> +2 Points</span> 
-  </div>
+  </div> -->
   <ion-slides class="dsc-slides" (ionSlideDidChange)="slideChanged()">
     <ion-slide *ngFor="let item of items; let i=index" class="iris-slide">
       <ion-card class="discover-card">
         <ion-card-content>
           <div class="discover-thumb">
-            <img src="{{item.pictureUrl}}" class="discover-pic">
+            <img src="{{item.pictureUrl}}" class="discover-pic" (load)="loaded = true" [ngClass]="{'img-loaded':loaded}" [hidden]="!loaded">
+            <ion-spinner [ngClass]="{'center':true}" *ngIf="!loaded" style="padding-top: 2em;"></ion-spinner>
           </div>
           <ion-card-title class="discover-title">
             {{item.fullName}}
@@ -32,7 +33,7 @@
           <p class="headline">
             {{item.distance}} km away.
           </p>
-          <rating [(ngModel)]='rate[i]' readOnly="false"></rating>
+          <rating [(ngModel)]='rate[i]' readOnly="true"></rating>
           <div style="width:80%;margin-left: 10%;padding-bottom: 1em">
             <div *ngFor="let skillItem of item.skills" style="border-radius: 30px;display: inline-block;color: #656565;padding: 2px 7px;margin:2px; font-size:12px;background: #dadada;">{{skillItem.skill}}</div>
           </div>
@@ -44,5 +45,13 @@
   <div class="connect-btn">
     <button ion-button round [disabled]=isConnected (click)="connect()">{{isConnected?'Request Sent':'Connect'}}</button>
   </div>
-  
+  <ion-fab right bottom #fab>
+     <button ion-fab color="primary" ><ion-icon [name]="filter?'ios-funnel':'search'"></ion-icon></button>
+     <ion-fab-list side="left" style="padding:1em 2em">
+      <button ion-fab color="primary" ><ion-icon name="search" (click)="clearFilter(fab)"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="top" style="padding:2em 1em">
+      <button ion-fab color="primary" ><ion-icon name="ios-funnel" (click)="search(fab)"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>

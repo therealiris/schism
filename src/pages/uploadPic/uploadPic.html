@@ -3,38 +3,20 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
  <ion-content padding>
     <div style="text-align: center;">
       <h3 style="color: #757572; font-size: 1em; font-weight: 200;" [hidden]="lastImage !== null">Upload your picture to build your profile</h3>
     </div>
-    <div style="width: 58%; border-radius: 49%;border-color: rgba(94, 138, 242, 0.25);border-width: thick;border-style: solid; margin:21%;height:30vh;overflow: hidden;">
+    <div style="width: 14em; border-radius: 49%;border-color: rgba(94, 138, 242, 0.25);margin:3em;border-width: thick;border-style: solid; height:14em;overflow: hidden;">
       <img id="userPic" src="{{lastImage?pathForImage(lastImage):'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/userDummy.png?alt=media'}}" (click)="presentActionSheet()">
-
     </div>
-     <span style="float: right;margin: -14vh 17vh;font-size: 20px; color: grey" (click)="presentActionSheet()"><ion-icon name="cloud-upload"></ion-icon></span>
   
   <div style="text-align: center;">
     <span style="color:red">*</span><span style="color: #757572; font-size: 1em; font-weight: 200;">Picture is mandatory</span>
   </div>
   <div class="onboarding-next" style="text-align: center; padding-top: 5em">
-      <button ion-button round (click)="uploadFirebase()">Next</button>
-    </div>
+    <button ion-button round (click)="uploadFirebase()" [disabled]="lastImage===null">Next</button>
+  </div>
 </ion-content>
  
-<!-- <ion-footer>
-  <ion-toolbar color="primary">
-  <div style="text-align: center;">
-    <ion-buttons >
-      <button ion-button icon-left (click)="presentActionSheet()">
-        <ion-icon name="camera"></ion-icon>Select Image
-      </button>
-      <button ion-button icon-left (click)="uploadFirebase()" [disabled]="lastImage === null">
-        <ion-icon name="cloud-upload"></ion-icon>Upload
-      </button>
-    </ion-buttons>
-  </div>
-    
-  </ion-toolbar>
-</ion-footer> -->
-</ion-content>
+

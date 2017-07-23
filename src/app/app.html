@@ -1,7 +1,7 @@
 <ion-menu [content]="content">
   <ion-content>
     <ion-list>
-      <div class="item item-avatar">
+      <div class="item item-avatar-menu">
         <img src="{{user.pictureUrl}}" class="avatar-pic">
         <!-- <ion-icon name="ios-create-outline" class="avatar-edit" (click)="getClicked()"></ion-icon> -->
         <p class="avatar-name">{{user.fullName}}</p>
@@ -11,6 +11,7 @@
         <button menuClose ion-item class="menu-button">
           <ion-icon name={{p.iconName}} class="menu-icon"></ion-icon>
           {{p.title}}
+          <span *ngIf = "p.title==='My Connections'" style="border-radius:10%; padding:0 8px; background:#11b8ff; color:#fff">4</span>
         </button>
       </ion-item>
     </ion-list>

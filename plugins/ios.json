@@ -73,6 +73,9 @@
         },
         "cordova-plugin-nativestorage": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-android-permissions": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
     "dependent_plugins": {

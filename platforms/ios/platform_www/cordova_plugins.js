@@ -403,6 +403,14 @@ module.exports = [
         "id": "cordova-plugin-nativestorage.NativeStorageError",
         "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
         "pluginId": "cordova-plugin-nativestorage"
+    },
+    {
+        "id": "cordova-plugin-android-permissions.Permissions",
+        "file": "plugins/cordova-plugin-android-permissions/www/permissions-dummy.js",
+        "pluginId": "cordova-plugin-android-permissions",
+        "clobbers": [
+            "cordova.plugins.permissions"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -430,7 +438,8 @@ module.exports.metadata =
     "cordova-plugin-crosswalk-webview": "2.3.0",
     "cordova-plugin-iosrtc": "3.2.2",
     "cordova-plugin-nativeaudio": "3.0.9",
-    "cordova-plugin-nativestorage": "2.2.2"
+    "cordova-plugin-nativestorage": "2.2.2",
+    "cordova-plugin-android-permissions": "1.0.0"
 };
 // BOTTOM OF METADATA
 });

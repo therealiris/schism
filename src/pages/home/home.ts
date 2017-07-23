@@ -18,13 +18,15 @@ export class HomePage {
   constructor(public navCtrl: NavController, public people: PeopleService, public auth: Auth, public user: User, public storage: Storage, public loadingCtrl: LoadingController) {
 
     this.appUser = {
-    "uid" : "", 
+    "uid" : "",
+    "username":"", 
     "email" : "", 
     "pictureUrl" : "",
+    "image":"",
     "fullName":"",
     "dob":"",
     "gender":"",
-    "type":"",
+    "type":[],
     "industry":[],
     "designation":"",
     "currentWorkplace":"",
@@ -40,6 +42,7 @@ export class HomePage {
     "rating":0,
     "ranking":0,
     "score":0,
+    "password":"",
     "pendingRatings":[]
     }
   }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, LoadingController,ModalController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController,ModalController, AlertController } from 'ionic-angular';
 import { OnboardingTwo } from '../onboarding2/on2';
+import { OnboardingThree } from '../onboarding3/on3';
 import { Storage } from '@ionic/storage';
 import { PeopleService } from '../../providers/people-service'
 
@@ -19,14 +20,14 @@ export class OnboardingOne {
   fullName:string;
   dob:string;
   email:string;
-  ent:any;
-  pr:any;
+  ent:boolean;
+  pr:boolean;
   designation:string;
   currentWorkplace:string;
   industry:any[] = [];
-  type:string;
+  type:string[];
   skills: any[] = [];
-  constructor(public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService, public loadingCtrl: LoadingController) {
+  constructor(public alertCtrl: AlertController, public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService, public loadingCtrl: LoadingController) {
     this.form = 'on1'
     this.rangeVal = 0
     this.skills = []
@@ -37,7 +38,7 @@ export class OnboardingOne {
     // "fullName":"",
     // "dob":"",
     // "gender":"",
-    // "type":"",
+    // "type":[],
     // "industry":[],
     // "designation":"",
     // "currentWorkplace":"",
@@ -53,26 +54,45 @@ export class OnboardingOne {
     // }
     
     this.user = this.navParams.data
-    console.log(this.user)
+    // console.log(this.user)
     // If we navigated to this page, we will have an item available as a nav param
 
     // Let's populate this page with some filler content for funzies
 
   }
- fillIndustry(data){
+ checkType(data){
 
    // let me = this
    // data.forEach((skill)=>{
    //   me.industry.push({"skill":skill,"rating":0})
    // })
-   console.log(data,this)
+   if(this.pr&&this.ent)
+     this.type = ["professional", "entrepreneur"]
+   else if(this.pr&&!this.ent)
+     this.type = ["professional"]
+   else if(this.ent&&!this.pr)
+     this.type= ["entrepreneur"]
+   else
+     this.type = []
+   // console.log(data, this.pr, this.ent)
+
   }
   selectIndustry(){
-    let industryModal = this.modalCtrl.create(OnboardingTwo);
+    let industryModal = this.modalCtrl.create(OnboardingTwo,{'list':this.industry});
     // this.navCtrl.push(OnboardingTwo, {callback:this.fillIndustry})
     industryModal.present()
     industryModal.onDidDismiss(data => {
      this.industry = data.industryList
+   });
+  }
+  selectSkills(){
+    let skillsModal = this.modalCtrl.create(OnboardingThree);
+    // this.navCtrl.push(OnboardingTwo, {callback:this.fillIndustry})
+    skillsModal.present()
+    skillsModal.onDidDismiss(data => {
+     data.skillsList.forEach(skill=>{
+       this.skills.push({"skill":skill,rating:0})
+     })
    });
   }
   itemTapped(event) {
@@ -82,7 +102,7 @@ export class OnboardingOne {
         {
           this.skills.push({skill:event.target.value,rating:0})
           event.target.value = ""
-          console.log(this.skills)
+          // console.log(this.skills)
         }
       else alert("You can add a maximum of three skills")
     }
@@ -97,7 +117,7 @@ export class OnboardingOne {
     setTimeout(() => {
       loading.dismiss();
       window.location.reload()
-    }, 2000);
+    }, 500);
     
   }
   removeHobby(index){
@@ -105,47 +125,85 @@ export class OnboardingOne {
     this.skills.splice(index,1)
   }
   removeIndustry(index){
-    console.log(index)
+    // console.log(index)
     this.industry.splice(index,1)
+  }
+  noChange(e){
+    if(this.form==='on1')
+      e.value = 0
+    if(this.form==='on2')
+      e.value = 40
+    if(this.form==='on3')
+      e.value = 80
   }
   nextClick(){
     if(this.form==='on1')
     {
-      this.user.fullName = this.fullName
-      this.user.dob = this.dob
-      this.user.gender = this.gender
-      this.user.email = this.email
-      this.form = 'on2'
-      this.rangeVal = 40
+      if(this.fullName&&this.dob&&this.gender&&this.email){
+        this.user.fullName = this.fullName
+        this.user.dob = this.dob
+        this.user.gender = this.gender
+        this.user.email = this.email
+        this.form = 'on2'
+        this.rangeVal = 40
+      }
+      else
+        alert("All fields are necessary for onboarding")
+
     }
     else if(this.form==='on2')
     {
-      this.user.designation = this.designation
-      this.user.industry = this.industry
-      this.user.type = this.ent?"entrepreneur":"professional"
-      this.user.designation = this.designation
-      this.user.currentWorkplace = this.currentWorkplace
-      this.form= 'on3'
-      this.rangeVal = 80 
+      if(this.designation&&this.industry.length>0&&this.type.length>0&&this.currentWorkplace){
+        this.user.designation = this.designation
+        this.user.industry = this.industry
+        this.user.type = this.type
+        this.user.currentWorkplace = this.currentWorkplace
+        this.form= 'on3' 
+        this.rangeVal = 80 
+      }
+      else
+        alert("All fields are necessary for onboarding")
     }
     else
       {
-        this.user.skills = this.skills
-        console.log(this.user)
-        this.people.sendData(this.user,(response)=>{
-          console.log(response)
-          this.storage.ready()
-          .then(()=>{
-            this.storage.set('currentUser',JSON.stringify(this.user))
-            this.presentLoadingDefault()
-          })
-        })
-        this.rangeVal = 100
+        if(this.skills.length>0){
+
+            this.user.skills = this.skills
+            this.rangeVal = 100
+            this.presentTerms()
+            // console.log(this.user)
+            
+          }
+          else alert("Please add atleast one skill")
       }
-    
-    // this.navCtrl.push(OnboardingTwo, {
-    //   item: 40,
-    //   userObject : JSON.stringify(this.user)
-    // });
+  }
+  presentTerms(){
+    let alert = this.alertCtrl.create({
+      title: 'Terms & Conditions',
+      message: "In these Website Standard Terms and Conditions, “Your Content” shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant Iris a non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.Your Content must be your own and must not be invading any third-party’s rights. Iris reserves the right to remove any of Your Content from this Website at any time without notice.",
+      buttons: [
+        {
+          text: 'Disagree',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Agree',
+          handler: () => {
+            this.people.sendData(this.user,(response)=>{
+              // console.log(response)
+              this.storage.ready()
+              .then(()=>{
+                this.storage.set('currentUser',JSON.stringify(this.user))
+                this.presentLoadingDefault()
+              })
+            })
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 }

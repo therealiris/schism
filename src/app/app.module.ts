@@ -16,6 +16,8 @@ import { IonicStorageModule } from '@ionic/storage';
 import { HttpModule } from '@angular/http';
 import { PeopleService } from '../providers/people-service'
 // import { ChatPage } from '../pages/chat/chat'
+import { FilterPage } from '../pages/filterPage/filter'
+
 import { Calendar } from '../pages/calendar/calendar'
 import { Profile } from '../pages/profile/profile'
 import { PlannerOne } from '../pages/planner1/plannerOne'
@@ -36,6 +38,7 @@ import { ChatsPage, ChatPage, AccountPage, ContactsPage } from '../pages';
 import { CallModal, ContactModal, UserImage, CallModalTrigger, ContactAddModal, KeyboardAttach } from '../components';
 import { AttachmentService, AudioService, CallService, ChatService, ContactService, LoginService, SocketService, VideoService} from '../services';
 import { MomentModule } from 'angular2-moment';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -70,7 +73,8 @@ const cloudSettings: CloudSettings = {
     UserImage,
     ContactsPage,
     ContactAddModal,
-    KeyboardAttach
+    KeyboardAttach,
+    FilterPage
   ],
   imports: [
     BrowserModule,
@@ -107,7 +111,8 @@ const cloudSettings: CloudSettings = {
     ContactModal,
     UserImage,
     ContactsPage,
-    ContactAddModal
+    ContactAddModal,
+    FilterPage
 
   ],
   providers: [
@@ -119,7 +124,8 @@ const cloudSettings: CloudSettings = {
     Transfer,
     Camera,
     FilePath,
-    LocalNotifications,    
+    LocalNotifications,
+    AndroidPermissions,    
     {provide: ErrorHandler, useClass: IonicErrorHandler}
     
   ]

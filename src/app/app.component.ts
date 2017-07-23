@@ -60,7 +60,7 @@ export class MyApp {
       storage.get('currentUser').then((data)=>{
         if(data!=null)
           {
-          this.rootPage = ChatsPage
+          this.rootPage = DiscoverPage
           this.user = JSON.parse(data)
           this.pushsetup();
           this.loginService.login({"username":this.user.uid,"password":"apptoken"}).then(() => {
@@ -70,13 +70,13 @@ export class MyApp {
             });
         }
         else{
-          this.loginService.login({"username":"758118e811e19b9ee236d467838a977a","password":"apptoken"}).then(() => {
-            this.loginService.complete.then(user => {
-              this.nav.setRoot(ChatsPage,{})
-            })
-          }, data => {
-              console.log("1",data);
-            });
+          this.rootPage = HomePage
+          // this.loginService.login({"username":"c0668107c590e75bb5c5361c6347e9a9","password":"apptoken"}).then(() => {
+          //   this.loginService.complete.then(user => {
+          //   })
+          // }, data => {
+          //     console.log("1",data);
+          //   });
           
           
 

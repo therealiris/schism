@@ -261,6 +261,32 @@ module.exports = [
         ]
     },
     {
+        "id": "cordova-plugin-nativeaudio.nativeaudio",
+        "file": "plugins/cordova-plugin-nativeaudio/www/nativeaudio.js",
+        "pluginId": "cordova-plugin-nativeaudio",
+        "clobbers": [
+            "window.plugins.NativeAudio"
+        ]
+    },
+    {
+        "id": "cordova-plugin-nativestorage.mainHandle",
+        "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
+        "pluginId": "cordova-plugin-nativestorage",
+        "clobbers": [
+            "NativeStorage"
+        ]
+    },
+    {
+        "id": "cordova-plugin-nativestorage.LocalStorageHandle",
+        "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
+        "pluginId": "cordova-plugin-nativestorage"
+    },
+    {
+        "id": "cordova-plugin-nativestorage.NativeStorageError",
+        "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
+        "pluginId": "cordova-plugin-nativestorage"
+    },
+    {
         "id": "cordova-plugin-sms-receiver.SmsReceiver",
         "file": "plugins/cordova-plugin-sms-receiver/www/SmsReceiver.js",
         "pluginId": "cordova-plugin-sms-receiver",
@@ -345,30 +371,12 @@ module.exports = [
         ]
     },
     {
-        "id": "cordova-plugin-nativeaudio.nativeaudio",
-        "file": "plugins/cordova-plugin-nativeaudio/www/nativeaudio.js",
-        "pluginId": "cordova-plugin-nativeaudio",
+        "id": "cordova-plugin-android-permissions.Permissions",
+        "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+        "pluginId": "cordova-plugin-android-permissions",
         "clobbers": [
-            "window.plugins.NativeAudio"
+            "cordova.plugins.permissions"
         ]
-    },
-    {
-        "id": "cordova-plugin-nativestorage.mainHandle",
-        "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
-        "pluginId": "cordova-plugin-nativestorage",
-        "clobbers": [
-            "NativeStorage"
-        ]
-    },
-    {
-        "id": "cordova-plugin-nativestorage.LocalStorageHandle",
-        "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
-        "pluginId": "cordova-plugin-nativestorage"
-    },
-    {
-        "id": "cordova-plugin-nativestorage.NativeStorageError",
-        "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
-        "pluginId": "cordova-plugin-nativestorage"
     }
 ];
 module.exports.metadata = 
@@ -378,12 +386,16 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-camera": "2.4.1",
     "cordova-plugin-console": "1.0.5",
+    "cordova-plugin-crosswalk-webview": "2.3.0",
     "cordova-plugin-device": "1.1.4",
     "cordova-plugin-file": "4.3.3",
     "cordova-plugin-file-transfer": "1.6.3",
     "cordova-plugin-filepath": "1.0.2",
     "cordova-plugin-geolocation": "2.4.3",
     "cordova-plugin-inappbrowser": "1.7.1",
+    "cordova-plugin-iosrtc": "3.2.2",
+    "cordova-plugin-nativeaudio": "3.0.9",
+    "cordova-plugin-nativestorage": "2.2.2",
     "cordova-plugin-sms-receiver": "0.1.6",
     "cordova-plugin-splashscreen": "4.0.2",
     "cordova-plugin-statusbar": "2.2.1",
@@ -393,10 +405,7 @@ module.exports.metadata =
     "de.appplant.cordova.plugin.local-notification": "0.8.5",
     "ionic-plugin-keyboard": "2.2.1",
     "phonegap-plugin-push": "1.10.3",
-    "cordova-plugin-crosswalk-webview": "2.3.0",
-    "cordova-plugin-iosrtc": "3.2.2",
-    "cordova-plugin-nativeaudio": "3.0.9",
-    "cordova-plugin-nativestorage": "2.2.2"
+    "cordova-plugin-android-permissions": "1.0.0"
 };
 // BOTTOM OF METADATA
 });

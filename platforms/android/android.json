@@ -13,6 +13,34 @@
                             "count": 1
                         },
                         {
+                            "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"xwalkVersion\" value=\"23+\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"xwalkLiteVersion\" value=\"xwalk_core_library_canary:17+\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"xwalkCommandLine\" value=\"--disable-pull-to-refresh-effect\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"xwalkMode\" value=\"embedded\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"xwalkMultipleApk\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"android-minSdkVersion\" value=\"16\" />",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
                         },
@@ -38,6 +66,14 @@
                         },
                         {
                             "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NativeAudio\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.nativeaudio.NativeAudio\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NativeStorage\"><param name=\"android-package\" value=\"NativeStorage\" /></feature>",
                             "count": 1
                         },
                         {
@@ -77,39 +113,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"xwalkVersion\" value=\"23+\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"xwalkLiteVersion\" value=\"xwalk_core_library_canary:17+\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"xwalkCommandLine\" value=\"--disable-pull-to-refresh-effect\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"xwalkMode\" value=\"embedded\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"xwalkMultipleApk\" value=\"true\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"android-minSdkVersion\" value=\"16\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"NativeAudio\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.nativeaudio.NativeAudio\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"NativeStorage\"><param name=\"android-package\" value=\"NativeStorage\" /></feature>",
+                            "xml": "<feature name=\"Permissions\"><param name=\"android-package\" value=\"com.android.plugins.Permissions\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -121,6 +125,14 @@
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 5
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "count": 1
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
@@ -136,14 +148,6 @@
                         },
                         {
                             "xml": "<uses-feature android:name=\"android.hardware.location.gps\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
                             "count": 1
                         },
                         {
@@ -308,6 +312,14 @@
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
+        "cordova-plugin-crosswalk-webview": {
+            "XWALK_VERSION": "23+",
+            "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+            "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+            "XWALK_MODE": "embedded",
+            "XWALK_MULTIPLEAPK": "true",
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
@@ -324,6 +336,15 @@
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
         "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-iosrtc": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-nativeaudio": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-nativestorage": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
         "cordova-plugin-sms-receiver": {
@@ -354,21 +375,7 @@
             "SENDER_ID": "1056346035559",
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
-        "cordova-plugin-crosswalk-webview": {
-            "XWALK_VERSION": "23+",
-            "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
-            "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
-            "XWALK_MODE": "embedded",
-            "XWALK_MULTIPLEAPK": "true",
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-iosrtc": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-nativeaudio": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-nativestorage": {
+        "cordova-plugin-android-permissions": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
@@ -635,6 +642,32 @@
             ]
         },
         {
+            "id": "cordova-plugin-nativeaudio.nativeaudio",
+            "file": "plugins/cordova-plugin-nativeaudio/www/nativeaudio.js",
+            "pluginId": "cordova-plugin-nativeaudio",
+            "clobbers": [
+                "window.plugins.NativeAudio"
+            ]
+        },
+        {
+            "id": "cordova-plugin-nativestorage.mainHandle",
+            "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
+            "pluginId": "cordova-plugin-nativestorage",
+            "clobbers": [
+                "NativeStorage"
+            ]
+        },
+        {
+            "id": "cordova-plugin-nativestorage.LocalStorageHandle",
+            "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
+            "pluginId": "cordova-plugin-nativestorage"
+        },
+        {
+            "id": "cordova-plugin-nativestorage.NativeStorageError",
+            "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
+            "pluginId": "cordova-plugin-nativestorage"
+        },
+        {
             "id": "cordova-plugin-sms-receiver.SmsReceiver",
             "file": "plugins/cordova-plugin-sms-receiver/www/SmsReceiver.js",
             "pluginId": "cordova-plugin-sms-receiver",
@@ -719,30 +752,12 @@
             ]
         },
         {
-            "id": "cordova-plugin-nativeaudio.nativeaudio",
-            "file": "plugins/cordova-plugin-nativeaudio/www/nativeaudio.js",
-            "pluginId": "cordova-plugin-nativeaudio",
+            "id": "cordova-plugin-android-permissions.Permissions",
+            "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+            "pluginId": "cordova-plugin-android-permissions",
             "clobbers": [
-                "window.plugins.NativeAudio"
+                "cordova.plugins.permissions"
             ]
-        },
-        {
-            "id": "cordova-plugin-nativestorage.mainHandle",
-            "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
-            "pluginId": "cordova-plugin-nativestorage",
-            "clobbers": [
-                "NativeStorage"
-            ]
-        },
-        {
-            "id": "cordova-plugin-nativestorage.LocalStorageHandle",
-            "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
-            "pluginId": "cordova-plugin-nativestorage"
-        },
-        {
-            "id": "cordova-plugin-nativestorage.NativeStorageError",
-            "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
-            "pluginId": "cordova-plugin-nativestorage"
         }
     ],
     "plugin_metadata": {
@@ -750,12 +765,16 @@
         "cordova-plugin-compat": "1.1.0",
         "cordova-plugin-camera": "2.4.1",
         "cordova-plugin-console": "1.0.5",
+        "cordova-plugin-crosswalk-webview": "2.3.0",
         "cordova-plugin-device": "1.1.4",
         "cordova-plugin-file": "4.3.3",
         "cordova-plugin-file-transfer": "1.6.3",
         "cordova-plugin-filepath": "1.0.2",
         "cordova-plugin-geolocation": "2.4.3",
         "cordova-plugin-inappbrowser": "1.7.1",
+        "cordova-plugin-iosrtc": "3.2.2",
+        "cordova-plugin-nativeaudio": "3.0.9",
+        "cordova-plugin-nativestorage": "2.2.2",
         "cordova-plugin-sms-receiver": "0.1.6",
         "cordova-plugin-splashscreen": "4.0.2",
         "cordova-plugin-statusbar": "2.2.1",
@@ -765,9 +784,6 @@
         "de.appplant.cordova.plugin.local-notification": "0.8.5",
         "ionic-plugin-keyboard": "2.2.1",
         "phonegap-plugin-push": "1.10.3",
-        "cordova-plugin-crosswalk-webview": "2.3.0",
-        "cordova-plugin-iosrtc": "3.2.2",
-        "cordova-plugin-nativeaudio": "3.0.9",
-        "cordova-plugin-nativestorage": "2.2.2"
+        "cordova-plugin-android-permissions": "1.0.0"
     }
 }

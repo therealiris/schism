@@ -193,10 +193,9 @@ export class ChatService {
 	}
 
 	chatName(chat) {
-
 		let name = '';
 		for (let c of chat.users) {
-			if (this.user!=null && c == this.user.id) {
+			if (c == this.user.id) {
 				continue;
 			}
 			name += (name ? ', ' : '') + (this.contactService.get(c).name || this.contactService.get(c).username)

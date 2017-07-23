@@ -26,13 +26,24 @@ export class PeopleService {
     });
   }
 
-  discover(uid, callback){
-  	this.http.get(apiUrl+'/users/discover?uid='+uid)
-  	.map(response => response.json())
-    .subscribe( response => {
-     console.log(response)	
-     callback(response);
-    });
+  discover(uid, filter, callback){
+    if(filter){
+      this.http.post(apiUrl+'/users/filterDiscover?uid='+uid, filter)
+      .map(response => response.json())
+      .subscribe( response => {
+       console.log(response)  
+       callback(response);
+      });
+    }
+    else{
+      this.http.get(apiUrl+'/users/discover?uid='+uid)
+      .map(response => response.json())
+      .subscribe( response => {
+       console.log(response)  
+       callback(response);
+      });
+    }
+  	
   }
 
   sendRequest(sender, sendee, reason, callback){

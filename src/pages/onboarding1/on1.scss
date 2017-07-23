@@ -1,5 +1,16 @@
 on-one {
-	
+.item-md{
+	padding: 0 2em;
+}
+.text-input{
+	color:#5e8af2;
+}
+ion-select{
+	color:#5e8af2;
+}
+ion-datetime{
+	color:#5e8af2;
+}	
 .content{
 	background:white;
 }
@@ -8,7 +19,7 @@ on-one {
 
 .onboarding-thumb{
 	text-align: center;
-	padding-top:1vh;
+	padding-top:2em;
 }
 .onboarding-input{
 	padding-top:1em;

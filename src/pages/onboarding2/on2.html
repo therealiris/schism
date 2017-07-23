@@ -1,12 +1,9 @@
 <ion-header no-border>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <ion-title>Select Industry</ion-title>
     <ion-buttons end>
       <button ion-button (click)="passSkills()">
-        <span>Done</span>
+        <span style="color:#5e8af2">Done</span>
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -16,7 +13,7 @@
 <ion-list>
   <ion-item *ngFor="let item of items">
     <ion-label>{{item}}</ion-label>
-    <ion-checkbox (ionChange)="updateList(item, $event)"></ion-checkbox>
+    <ion-checkbox (ionChange)="updateList(item, $event)" checked="filled[item]"></ion-checkbox>
   </ion-item>
 </ion-list>
 </ion-content>
