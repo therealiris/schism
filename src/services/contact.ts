@@ -100,12 +100,12 @@ export class ContactService {
 
 	// get a contact and its details
 	public get(id) {
-		console.debug('getting contact on logout', id, this.user.id)
 		if (id == this.user.id) {
 			return this.user;
 		}
 		for (let contact of this.contacts) {
 			if (contact.id == id) {
+				console.log("this is contact object",contact)
 				return contact;
 			}
 		}

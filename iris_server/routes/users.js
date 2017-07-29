@@ -538,7 +538,7 @@ router.get("/events", function(req, res) {
 router.get('/otp', function(req, res) {
     var phone = req.param('phone')
     var otp = req.param('otp')
-    axios.get('https://control.msg91.com/api/sendhttp.php?authkey=161105AIyLFPqYo594a86f6&mobiles=' + phone + '&message=Use%20OTP%20' + otp + '%20to%20successfully%20login%20to%20IRIS&sender=TMIRIS&route=4&country=0')
+    axios.get('https://control.msg91.com/api/sendhttp.php?authkey=166793An2EWuoYrxq9597607d0&mobiles=' + phone + '&message=Use%20OTP%20' + otp + '%20to%20successfully%20login%20to%20IRIS&sender=TMIRIS&route=4&country=0')
         .then(response => {
             if (response != null)
                 res.send({

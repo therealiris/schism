@@ -9,7 +9,7 @@
 </ion-header>
 
 <ion-content scroll="false">
-	<div class="call-buttons inCallUI">
+	<div class="call-buttons inCallUI" style="text-align: center;">
 		<button ion-button round icon-only color="secondary" class="button-answering" *ngIf="callService.isAnswering" (click)="callService.answer()"><ion-icon name="call"></ion-icon></button>
 		<button ion-button round icon-only color="danger" class="button-answering" *ngIf="callService.isAnswering" (click)="callService.ignore()"><ion-icon name="close"></ion-icon></button>
 
@@ -23,7 +23,7 @@
 		</button>
 	</div>
 	<div class="videos inCallUI">
-		<video id="remote" autoplay="true" *ngIf="callService.remoteVideo" [src]="callService.remoteVideo"></video>
-		<video id="local"  *ngIf="callService.localVideo" [src]="callService.localVideo" [ngClass]="{preview: callService.isCalling || callService.isAnswering}"></video>
+		<video id="remote" autoplay="true" *ngIf="callService.remoteVideo" [src]="callService.remoteVideo" style="height:65vh; width:100vw"></video>
+		<video id="local"  *ngIf="callService.localVideo" [src]="callService.localVideo" [ngClass]="{preview: callService.isCalling || callService.isAnswering}" muted style="height: 30vh"></video>
 	</div>
 </ion-content>

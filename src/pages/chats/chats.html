@@ -21,15 +21,15 @@
 
 <ion-content padding>
 	<ion-list class="chat-list">
-		<!-- <ion-item (click)="chat(chatItem.id)" class="item-remove-animate item-avatar item-icon-right online" *ngFor="let chatItem of chatService.chats" type="item-text-wrap">
+		<ion-item (click)="chat(chatItem.id)" class="item-remove-animate item-avatar item-icon-right online" *ngFor="let chatItem of chatService.chats" type="item-text-wrap">
 			<ion-avatar item-left>
 				<user-image [contact]=chatItem.users [hideSelf]=true></user-image>
     		</ion-avatar>
-			<h2>{{chatItem.name}}</h2>
-			<p class="chat-text" [innerHTML]="chatItem.lastMarked"></p>
+			<h2>{{chatUsers[chatItem.id].name}}</h2>
+			<p class="chat-text" [innerHTML]="chatItem.lastMessage"></p>
 			<span class="last-time" *ngIf="chatItem.lastDate">{{chatItem.lastDate | amTimeAgo:true}}</span>
-		</ion-item> -->
-		<ion-item-sliding #item class="conn-slide" *ngFor="let chatItem of chatService.chats; let i=index" >
+		</ion-item>
+		<!-- <ion-item-sliding #item class="conn-slide" *ngFor="let chatItem of chatService.chats; let i=index" >
 	    <ion-item class="item-remove-animate item-avatar item-icon-right online" *ngFor="let chatItem of chatService.chats" type="item-text-wrap">
 			<ion-avatar item-left>
 				<user-image [contact]=chatItem.users [hideSelf]=true></user-image>
@@ -52,6 +52,6 @@
 	        Meet
 	      </button>
 	    </ion-item-options>
-	  </ion-item-sliding>
+	  </ion-item-sliding> -->
 	</ion-list>
 </ion-content>

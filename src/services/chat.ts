@@ -4,6 +4,10 @@ import { Injectable, ApplicationRef, NgZone } from '@angular/core';
 import { SocketService, ContactService } from './';
 import { Events } from 'ionic-angular';
 import * as marked from 'marked';
+import { Storage } from '@ionic/storage';
+import { LocalNotifications } from '@ionic-native/local-notifications';
+import { NavController} from 'ionic-angular';
+import { ChatPage } from '../pages'
 
 @Injectable()
 export class ChatService {
@@ -11,18 +15,27 @@ export class ChatService {
 	chats = []
 
 	// manages chats
-	constructor(private zone:NgZone, private ref: ApplicationRef, private socket: SocketService, private events: Events, private contactService: ContactService) {
+	constructor(private navCtrl : NavController,private localNotifications : LocalNotifications,public storage:Storage,private zone:NgZone, private ref: ApplicationRef, private socket: SocketService, private events: Events, private contactService: ContactService) {
 		let evts = events;
 
 		marked.setOptions({
 			sanitize: true,
 			gfm: true
 		});
-
+		storage.ready().then(()=>{
+			storage.get("currentUser").then((data)=>{
+				this.user = JSON.parse(data)
+			})
+		})
+		this.localNotifications.on('click', (notification, state) => {
+			let dataBody = JSON.parse(notification.data)
+			this.navCtrl.setRoot(ChatPage,{"chatId":dataBody.chatId})
+		})
 		// triggered after a successfull login
-		this.events.subscribe('user.login', data => {
-			this.user = data.user;
-		});
+		//original method
+		// this.events.subscribe('user.login', data => {
+		// 	this.user = data.user;
+		// });
 
 		let self = this;
 
@@ -65,6 +78,10 @@ export class ChatService {
 				}
 				this.chats.push(chat);
 				this.processChats();
+				this.localNotifications.schedule({
+				  id: 1,
+				  text: 'You have recieved a new message'
+				});
 			//});
 		});
 
@@ -147,7 +164,7 @@ export class ChatService {
 					return;
 				}
 			}
-
+			console.log(this.socket)
 			this.socket.promise('get-contact-chat', {id: id}).then(chat => {
 				this.chats.push(chat);
 				this.chats.sort(this.sortChats);

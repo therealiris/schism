@@ -22,7 +22,7 @@
     		</ion-avatar>
 			<h2>{{contact.name || contact.username}}</h2>
 		</ion-item> -->
-		<ion-item-sliding #item class="conn-slide" *ngFor="let contact of contactService.contacts; let i=index" >
+		<ion-item-sliding #item class="conn-slide" *ngFor="let contact of contactList; let i=index" >
 			<ion-item [ngClass]="{online: contact.online}">
 			  <div class="conn-list-item">
 			   <div class="thumbnail">

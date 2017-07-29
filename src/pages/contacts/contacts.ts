@@ -10,20 +10,23 @@ import { LoginService, ContactService, ChatService } from '../../services';
 	selector: 'page-contacts',
 	templateUrl: 'contacts.html'
 })
+
 export class ContactsPage {
+
+contactList: any;
 
 	constructor(private chatService: ChatService, private modalCtrl: ModalController, private navCtrl: NavController, private loginService: LoginService, public contactService: ContactService) {
 		// contacts / chats list state
-		loginService.complete.then(user => {
-			console.debug('login complete');
-			if (!user.id) {
-				loginService.go();
-			}
-		}, () => {
-			console.debug('login faile');
-			loginService.go();
-		});
-
+		// loginService.complete.then(user => {
+		// 	console.debug('login complete');
+		// 	if (!user.id) {
+		// 		loginService.go();
+		// 	}
+		// }, () => {
+		// 	console.debug('login faile');
+		// 	loginService.go();
+		// });
+		this.contactList = contactService.contacts
 		console.debug('Contacts: ', contactService.contacts);
 	}
 
