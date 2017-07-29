@@ -22,6 +22,7 @@ import { ChatsPage } from '../pages';
 import { CallService, LoginService } from '../services';
 import { CallModalTrigger } from '../components';
 import * as moment from 'moment';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 declare var cordova:any;
 
@@ -35,7 +36,7 @@ export class MyApp {
   user : any;
   pages: Array<{title: string, component: any , iconName : string }>;
   isInCall = false
-  constructor(callService: CallService, private loginService: LoginService, events: Events, callModal: CallModalTrigger,public people: PeopleService,public platform: Platform, public push: Push, public statusBar: StatusBar, public splashScreen: SplashScreen, private toastCtrl: ToastController, public storage:Storage) {
+  constructor(public localNotifications:LocalNotifications,callService: CallService, private loginService: LoginService, events: Events, callModal: CallModalTrigger,public people: PeopleService,public platform: Platform, public push: Push, public statusBar: StatusBar, public splashScreen: SplashScreen, private toastCtrl: ToastController, public storage:Storage) {
     moment.locale('en', {
       relativeTime: {
         future: 'now',
@@ -84,7 +85,9 @@ export class MyApp {
       })
     })
     
-      
+    this.localNotifications.on('click', (notification, state) => {
+      this.nav.setRoot(ChatsPage)
+    })  
       
     // used for an example of ngFor and navigation
     this.pages = [

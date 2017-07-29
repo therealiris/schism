@@ -347,6 +347,9 @@ router.post("/acceptMeeting", function(req, res) {
                 res.send({
                     "status": 1
                 })
+                db.users.find({"uid":{"$in":[req.body.eventObject.with.uid,req.body.uid]}},{"fullName":1,"pushId":1}).toArray(function(err,user){
+                    sendPush(user[1].pushId,4,{"fullName":user[0].fullName})
+                })
             })
 
         }
@@ -589,16 +592,20 @@ function sendPush(pushId, notificationType, notificationDetail) {
         title = ""
 
     if (notificationType === 1) {
-        title = "New Connection Request"
+        title = "Connections"
         message = notificationDetail.fullName + " wants to connect with you"
     }
     if (notificationType === 2) {
-        title = "New Meeting Request"
+        title = "Meetings"
         message = notificationDetail.fullName + " has scheduled a " + notificationDetail.eventType + " with you"
     }
     if(notificationType === 3){
-    	title = "New Connection"
+    	title = "Connections"
     	message = notificationDetail.fullName + " is now a connection."
+    }
+    if(notificationType === 4){
+        title = "Meetings"
+        message = notificationDetail.fullName + " has accepted your meeting invite."
     }
     let pushKey = "key=AAAA9fMhVWc:APA91bE6AqkJnpwmMWEbU0vf6WB21OsGlSQTPPDuglRa0Y2XL0IF_NEa07ZZ_ASbUYcSnK4IJ1OtHSk3x3p9_KbHw7_z3sd0QuAkaS5Lo9m-XDRHuo5iVFvlo8iFxVlpuW4WJVJDFw_Y"
     let notification = {

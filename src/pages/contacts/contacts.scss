@@ -9,7 +9,10 @@ page-contacts {
 	.chat-list .item:last-child {
 		border-bottom: none;
 	}
-
+	.content{
+		background:#fff;
+		padding:2px 0 !important;
+	}
 	// @todo
 	// angular2 doesnt seem to play well with animations yet.
 	/*

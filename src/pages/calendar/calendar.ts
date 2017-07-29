@@ -15,6 +15,7 @@ export class Calendar {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public people : PeopleService, public storage: Storage) {
     // If we navigated to this page, we will have an item available as a nav param
+    this.eventList = []
     storage.ready().then(()=>{
       storage.get('currentUser').then((data)=>{
         if(data!=null)

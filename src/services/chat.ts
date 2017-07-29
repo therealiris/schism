@@ -6,7 +6,6 @@ import { Events } from 'ionic-angular';
 import * as marked from 'marked';
 import { Storage } from '@ionic/storage';
 import { LocalNotifications } from '@ionic-native/local-notifications';
-import { NavController} from 'ionic-angular';
 import { ChatPage } from '../pages'
 
 @Injectable()
@@ -15,7 +14,7 @@ export class ChatService {
 	chats = []
 
 	// manages chats
-	constructor(private navCtrl : NavController,private localNotifications : LocalNotifications,public storage:Storage,private zone:NgZone, private ref: ApplicationRef, private socket: SocketService, private events: Events, private contactService: ContactService) {
+	constructor(private localNotifications : LocalNotifications,public storage:Storage,private zone:NgZone, private ref: ApplicationRef, private socket: SocketService, private events: Events, private contactService: ContactService) {
 		let evts = events;
 
 		marked.setOptions({
@@ -27,10 +26,7 @@ export class ChatService {
 				this.user = JSON.parse(data)
 			})
 		})
-		this.localNotifications.on('click', (notification, state) => {
-			let dataBody = JSON.parse(notification.data)
-			this.navCtrl.setRoot(ChatPage,{"chatId":dataBody.chatId})
-		})
+		
 		// triggered after a successfull login
 		//original method
 		// this.events.subscribe('user.login', data => {
@@ -78,10 +74,7 @@ export class ChatService {
 				}
 				this.chats.push(chat);
 				this.processChats();
-				this.localNotifications.schedule({
-				  id: 1,
-				  text: 'You have recieved a new message'
-				});
+				
 			//});
 		});
 
@@ -125,6 +118,11 @@ export class ChatService {
 	}
 
 	private processChats() {
+		debugger;
+		this.localNotifications.schedule({
+		  id: 1,
+		  text: 'You have recieved a new message'
+		});
 		for (let chat of this.chats) {
 			chat.name = this.chatName(chat);
 		}

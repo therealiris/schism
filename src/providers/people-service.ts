@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
   for more info on providers and Angular 2 DI.
 
 */
-const apiUrl = "http://139.162.5.76:9003"
+const apiUrl = "http://192.168.1.5:9003"
 @Injectable()
 export class PeopleService {
 

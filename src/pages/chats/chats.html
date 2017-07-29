@@ -1,5 +1,5 @@
 <ion-header>
-	<ion-navbar >
+	<ion-navbar color="primary">
 		<button ion-button menuToggle>
 	      <ion-icon name="menu"></ion-icon>
 	    </button>
@@ -11,17 +11,17 @@
 		<ion-title>
 			Chats
 		</ion-title>
-		<ion-buttons end>
+		<!-- <ion-buttons end>
 			<button (click)="account()" ion-button icon-only>
 				<ion-icon name="settings"></ion-icon>
 			</button>
-		</ion-buttons>
+		</ion-buttons> -->
 	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
 	<ion-list class="chat-list">
-		<ion-item (click)="chat(chatItem.id)" class="item-remove-animate item-avatar item-icon-right online" *ngFor="let chatItem of chatService.chats" type="item-text-wrap">
+		<ion-item (click)="chat(chatItem.id)" class="item-remove-animate item-avatar item-icon-right online" *ngFor="let chatItem of chatsList" type="item-text-wrap">
 			<ion-avatar item-left>
 				<user-image [contact]=chatItem.users [hideSelf]=true></user-image>
     		</ion-avatar>
