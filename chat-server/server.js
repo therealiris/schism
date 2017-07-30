@@ -45,6 +45,7 @@ process.env.AWS_SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY || 'your-a
 
 const
 	express = require('express'),
+	axios = require('axios'),
 	app = express(),
 	http = require('http').Server(app),
 	io = require('socket.io')(http),
@@ -94,7 +95,33 @@ var Name = {
 	}
 }
 
+function sendPush(pushId, notificationType, notificationDetail) {
+    let message = "",
+        title = ""
 
+    if (notificationType === 1) {
+        title = "Connections"
+        message = notificationDetail.fullName + " sent you a message"
+    }
+
+    let pushKey = "key=AAAA9fMhVWc:APA91bE6AqkJnpwmMWEbU0vf6WB21OsGlSQTPPDuglRa0Y2XL0IF_NEa07ZZ_ASbUYcSnK4IJ1OtHSk3x3p9_KbHw7_z3sd0QuAkaS5Lo9m-XDRHuo5iVFvlo8iFxVlpuW4WJVJDFw_Y"
+    let notification = {
+            "notification": {
+                "title": title,
+                "body": message,
+                "sound": "default"
+            },
+            "to": pushId
+        },
+        pushHeader = {
+            "Authorization": pushKey
+        }
+    axios.post("https://fcm.googleapis.com/fcm/send", notification, {
+        "headers": pushHeader
+    }).then(res => {
+        console.log("Pushed Notification")
+    })
+}
 
 // setup socket.io
 io.on('connection', socket => {
@@ -393,12 +420,24 @@ io.on('connection', socket => {
 					}
 					let connection = getSocket(contact);
 					console.log('message: from ' + currentUser.id + ' to ' + contact);
+					sendNotification(currentUser.id, contact)
 					io.to(connection.socket).emit('chat-message', currentUser.id, send);
 				}
 			});
 		};
 	});
-
+	function sendNotification(currentUser, to){
+		db.collection("users").find({"_id":ObjectId(currentUser)},{"fullName":1,"pushId":1}).toArray((err, usr)=>{
+			if(!err)
+			{
+				let name = usr[0].fullName
+				db.collection("users").find({"_id":ObjectId(to)},{"fullName":1,"pushId":1}).toArray((err,user)=>{
+					sendPush(user[0].pushId,1,{"fullName":name})
+				})
+			}
+			
+		})
+	}
 	// add a user to the chat
 	socket.on('add-to-chat', request => {
 		let currentUser = checkUser();
