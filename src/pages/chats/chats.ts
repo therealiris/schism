@@ -24,7 +24,6 @@ export class ChatsPage {
 		// 	console.debug('login fail');
 		// 	loginService.go();
 		// });
-		console.log("Current user is : ",chatService.user)
 		this.chatUsers = {}
 		this.chatsList = chatService.chats.filter(c =>{
 			if(c.messages)
@@ -37,7 +36,8 @@ export class ChatsPage {
 			})
 			
 		})
-		console.log("yahan hai chats",this.chatUsers)
+		
+		events.publish("clearHamNotification")
 	}
 
 	// go to accounts

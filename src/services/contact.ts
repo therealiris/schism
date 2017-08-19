@@ -3,17 +3,23 @@
 import { Injectable, ApplicationRef } from '@angular/core';
 import { SocketService } from './';
 import { Events } from 'ionic-angular';
+import { PeopleService } from '../providers/people-service'
+
 
 @Injectable()
+
 export class ContactService {
 	contacts = []
 	public user = null
-
+	filter = []
 	// manages contacts online status
-	constructor(private ref: ApplicationRef, public socket: SocketService, public events: Events) {
+	constructor(private people:PeopleService,private ref: ApplicationRef, public socket: SocketService, public events: Events) {
+
 		// triggered when a contact comes online
 		this.socket.on('online', contact => {
 			contact.online = true;
+			// console.log(contact)
+			if(this.filter.indexOf(contact.username)>-1)
 			this.setOnlineUsers([contact]);
 		});
 
@@ -32,7 +38,55 @@ export class ContactService {
 		// triggered after a successfull login
 		this.events.subscribe('user.login', data => {
 			this.user = data.user;
+			people.updateCurrentUser(this.user.username,(user=>{
+				let unreads = user.userObject.unread
+				people.getConnections(this.user.username,(data=>{
+					this.contacts = []
+					data.forEach(d=>{
+						let newContactObject = {"id":d._id.toString(),"image":d.pictureUrl,"name":d.fullName,"username":d.uid,"online":true,"unread":false}
+						if(unreads.indexOf(newContactObject.id)>-1)
+							newContactObject.unread = true
+						this.contacts.push(newContactObject)
+					})
+				}))
+				this.filter = data.userObject.connections
+			}))
 		});
+		this.events.subscribe('refreshContacts', () => {
+			console.log("refreshing contacts")
+			people.updateCurrentUser(this.user.username,(user=>{
+				let unreads = user.userObject.unread
+				people.getConnections(this.user.username,(data=>{
+					this.contacts = []
+					data.forEach(d=>{
+						let newContactObject = {"id":d._id.toString(),"image":d.pictureUrl,"name":d.fullName,"username":d.uid,"online":true,"unread":false}
+						if(unreads.indexOf(newContactObject.id)>-1)
+							newContactObject.unread = true
+						this.contacts.push(newContactObject)
+					})
+				}))
+				this.filter = user.userObject.connections
+			}))
+		});
+		this.events.subscribe("clearUnread",(data)=>{
+			this.contacts.forEach(co=>{
+				if(co.id===data.id)
+					co.unread = false
+			})
+		})
+		this.events.subscribe("addUnread",(data)=>{
+			this.contacts.forEach(co=>{
+				if(data.id){
+					if(co.id===data.id)
+					co.unread = true
+				}
+				if(data.name){
+					if(co.name===data.name)
+						co.unread = true
+				}
+				
+			})
+		})
 
 		// triggeres after a logout event
 		// note: this does not break the socket connection
@@ -43,7 +97,7 @@ export class ContactService {
 
 	// set online users
 	private setOnlineUsers(contacts) {
-		console.log('SET ONLINE USERS', this, contacts, this.user);
+		console.log('SET ONLINE USERS',contacts, this.user);
 
 		// i think this happens when user is notified that they are online and we havent recieved the login thing yet
 		if (!this.user) {
@@ -105,7 +159,7 @@ export class ContactService {
 		}
 		for (let contact of this.contacts) {
 			if (contact.id == id) {
-				console.log("this is contact object",contact)
+				// console.log("this is contact object",contact)
 				return contact;
 			}
 		}

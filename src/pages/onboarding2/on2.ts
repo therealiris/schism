@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,ViewController } from 'ionic-angular';
-import { OnboardingOne } from '../onboarding1/on1';
+
 
 @Component({
   selector: 'on-two',
@@ -15,12 +15,12 @@ export class OnboardingTwo {
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl:ViewController) {
     // If we navigated to this page, we will have an item available as a nav param
     this.filled = {}
-    // this.selectedList = []
-    this.selectedList = this.navParams.data.list
+    this.selectedList = []
+    // this.selectedList = this.navParams.data.list
     // this.filler = this.navParams.data.callback
-    this.selectedList.forEach(item=>{
-      this.filled[item] = true
-    })
+    // this.selectedList.forEach(item=>{
+    //   this.filled[item] = true
+    // })
     this.initializeItems();
   }
   initializeItems() {
@@ -105,7 +105,7 @@ export class OnboardingTwo {
         this.selectedList.push(item)
       else{
           value.checked = false
-          alert("You can select maximum three skills")
+          alert("You can select maximum three industries")
       }
     }
     

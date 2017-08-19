@@ -8,7 +8,7 @@
       <h3 style="color: #757572; font-size: 1em; font-weight: 200;" [hidden]="lastImage !== null">Upload your picture to build your profile</h3>
     </div>
     <div style="width: 14em; border-radius: 49%;border-color: rgba(94, 138, 242, 0.25);margin:3em;border-width: thick;border-style: solid; height:14em;overflow: hidden;">
-      <img id="userPic" src="{{lastImage?pathForImage(lastImage):'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/userDummy.png?alt=media'}}" (click)="presentActionSheet()">
+      <img id="userPic" src="{{lastImage?pathForImage(lastImage):'assets/img/ud.svg'}}" (click)="presentActionSheet()">
     </div>
   
   <div style="text-align: center;">

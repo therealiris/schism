@@ -16,10 +16,32 @@
 // automatically applied to the <body> element in the app.
 
 // Menu Avatar
+.hamNotification{
+    position: absolute;
+    top: 0em;
+    z-index: 9;
+    left: 0.6em;
+    color: #00e4aa;
+    font-size: 5em;
+    margin-top:-0.4em
+}
 
-@font-face {
-font-family: AppFont;
-src: url("../assets/fonts/Roboto-Regular.ttf");
+.newNotification{
+    position: absolute;
+    top: 0em;
+    z-index: 9;
+    right: 0.3em;
+    color: #00e4aa;
+    font-size: 5em;
+    margin-top:-0.4em
+}
+.item.selectedMenuItem{
+    border-style: solid;
+    border-width: 0 0 0 1em;
+    border-color: #6693ff;
+}
+.item.feedbackItem{
+  margin-top : 4em
 }
 .item-avatar-menu{
   background-color:rgba(87,125,215,1) !important;
@@ -34,13 +56,15 @@ src: url("../assets/fonts/Roboto-Regular.ttf");
   }
   .avatar-name{
     color:#fff;
-    font-size: 14px;
-    font-weight:500;
+    font-size: 16px;
+    font-weight:600;
+    margin:5px;
   }
   .avatar-headline{
     color:#e2e2e2;
     font-size:12px;
-    font-weight:300;
+    font-weight:500;
+    margin:5px;
   }
   .avatar-edit{
     border-style: solid;
@@ -64,13 +88,18 @@ src: url("../assets/fonts/Roboto-Regular.ttf");
   border-bottom: none !important;
 }
 .menu-button{
-  font-weight:600;
-  color: #6f6f6f;
-  height:9vh;
+  font-weight:400;
+  color: #888888;
+  height:7vh;
   font-size : 14px;
+}
+.menu-button .label{
+  margin:0;
 }
 .menu-icon{
   padding:1em 1.8em 0em 0em;
+  font-size:1.4em;
+  font-weight:800;
 }
 .toolbar-background{
   background:transparent;

@@ -7,6 +7,14 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+  <div *ngIf="selectedList.length>0" style="display: grid;text-align: center;max-height:7em" >
+    <div *ngFor="let selection of selectedList" style="max-width: 16em; padding:3px; background: #5e8af2; color: #fff;margin-top: 3px;max-height: 2em; border-radius: 0 1em 1em 0">
+      {{selection}}
+    </div>
+  </div>
+  <div *ngIf="selectedList.length===0" style="display: grid;text-align: center;height:7em" >
+    <span style="padding-top: 3em;color: #999999"><i>*Scroll/Search to select your skills below</i> </span>
+  </div>
 </ion-header>
 <ion-content>
 <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>

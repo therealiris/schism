@@ -2,16 +2,16 @@
 
 import { Injectable } from '@angular/core';
 import { Platform } from 'ionic-angular';
-import { NativeAudio } from 'ionic-native';
+import { NativeAudio } from '@ionic-native/native-audio';
 import { Config } from '../app/config';
 
 @Injectable()
 export class AudioService {
 	ready = null;
 	audio = []
-	volume = .4
+	volume = 1
 
-	constructor(public platform: Platform) {
+	constructor(public platform: Platform, private nativeAudio: NativeAudio) {
 
 		this.ready = new Promise((resolve, reject) => {
 
@@ -22,7 +22,7 @@ export class AudioService {
 
 				if (this.platform.is('cordova')) {
 					files.forEach(file => {
-						NativeAudio.preloadComplex(file, 'assets/audio/' + file + '.mp3', this.volume, 1, 0).then(msg => {
+						this.nativeAudio.preloadSimple(file, 'assets/audio/' + file + '.mp3').then(msg => {
 							c++;
 							if (c == files.length) {
 								setTimeout(resolve, 100);
@@ -54,7 +54,7 @@ export class AudioService {
 		}
 		this.ready.then(() => {
 			if (this.platform.is('cordova')) {
-				NativeAudio.play(clip);
+				this.nativeAudio.play(clip);
 			} else if (this.audio[clip]) {
 				this.audio[clip].play();
 			}

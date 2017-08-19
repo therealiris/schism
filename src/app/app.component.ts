@@ -1,28 +1,23 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, ToastController, ViewController, Events, NavController } from 'ionic-angular';
+import { Nav, Platform, ToastController, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
-import { LoginPage } from '../pages/login/login';
 import { DiscoverPage } from '../pages/discover/discover';
-import { Connections } from '../pages/connections/connections'
-import { OnboardingOne } from '../pages/onboarding1/on1';
-import { Calendar } from '../pages/calendar/calendar';
+import { CalendarPage } from '../pages/calendar/calendar';
 import { Profile } from '../pages/profile/profile';
+import { Ranking } from '../pages/ranking/ranking';
 import { Feedback } from '../pages/feedback/feedback';
-import { NotificationPage } from '../pages/notification/notification';
 import { UploadPic } from '../pages/uploadPic/uploadPic';
-import { PlannerTwo } from '../pages/planner2/plannerTwo'
-import { PlannerOne } from '../pages/planner1/plannerOne'
 import { Storage } from '@ionic/storage';
-import Peer from "../../node_modules/peerjs/lib/peer";
 import { Push, PushObject, PushOptions } from '@ionic-native/push';
 import { PeopleService } from '../providers/people-service'
-import { ChatsPage } from '../pages';
+import { ChatsPage, ContactsPage } from '../pages';
 import { CallService, LoginService } from '../services';
 import { CallModalTrigger } from '../components';
 import * as moment from 'moment';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { BackgroundMode } from '@ionic-native/background-mode';
 
 declare var cordova:any;
 
@@ -34,9 +29,13 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage: any ;
   user : any;
-  pages: Array<{title: string, component: any , iconName : string }>;
-  isInCall = false
-  constructor(public localNotifications:LocalNotifications,callService: CallService, private loginService: LoginService, events: Events, callModal: CallModalTrigger,public people: PeopleService,public platform: Platform, public push: Push, public statusBar: StatusBar, public splashScreen: SplashScreen, private toastCtrl: ToastController, public storage:Storage) {
+  pages: Array<{title: string, component: any , iconName : string, selected:boolean }>;
+  isInCall = false;
+  unread : number;
+  unreadNotification : boolean;
+  hamburgerNotification : boolean;
+  otherPage : boolean;
+  constructor(private backgroundMode: BackgroundMode,public localNotifications:LocalNotifications,callService: CallService, private loginService: LoginService, public events: Events, callModal: CallModalTrigger,public people: PeopleService,public platform: Platform, public push: Push, public statusBar: StatusBar, public splashScreen: SplashScreen, private toastCtrl: ToastController, public storage:Storage) {
     moment.locale('en', {
       relativeTime: {
         future: 'now',
@@ -54,6 +53,13 @@ export class MyApp {
         yy: '%d y'
       }
     });
+    this.backgroundMode.enable();
+    
+
+    this.hamburgerNotification = false
+    this.unread = 0
+    this.unreadNotification = false
+    this.otherPage = false
     this.initializeApp();
     this.user = {fullName:'',pictureUrl:''}
     this.loginService.logout()
@@ -67,11 +73,12 @@ export class MyApp {
           this.loginService.login({"username":this.user.uid,"password":"apptoken"}).then(() => {
             this.loginService.complete.then(user => {})
           }, data => {
-              console.log(data);
+              // console.log(data);
             });
         }
         else{
           this.rootPage = HomePage
+
           // this.loginService.login({"username":"c0668107c590e75bb5c5361c6347e9a9","password":"apptoken"}).then(() => {
           //   this.loginService.complete.then(user => {
           //   })
@@ -85,32 +92,56 @@ export class MyApp {
       })
     })
     
-    this.localNotifications.on('click', (notification, state) => {
-      this.nav.setRoot(ChatsPage)
-    })  
       
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Discover', component: DiscoverPage, iconName:'ios-search-outline' },
-      { title: 'Profile', component: Profile, iconName:'md-person' },
-      { title: 'My Connections', component: ChatsPage, iconName:'ios-people-outline' },
-      { title: 'Planner', component: Calendar, iconName:'ios-calendar-outline' },
-      { title: 'Feedback', component: Feedback, iconName:'ios-settings' }
+      { title: 'Discover', component: DiscoverPage, iconName:'ios-search-outline', selected:false },
+      { title: 'Connections', component: ContactsPage, iconName:'ios-people-outline', selected:false  },
+      { title: 'Planner', component: CalendarPage, iconName:'ios-calendar-outline', selected:false  },
+      { title: 'Ranking', component: Ranking, iconName:'ios-trophy-outline', selected:false  },
+      { title: 'Feedback', component: Feedback, iconName:'ios-settings', selected:false  }
 
     ];
     events.subscribe('call.status.isincall', status => {
-      console.debug('call status changed to ', status);
+      if(this.backgroundMode.isActive())
+      this.backgroundMode.moveToForeground();
+      // console.debug('call status changed to ', status);
       this.isInCall = status;
     });
-
+    events.subscribe('configureUser',(data)=>{
+          if(data!=null)
+          {   this.user = data.userData
+              this.rootPage = DiscoverPage
+              this.pushsetup();
+              this.loginService.login({"username":this.user.uid,"password":"apptoken"}).then(() => {
+                this.loginService.complete.then(user => {})
+                }, data => {
+                    // console.log(data);
+                  });
+            }
+    })
+    events.subscribe('clearNewNotification',()=>{
+      this.unreadNotification = false
+    })
+    events.subscribe('clearHamNotification',()=>{
+      this.hamburgerNotification = false
+    }) 
+    events.subscribe('hamburgerOn',(data)=>{
+      this.hamburgerNotification = true
+      this.unread = data.num
+    })
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      this.statusBar.styleBlackTranslucent()
+
+      setTimeout(()=>{
+        this.splashScreen.hide();
+      },3000)
+      
       
     });
   }
@@ -131,17 +162,39 @@ export class MyApp {
  
   pushObject.on('notification').subscribe((notification: any) => {
     if (notification.additionalData.foreground) {
-      let toast = this.toastCtrl.create({
-            message: notification.message,
-            duration: 3000,
-            position: 'top'
-          });
+        let toast = this.toastCtrl.create({
+              message: notification.message,
+              duration: 3000,
+              position: 'top'
+            });
 
-        toast.onDidDismiss(() => {
-          console.log('Dismissed toast');
-        });
+        // toast.onDidDismiss(() => {
+        //   // console.log('Dismissed toast');
+        // });
 
-        toast.present();
+        
+        if(notification.message.indexOf("message")>-1)
+        {
+          let name = notification.message.split("has")[0].trim()
+          this.events.publish("addUnread",{"name":name})
+          let view = this.nav.getActive();
+          console.log(view.component.name)
+          if(view.component.name!="ContactsPage")
+          {this.unread++
+          this.hamburgerNotification =true}
+        }
+        if(notification.message.indexOf("connection")>-1)
+        {
+          this.events.publish("refreshContacts")
+          toast.present();
+          this.unreadNotification =true
+        }
+        if(notification.message.indexOf("accepted")>-1)
+        {
+          toast.present();
+          this.unreadNotification =true
+        }
+        
     }
 
   });
@@ -162,9 +215,28 @@ export class MyApp {
      })
   }
   openPage(page) {
+    if(page.title==='Connections')
+      {
+        this.people.clearUnread(this.user.uid)
+        this.unread = 0;
+      }
+    if(page.title === 'Discover')
+      this.otherPage = false
+    else
+      this.otherPage = true
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+    this.pages.forEach((tmpp,index)=>{
+      if(tmpp.title === page.title)
+        this.pages[index].selected = true
+      else
+        this.pages[index].selected = false
+    })
+    console.log(this.nav)
+  }
+  showProfile(){
+    this.nav.setRoot(Profile)
   }
   getClicked(){
     let toast = this.toastCtrl.create({
@@ -174,7 +246,7 @@ export class MyApp {
     });
 
   toast.onDidDismiss(() => {
-    console.log('Dismissed toast');
+    // console.log('Dismissed toast');
   });
 
   toast.present();

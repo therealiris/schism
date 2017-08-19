@@ -139,7 +139,7 @@ io.on('connection', socket => {
 	// pluck the users connection by id
 	let getSocket = user => {
 		for (let i in users) {
-			console.log('want id ', user)
+			// console.log('want id ', user)
 			if (user == users[i].id) {
 				return users[i];
 			}
@@ -202,7 +202,7 @@ io.on('connection', socket => {
 		});
 
 		socket.broadcast.emit('online', usr);
-		console.log(usr.username + ' logged in');
+		// console.log(usr.username + ' logged in');
 	};
 
 	socket.on('chats', request => {
@@ -422,6 +422,17 @@ io.on('connection', socket => {
 					console.log('message: from ' + currentUser.id + ' to ' + contact);
 					sendNotification(currentUser.id, contact)
 					io.to(connection.socket).emit('chat-message', currentUser.id, send);
+					let offlineStatus = true
+					users.forEach(u=>{
+						// console.log(u.user.name)
+						if(u.id === contact.toString()){
+							console.log(u.user.name)
+							offlineStatus = false
+						}
+					})
+					console.log(offlineStatus)
+					if(offlineStatus)
+						db.collection("users").update({"_id":contact},{"$addToSet":{"unread":currentUser.id}})
 				}
 			});
 		};

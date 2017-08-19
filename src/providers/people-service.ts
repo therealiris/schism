@@ -9,14 +9,28 @@ import 'rxjs/add/operator/map';
   for more info on providers and Angular 2 DI.
 
 */
-const apiUrl = "http://192.168.1.5:9003"
+const apiUrl = "http://192.168.1.4:9003"
 @Injectable()
 export class PeopleService {
 
   constructor(public http: Http) {
     console.log('Hello PeopleService Provider');
   }
-
+  userById(id,callback){
+    this.http.get(apiUrl+'/users/userById?id='+id)
+    .map(response => response.json())
+    .subscribe( response => {
+     console.log(response)  
+     callback(response);
+    });
+  }
+  clearUnread(uid){
+    this.http.post(apiUrl+'/users/clearUnread?uid='+uid,{})
+    .map(response => response.json())
+      .subscribe( response => {
+       console.log(response)  
+      });
+  }
   sendData(userObject, callback){
   	this.http.post(apiUrl+'/users/data',userObject)  
   	.map(response => response.json())

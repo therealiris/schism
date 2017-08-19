@@ -47,6 +47,33 @@
     </array>
     <key>UIRequiresFullScreen</key>
     <true/>
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>audio</string>
+      <string>remote-notification</string>
+    </array>
+    <key>CFBundleLocalizations</key>
+    <array>
+      <string>en</string>
+      <string>de</string>
+      <string>nl</string>
+      <string>fr</string>
+      <string>it</string>
+    </array>
+    <key>NSCalendarsUsageDescription</key>
+    <string/>
+    <key>NSCameraUsageDescription</key>
+    <string/>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string/>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string/>
+    <key>NSMicrophoneUsageDescription</key>
+    <string/>
+    <key>GCM_SENDER_ID</key>
+    <string>1056346035559</string>
+    <key>IS_GCM_ENABLED</key>
+    <true/>
     <key>NSAppTransportSecurity</key>
     <dict>
       <key>NSExceptionDomains</key>
@@ -60,19 +87,5 @@
       <key>NSAllowsArbitraryLoads</key>
       <true/>
     </dict>
-    <key>NSCameraUsageDescription</key>
-    <string/>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string/>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string/>
-    <key>UIBackgroundModes</key>
-    <array>
-      <string>remote-notification</string>
-    </array>
-    <key>GCM_SENDER_ID</key>
-    <string>1056346035559</string>
-    <key>IS_GCM_ENABLED</key>
-    <true/>
   </dict>
 </plist>

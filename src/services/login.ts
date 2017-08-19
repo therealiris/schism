@@ -4,7 +4,6 @@ import { Injectable, ViewChild } from '@angular/core';
 import { Events, Nav, NavController, AlertController, App, Platform } from 'ionic-angular';
 import { AudioService, SocketService, ContactService } from './';
 import { NativeStorage } from 'ionic-native';
-import { LoginPage } from '../pages';
 
 declare var localStorage:any;
 

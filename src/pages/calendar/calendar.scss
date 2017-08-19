@@ -4,7 +4,7 @@
 }
 calendar{
 	.content{
-		background:linear-gradient(to bottom, #00a9ff 0%, #2b6ad8 10%, #FFFFFF 10%, #ffffff 10%, #ffffff 100%);
+		background: #ffffff;
 	}
 }
 
@@ -15,7 +15,15 @@ calendar{
 }
 .calendar-content{
 	text-align:left;
-	padding-left:5%;
+	padding:5%;
 	color:grey;
 	font-size:16px;
 }
+.info-panel{
+	
+		border-radius: 2em;
+		background:#5e84f9;
+		padding:0.2em 1em; 
+		color: #fff; 
+		font-size: 0.9em;
+	}

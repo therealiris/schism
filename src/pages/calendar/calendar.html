@@ -1,20 +1,43 @@
 <ion-header no-border >
-  <ion-navbar class="calendar-header">
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Planner</ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="openNotifications()">
-        <ion-icon name="notifications"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list class="chat-list">
-    <ion-item *ngFor="let event of eventList; let i=index">
+    <ion-card *ngFor="let event of eventList; let i=index">
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{event.with.pictureUrl}}">
+        </ion-avatar>
+        <h2>{{event.type}} with {{event.with.fullName}}</h2>
+        <p>From : {{event.from}}</p>
+        <p>To : {{event.to}}</p>
+        <p text-wrap>Agenda : {{event.agenda}}</p>
+        <p *ngIf="event.type==='meeting'">Venue : {{event.venue}}</p>
+      </ion-item>
+
+      <ion-row>
+        <ion-col center text-center>
+          <span class="info-panel">{{event.pending?"Pending":"Confirmed"}}
+         </span>
+        </ion-col>
+        <ion-col center text-center>
+          <span (click)="syncItem(i)" class="info-panel"><ion-icon name="sync"></ion-icon>  Sync</span>
+        </ion-col>
+        <ion-col center text-center>
+          <span *ngIf="!event.active" class="info-panel">Inactive</span>
+          <span *ngIf="event.active" class="info-panel" (click)="call(i)"><ion-icon name="call"></ion-icon> Call</span>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+    <!-- <ion-item *ngFor="let event of eventList; let i=index">
       <div class="conn-list-item">
        <div class="thumbnail">
          <img src="{{event.with.pictureUrl}}" class="calendar-image">
@@ -23,25 +46,20 @@
          <span>{{event.with.fullName}}</span> <br>
          <span>From : {{event.from}}</span><br>
          <span>To : {{event.to}}</span><br>
-         <span>Agenda : {{event.agenda}}</span><br>
-         <span>Venue : {{event.venue}}</span>
-         <span>{{event.pending?"PENDING":"CONFIRMED"}}</span>
        </div> 
       </div>
+      <div>
+         <span style="border-radius: 2em; background:#5e84f9;padding:0.2em 1em; color: #fff; font-size: 0.8em">{{event.pending?"PENDING":"CONFIRMED"}}
+         </span>
+         <span>sync</span>
+         <span>{{event.active?"Active":"Inactive"}}</span>
+       </div>
     </ion-item>
     <ion-item *ngIf="eventList.length==0">
       <div style="text-align: center">
-       <!-- <div class="thumbnail">
-         <img src="{{event.with.pictureUrl}}" class="calendar-image">
-       </div> -->
          <span style="color:#999999">NO MEETINGS PLANNED YET</span> <br>
-         <!-- <span>From : {{event.from}}</span><br>
-         <span>To : {{event.to}}</span><br>
-         <span>Agenda : {{event.agenda}}</span><br>
-         <span>Venue : {{event.venue}}</span>
-         <span>{{event.pending?"PENDING":"CONFIRMED"}}</span> --> 
       </div>
-    </ion-item> 
+    </ion-item>  -->
   </ion-list>
  <!-- <ion-card>
     <ion-card-content>
@@ -50,8 +68,16 @@
       </div>
     </ion-card-content>
   </ion-card> -->
-   <ion-fab right bottom>
-     <button ion-fab color="primary" (click)="plan()"><ion-icon name="add"></ion-icon></button>
-   </ion-fab>
+   <ion-fab right bottom #fab>
+     <button ion-fab color="primary" ><ion-icon name="ios-add"></ion-icon></button>
+     <ion-fab-list side="left" style="padding:1em 1em;color: #999999">
+      Call
+      <button ion-fab color="primary"  (click)="schedule('call')" ><ion-icon name="ios-call"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="top" style="color: #999999">
+      Meeting
+      <button ion-fab color="primary"  (click)="schedule('meeting')" ><ion-icon name="md-pin"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>
 

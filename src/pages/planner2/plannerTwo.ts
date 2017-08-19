@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 import { PeopleService } from '../../providers/people-service'
-import { Calendar } from '../calendar/calendar'
+import { PlannerOne } from '../planner1/plannerOne'
 import { Storage } from '@ionic/storage';
 import * as moment from 'moment';
+import { Calendar } from '@ionic-native/calendar';
 
 @Component({
   selector: 'plannerTwo',
@@ -15,6 +16,7 @@ export class PlannerTwo {
   connections: any;
   minDate : string;
   maxDate : string;
+  minTime : string;
   eventDate : string;
   timeStarts : string;
   timeStops : string;
@@ -22,8 +24,9 @@ export class PlannerTwo {
   type : string;
   agenda : string;
   user : any;
+  withUser:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public people: PeopleService, public storage: Storage) {
+  constructor(private calendar: Calendar,public viewCtrl:ViewController,public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams, public people: PeopleService, public storage: Storage) {
     storage.ready().then(()=>{
       storage.get('currentUser').then((data)=>{
         if(data!=null)
@@ -32,11 +35,17 @@ export class PlannerTwo {
           }
         })
       })
+    this.calendar.hasReadWritePermission().then(status=>{
+      if(!status)
+        this.calendar.requestReadWritePermission()
+    })
+    this.type = this.navParams.get("type")
+
     // If we navigated to this page, we will have an item available as a nav param
     this.minDate = moment().format('YYYY-MM-DD')
     this.maxDate = moment().add(30, 'days').format('YYYY-MM-DD');
     console.log(this.maxDate)
-    this.withObject = this.navParams.data
+
   }
   setupMeeting(){
     var meetingObject = {
@@ -44,18 +53,35 @@ export class PlannerTwo {
       "event":{
         "from":this.eventDate + " " +this.timeStarts,
         "to":this.eventDate + " " +this.timeStops,
-        "type":"chat",
+        "type":this.type,
         "with": this.withObject,
         "venue":this.venue,
         "agenda":this.agenda,
         "pending":true
       }
     }
-    alert(JSON.stringify(meetingObject))
+    
+    // alert(JSON.stringify(meetingObject))
     this.people.pushEvent(meetingObject,(res)=>{
       if(res.status===1){
-        this.navCtrl.setRoot(Calendar);
+        this.viewCtrl.dismiss()
       }
     })
+
+  }
+  selectUser(){
+    let planModal = this.modalCtrl.create(PlannerOne);
+    planModal.present()
+    planModal.onDidDismiss(data=>{
+      if(data){
+        console.log(data.withObject)
+        this.withObject = data.withObject
+        this.withUser = this.withObject.fullName
+      }
+      
+    })
+  }
+  dismiss(){
+    this.viewCtrl.dismiss()
   }
 }

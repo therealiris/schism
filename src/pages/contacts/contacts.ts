@@ -1,11 +1,15 @@
 // display list of contacts
 
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController,Events } from 'ionic-angular';
 import { ChatPage, AccountPage, ChatsPage } from '../';
 import { ContactModal } from '../../components';
 import { LoginService, ContactService, ChatService } from '../../services';
-
+import { Tutorial } from '../tutorial/tutorial'
+import { PlannerTwo } from '../planner2/plannerTwo'
+import { CalendarPage } from '../calendar/calendar'
+import { PeopleService } from '../../providers/people-service'
+import { Storage } from '@ionic/storage';
 @Component({
 	selector: 'page-contacts',
 	templateUrl: 'contacts.html'
@@ -14,8 +18,8 @@ import { LoginService, ContactService, ChatService } from '../../services';
 export class ContactsPage {
 
 contactList: any;
-
-	constructor(private chatService: ChatService, private modalCtrl: ModalController, private navCtrl: NavController, private loginService: LoginService, public contactService: ContactService) {
+tutorial : boolean;
+	constructor(private storage:Storage,private people:PeopleService,public events:Events,private chatService: ChatService, private modalCtrl: ModalController, private navCtrl: NavController, private loginService: LoginService, public contactService: ContactService) {
 		// contacts / chats list state
 		// loginService.complete.then(user => {
 		// 	console.debug('login complete');
@@ -26,8 +30,21 @@ contactList: any;
 		// 	console.debug('login faile');
 		// 	loginService.go();
 		// });
+		
+	    
+		this.events.publish("refreshContacts");
 		this.contactList = contactService.contacts
 		console.debug('Contacts: ', contactService.contacts);
+		storage.get('contactsTutorial').then((val)=>{
+	      if(val)
+	      {
+	        let tut = this.modalCtrl.create(Tutorial,{"type":"connections"})
+	   		tut.present()
+	        tut.onDidDismiss(()=>{
+	          this.storage.set('contactsTutorial',false)
+	        })
+	      }
+	    });
 	}
 
 	// tap and hold contact card
@@ -43,6 +60,7 @@ contactList: any;
 
 	// go to a chat
 	chat(id) {
+		this.events.publish("clearUnread",{"id":id})
 		console.log(id)
 		this.chatService.getChatByContact(id).then((chat:any) => {
 			console.debug('Pushing to chat: ', chat)
@@ -53,5 +71,15 @@ contactList: any;
 	goChats(id) {
 		this.navCtrl.setRoot(ChatsPage, {}, {animate: true, direction: 'forward'});
 	}
+	schedule(type){
+    
+    let planModal = this.modalCtrl.create(PlannerTwo,{
+      "type": type
+    });
+    planModal.present()
+    planModal.onDidDismiss(()=>{
+      this.navCtrl.setRoot(CalendarPage)
+    })
+  }
 
 }

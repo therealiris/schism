@@ -20,6 +20,20 @@ wss.on('connection', function connection(ws) {
 router.get('/', function(req, res, next) {
     res.send('respond with a resource');
 });
+router.get('/userById', function(req, res) {
+    let id = require('mongodb').ObjectId(req.param('id'))
+    db.users.find({"_id":id}).toArray(function(err,user){
+        if(!err){
+           res.send(user[0]) 
+        }    
+        
+    })
+});
+router.post('/clearUnread', function(req, res) {
+    let uid = req.param("uid")
+    db.users.update({"uid":uid},{"$set":{"unread":[]}})
+    res.send({"status":1})
+});
 router.post("/filterDiscover", function(req,res){
 
     let industry = req.body.industry, skills = req.body.skills.map(sk=>{
@@ -348,7 +362,7 @@ router.post("/acceptMeeting", function(req, res) {
                     "status": 1
                 })
                 db.users.find({"uid":{"$in":[req.body.eventObject.with.uid,req.body.uid]}},{"fullName":1,"pushId":1}).toArray(function(err,user){
-                    sendPush(user[1].pushId,4,{"fullName":user[0].fullName})
+                    sendPush(user[0].pushId,4,{"fullName":user[1].fullName})
                 })
             })
 
@@ -487,6 +501,8 @@ router.post("/events", function(req, res) {
             }).toArray(function(err, user) {
                 if (!err) {
                     var withObject = user[0]
+                    withObject["id"]=withObject["_id"].toString()
+                    delete withObject["_id"]
                     console.log(withObject)
                     var withUser = eventObject.with.uid
                     eventObject.with = withObject

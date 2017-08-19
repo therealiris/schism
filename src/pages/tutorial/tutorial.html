@@ -1,0 +1,50 @@
+<ion-content class="tutorial-modal" (click)="dismiss()">
+  
+  <div style="text-align: center;" *ngIf="type==='discover'">
+    <div style="padding-top: 2vh">
+      <span style="font-weight:800;font-size: 0.8em;color: #fff"> <i>Tap on the hamburger to find your menu</i></span>
+    </div>
+    <div style="padding-top: 30vh">
+      <img src="assets/img/tutorial/swipe-arrow.png" style="max-width: 40%" alt="">
+      <span style="font-weight:800;font-size: 0.8em;color: #fff"> <i>Swipe the cards and discover users</i></span>
+    </div>
+    <div style="padding-top: 30vh">
+
+      <span style="font-weight:800;font-size: 0.8em;color: #fff"> <i>Tap here to filter users based on skills and industry</i></span>
+      
+    </div>
+  </div>
+  <div style="text-align: center;" *ngIf="type==='connections'">
+    <div style="padding-top: 20vh">
+      <img src="assets/img/tutorial/swipe-left.png" style="max-width: 40%" alt="">
+      <span style="font-weight:800;font-size: 0.8em;color: #fff"> <i>Swipe the contact cards</i></span>
+    </div>
+    <div style="text-align: left; padding-left: 3em">
+      <div style="padding-top: 2vh">
+        <span style="font-size: 1em;color: #fff"><ion-icon name="chatbubbles"></ion-icon> <i> Chat with your contacts</i></span>
+      </div>
+      <div style="padding-top: 2vh">
+        <span style="font-size: 1em;color: #fff"><ion-icon name="call"></ion-icon> <i> Schedule calls</i></span>
+      </div>
+      <div style="padding-top: 2vh">
+        <span style="font-size: 1em;color: #fff"><ion-icon name="calendar"></ion-icon> <i>Schedule Meetings</i></span>
+      </div>
+    </div>
+    
+  </div>
+  <div style="text-align: center;" *ngIf="type==='calendar'">
+    <div style="padding-top: 30vh">
+      <span style="font-size: 12vh;color: #fff"><ion-icon name="calendar"></ion-icon></span>
+    </div>
+    <div style="padding-top: 3vh">
+
+      <span style="font-weight:800;font-size: 0.8em;color: #fff"> <i>Your events will be listed here</i></span>
+    </div>
+    <div style="padding-top: 40vh">
+
+      <span style="font-weight:800;font-size: 0.8em;color: #fff"> <i>Tap here to schedule a call or meeting</i></span>
+      
+    </div>
+  </div>
+
+</ion-content>

@@ -6,7 +6,6 @@ import { LoginService, ChatService, AudioService, ContactService, AttachmentServ
 import { ContactAddModal } from '../../components';
 import { Config } from '../../app/config';
 import { DomSanitizer } from '@angular/platform-browser';
-
 import { Observable } from 'rxjs/Observable';
 
 import * as marked from 'marked';

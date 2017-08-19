@@ -5,7 +5,6 @@ import { SocketService, ContactService } from './';
 import { Events } from 'ionic-angular';
 import * as marked from 'marked';
 import { Storage } from '@ionic/storage';
-import { LocalNotifications } from '@ionic-native/local-notifications';
 import { ChatPage } from '../pages'
 
 @Injectable()
@@ -14,7 +13,7 @@ export class ChatService {
 	chats = []
 
 	// manages chats
-	constructor(private localNotifications : LocalNotifications,public storage:Storage,private zone:NgZone, private ref: ApplicationRef, private socket: SocketService, private events: Events, private contactService: ContactService) {
+	constructor(public storage:Storage,private zone:NgZone, private ref: ApplicationRef, private socket: SocketService, private events: Events, private contactService: ContactService) {
 		let evts = events;
 
 		marked.setOptions({
@@ -38,7 +37,8 @@ export class ChatService {
 		// broadcast an event when there is a chat mesasage recieved
 		// another way to do this would be to forward the message directly
 		this.socket.on('chat-message', function(name, message) {
-			console.debug('SOCKET chat-message');
+			console.log('SOCKET chat-message', name, message);
+			evts.publish("addUnread",{"id":message.from})
 			let have = false;
 
 				for (let chat of self.chats) {
@@ -50,12 +50,13 @@ export class ChatService {
 
 			// get a new list of chats if we are missing something
 			if (!have) {
-				console.debug('getting new chats...');
+				console.log('getting new chats...');
 				self.socket.emit('chats');
 			}
 
 			self.updateLastMessage(message.chat, message);
 			evts.publish('chat-message', name, message);
+
 		});
 
 		// triggered where there is an update to the chat data. like adding a user to the chat
@@ -118,11 +119,6 @@ export class ChatService {
 	}
 
 	private processChats() {
-		debugger;
-		this.localNotifications.schedule({
-		  id: 1,
-		  text: 'You have recieved a new message'
-		});
 		for (let chat of this.chats) {
 			chat.name = this.chatName(chat);
 		}

@@ -1,8 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams, LoadingController, ModalController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController, ModalController, Events } from 'ionic-angular';
 import { sendRequest } from '../sendRequest/sendRequest'
 import { FilterPage } from '../filterPage/filter'
 import { NotificationPage } from '../notification/notification'
+import { RatingModal } from '../rating-modal/rating-modal'
+import { Tutorial } from '../tutorial/tutorial'
 import { PeopleService } from '../../providers/people-service'
 import { Storage } from '@ionic/storage';
 import { Slides } from 'ionic-angular';
@@ -26,12 +28,36 @@ export class DiscoverPage {
   long: number;
   rate : number[];
   filter : any;
-  constructor(public modalCtrl:ModalController,public navCtrl: NavController,public loadingCtrl: LoadingController, public navParams: NavParams,public people: PeopleService,public storage:Storage) {
+  pendingRatings:any;
+  ratingCount:number;
+  localRequested : any;
+  tutorial : boolean;
+  constructor(private events:Events,public modalCtrl:ModalController,public navCtrl: NavController,public loadingCtrl: LoadingController, public navParams: NavParams,public people: PeopleService,public storage:Storage) {
+    storage.get('discoverTutorial').then((val)=>{
+      if(val)
+      {
+        let tut = this.modalCtrl.create(Tutorial,{"type":"discover"})
+        tut.present()
+        tut.onDidDismiss(()=>{
+          this.storage.set('discoverTutorial',false)
+        })
+      }
+    });
+    
     this.currentIndex = 0
     this.rate = []
+    this.pendingRatings = []
+    this.localRequested = []
+    this.ratingCount = 0
     // If we navigated to this page, we will have an item available as a nav param
     this.showPoints = false
-
+    // this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.RECORD_AUDIO).then(
+    //   success => {
+    //     this.androidPermissions.requestPermissions(this.androidPermissions.PERMISSION.RECORD_AUDIO)
+    //     console.log("success")
+    //      },
+    //   err => this.androidPermissions.requestPermissions(this.androidPermissions.PERMISSION.RECORD_AUDIO)
+    // );
     storage.ready().then(()=>{
       storage.get('currentUser').then((data)=>{
         if(data!=null)
@@ -39,15 +65,33 @@ export class DiscoverPage {
             this.user = JSON.parse(data)
              people.updateCurrentUser(this.user.uid, (user)=>{
              this.user = user.userObject
+
+             this.pendingRatings = user.userObject.pendingRatings
+
+             if(user.userObject.unread.length>0)
+               this.events.publish("hamburgerOn", {"num":user.userObject.unread.length})
+             // console.log(this.pendingRatings)
              this.lat = this.user.lastLoginLocation.split(",")[0]
              this.long = this.user.lastLoginLocation.split(",")[1]
              this.startDiscover()
              this.locationUpdate()
+             
            })
         }
       })
     })
     
+  }
+  showRatings(){
+    // console.log("Pending Ratings Block")
+    if(this.ratingCount<2)
+    {
+      this.people.updateCurrentUser(this.pendingRatings[this.ratingCount],(user)=>{
+         let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user.userObject})
+        pendingRatingModal.present()
+      })
+      
+    }
   }
   startDiscover(){
     
@@ -57,7 +101,14 @@ export class DiscoverPage {
       });
     loading.present()
     this.people.discover(this.user.uid, this.filter,(discoverList)=>{
-        this.items = discoverList
+        let filteredList = new Array()
+        discoverList.forEach((listItem,index)=>{
+          if(!(listItem.uid===this.user.uid||this.user.connections.indexOf(listItem.uid)>-1||this.user.requests.indexOf(listItem.uid)>-1||this.user.requested.indexOf(listItem.uid)>-1))
+            {
+              filteredList.push(listItem)
+            }
+        })
+        this.items = filteredList
         for(var i=0;i<this.items.length;i++){
           var totalRating = 0
           this.items[i].skills.forEach(skill=>{
@@ -74,23 +125,23 @@ export class DiscoverPage {
         // this.locationUpdate()
         this.slides.lockSwipeToNext(false)
         this.slides.slideTo(0,500)
-        console.log(this.currentIndex)
+        // console.log(this.currentIndex)
       })
   }
   locationUpdate(){
-    console.log("updating location")
+    // console.log("updating location")
     Geolocation.getCurrentPosition().then(res => {
                 // console.log(res.coords.latitude,res.coords.longitude)
         this.lat = res.coords.latitude
         this.long = res.coords.longitude  
         this.user.lastLoginLocation = this.lat+","+this.long
+
         this.people.updateLocation(this.user.uid,this.user.lastLoginLocation,(response)=>{
           // console.log("UPDATED LOGIN LOCATION")
+          // this.showRatings()
         })
       }).catch((error) => {
         alert("error in locating")
-        // loading.dismiss();
-        // console.log('Error getting location', error);
       });
   }
   getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
@@ -111,29 +162,44 @@ export class DiscoverPage {
     return deg * (Math.PI/180)
   }
   slideChanged(){
+
+    
+      
       // this.showPoints = true
 
       // setTimeout(()=>{
       //   this.showPoints = false
       // },800)
       this.currentIndex = this.slides.getActiveIndex();
-      console.log(this.currentIndex)
+      if(this.localRequested.indexOf(this.items[this.currentIndex]['uid'])>-1)
+        this.isConnected=true
+      else this.isConnected = false
+      // console.log(this.currentIndex)
       if(this.currentIndex === this.items.length-1)
         this.slides.lockSwipeToNext(true)
       else
         this.slides.lockSwipeToNext(false)
-      // if(this.items[this.currentIndex])
-      // if(this.user.requested.indexOf(this.items[this.currentIndex]['uid'])>-1)
-      //   this.isConnected=true
-      // else this.isConnected = false
+      
     
   }
   connect(){
     let item = this.items[this.currentIndex]
     // console.log("hauchi")
-    this.navCtrl.push(sendRequest, {
-      item: item
+    let connectModal = this.modalCtrl.create(sendRequest,{
+      "item": item
     });
+    connectModal.present()
+    connectModal.onDidDismiss(data=>{
+      if(data){
+        this.localRequested.push(data.justRequested)
+        this.isConnected = true
+      }
+      
+
+    })
+    // this.navCtrl.push(sendRequest, {
+    //   item: item
+    // });
 
   }
   openNotifications(){
@@ -144,7 +210,7 @@ export class DiscoverPage {
     // this.navCtrl.push(OnboardingTwo, {callback:this.fillIndustry})
     filterModal.present()
     filterModal.onDidDismiss(data => {
-      console.log(data)
+      // console.log(data)
 
       this.filter = data.filter
       if(this.filter.type.length>0||this.filter.industry.length>0||this.filter.skills.length>0)

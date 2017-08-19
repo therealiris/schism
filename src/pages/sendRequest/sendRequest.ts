@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { PeopleService } from '../../providers/people-service'
 import { Storage } from '@ionic/storage';
 
@@ -17,7 +17,7 @@ export class sendRequest {
   reasons : any;
   reasonMessage :string;
   user : {"uid": string};
-  constructor(public navCtrl: NavController, public navParams: NavParams,public people: PeopleService,public storage:Storage) {
+  constructor(public viewCtrl: ViewController,public navCtrl: NavController, public navParams: NavParams,public people: PeopleService,public storage:Storage) {
     // If we navigated to this page, we will have an item available as a nav param
     storage.ready().then(()=>{
       storage.get('currentUser').then((data)=>{
@@ -39,14 +39,14 @@ export class sendRequest {
       this.allow=true;
   }
   cancel(){
-    this.navCtrl.pop()
+    this.viewCtrl.dismiss()
   }
   connect(){
     var reasonString = this.reasons + "||" + this.reasonMessage
     
     this.people.sendRequest(this.user,this.item.uid, reasonString,(res)=>{
       if(res.status==1)
-        this.navCtrl.popToRoot()
+        this.viewCtrl.dismiss({"justRequested":this.item.uid})
     })
   }
 }

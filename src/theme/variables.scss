@@ -32,6 +32,14 @@ $colors: (
 
 );
 
+@font-face {
+font-family: AppFontGlobal;
+src: url("../assets/fonts/Quicksand-Regular.ttf");
+}
+body,div, span, button, h1, h2, h3, h4, h5, h6, p, ion-item, ion-title {
+font-family: 'AppFontGlobal' !important;
+}
+
 .iris-header{
 	background: transparent
 }

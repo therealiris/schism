@@ -42,16 +42,22 @@
       </ion-card>
     </ion-slide>
   </ion-slides>
-  <div class="connect-btn">
-    <button ion-button round [disabled]=isConnected (click)="connect()">{{isConnected?'Request Sent':'Connect'}}</button>
+  <div class="connect-btn" *ngIf="!isConnected">
+    <button ion-button round [disabled]=isConnected (click)="connect()" >Connect</button>
+  </div>
+  <div class="connect-btn"  *ngIf="isConnected" >
+    <span style="color: #5e8af2; font-size: 1.4em"><ion-icon name="checkmark"></ion-icon>Request sent</span>
   </div>
   <ion-fab right bottom #fab>
      <button ion-fab color="primary" ><ion-icon [name]="filter?'ios-funnel':'search'"></ion-icon></button>
      <ion-fab-list side="left" style="padding:1em 2em">
-      <button ion-fab color="primary" ><ion-icon name="search" (click)="clearFilter(fab)"></ion-icon></button>
+      Reset<button ion-fab color="primary"  (click)="clearFilter(fab)" ><ion-icon name="md-undo"></ion-icon></button>
     </ion-fab-list>
     <ion-fab-list side="top" style="padding:2em 1em">
-      <button ion-fab color="primary" ><ion-icon name="ios-funnel" (click)="search(fab)"></ion-icon></button>
+      <button ion-fab color="primary"  (click)="search(fab)" ><ion-icon name="ios-funnel"></ion-icon></button>
     </ion-fab-list>
   </ion-fab>
+  <div style="position: absolute;bottom: 2em;left: -2em;" *ngIf="pendingRatings.length>0" (tap) = "showRatings()">
+    <button style="padding: 1em 1em 1em 4em;background: #ecb505;border-radius: 2em;color: #fff;"><ion-icon style="font-size: 2.2em; font-weight: 400" name="ios-people"></ion-icon></button>
+  </div>
 </ion-content>

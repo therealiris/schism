@@ -6,11 +6,11 @@
 		<ion-title>
 			My Connections
 		</ion-title>
-		<ion-buttons end>
+		<!-- <ion-buttons end>
 			<button (click)="goChats()" ion-button icon-only>
 				<ion-icon name="chatbubbles"></ion-icon>
 			</button>
-		</ion-buttons>
+		</ion-buttons> -->
 	</ion-navbar>
 </ion-header>
 
@@ -29,7 +29,7 @@
 			     <img src={{contact.image}} class="connection-image">
 			   </div>
 			   <div class="conn-content">
-			     <span>{{contact.name}}</span> <br>
+			     <span>{{contact.name}} <ion-icon *ngIf="contact.unread" name="mail"></ion-icon></span> <br>
 			     <!-- <span>Meeting : 7:00 P.M to 10 P.M</span> -->
 			   </div> 
 			  </div>
@@ -40,10 +40,10 @@
 			    <ion-icon name="chatboxes"></ion-icon>
 			    Chat
 			  </button>
-			  <button ion-button class="slide-button" (click)="contactCard(contact)">
+			  <button ion-button class="slide-button" (click)="schedule('call')">
 			    <ion-icon name="call"></ion-icon>
 			    Call
-			  </button><button class="slide-button" ion-button (click)="schedule(i)">
+			  </button><button class="slide-button" ion-button (click)="schedule('meeting')">
 			    <ion-icon name="calendar"></ion-icon>
 			    Meet
 			  </button>

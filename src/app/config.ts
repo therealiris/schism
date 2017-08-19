@@ -1,14 +1,14 @@
 // static config variables
 
-import { Component } from '@angular/core';
+// import { Component } from '@angular/core';
 
-@Component({})
+// @Component({})
 export class Config {
 
 	// url of the chat server
 	// for local development it will be something like http://192.168.0.214:9000/
 	//public static server = 'https://ionic-video-chat-server.herokuapp.com/';
-	public static server = 'ws://192.168.1.5:5000/';
+	public static server = 'ws://192.168.1.4:5000/';
 
 	// enables or disables chat sounds. usefull for development
 	public static audio = false;

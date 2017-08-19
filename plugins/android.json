@@ -78,6 +78,15 @@
         },
         "cordova-plugin-android-permissions": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-calendar": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
     "dependent_plugins": {

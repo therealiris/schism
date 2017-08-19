@@ -1,44 +1,39 @@
-<ion-header no-border color="primary">
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Schedule</ion-title>
+<ion-header no-border >
+  <ion-navbar color="primary">
+    <ion-title>Schedule a {{type}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
- <ion-list style="padding: 1em">
-
-  <ion-item>
-    <ion-input type="text" value="{{withObject.fullName}}"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Date</ion-label>
+ <ion-list style="padding: 3em">
+  
+  <div style="padding-left: 1em; color: #999999;font-size: 1.2em" (click)="selectUser()">
+    <span>{{withUser?withUser:'Select a contact'}}</span>
+  </div>
+  <ion-item style="padding-top: 1.2em">
+    <ion-label><ion-icon name="ios-calendar-outline"></ion-icon> Date</ion-label>
     <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="eventDate" min="{{minDate}}" max="{{maxDate}}"></ion-datetime>
   </ion-item>
-  <ion-item>
-    <ion-label>Start Time</ion-label>
+  <ion-item style="padding-top: 1.2em">
+    <ion-label> <ion-icon name="ios-clock-outline"></ion-icon> Start Time</ion-label>
     <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="timeStarts"></ion-datetime>
   </ion-item>
-  <ion-item>
-    <ion-label>End Time</ion-label>
+  <ion-item style="padding-top: 1.2em">
+    <ion-label><ion-icon name="ios-clock-outline"></ion-icon> End Time</ion-label>
     <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="timeStops"></ion-datetime>
   </ion-item>
-  <ion-item>
-    <ion-input type="text" placeholder="Agenda for meeting?" [(ngModel)]="agenda"></ion-input>
+  <ion-item style="padding-top: 1.2em">
+    <ion-label stacked> <ion-icon name="ios-paper-plane-outline"></ion-icon> Agenda</ion-label>
+    <ion-textarea type="text" [(ngModel)]="agenda"></ion-textarea>
   </ion-item>
-  <ion-item>
-    <ion-label>Type</ion-label>
-    <ion-select [(ngModel)]="type">
-      <ion-option value="Blue-O">Chat</ion-option>
-      <ion-option value="Diamond District Workspace">Call</ion-option>
-    </ion-select>
-  </ion-item>
-  <ion-item>
+  <ion-item  style="padding-top: 1.2em" *ngIf="type==='meeting'">
     <ion-label>Venue</ion-label>
     <ion-select [(ngModel)]="venue">
-      <ion-option value="N/A">In-App Communication</ion-option>
       <ion-option value="Blue-O">Blue-O</ion-option>
       <ion-option value="Diamond District Workspace">Diamond District WorkSpace</ion-option>
     </ion-select>

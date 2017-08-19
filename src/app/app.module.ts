@@ -14,12 +14,13 @@ import { Connections } from '../pages/connections/connections';
 import { NotificationPage } from '../pages/notification/notification';
 import { IonicStorageModule } from '@ionic/storage';    
 import { HttpModule } from '@angular/http';
-import { PeopleService } from '../providers/people-service'
-// import { ChatPage } from '../pages/chat/chat'
 import { FilterPage } from '../pages/filterPage/filter'
-
-import { Calendar } from '../pages/calendar/calendar'
+import { RatingModal } from '../pages/rating-modal/rating-modal'
+import { Tutorial } from '../pages/tutorial/tutorial'
+import { CalendarPage } from '../pages/calendar/calendar'
+import { UserDetail } from '../pages/userDetail/userDetail'
 import { Profile } from '../pages/profile/profile'
+import { Ranking } from '../pages/ranking/ranking'
 import { PlannerOne } from '../pages/planner1/plannerOne'
 import { PlannerTwo } from '../pages/planner2/plannerTwo'
 import { StatusBar } from '@ionic-native/status-bar';
@@ -35,10 +36,14 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
 import { Push } from '@ionic-native/push';
 import { Ionic2RatingModule } from 'ionic2-rating';
 import { ChatsPage, ChatPage, AccountPage, ContactsPage } from '../pages';
+import { PeopleService } from '../providers/people-service';
 import { CallModal, ContactModal, UserImage, CallModalTrigger, ContactAddModal, KeyboardAttach } from '../components';
 import { AttachmentService, AudioService, CallService, ChatService, ContactService, LoginService, SocketService, VideoService} from '../services';
 import { MomentModule } from 'angular2-moment';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
+import { BackgroundMode } from '@ionic-native/background-mode';
+import { NativeAudio } from '@ionic-native/native-audio';
+import { Calendar } from '@ionic-native/calendar';
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -59,7 +64,7 @@ const cloudSettings: CloudSettings = {
     Connections,
     ChatPage,
     NotificationPage,
-    Calendar,
+    CalendarPage,
     PlannerOne,
     PlannerTwo,
     Profile,
@@ -74,7 +79,9 @@ const cloudSettings: CloudSettings = {
     ContactsPage,
     ContactAddModal,
     KeyboardAttach,
-    FilterPage
+    FilterPage,
+    UserDetail,
+    RatingModal, Ranking, Tutorial
   ],
   imports: [
     BrowserModule,
@@ -97,7 +104,7 @@ const cloudSettings: CloudSettings = {
     sendRequest,
     Connections,
     NotificationPage,
-    Calendar,
+    CalendarPage,
     PlannerOne,
     PlannerTwo,
     Profile,
@@ -112,10 +119,15 @@ const cloudSettings: CloudSettings = {
     UserImage,
     ContactsPage,
     ContactAddModal,
-    FilterPage
+    FilterPage,
+    UserDetail,
+    RatingModal,Ranking, Tutorial
 
   ],
   providers: [
+  Calendar,
+  BackgroundMode,NativeAudio,
+    PeopleService,
     AttachmentService, CallModalTrigger, LoginService, AudioService, SocketService, CallService, ContactService, VideoService, ChatService,
     StatusBar,
     SplashScreen,

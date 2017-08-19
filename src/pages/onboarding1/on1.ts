@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, LoadingController,ModalController, AlertController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController,ModalController, AlertController,Events } from 'ionic-angular';
 import { OnboardingTwo } from '../onboarding2/on2';
 import { OnboardingThree } from '../onboarding3/on3';
 import { Storage } from '@ionic/storage';
@@ -27,7 +27,8 @@ export class OnboardingOne {
   industry:any[] = [];
   type:string[];
   skills: any[] = [];
-  constructor(public alertCtrl: AlertController, public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService, public loadingCtrl: LoadingController) {
+  constructor( public events: Events, public alertCtrl: AlertController, public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService, public loadingCtrl: LoadingController) {
+    
     this.form = 'on1'
     this.rangeVal = 0
     this.skills = []
@@ -90,7 +91,8 @@ export class OnboardingOne {
     // this.navCtrl.push(OnboardingTwo, {callback:this.fillIndustry})
     skillsModal.present()
     skillsModal.onDidDismiss(data => {
-     data.skillsList.forEach(skill=>{
+      this.skills=[]
+       data.skillsList.forEach(skill=>{
        this.skills.push({"skill":skill,rating:0})
      })
    });
@@ -108,16 +110,20 @@ export class OnboardingOne {
     }
       
   }
-  presentLoadingDefault() {
+  presentLoadingDefault(userData) {
+    this.storage.set("discoverTutorial",true)
+    this.storage.set("contactsTutorial",true)    
+    this.storage.set("plannerTutorial",true)    
     let loading = this.loadingCtrl.create({
       spinner:"crescent",
-      content: 'Configuring account..Please wait...'
+      content: 'Accessing IRIS ecosystem..Please wait...'
     });
     loading.present();
     setTimeout(() => {
       loading.dismiss();
-      window.location.reload()
-    }, 500);
+      this.events.publish('configureUser',{"userData":userData})
+      // window.location.reload()
+    }, 1500);
     
   }
   removeHobby(index){
@@ -197,7 +203,7 @@ export class OnboardingOne {
               this.storage.ready()
               .then(()=>{
                 this.storage.set('currentUser',JSON.stringify(this.user))
-                this.presentLoadingDefault()
+                this.presentLoadingDefault(this.user)
               })
             })
           }

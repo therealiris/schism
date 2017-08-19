@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ActionSheetController, ToastController, Platform, LoadingController, Loading } from 'ionic-angular';
 import { File } from '@ionic-native/file';
-import { Transfer, TransferObject } from '@ionic-native/transfer';
+import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path'; 
 import { Camera } from '@ionic-native/camera';
 import { LocalNotifications } from '@ionic-native/local-notifications';
@@ -159,7 +159,7 @@ uploadFirebase(){
      this.appUser.pictureUrl = pictureUrl
      this.appUser.image = pictureUrl
      loading.dismiss()
-     this.navCtrl.push(OnboardingOne, this.appUser, { animate: true, direction: 'forward' })
+     this.navCtrl.setRoot(OnboardingOne, this.appUser, { animate: true, direction: 'forward' })
     });
 }
 }

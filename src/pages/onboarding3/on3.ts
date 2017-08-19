@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,ViewController } from 'ionic-angular';
-import { OnboardingOne } from '../onboarding1/on1';
+
 
 @Component({
   selector: 'on-three',
