@@ -16,6 +16,30 @@ export class PeopleService {
   constructor(public http: Http) {
     console.log('Hello PeopleService Provider');
   }
+  pushRating(pointsBody,callback){
+    this.http.post(apiUrl+'/users/pushRating',pointsBody)
+    .map(response => response.json())
+      .subscribe( response => {
+       console.log(response)
+       callback(response)  
+      });
+  }
+  pushPendingRating(pointsBody,callback){
+    this.http.post(apiUrl+'/users/pushPendingRating',pointsBody)
+    .map(response => response.json())
+      .subscribe( response => {
+       console.log(response)
+       callback(response)  
+      });
+  }
+  addFeedback(feedBody,callback){
+    this.http.post(apiUrl+'/users/addFeedback',feedBody)
+    .map(response => response.json())
+      .subscribe( response => {
+       console.log(response)
+       callback(response)  
+      });
+  }
   userById(id,callback){
     this.http.get(apiUrl+'/users/userById?id='+id)
     .map(response => response.json())

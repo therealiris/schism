@@ -99,6 +99,10 @@
                         {
                             "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AudioTogglePlugin\"><param name=\"ios-package\" value=\"AudioTogglePlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -277,6 +281,9 @@
         },
         "phonegap-plugin-push": {
             "SENDER_ID": "1056346035559",
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-audiotoggle": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
@@ -726,6 +733,14 @@
             "clobbers": [
                 "PushNotification"
             ]
+        },
+        {
+            "id": "cordova-plugin-audiotoggle.AudioToggle",
+            "file": "plugins/cordova-plugin-audiotoggle/www/audiotoggle.js",
+            "pluginId": "cordova-plugin-audiotoggle",
+            "clobbers": [
+                "AudioToggle"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -755,6 +770,7 @@
         "cordova-sqlite-storage": "2.0.4",
         "de.appplant.cordova.plugin.local-notification": "0.8.5",
         "ionic-plugin-keyboard": "2.2.1",
-        "phonegap-plugin-push": "1.10.3"
+        "phonegap-plugin-push": "1.10.3",
+        "cordova-plugin-audiotoggle": "1.0.3"
     }
 }

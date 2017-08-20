@@ -3,6 +3,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { PeopleService } from '../../providers/people-service'
+import { Storage } from '@ionic/storage';
 
 
 @Component({
@@ -14,7 +15,8 @@ export class RatingModal {
 	user : any;
 	rate : any;
 	allowed : boolean;
-	constructor(private peopleService: PeopleService,private viewCtrl: ViewController, private params: NavParams, private navCtrl: NavController) {
+	currentUser :any;
+	constructor(public storage: Storage,private peopleService: PeopleService,private viewCtrl: ViewController, private params: NavParams, private navCtrl: NavController) {
 		this.allowed = false
 		this.rate = []
 		this.user = params.get("userObject")
@@ -22,6 +24,15 @@ export class RatingModal {
 		this.user.skills.forEach(skill=>{
 			this.rate.push({"skill":skill,"rating":0})
 		})
+		storage.ready().then(()=>{
+	      storage.get('currentUser').then((data)=>{
+	        if(data!=null)
+	          {
+	            console.log("here now filling profile", data)
+	            this.currentUser = JSON.parse(data)
+	        }
+	      })
+	    })
 
 	}
 	modified(){
@@ -34,12 +45,22 @@ export class RatingModal {
 				this.allowed=true
 		})
 		console.log(this.rate)
-		if(this.allowed)
-		this.viewCtrl.dismiss()
+		if(this.allowed){
+			this.peopleService.pushRating({"uid":this.user.uid,"ratings":this.rate, "user":this.currentUser.uid},(status)=>{
+					this.viewCtrl.dismiss()
+			})
+			
+		}
+		
 		else
 			alert("Please rate atleast one skill")
 	}
 	rateLater(){
-		this.viewCtrl.dismiss()
+		{
+			this.peopleService.pushPendingRating({"uid":this.currentUser.uid,"user":this.user.uid}	,(status)=>{
+					this.viewCtrl.dismiss()
+			})
+			
+		}
 	}
 }

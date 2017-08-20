@@ -135,6 +135,10 @@
                         {
                             "xml": "<feature name=\"Calendar\"><param name=\"android-package\" value=\"nl.xservices.plugins.Calendar\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AudioTogglePlugin\"><param name=\"android-package\" value=\"com.dooble.audiotoggle.AudioTogglePlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -319,6 +323,10 @@
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_CALENDAR\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -426,6 +434,9 @@
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
         "cordova-plugin-calendar": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-audiotoggle": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
@@ -841,6 +852,14 @@
             "clobbers": [
                 "Calendar"
             ]
+        },
+        {
+            "id": "cordova-plugin-audiotoggle.AudioToggle",
+            "file": "plugins/cordova-plugin-audiotoggle/www/audiotoggle.js",
+            "pluginId": "cordova-plugin-audiotoggle",
+            "clobbers": [
+                "AudioToggle"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -870,6 +889,7 @@
         "cordova-plugin-android-permissions": "1.0.0",
         "cordova-plugin-media": "3.0.1",
         "cordova-plugin-background-mode": "0.7.2",
-        "cordova-plugin-calendar": "4.6.0"
+        "cordova-plugin-calendar": "4.6.0",
+        "cordova-plugin-audiotoggle": "1.0.3"
     }
 }

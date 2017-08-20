@@ -1,0 +1,92 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-audiotoggle",
+        "scope": null,
+        "escapedName": "cordova-plugin-audiotoggle",
+        "name": "cordova-plugin-audiotoggle",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/sidharth/Documents/Dev/irisapp/node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-audiotoggle@latest",
+  "_id": "cordova-plugin-audiotoggle@1.0.3",
+  "_inCache": true,
+  "_location": "/cordova-plugin-audiotoggle",
+  "_nodeVersion": "6.10.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-audiotoggle-1.0.3.tgz_1497993872399_0.6380259222351015"
+  },
+  "_npmUser": {
+    "name": "danielflippance",
+    "email": "danielflippance@hotmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-audiotoggle",
+    "scope": null,
+    "escapedName": "cordova-plugin-audiotoggle",
+    "name": "cordova-plugin-audiotoggle",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-audiotoggle/-/cordova-plugin-audiotoggle-1.0.3.tgz",
+  "_shasum": "a439f71313cde89eeac9dfc1afdf2a2ce1e75349",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-audiotoggle",
+  "_where": "/Users/sidharth/Documents/Dev/irisapp/node_modules",
+  "author": {
+    "name": "alongubkin"
+  },
+  "bugs": {
+    "url": "https://github.com/danielflippance/audiotoggle/issues"
+  },
+  "dependencies": {},
+  "description": "Cordova plugin for switching between speaker and earpiece when playing audio",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "a439f71313cde89eeac9dfc1afdf2a2ce1e75349",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-audiotoggle/-/cordova-plugin-audiotoggle-1.0.3.tgz"
+  },
+  "gitHead": "5d013c0d1c932d7f7d79d98ce3800906ad8fcbb0",
+  "homepage": "https://github.com/danielflippance/audiotoggle#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "ionic",
+    "audio",
+    "toggle"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "danielflippance",
+      "email": "danielflippance@hotmail.com"
+    }
+  ],
+  "name": "cordova-plugin-audiotoggle",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielflippance/audiotoggle.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.3"
+}

@@ -48,6 +48,7 @@
         "cordova-ios": "^4.4.0",
         "cordova-plugin-android-permissions": "^1.0.0",
         "cordova-plugin-app-event": "file:node_modules/cordova-plugin-app-event",
+        "cordova-plugin-audiotoggle": "^1.0.3",
         "cordova-plugin-background-mode": "^0.7.2",
         "cordova-plugin-calendar": "^4.6.0",
         "cordova-plugin-camera": "^2.4.1",
@@ -156,7 +157,8 @@
                 "MICROPHONE_USAGE_DESCRIPTION": " "
             },
             "cordova-plugin-background-mode": {},
-            "cordova-plugin-calendar": {}
+            "cordova-plugin-calendar": {},
+            "cordova-plugin-audiotoggle": {}
         },
         "platforms": [
             "android",

@@ -11,7 +11,9 @@ import { RatingModal } from '../../pages/rating-modal/rating-modal'
 	selector: 'modal-call'
 })
 export class CallModal {
+	audioSwitched:boolean;
 	constructor(private modalCtrl:ModalController,private people:PeopleService, params: NavParams, private events: Events, private viewCtrl: ViewController, public callService: CallService) {
+		this.audioSwitched = false
 		this.events.subscribe('call.trigger.hide', data => {
 			this.hide();
 		});
@@ -35,5 +37,16 @@ export class CallModal {
 	        this.callService.end()
 	      })
 		
+	}
+	switchAudio(){
+		if(!this.audioSwitched)
+		{	
+			this.audioSwitched = true
+			AudioToggle.setAudioMode(AudioToggle.EARPIECE);
+		}
+		else{
+			this.audioSwitched = false
+			AudioToggle.setAudioMode(AudioToggle.SPEAKER)
+		}
 	}
 }

@@ -16,6 +16,9 @@
 		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
+		65673F0914E742BCA5AC6883 /* AudioTogglePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 989BA2715D834674821B3B28 /* AudioTogglePlugin.m */; };
+		6C8A3B7D016349B691E55826 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9A05D5A2484BF4883A8CEE /* AVFoundation.framework */; };
+		08126EC3C1594B4185D0428D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8051C3A31FB4A05878DCC2C /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,10 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "Iris/config.xml"; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		989BA2715D834674821B3B28 /* AudioTogglePlugin.m */ = {isa = PBXFileReference; name = "AudioTogglePlugin.m"; path = "cordova-plugin-audiotoggle/AudioTogglePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0CD2E6C2B57F44DB91A8C900 /* AudioTogglePlugin.h */ = {isa = PBXFileReference; name = "AudioTogglePlugin.h"; path = "cordova-plugin-audiotoggle/AudioTogglePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		8B9A05D5A2484BF4883A8CEE /* AVFoundation.framework */ = {isa = PBXFileReference; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		E8051C3A31FB4A05878DCC2C /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +71,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				6C8A3B7D016349B691E55826 /* AVFoundation.framework in Frameworks */,
+				08126EC3C1594B4185D0428D /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +143,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B9A05D5A2484BF4883A8CEE /* AVFoundation.framework */,
+				E8051C3A31FB4A05878DCC2C /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,6 +170,8 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				989BA2715D834674821B3B28 /* AudioTogglePlugin.m */,
+				0CD2E6C2B57F44DB91A8C900 /* AudioTogglePlugin.h */,
 			);
 			name = Plugins;
 			path = "Iris/Plugins";
@@ -271,6 +284,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				65673F0914E742BCA5AC6883 /* AudioTogglePlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

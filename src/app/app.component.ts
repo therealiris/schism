@@ -18,6 +18,7 @@ import { CallModalTrigger } from '../components';
 import * as moment from 'moment';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { BackgroundMode } from '@ionic-native/background-mode';
+import { NativeAudio } from '@ionic-native/native-audio';
 
 declare var cordova:any;
 
@@ -27,6 +28,8 @@ declare var cordova:any;
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
+  audio = [];
+  volume = 1;
   rootPage: any ;
   user : any;
   pages: Array<{title: string, component: any , iconName : string, selected:boolean }>;
@@ -35,7 +38,7 @@ export class MyApp {
   unreadNotification : boolean;
   hamburgerNotification : boolean;
   otherPage : boolean;
-  constructor(private backgroundMode: BackgroundMode,public localNotifications:LocalNotifications,callService: CallService, private loginService: LoginService, public events: Events, callModal: CallModalTrigger,public people: PeopleService,public platform: Platform, public push: Push, public statusBar: StatusBar, public splashScreen: SplashScreen, private toastCtrl: ToastController, public storage:Storage) {
+  constructor(public nativeAudio:NativeAudio,private backgroundMode: BackgroundMode,public localNotifications:LocalNotifications,callService: CallService, private loginService: LoginService, public events: Events, callModal: CallModalTrigger,public people: PeopleService,public platform: Platform, public push: Push, public statusBar: StatusBar, public splashScreen: SplashScreen, private toastCtrl: ToastController, public storage:Storage) {
     moment.locale('en', {
       relativeTime: {
         future: 'now',
@@ -134,13 +137,42 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      let files = ['login','message-received-back','message-received-front','message-sent','calling'];
+        let c = 1;
+
+        if (this.platform.is('cordova')) {
+          files.forEach(file => {
+            this.nativeAudio.preloadSimple(file, 'assets/audio/' + file + '.mp3').then(msg => {
+              c++;
+              if (c == files.length) {
+              }
+            }, msg => {
+
+              console.debug('ERROR loading sound: ' + msg);
+            });
+          });
+        } else {
+          files.forEach(file => {
+            this.audio[file] = new Audio('assets/audio/' + file + '.mp3');
+            this.audio[file].volume = this.volume;
+          });
+
+        }
+      this.platform.registerBackButtonAction(()=>{
+        if(this.nav.canGoBack()){
+              this.nav.pop();
+            }
+        else{
+          this.backgroundMode.moveToBackground()
+        }
+      })
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleBlackTranslucent()
 
-      setTimeout(()=>{
+
         this.splashScreen.hide();
-      },3000)
+
       
       
     });
@@ -153,7 +185,7 @@ export class MyApp {
      ios: {
          alert: 'true',
          badge: true,
-         sound: 'false'
+         sound: 'true'
      },
      windows: {}
   };
@@ -168,9 +200,6 @@ export class MyApp {
               position: 'top'
             });
 
-        // toast.onDidDismiss(() => {
-        //   // console.log('Dismissed toast');
-        // });
 
         
         if(notification.message.indexOf("message")>-1)
@@ -179,9 +208,15 @@ export class MyApp {
           this.events.publish("addUnread",{"name":name})
           let view = this.nav.getActive();
           console.log(view.component.name)
-          if(view.component.name!="ContactsPage")
-          {this.unread++
-          this.hamburgerNotification =true}
+          if(view.component.name!="ContactsPage" && view.component.name!="ChatPage")
+          {
+            this.unread++
+            this.hamburgerNotification=true
+            toast.present()
+            this.nativeAudio.play('message-received-front')
+          }
+
+          
         }
         if(notification.message.indexOf("connection")>-1)
         {

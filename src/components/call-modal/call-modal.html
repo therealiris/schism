@@ -33,6 +33,10 @@
 			<ion-icon name="mic-off" *ngIf="!callService.muted"></ion-icon>
 			<ion-icon name="mic" *ngIf="callService.muted"></ion-icon>
 		</button>
+		<button style="padding: 0.6em" ion-button round icon-only outline color="light" class="button-incall" *ngIf="callService.isInCall" (click)="switchAudio()">
+			<ion-icon name="volume-off" *ngIf="!audioSwitched"></ion-icon>
+			<ion-icon name="volume-up" *ngIf="audioSwitched"></ion-icon>
+		</button>
 	</div>
 	<div class="videos inCallUI" style="display: none;">
 		<video id="remote" autoplay="true" *ngIf="callService.remoteVideo" [src]="callService.remoteVideo" style="height:65vh; width:100vw" ></video>

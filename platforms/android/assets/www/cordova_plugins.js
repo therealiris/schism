@@ -410,6 +410,14 @@ module.exports = [
         "clobbers": [
             "Calendar"
         ]
+    },
+    {
+        "id": "cordova-plugin-audiotoggle.AudioToggle",
+        "file": "plugins/cordova-plugin-audiotoggle/www/audiotoggle.js",
+        "pluginId": "cordova-plugin-audiotoggle",
+        "clobbers": [
+            "AudioToggle"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -441,7 +449,8 @@ module.exports.metadata =
     "cordova-plugin-android-permissions": "1.0.0",
     "cordova-plugin-media": "3.0.1",
     "cordova-plugin-background-mode": "0.7.2",
-    "cordova-plugin-calendar": "4.6.0"
+    "cordova-plugin-calendar": "4.6.0",
+    "cordova-plugin-audiotoggle": "1.0.3"
 };
 // BOTTOM OF METADATA
 });

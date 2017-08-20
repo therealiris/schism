@@ -9,7 +9,7 @@ import { Storage } from '@ionic/storage';
   providers: [PeopleService]
 })
 export class Profile {
-  user : {pictureUrl:string, fullName:string, gender:string,email:string,designation:string,dob:string,currentWorkplace:string,hobbies:string[], industry:string[], skill:any};
+  user : {pictureUrl:string, fullName:string, gender:string,email:string,designation:string,dob:string,currentWorkplace:string,hobbies:string[], industry:string[], skills:any};
   profile : any;
   fullName : string;
   gender : string;
@@ -21,16 +21,18 @@ export class Profile {
   industry : string[];
   pictureUrl : string;
   skill : any;
+  rate : any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService) {
     // If we navigated to this page, we will have an item available as a nav param
     this.profile = "personal"
-    this.user = {"pictureUrl":"", "fullName":"", "gender":"","dob":"","hobbies":[],"email":"","designation":"","currentWorkplace":"","industry":[],"skill":[]}
+    this.user = {"pictureUrl":"", "fullName":"", "gender":"","dob":"","hobbies":[],"email":"","designation":"","currentWorkplace":"","industry":[],"skills":[]}
     storage.ready().then(()=>{
       storage.get('currentUser').then((data)=>{
         if(data!=null)
           {
             console.log("here now filling profile", data)
             this.user = JSON.parse(data)
+            this.rate = this.user.skills
         }
       })
     })

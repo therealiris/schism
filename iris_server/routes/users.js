@@ -29,6 +29,42 @@ router.get('/userById', function(req, res) {
         
     })
 });
+router.post('/pushRating', function(req, res) {
+    let uid = req.body.uid, ratings = req.body.ratings
+
+    db.users.find({"uid":uid}).toArray(function(err,user){
+        if(!err){
+            let skillBody = []
+            skills = user[0].skills
+            skills.forEach(skill=>{
+                ratings.forEach(rating=>{
+                    if(skill.skill === rating.skill.skill)
+                    {   
+                        let newRating = (rating.rating!=0?(skill.rating+rating.rating)/2:skill.rating).toFixed(1)
+                        let skillObj = {"skill":skill.skill,"rating":newRating}
+                        skillBody.push(skillObj)
+                    }
+                })
+            })
+            db.users.update({"uid":uid},{"$set":{"skills":skillBody}},function(err,result){
+                res.send({status:1})
+            })
+            db.users.update({"uid":req.body.user},{"$pull":{"pendingRatings":uid}})
+        }
+    })
+});
+router.post('/pushPendingRating', function(req, res) {
+    let uid = req.body.uid, pendingId = req.body.user
+    console.log(req.body)
+    db.users.update({"uid":uid},{"$addToSet":{"pendingRatings": pendingId}})
+    res.send({"status":1})
+});
+router.post('/addFeedback', function(req, res) {
+    let feed = JSON.stringify(req.body), uid = req.body.uid
+
+    db.users.update({"uid":uid},{"$set":{"feedback": feed.toString()}})
+    res.send({"status":1})
+});
 router.post('/clearUnread', function(req, res) {
     let uid = req.param("uid")
     db.users.update({"uid":uid},{"$set":{"unread":[]}})
@@ -557,7 +593,7 @@ router.get("/events", function(req, res) {
 router.get('/otp', function(req, res) {
     var phone = req.param('phone')
     var otp = req.param('otp')
-    axios.get('https://control.msg91.com/api/sendhttp.php?authkey=166793An2EWuoYrxq9597607d0&mobiles=' + phone + '&message=Use%20OTP%20' + otp + '%20to%20successfully%20login%20to%20IRIS&sender=TMIRIS&route=4&country=0')
+    axios.get('https://control.msg91.com/api/sendhttp.php?authkey=169994A8BUunqq5992a81d&mobiles=' + phone + '&message=Use%20OTP%20' + otp + '%20to%20successfully%20login%20to%20IRIS&sender=TMIRIS&route=4&country=0')
         .then(response => {
             if (response != null)
                 res.send({
@@ -603,6 +639,11 @@ router.post("/updatePushRegistration", function(req, res) {
         })
 })
 
+function addPoints(pointsBody){
+    pointsBody.forEach(pbody=>{
+        db.users.update({"uid":pbody.uid},{"$inc":{"score":pbody.score}})
+    })
+}
 function sendPush(pushId, notificationType, notificationDetail) {
     let message = "",
         title = ""

@@ -444,6 +444,14 @@ module.exports = [
         "clobbers": [
             "PushNotification"
         ]
+    },
+    {
+        "id": "cordova-plugin-audiotoggle.AudioToggle",
+        "file": "plugins/cordova-plugin-audiotoggle/www/audiotoggle.js",
+        "pluginId": "cordova-plugin-audiotoggle",
+        "clobbers": [
+            "AudioToggle"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -475,7 +483,8 @@ module.exports.metadata =
     "cordova-sqlite-storage": "2.0.4",
     "de.appplant.cordova.plugin.local-notification": "0.8.5",
     "ionic-plugin-keyboard": "2.2.1",
-    "phonegap-plugin-push": "1.10.3"
+    "phonegap-plugin-push": "1.10.3",
+    "cordova-plugin-audiotoggle": "1.0.3"
 };
 // BOTTOM OF METADATA
 });

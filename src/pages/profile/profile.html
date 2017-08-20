@@ -58,7 +58,7 @@
     </ion-item>
     <ion-item>
       <ion-label stacked>Skill</ion-label>
-      <ion-input *ngFor="let skill of user.skills" type="text" value={{skill.skill}} disabled="true"></ion-input>
+      <ion-input *ngFor="let skill of user.skills; let i = index" type="text" value={{skill.skill}} disabled="true"></ion-input>
     </ion-item>
   </ion-list>
 </div>

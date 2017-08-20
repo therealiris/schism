@@ -1,5 +1,5 @@
+<ion-content>
 
-	<ion-card style="margin-top: 2em;" class="ratingCard">
         <ion-card-content>
           <div class="discover-thumb">
             <img src="{{user.pictureUrl}}" class="discover-pic" (load)="loaded = true" [ngClass]="{'img-loaded':loaded}" [hidden]="!loaded">
@@ -29,5 +29,6 @@
             <button ion-button round [disabled]="allowed" (click)="submitRating()">Done</button>
           </div>
         </ion-card-content>
-      </ion-card>
+
       
+</ion-content>

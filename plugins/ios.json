@@ -87,6 +87,9 @@
         "phonegap-plugin-push": {
             "SENDER_ID": "1056346035559",
             "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-audiotoggle": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
     "dependent_plugins": {

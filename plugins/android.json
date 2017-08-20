@@ -87,6 +87,9 @@
         },
         "cordova-plugin-calendar": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-audiotoggle": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
     "dependent_plugins": {
