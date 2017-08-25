@@ -28,8 +28,11 @@
             {{item.fullName}}
             </ion-card-title>
           <p class="headline">
-            {{item.designation}} at {{item.currentWorkplace}}
+            {{item.designation}}, {{item.currentWorkplace}}
           </p>
+          <div style="width:80%;margin-left: 10%;padding-bottom: 1em">
+            <div *ngFor="let ind of item.industry" style="border-radius: 30px;display: inline-block;color: #656565;padding: 2px 7px;margin:2px; font-size:12px;background: #dadada;">{{ind}}</div>
+          </div>
           <p class="headline">
             {{item.distance}} km away.
           </p>

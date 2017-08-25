@@ -29,14 +29,14 @@
 			     <img src={{contact.image}} class="connection-image">
 			   </div>
 			   <div class="conn-content">
-			     <span>{{contact.name}} <ion-icon *ngIf="contact.unread" name="mail"></ion-icon></span> <br>
+			     <span> <strong>{{contact.name}} </strong><ion-icon *ngIf="contact.unread" name="mail"></ion-icon></span> <br>
 			     <!-- <span>Meeting : 7:00 P.M to 10 P.M</span> -->
 			   </div> 
 			  </div>
 			</ion-item>
 
 			<ion-item-options side="right">
-			  <button class="slide-button" ion-button (click)="chat(contact.id)">
+			  <button class="slide-button" ion-button (click)="chat(contact.id, item)">
 			    <ion-icon name="chatboxes"></ion-icon>
 			    Chat
 			  </button>
@@ -45,7 +45,7 @@
 			    Call
 			  </button><button class="slide-button" ion-button (click)="schedule('meeting')">
 			    <ion-icon name="calendar"></ion-icon>
-			    Meet
+			    Meeting
 			  </button>
 			</ion-item-options>
 		</ion-item-sliding>

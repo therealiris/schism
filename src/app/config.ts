@@ -11,7 +11,7 @@ export class Config {
 	public static server = 'ws://192.168.1.4:5000/';
 
 	// enables or disables chat sounds. usefull for development
-	public static audio = false;
+	public static audio = true;
 
 	// STUN/TURN ice servers for connection negotiation
 	public static ice = [

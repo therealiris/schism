@@ -22,7 +22,7 @@ rating{
     color: #ffb400;
  
     ion-icon {
-      font-size: 1.3em;
+      font-size: 1.5em;
     }
   }
 }
@@ -43,7 +43,7 @@ discover-list {
 	}
 	.iris-slide.swiper-slide{
 	    width: 90vw !important;
-	    margin: 2em 5vw;
+	    margin: 12vh 5vw;
 	    padding: 0 6vw;
 	}
 	.content{
@@ -58,8 +58,8 @@ background: -moz-linear-gradient(top, rgba(116,203,253,1) 0%, rgba(101,157,241,1
 }
 .discover-pic{
 	display: inline;
-    height: 9em !important;
-    width: 9em !important;
+    height: 6em !important;
+    width: 6em !important;
     border-radius: 50%;
     margin: 1em 0 0;
 }
@@ -90,7 +90,7 @@ background: -moz-linear-gradient(top, rgba(116,203,253,1) 0%, rgba(101,157,241,1
 	transition: all 0.5s ease-in;
 }
 .dsc-slides{
-	height:65vh !important;
+	height:70vh !important;
 }
 .connect-btn{
 	text-align:center;

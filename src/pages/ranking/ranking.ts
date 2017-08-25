@@ -9,28 +9,30 @@ import { Storage } from '@ionic/storage';
   providers: [PeopleService]
 })
 export class Ranking {
-  user : {pictureUrl:string, fullName:string, gender:string,email:string,designation:string,dob:string,currentWorkplace:string,hobbies:string[], industry:string[], skill:any};
-  profile : any;
-  fullName : string;
-  gender : string;
-  dob : string;
-  email : string;
-  hobbies : string[];
-  designation : string;
-  currentWorkplace : string;
-  industry : string[];
-  pictureUrl : string;
-  skill : any;
+  user : any;
+  rankList : any;
+  info: any;
+  rates : number[];
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService) {
     // If we navigated to this page, we will have an item available as a nav param
-    this.profile = "personal"
-    this.user = {"pictureUrl":"", "fullName":"", "gender":"","dob":"","hobbies":[],"email":"","designation":"","currentWorkplace":"","industry":[],"skill":[]}
+    this.user = {"pictureUrl":""}
+    this.info = {"score":0, "ranking":0}
+    this.rates =[];
     storage.ready().then(()=>{
       storage.get('currentUser').then((data)=>{
         if(data!=null)
           {
             console.log("here now filling profile", data)
             this.user = JSON.parse(data)
+            this.people.ranking(this.user.uid,(rankings)=>{
+              console.log(rankings)
+              this.info = rankings.userInfo
+              this.rankList = rankings.rankedList
+              this.rankList.forEach(rank=>{
+                this.rates.push(parseFloat(rank.rating))
+              })
+              console.log(this.rates)
+            })
         }
       })
     })

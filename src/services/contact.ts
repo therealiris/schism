@@ -75,14 +75,23 @@ export class ContactService {
 			})
 		})
 		this.events.subscribe("addUnread",(data)=>{
-			this.contacts.forEach(co=>{
+			this.contacts.forEach((co,index)=>{
 				if(data.id){
+
 					if(co.id===data.id)
-					co.unread = true
+					{
+						co.unread = true
+					this.contacts.splice(index,1)
+					this.contacts.unshift(co)
+				}
 				}
 				if(data.name){
 					if(co.name===data.name)
-						co.unread = true
+						{
+							co.unread = true
+							this.contacts.splice(index,1)
+							this.contacts.unshift(co)
+						}
 				}
 				
 			})

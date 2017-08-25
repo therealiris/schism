@@ -52,12 +52,21 @@ export class AudioService {
 		if (!Config.audio) {
 			return;
 		}
-		this.ready.then(() => {
-			if (this.platform.is('cordova')) {
-				this.nativeAudio.play(clip);
-			} else if (this.audio[clip]) {
-				this.audio[clip].play();
-			}
-		});
+
+
+		if (this.platform.is('cordova')) {
+			if(clip==="calling")
+				this.nativeAudio.loop(clip)
+			else
+			this.nativeAudio.play(clip);
+		} else if (this.audio[clip]) {
+			this.audio[clip].play();
+		}
+
 	}
+	public stopAudioCalling(){
+		this.nativeAudio.stop('calling')
+	}
+
+
 }

@@ -4,7 +4,7 @@
 
 		</ion-buttons>
 		<ion-title>
-			{{chat.name}}
+			{{title}}
 		</ion-title>
 		<!-- <ion-buttons end>
 			<button (click)="addContact()" ion-button icon-only>
@@ -53,10 +53,10 @@
 		<form (ngSubmit)="send()">
 
 			<ion-item>
-				<ion-input type="text" message="true" (blur)="blurInput($event)" placeholder="Say something..." [(ngModel)]="data.message" name="message" id="messageBox"></ion-input>
+				<ion-input type="text" style="max-width: 80%;outline:none;border:none" message="true" (blur)="blurInput($event)" placeholder="Say something..." [(ngModel)]="data.message" name="message" id="messageBox" text-wrap></ion-input>
 			</ion-item>
 			<!-- <label for="attachment" class="attachment-link"><ion-icon name="ios-camera-outline" color="primary"></ion-icon></label> -->
-			<button ion-button clear class="send-button" color="primary">Send</button>
+			<button ion-button clear class="send-button" type="submit" color="primary">Send</button>
 		</form>
 	</ion-toolbar>
 </ion-footer>

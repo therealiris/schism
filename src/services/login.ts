@@ -89,10 +89,6 @@ export class LoginService {
 			let success = (user) => {
 				console.debug('Auth: ', user);
 				done();
-				if (this.playLoginSound) {
-					this.playLoginSound = false;
-					this.audio.play('login');
-				}
 				this.events.publish('user.login', {
 					user: user
 				});

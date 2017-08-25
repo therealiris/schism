@@ -6,6 +6,7 @@ import { CallService } from '../../services/call';
 import { PeopleService } from '../../providers/people-service';
 import { RatingModal } from '../../pages/rating-modal/rating-modal'
 
+
 @Component({
 	templateUrl: 'call-modal.html',
 	selector: 'modal-call'
@@ -42,11 +43,11 @@ export class CallModal {
 		if(!this.audioSwitched)
 		{	
 			this.audioSwitched = true
-			AudioToggle.setAudioMode(AudioToggle.EARPIECE);
+			AudioToggle.setAudioMode(AudioToggle.SPEAKER);
 		}
 		else{
 			this.audioSwitched = false
-			AudioToggle.setAudioMode(AudioToggle.SPEAKER)
+			AudioToggle.setAudioMode(AudioToggle.EARPIECE)
 		}
 	}
 }

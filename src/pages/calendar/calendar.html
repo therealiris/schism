@@ -16,10 +16,10 @@
           <img src="{{event.with.pictureUrl}}">
         </ion-avatar>
         <h2>{{event.type}} with {{event.with.fullName}}</h2>
-        <p>From : {{event.from}}</p>
-        <p>To : {{event.to}}</p>
-        <p text-wrap>Agenda : {{event.agenda}}</p>
-        <p *ngIf="event.type==='meeting'">Venue : {{event.venue}}</p>
+        <p><strong>From : {{event.from}}</strong></p>
+        <p><strong>To : {{event.to}}</strong></p>
+        <p text-wrap><strong>Agenda : {{event.agenda}}</strong></p>
+        <p *ngIf="event.type==='meeting'"><strong>Venue : {{event.venue}}</strong></p>
       </ion-item>
 
       <ion-row>

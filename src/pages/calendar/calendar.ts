@@ -22,7 +22,6 @@ export class CalendarPage {
     // If we navigated to this page, we will have an item available as a nav param
 
     storage.get('plannerTutorial').then((val)=>{
-      alert("tutorial"+ val)
       if(val)
       {
         let tut = this.modalCtrl.create(Tutorial,{"type":"calendar"})

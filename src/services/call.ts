@@ -92,9 +92,10 @@ export class CallService {
 				case 'answer':
 					clearTimeout(this.pickupTimeout);
 					this.pickupTimeout = null;
-
+					this.audio.stopAudioCalling()
 					this.isInCall = true;
 					this.isCalling = false;
+					AudioToggle.setAudioMode(AudioToggle.EARPIECE);
 					this.refreshVideos();
 
 					this.call(true, this.contact.id);
@@ -215,6 +216,7 @@ export class CallService {
 	};
 
 	hideModal() {
+		this.audio.stopAudioCalling()
 		this.events.publish('call.trigger.hide', true);
 	}
 
@@ -315,6 +317,7 @@ export class CallService {
 
 	// cancel a call being placed
 	cancel() {
+		this.audio.stopAudioCalling()
 		this.socket.emit('sendMessage', this.contact.id, {
 			type: 'cancel'
 		});
@@ -323,6 +326,7 @@ export class CallService {
 
 	// ignore an incomming call
 	ignore(end, name) {
+		this.audio.stopAudioCalling()
 		this.socket.emit('sendMessage', name || this.contact.id, {
 			type: 'ignore'
 		});
@@ -335,7 +339,8 @@ export class CallService {
 		if (this.isInCall) {
 			return;
 		}
-
+		this.audio.stopAudioCalling()
+		AudioToggle.setAudioMode(AudioToggle.EARPIECE);
 		clearTimeout(this.pickupTimeout);
 		this.pickupTimeout = null;
 

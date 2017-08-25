@@ -20,6 +20,37 @@ wss.on('connection', function connection(ws) {
 router.get('/', function(req, res, next) {
     res.send('respond with a resource');
 });
+router.get('/rankings', function(req, res) {
+    let uid = req.param("uid"), responseBody = {}, rankedUser = new Array()
+    db.users.find({},{"fullName":1, "score":1, "ratings":1, "skills":1, "uid":1, "pictureUrl":1}).sort({score:-1}).toArray(function(err,users){
+        if(!err){
+           rankedUser = users.slice(0,5) 
+           users.forEach((user,index)=>{
+                if(user.uid === uid)
+                {
+                    console.log("rank for "+ uid)
+                    user.ranking = index+1
+                    responseBody["userInfo"] = user
+                }
+                
+           })
+           rankedUser.forEach((rk,index)=>{
+            let totalSkills = rk.skills.length, totalRatings = 0
+
+                rk.skills.forEach(skill=>{
+                    totalRatings+=skill.rating
+                })
+                let userRating = totalRatings/totalSkills
+                rk.rating = userRating.toFixed(1)
+                rk.ranking = index+1
+           })
+           // let topUsers = rankedUser.slice(5)
+           responseBody.rankedList = rankedUser
+           res.send(responseBody)
+        }    
+        
+    })
+});
 router.get('/userById', function(req, res) {
     let id = require('mongodb').ObjectId(req.param('id'))
     db.users.find({"_id":id}).toArray(function(err,user){
@@ -31,6 +62,20 @@ router.get('/userById', function(req, res) {
 });
 router.post('/pushRating', function(req, res) {
     let uid = req.body.uid, ratings = req.body.ratings
+    let totalRatings = 0; let totalSkills = ratings.length
+    ratings.forEach(rat=>{
+        totalRatings+=rat.rating
+    })
+    let overall = parseFloat(totalRatings/totalSkills).toFixed(1)
+    console.log(overall)
+    if(overall>4){
+        console.log("here")
+        addPoints([{"uid":uid,"score":15}])
+    }
+    if(overall<=4 && overall>2)
+        addPoints([{"uid":uid,"score":10}])
+    if(overall<=2)
+        addPoints([{"uid":uid,"score":5}])
 
     db.users.find({"uid":uid}).toArray(function(err,user){
         if(!err){
@@ -41,7 +86,7 @@ router.post('/pushRating', function(req, res) {
                     if(skill.skill === rating.skill.skill)
                     {   
                         let newRating = (rating.rating!=0?(skill.rating+rating.rating)/2:skill.rating).toFixed(1)
-                        let skillObj = {"skill":skill.skill,"rating":newRating}
+                        let skillObj = {"skill":skill.skill,"rating":parseFloat(newRating)}
                         skillBody.push(skillObj)
                     }
                 })
@@ -156,6 +201,10 @@ router.post('/data', function(req, res, next) {
                 db.users.insert(newuser, function(err, result) {
                     if (!err) {
                         console.log(result)
+                        let pointArr = new Array()
+                        let pointBody = {"uid":newuser.uid, "score":100}
+                        pointArr.push(pointBody)
+                        addPoints(pointArr)
                         res.send(newuser)
                     }
                 })
@@ -199,6 +248,7 @@ router.get('/discover', function(req, res, next) {
                 "uid": 1,
                 "designation": 1,
                 "skills": 1,
+                "industry":1,
                 "currentWorkplace": 1,
                 "lastLoginLocation": 1
             }).limit(10).toArray(function(err, users) {
@@ -285,10 +335,11 @@ router.put("/request", function(req, res) {
                         "requested": req.body.id
                     }
                 }, function(err, response) {
-                    if (!err)
-                        res.send({
-                            status: 1
-                        })
+                    if (!err){
+                       addPoints([{"uid":req.body.uid,"score":15}]) 
+                       res.send({status: 1}) 
+                    }
+                        
                 })
             } else
                 console.log(err)
@@ -373,6 +424,7 @@ router.get("/connections", function(req, res) {
     })
 })
 router.post("/acceptMeeting", function(req, res) {
+    addPoints([{"uid":req.body.uid,"score":5},{"uid":req.body.eventObject.with.uid,"score":15}])
     db.users.update({
         "uid": req.body.uid
     }, {
@@ -437,6 +489,7 @@ router.post("/rejectMeeting", function(req, res) {
 router.post("/acceptConnect", function(req, res) {
     var uid = req.body.uid
     var acceptId = req.body.acceptId
+    addPoints([{"uid":uid,"score":5},{"uid":acceptId,"score":15}])
     db.users.update({
         "uid": uid
     }, {
@@ -520,6 +573,8 @@ router.post("/events", function(req, res) {
         eventObject = req.body.event,
         eventId = (+new Date).toString(36)
     eventObject.eventId = eventId
+    addPoints([{"uid":req.body.uid,"score":15}])
+
     db.users.update({
         "uid": uid
     }, {

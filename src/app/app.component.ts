@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+  import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, ToastController, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,6 +19,7 @@ import * as moment from 'moment';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { BackgroundMode } from '@ionic-native/background-mode';
 import { NativeAudio } from '@ionic-native/native-audio';
+
 
 declare var cordova:any;
 
@@ -56,6 +57,7 @@ export class MyApp {
         yy: '%d y'
       }
     });
+    this.backgroundMode.setDefaults({silent:true})
     this.backgroundMode.enable();
     
 
@@ -137,27 +139,27 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      let files = ['login','message-received-back','message-received-front','message-sent','calling'];
-        let c = 1;
+      // let files = ['login','message-received-back','message-received-front','message-sent','calling'];
+      //   let c = 1;
 
-        if (this.platform.is('cordova')) {
-          files.forEach(file => {
-            this.nativeAudio.preloadSimple(file, 'assets/audio/' + file + '.mp3').then(msg => {
-              c++;
-              if (c == files.length) {
-              }
-            }, msg => {
+      //   if (this.platform.is('cordova')) {
+      //     files.forEach(file => {
+      //       this.nativeAudio.preloadSimple(file, 'assets/audio/' + file + '.mp3').then(msg => {
+      //         c++;
+      //         if (c == files.length) {
+      //         }
+      //       }, msg => {
 
-              console.debug('ERROR loading sound: ' + msg);
-            });
-          });
-        } else {
-          files.forEach(file => {
-            this.audio[file] = new Audio('assets/audio/' + file + '.mp3');
-            this.audio[file].volume = this.volume;
-          });
+      //         console.debug('ERROR loading sound: ' + msg);
+      //       });
+      //     });
+      //   } else {
+      //     files.forEach(file => {
+      //       this.audio[file] = new Audio('assets/audio/' + file + '.mp3');
+      //       this.audio[file].volume = this.volume;
+      //     });
 
-        }
+      //   }
       this.platform.registerBackButtonAction(()=>{
         if(this.nav.canGoBack()){
               this.nav.pop();
@@ -224,6 +226,11 @@ export class MyApp {
           toast.present();
           this.unreadNotification =true
         }
+        if(notification.message.indexOf("scheduled")>-1)
+        {
+          toast.present();
+          this.unreadNotification =true
+        }
         if(notification.message.indexOf("accepted")>-1)
         {
           toast.present();
@@ -254,6 +261,7 @@ export class MyApp {
       {
         this.people.clearUnread(this.user.uid)
         this.unread = 0;
+        this.hamburgerNotification = false
       }
     if(page.title === 'Discover')
       this.otherPage = false

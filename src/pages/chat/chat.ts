@@ -37,7 +37,7 @@ export class ChatPage {
 	}
 	messageHandleWrap = null
 	attachments = Config.attachments;
-
+	title :String;
 	constructor(private sanitizer: DomSanitizer, private attachment: AttachmentService, public contactService: ContactService, private modalCtrl: ModalController, private events: Events, params: NavParams, private loginService: LoginService, private chatService: ChatService, private audioService: AudioService) {
 		console.debug('Viewing chat: ', params.get('chatId'));
 
@@ -47,7 +47,7 @@ export class ChatPage {
 		});
 
 		this.chat = this.chatService.getChatById(params.get('chatId'));
-
+		this.title = params.get('name')
 		// if we refreshed on this page, then go back to chats
 		if (!loginService.user) {
 			loginService.go();

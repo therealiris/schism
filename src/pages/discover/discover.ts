@@ -89,6 +89,10 @@ export class DiscoverPage {
       this.people.updateCurrentUser(this.pendingRatings[this.ratingCount],(user)=>{
          let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user.userObject})
         pendingRatingModal.present()
+        pendingRatingModal.onDidDismiss((data)=>{
+          if(data.status)
+          this.pendingRatings.splice(this.ratingCount,1)
+        })
       })
       
     }

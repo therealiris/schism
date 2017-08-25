@@ -10,6 +10,7 @@ import { PlannerTwo } from '../planner2/plannerTwo'
 import { CalendarPage } from '../calendar/calendar'
 import { PeopleService } from '../../providers/people-service'
 import { Storage } from '@ionic/storage';
+import { ItemSliding } from 'ionic-angular';
 @Component({
 	selector: 'page-contacts',
 	templateUrl: 'contacts.html'
@@ -59,12 +60,18 @@ tutorial : boolean;
 	}
 
 	// go to a chat
-	chat(id) {
+	chat(id, item:ItemSliding) {
+		let name = "" 
+		this.contactList.forEach(con=>{
+			if(con.id === id)
+				name = con.name
+		})
+		item.close()
 		this.events.publish("clearUnread",{"id":id})
 		console.log(id)
 		this.chatService.getChatByContact(id).then((chat:any) => {
 			console.debug('Pushing to chat: ', chat)
-			this.navCtrl.push(ChatPage, {chatId: chat.id}, {animate: true, direction: 'forward'});
+			this.navCtrl.push(ChatPage, {chatId: chat.id, "name":name}, {animate: true, direction: 'forward'});
 		});
 	}
 
@@ -78,7 +85,7 @@ tutorial : boolean;
     });
     planModal.present()
     planModal.onDidDismiss(()=>{
-      this.navCtrl.setRoot(CalendarPage)
+      this.navCtrl.setRoot(ContactsPage)
     })
   }
 

@@ -47,9 +47,9 @@ export class RatingModal {
 		console.log(this.rate)
 		if(this.allowed){
 			this.peopleService.pushRating({"uid":this.user.uid,"ratings":this.rate, "user":this.currentUser.uid},(status)=>{
-					this.viewCtrl.dismiss()
+				console.log(status)	
 			})
-			
+			this.viewCtrl.dismiss({status:true})
 		}
 		
 		else
@@ -58,7 +58,7 @@ export class RatingModal {
 	rateLater(){
 		{
 			this.peopleService.pushPendingRating({"uid":this.currentUser.uid,"user":this.user.uid}	,(status)=>{
-					this.viewCtrl.dismiss()
+					this.viewCtrl.dismiss({status:false})
 			})
 			
 		}
