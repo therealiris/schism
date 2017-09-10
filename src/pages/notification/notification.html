@@ -1,9 +1,9 @@
 <ion-header >
-  <ion-navbar>
+  <ion-navbar hideBackButton="true">
     <ion-title>Notifications</ion-title>
     <ion-buttons end>
-      <button ion-button (click)="dismiss()">
-        <ion-icon name="close"></ion-icon>
+      <button ion-button (tap)="dismiss()" style="padding-right: 2vw">
+        <ion-icon name="close" style="font-size: 1.6em"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>

@@ -34,7 +34,7 @@ export class DiscoverPage {
   tutorial : boolean;
   constructor(private events:Events,public modalCtrl:ModalController,public navCtrl: NavController,public loadingCtrl: LoadingController, public navParams: NavParams,public people: PeopleService,public storage:Storage) {
     storage.get('discoverTutorial').then((val)=>{
-      if(val)
+      if(!val)
       {
         let tut = this.modalCtrl.create(Tutorial,{"type":"discover"})
         tut.present()

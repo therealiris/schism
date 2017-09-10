@@ -12,7 +12,7 @@ export class LoginService {
 
 	user = null
 	storage = null
-	playLoginSound = true
+	playLoginSound = false
 	complete = null
 
 	private nav:NavController;
@@ -137,10 +137,7 @@ export class LoginService {
 				this.events.publish('user.login', {
 					user: user
 				});
-				if (this.playLoginSound) {
-					this.playLoginSound = false;
-					this.audio.play('login');
-				}
+				
 				resolve();
 			};
 
@@ -152,7 +149,6 @@ export class LoginService {
 
 	// log the user out
 	public logout() {
-		this.playLoginSound = true;
 		this.storage.remove('token');
 		this.user = null;
 		//$rootScope.contacts.length = 0;

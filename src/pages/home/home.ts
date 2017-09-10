@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { NavController, LoadingController } from 'ionic-angular';
+import { Component,ViewChild } from '@angular/core';
+import { NavController, LoadingController, Slides } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { Storage } from '@ionic/storage';
+
 
 
 @Component({
@@ -9,10 +10,11 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  @ViewChild(Slides) slides: Slides;  
   appUser:any;
+  showLogin : boolean;
   constructor(public navCtrl: NavController, public storage: Storage, public loadingCtrl: LoadingController) {
-
+      this.showLogin = false
     this.appUser = {
     "uid" : "",
     "username":"", 
@@ -45,5 +47,16 @@ export class HomePage {
   }
   login(){
     this.navCtrl.push(LoginPage,this.appUser,{ animate: true, direction: 'forward' })
+  }
+  slideChanged() {
+    let currentIndex = this.slides.getActiveIndex();
+    if(currentIndex===2){
+        this.showLogin = true;
+        this.slides.lockSwipeToNext(true)
+
+    }
+    else{
+        this.showLogin = false;
+    }
   }
 }

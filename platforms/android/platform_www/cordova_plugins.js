@@ -1,6 +1,47 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "id": "cordova-plugin-android-permissions.Permissions",
+        "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+        "pluginId": "cordova-plugin-android-permissions",
+        "clobbers": [
+            "cordova.plugins.permissions"
+        ]
+    },
+    {
+        "id": "cordova-plugin-audiotoggle.AudioToggle",
+        "file": "plugins/cordova-plugin-audiotoggle/www/audiotoggle.js",
+        "pluginId": "cordova-plugin-audiotoggle",
+        "clobbers": [
+            "AudioToggle"
+        ]
+    },
+    {
+        "id": "cordova-plugin-device.device",
+        "file": "plugins/cordova-plugin-device/www/device.js",
+        "pluginId": "cordova-plugin-device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
+        "id": "cordova-plugin-background-mode.BackgroundMode",
+        "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
+        "pluginId": "cordova-plugin-background-mode",
+        "clobbers": [
+            "cordova.plugins.backgroundMode",
+            "plugin.backgroundMode"
+        ]
+    },
+    {
+        "id": "cordova-plugin-calendar.Calendar",
+        "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
+        "pluginId": "cordova-plugin-calendar",
+        "clobbers": [
+            "Calendar"
+        ]
+    },
+    {
         "id": "cordova-plugin-camera.Camera",
         "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
         "pluginId": "cordova-plugin-camera",
@@ -30,14 +71,6 @@ module.exports = [
         "pluginId": "cordova-plugin-camera",
         "clobbers": [
             "CameraPopoverHandle"
-        ]
-    },
-    {
-        "id": "cordova-plugin-device.device",
-        "file": "plugins/cordova-plugin-device/www/device.js",
-        "pluginId": "cordova-plugin-device",
-        "clobbers": [
-            "device"
         ]
     },
     {
@@ -261,6 +294,22 @@ module.exports = [
         ]
     },
     {
+        "id": "cordova-plugin-media.MediaError",
+        "file": "plugins/cordova-plugin-media/www/MediaError.js",
+        "pluginId": "cordova-plugin-media",
+        "clobbers": [
+            "window.MediaError"
+        ]
+    },
+    {
+        "id": "cordova-plugin-media.Media",
+        "file": "plugins/cordova-plugin-media/www/Media.js",
+        "pluginId": "cordova-plugin-media",
+        "clobbers": [
+            "window.Media"
+        ]
+    },
+    {
         "id": "cordova-plugin-nativeaudio.nativeaudio",
         "file": "plugins/cordova-plugin-nativeaudio/www/nativeaudio.js",
         "pluginId": "cordova-plugin-nativeaudio",
@@ -369,72 +418,28 @@ module.exports = [
         "clobbers": [
             "PushNotification"
         ]
-    },
-    {
-        "id": "cordova-plugin-android-permissions.Permissions",
-        "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
-        "pluginId": "cordova-plugin-android-permissions",
-        "clobbers": [
-            "cordova.plugins.permissions"
-        ]
-    },
-    {
-        "id": "cordova-plugin-media.MediaError",
-        "file": "plugins/cordova-plugin-media/www/MediaError.js",
-        "pluginId": "cordova-plugin-media",
-        "clobbers": [
-            "window.MediaError"
-        ]
-    },
-    {
-        "id": "cordova-plugin-media.Media",
-        "file": "plugins/cordova-plugin-media/www/Media.js",
-        "pluginId": "cordova-plugin-media",
-        "clobbers": [
-            "window.Media"
-        ]
-    },
-    {
-        "id": "cordova-plugin-background-mode.BackgroundMode",
-        "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
-        "pluginId": "cordova-plugin-background-mode",
-        "clobbers": [
-            "cordova.plugins.backgroundMode",
-            "plugin.backgroundMode"
-        ]
-    },
-    {
-        "id": "cordova-plugin-calendar.Calendar",
-        "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
-        "pluginId": "cordova-plugin-calendar",
-        "clobbers": [
-            "Calendar"
-        ]
-    },
-    {
-        "id": "cordova-plugin-audiotoggle.AudioToggle",
-        "file": "plugins/cordova-plugin-audiotoggle/www/audiotoggle.js",
-        "pluginId": "cordova-plugin-audiotoggle",
-        "clobbers": [
-            "AudioToggle"
-        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "cordova-plugin-android-permissions": "1.0.0",
     "cordova-plugin-app-event": "1.2.0",
+    "cordova-plugin-audiotoggle": "1.0.3",
+    "cordova-plugin-device": "1.1.4",
+    "cordova-plugin-background-mode": "0.7.2",
     "cordova-plugin-compat": "1.1.0",
+    "cordova-plugin-calendar": "4.6.0",
     "cordova-plugin-camera": "2.4.1",
     "cordova-plugin-console": "1.0.5",
     "cordova-plugin-crosswalk-webview": "2.3.0",
-    "cordova-plugin-device": "1.1.4",
     "cordova-plugin-file": "4.3.3",
     "cordova-plugin-file-transfer": "1.6.3",
     "cordova-plugin-filepath": "1.0.2",
     "cordova-plugin-geolocation": "2.4.3",
     "cordova-plugin-inappbrowser": "1.7.1",
     "cordova-plugin-iosrtc": "3.2.2",
+    "cordova-plugin-media": "3.0.1",
     "cordova-plugin-nativeaudio": "3.0.9",
     "cordova-plugin-nativestorage": "2.2.2",
     "cordova-plugin-sms-receiver": "0.1.6",
@@ -445,12 +450,7 @@ module.exports.metadata =
     "cordova-sqlite-storage": "2.0.4",
     "de.appplant.cordova.plugin.local-notification": "0.8.5",
     "ionic-plugin-keyboard": "2.2.1",
-    "phonegap-plugin-push": "1.10.3",
-    "cordova-plugin-android-permissions": "1.0.0",
-    "cordova-plugin-media": "3.0.1",
-    "cordova-plugin-background-mode": "0.7.2",
-    "cordova-plugin-calendar": "4.6.0",
-    "cordova-plugin-audiotoggle": "1.0.3"
+    "phonegap-plugin-push": "1.10.3"
 };
 // BOTTOM OF METADATA
 });

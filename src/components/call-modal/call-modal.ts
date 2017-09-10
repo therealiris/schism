@@ -6,6 +6,7 @@ import { CallService } from '../../services/call';
 import { PeopleService } from '../../providers/people-service';
 import { RatingModal } from '../../pages/rating-modal/rating-modal'
 
+declare var AudioToggle:any;
 
 @Component({
 	templateUrl: 'call-modal.html',
@@ -35,6 +36,7 @@ export class CallModal {
 		this.people.userById(this.callService.contact.id.toString(),(user)=>{
 	         let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user})
 	        pendingRatingModal.present()
+	        
 	        this.callService.end()
 	      })
 		

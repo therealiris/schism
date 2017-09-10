@@ -9,6 +9,34 @@
                 "parents": {
                     "/*": [
                         {
+                            "xml": "<feature name=\"Permissions\"><param name=\"android-package\" value=\"com.android.plugins.Permissions\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AudioTogglePlugin\"><param name=\"android-package\" value=\"com.dooble.audiotoggle.AudioTogglePlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BackgroundMode\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.background.BackgroundMode\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"KeepRunning\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"AndroidLaunchMode\" value=\"singleInstance\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Calendar\"><param name=\"android-package\" value=\"nl.xservices.plugins.Calendar\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
                             "count": 1
                         },
@@ -41,10 +69,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -66,6 +90,10 @@
                         },
                         {
                             "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Media\"><param name=\"android-package\" value=\"org.apache.cordova.media.AudioHandler\" /></feature>",
                             "count": 1
                         },
                         {
@@ -111,89 +139,91 @@
                         {
                             "xml": "<feature name=\"PushNotification\"><param name=\"android-package\" value=\"com.adobe.phonegap.push.PushPlugin\" /></feature>",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Permissions\"><param name=\"android-package\" value=\"com.android.plugins.Permissions\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Media\"><param name=\"android-package\" value=\"org.apache.cordova.media.AudioHandler\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"BackgroundMode\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.background.BackgroundMode\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"KeepRunning\" value=\"true\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"AndroidLaunchMode\" value=\"singleInstance\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Calendar\"><param name=\"android-package\" value=\"nl.xservices.plugins.Calendar\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"AudioTogglePlugin\"><param name=\"android-package\" value=\"com.dooble.audiotoggle.AudioTogglePlugin\" /></feature>",
-                            "count": 1
                         }
                     ]
                 }
             },
             "AndroidManifest.xml": {
                 "parents": {
-                    "/*": [
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_CALENDAR\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_CALENDAR\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.RECEIVE_SMS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.SEND_SMS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.telephony\" android:required=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\" />",
+                            "count": 1
+                        },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 6
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
+                            "xml": "<uses-permission android:name=\"com.google.android.c2dm.permission.RECEIVE\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "xml": "<uses-permission android:name=\"${applicationId}.permission.C2D_MESSAGE\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+                            "xml": "<uses-permission android:name=\"${applicationId}.permission.PushHandlerActivity\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-feature android:name=\"android.hardware.location.gps\" />",
+                            "xml": "<permission android:name=\"${applicationId}.permission.C2D_MESSAGE\" android:protectionLevel=\"signature\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
-                            "count": 2
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
-                            "count": 2
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
-                            "count": 1
-                        }
-                    ],
-                    "application": [
-                        {
-                            "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"android.support.v4.content.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/provider_paths\" /></provider>",
+                            "xml": "<permission android:name=\"${applicationId}.permission.PushHandlerActivity\" android:protectionLevel=\"signature\" />",
                             "count": 1
                         }
                     ],
                     "/manifest/application": [
+                        {
+                            "xml": "<service android:name=\"de.appplant.cordova.plugin.background.ForegroundService\" />",
+                            "count": 1
+                        },
                         {
                             "xml": "<receiver android:exported=\"true\" android:name=\"name.ratson.cordova.sms_receiver.SmsReceiver\"><intent-filter android:priority=\"999\"><action android:name=\"android.provider.Telephony.SMS_RECEIVED\" /></intent-filter></receiver>",
                             "count": 1
@@ -249,83 +279,53 @@
                         {
                             "xml": "<service android:exported=\"false\" android:name=\"com.adobe.phonegap.push.RegistrationIntentService\" />",
                             "count": 1
-                        },
-                        {
-                            "xml": "<service android:name=\"de.appplant.cordova.plugin.background.ForegroundService\" />",
-                            "count": 1
                         }
                     ],
-                    "/manifest": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.RECEIVE_SMS\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.SEND_SMS\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-feature android:name=\"android.hardware.telephony\" android:required=\"false\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\" />",
-                            "count": 1
-                        },
+                    "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-                            "count": 1
+                            "count": 6
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
-                            "count": 2
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"com.google.android.c2dm.permission.RECEIVE\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"${applicationId}.permission.C2D_MESSAGE\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"${applicationId}.permission.PushHandlerActivity\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<permission android:name=\"${applicationId}.permission.C2D_MESSAGE\" android:protectionLevel=\"signature\" />",
+                            "xml": "<uses-feature android:name=\"android.hardware.location.gps\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<permission android:name=\"${applicationId}.permission.PushHandlerActivity\" android:protectionLevel=\"signature\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.READ_CALENDAR\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.WRITE_CALENDAR\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
                             "count": 1
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 2
+                        }
+                    ],
+                    "application": [
+                        {
+                            "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"android.support.v4.content.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/provider_paths\" /></provider>",
                             "count": 1
                         }
                     ]
@@ -340,19 +340,29 @@
                         }
                     ]
                 }
-            },
-            "config.xml": {
-                "parents": {
-                    "/*": []
-                }
             }
         }
     },
     "installed_plugins": {
+        "cordova-plugin-android-permissions": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
         "cordova-plugin-app-event": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
+        "cordova-plugin-audiotoggle": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
         "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-calendar": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
         "cordova-plugin-camera": {
@@ -367,9 +377,6 @@
             "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
             "XWALK_MODE": "embedded",
             "XWALK_MULTIPLEAPK": "true",
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
         "cordova-plugin-file": {
@@ -388,6 +395,9 @@
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
         "cordova-plugin-iosrtc": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-media": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
         "cordova-plugin-nativeaudio": {
@@ -423,25 +433,51 @@
         "phonegap-plugin-push": {
             "SENDER_ID": "1056346035559",
             "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-android-permissions": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-background-mode": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-calendar": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-audiotoggle": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
     "dependent_plugins": {},
     "modules": [
+        {
+            "id": "cordova-plugin-android-permissions.Permissions",
+            "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+            "pluginId": "cordova-plugin-android-permissions",
+            "clobbers": [
+                "cordova.plugins.permissions"
+            ]
+        },
+        {
+            "id": "cordova-plugin-audiotoggle.AudioToggle",
+            "file": "plugins/cordova-plugin-audiotoggle/www/audiotoggle.js",
+            "pluginId": "cordova-plugin-audiotoggle",
+            "clobbers": [
+                "AudioToggle"
+            ]
+        },
+        {
+            "id": "cordova-plugin-device.device",
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "pluginId": "cordova-plugin-device",
+            "clobbers": [
+                "device"
+            ]
+        },
+        {
+            "id": "cordova-plugin-background-mode.BackgroundMode",
+            "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
+            "pluginId": "cordova-plugin-background-mode",
+            "clobbers": [
+                "cordova.plugins.backgroundMode",
+                "plugin.backgroundMode"
+            ]
+        },
+        {
+            "id": "cordova-plugin-calendar.Calendar",
+            "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
+            "pluginId": "cordova-plugin-calendar",
+            "clobbers": [
+                "Calendar"
+            ]
+        },
         {
             "id": "cordova-plugin-camera.Camera",
             "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
@@ -472,14 +508,6 @@
             "pluginId": "cordova-plugin-camera",
             "clobbers": [
                 "CameraPopoverHandle"
-            ]
-        },
-        {
-            "id": "cordova-plugin-device.device",
-            "file": "plugins/cordova-plugin-device/www/device.js",
-            "pluginId": "cordova-plugin-device",
-            "clobbers": [
-                "device"
             ]
         },
         {
@@ -703,6 +731,22 @@
             ]
         },
         {
+            "id": "cordova-plugin-media.MediaError",
+            "file": "plugins/cordova-plugin-media/www/MediaError.js",
+            "pluginId": "cordova-plugin-media",
+            "clobbers": [
+                "window.MediaError"
+            ]
+        },
+        {
+            "id": "cordova-plugin-media.Media",
+            "file": "plugins/cordova-plugin-media/www/Media.js",
+            "pluginId": "cordova-plugin-media",
+            "clobbers": [
+                "window.Media"
+            ]
+        },
+        {
             "id": "cordova-plugin-nativeaudio.nativeaudio",
             "file": "plugins/cordova-plugin-nativeaudio/www/nativeaudio.js",
             "pluginId": "cordova-plugin-nativeaudio",
@@ -811,70 +855,26 @@
             "clobbers": [
                 "PushNotification"
             ]
-        },
-        {
-            "id": "cordova-plugin-android-permissions.Permissions",
-            "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
-            "pluginId": "cordova-plugin-android-permissions",
-            "clobbers": [
-                "cordova.plugins.permissions"
-            ]
-        },
-        {
-            "id": "cordova-plugin-media.MediaError",
-            "file": "plugins/cordova-plugin-media/www/MediaError.js",
-            "pluginId": "cordova-plugin-media",
-            "clobbers": [
-                "window.MediaError"
-            ]
-        },
-        {
-            "id": "cordova-plugin-media.Media",
-            "file": "plugins/cordova-plugin-media/www/Media.js",
-            "pluginId": "cordova-plugin-media",
-            "clobbers": [
-                "window.Media"
-            ]
-        },
-        {
-            "id": "cordova-plugin-background-mode.BackgroundMode",
-            "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
-            "pluginId": "cordova-plugin-background-mode",
-            "clobbers": [
-                "cordova.plugins.backgroundMode",
-                "plugin.backgroundMode"
-            ]
-        },
-        {
-            "id": "cordova-plugin-calendar.Calendar",
-            "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
-            "pluginId": "cordova-plugin-calendar",
-            "clobbers": [
-                "Calendar"
-            ]
-        },
-        {
-            "id": "cordova-plugin-audiotoggle.AudioToggle",
-            "file": "plugins/cordova-plugin-audiotoggle/www/audiotoggle.js",
-            "pluginId": "cordova-plugin-audiotoggle",
-            "clobbers": [
-                "AudioToggle"
-            ]
         }
     ],
     "plugin_metadata": {
+        "cordova-plugin-android-permissions": "1.0.0",
         "cordova-plugin-app-event": "1.2.0",
+        "cordova-plugin-audiotoggle": "1.0.3",
+        "cordova-plugin-device": "1.1.4",
+        "cordova-plugin-background-mode": "0.7.2",
         "cordova-plugin-compat": "1.1.0",
+        "cordova-plugin-calendar": "4.6.0",
         "cordova-plugin-camera": "2.4.1",
         "cordova-plugin-console": "1.0.5",
         "cordova-plugin-crosswalk-webview": "2.3.0",
-        "cordova-plugin-device": "1.1.4",
         "cordova-plugin-file": "4.3.3",
         "cordova-plugin-file-transfer": "1.6.3",
         "cordova-plugin-filepath": "1.0.2",
         "cordova-plugin-geolocation": "2.4.3",
         "cordova-plugin-inappbrowser": "1.7.1",
         "cordova-plugin-iosrtc": "3.2.2",
+        "cordova-plugin-media": "3.0.1",
         "cordova-plugin-nativeaudio": "3.0.9",
         "cordova-plugin-nativestorage": "2.2.2",
         "cordova-plugin-sms-receiver": "0.1.6",
@@ -885,11 +885,6 @@
         "cordova-sqlite-storage": "2.0.4",
         "de.appplant.cordova.plugin.local-notification": "0.8.5",
         "ionic-plugin-keyboard": "2.2.1",
-        "phonegap-plugin-push": "1.10.3",
-        "cordova-plugin-android-permissions": "1.0.0",
-        "cordova-plugin-media": "3.0.1",
-        "cordova-plugin-background-mode": "0.7.2",
-        "cordova-plugin-calendar": "4.6.0",
-        "cordova-plugin-audiotoggle": "1.0.3"
+        "phonegap-plugin-push": "1.10.3"
     }
 }

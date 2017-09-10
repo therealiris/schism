@@ -6,6 +6,7 @@ import { ChatPage, AccountPage, ChatsPage } from '../';
 import { ContactModal } from '../../components';
 import { LoginService, ContactService, ChatService } from '../../services';
 import { Tutorial } from '../tutorial/tutorial'
+import { DiscoverPage } from '../discover/discover'
 import { PlannerTwo } from '../planner2/plannerTwo'
 import { CalendarPage } from '../calendar/calendar'
 import { PeopleService } from '../../providers/people-service'
@@ -77,6 +78,9 @@ tutorial : boolean;
 
 	goChats(id) {
 		this.navCtrl.setRoot(ChatsPage, {}, {animate: true, direction: 'forward'});
+	}
+	goDiscover(){
+		this.navCtrl.setRoot(DiscoverPage)
 	}
 	schedule(type){
     

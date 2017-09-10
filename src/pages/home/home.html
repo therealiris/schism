@@ -1,6 +1,6 @@
 <ion-content padding style="text-align: center">
   <ion-title>Welcome to IRIS</ion-title>
-  <ion-slides pager>
+  <ion-slides pager (ionSlideDidChange)="slideChanged()">
   <ion-slide class="welcome-slides" style="background-color: white">
     <ion-card>
         <ion-card-content>
@@ -8,7 +8,7 @@
         </ion-card-content>
       </ion-card>
       <p class="welcome-desc">
-            <strong>Connect and Network with Professionals from the Technology and IT Industry</strong>
+            <strong>Network and Connect with Professionals from the Technology and IT Industry</strong>
           </p>
   </ion-slide>
 
@@ -19,7 +19,7 @@
         </ion-card-content>
       </ion-card>
           <p class="welcome-desc">
-            <strong>Rate users based on their skillsets and level of expertise</strong>
+            <strong>Rate users based on their Skillsets and Expertise</strong>
           </p>
   </ion-slide>
 
@@ -35,7 +35,7 @@
   </ion-slide>
 
 </ion-slides>
-<button ion-button icon-left round class="linked-in" (click)="login()">
+<button *ngIf="showLogin" ion-button icon-left round class="linked-in" (click)="login()">
   <!-- <ion-icon name="logo-linkedin"></ion-icon> -->
   <b>Get Started</b>
 </button>

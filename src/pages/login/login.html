@@ -6,7 +6,7 @@
   <div class="otp-container" *ngIf="!numberSent">
     <h5 style="padding-top: 2em; color:#5e8af2; font-weight: 400;">Login Securely</h5>
     <h5 style="padding-top: 2em; color:#5e8af2; font-weight: 300;">Please enter your phone number</h5>
-    <input [(ngModel)]="phone" type="number" style="margin: 1em; color:#5e8af2;font-size: 2em; font-weight: 300;text-align:center; border:none; border-bottom: solid; border-width: thin; border-color: #5e8af2;background: none;width:70vw">
+    <span style="color:#5e8af2; font-size: 1.6em">+91</span><input [(ngModel)]="phone" type="number" style="margin: 1em 1em 1em 0; color:#5e8af2;font-size: 2em; font-weight: 300;text-align:center; border:none; border-bottom: solid; border-width: thin; border-color: #5e8af2;background: none;width:70vw">
     <button style="background: #5e8af2; border:none;border-radius: 1em; padding: 0.5em 1em; font-size: 1.2em;color: #fff;" (click)="sendNumber()">verify</button>
     <br>
     
@@ -21,7 +21,7 @@
     <span style="color: #5e8af2;" *ngIf="countDownStopped" (click)="sendNumber()">Resend OTP</span>
   </div>
 
-  <div style="text-align: center; padding-top: 3.5em">
-    <span style="color: #999999; font-size: 0.8em"><i>*Your contact information is not visible to other users</i></span>
+  <div style="text-align: center; padding: 3.5em 2em">
+    <span style="color: #999999; font-size: 0.8em"><i>*Your contact information is only for secure login purpose and is not shared with anyone</i></span>
   </div>
 </ion-content>

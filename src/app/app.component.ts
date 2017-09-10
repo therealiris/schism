@@ -101,8 +101,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Discover', component: DiscoverPage, iconName:'ios-search-outline', selected:false },
-      { title: 'Connections', component: ContactsPage, iconName:'ios-people-outline', selected:false  },
-      { title: 'Planner', component: CalendarPage, iconName:'ios-calendar-outline', selected:false  },
+      { title: 'My Connections', component: ContactsPage, iconName:'ios-people-outline', selected:false  },
+      { title: 'My Planner', component: CalendarPage, iconName:'ios-calendar-outline', selected:false  },
       { title: 'Ranking', component: Ranking, iconName:'ios-trophy-outline', selected:false  },
       { title: 'Feedback', component: Feedback, iconName:'ios-settings', selected:false  }
 
@@ -139,27 +139,7 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // let files = ['login','message-received-back','message-received-front','message-sent','calling'];
-      //   let c = 1;
 
-      //   if (this.platform.is('cordova')) {
-      //     files.forEach(file => {
-      //       this.nativeAudio.preloadSimple(file, 'assets/audio/' + file + '.mp3').then(msg => {
-      //         c++;
-      //         if (c == files.length) {
-      //         }
-      //       }, msg => {
-
-      //         console.debug('ERROR loading sound: ' + msg);
-      //       });
-      //     });
-      //   } else {
-      //     files.forEach(file => {
-      //       this.audio[file] = new Audio('assets/audio/' + file + '.mp3');
-      //       this.audio[file].volume = this.volume;
-      //     });
-
-      //   }
       this.platform.registerBackButtonAction(()=>{
         if(this.nav.canGoBack()){
               this.nav.pop();
@@ -169,7 +149,7 @@ export class MyApp {
         }
       })
       // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
+      // Here we can do any higher level native things you might need.
       this.statusBar.styleBlackTranslucent()
 
 

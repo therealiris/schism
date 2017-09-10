@@ -48,26 +48,43 @@ export class PlannerTwo {
 
   }
   setupMeeting(){
-    var meetingObject = {
-      "uid":this.user.uid,
-      "event":{
-        "from":this.eventDate + " " +this.timeStarts,
-        "to":this.eventDate + " " +this.timeStops,
-        "type":this.type,
-        "with": this.withObject,
-        "venue":this.venue,
-        "agenda":this.agenda,
-        "pending":true
-      }
-    }
-    
-    // alert(JSON.stringify(meetingObject))
-    this.people.pushEvent(meetingObject,(res)=>{
-      if(res.status===1){
-        this.viewCtrl.dismiss()
-      }
-    })
 
+    if(this.checkValidity())
+    {
+        let meetingObject = {
+        "uid":this.user.uid,
+        "event":{
+          "from":this.eventDate + " " +this.timeStarts,
+          "to":this.eventDate + " " +this.timeStops,
+          "type":this.type,
+          "with": this.withObject,
+          "venue":this.venue,
+          "agenda":this.agenda,
+          "pending":true
+        }
+      }
+      
+      // alert(JSON.stringify(meetingObject))
+      this.people.pushEvent(meetingObject,(res)=>{
+        if(res.status===1){
+          this.viewCtrl.dismiss()
+        }
+      })
+    }
+  }
+  checkValidity(){
+    let from = moment(this.eventDate + " " +this.timeStarts), to = moment(this.eventDate + " " +this.timeStops), current = moment()
+    console.log(from,to,current)
+    if(from.add(15,'minutes')<to)
+    {
+      alert("Meetings should be a minimum of 15 minute duration")
+      return false
+    }
+    else if(from.add(10,'minutes')<current){
+      alert("Please select an appropriate meeting time")
+      return false
+    }
+    else return true
   }
   selectUser(){
     let planModal = this.modalCtrl.create(PlannerOne);

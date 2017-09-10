@@ -251,7 +251,7 @@ router.get('/discover', function(req, res, next) {
                 "industry":1,
                 "currentWorkplace": 1,
                 "lastLoginLocation": 1
-            }).limit(10).toArray(function(err, users) {
+            }).limit(20).toArray(function(err, users) {
                 if (!err)
                     res.send(users)
             })

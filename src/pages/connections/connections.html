@@ -12,7 +12,10 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-  <ion-searchbar (ionInput)="getItems($event)" class="conn-search"></ion-searchbar>
+  <div *ngIf="eventList.length===0" style="text-align: center; padding-top: 2em">
+      <span style="color: #999999"><i>You have no calls or meetings scheduled.</i></span>
+    </div>
+  <!-- <ion-searchbar (ionInput)="getItems($event)" class="conn-search"></ion-searchbar> -->
   <ion-list class="conn-list">
   <ion-item-sliding #item class="conn-slide" *ngFor="let connection of connections; let i=index" >
     <ion-item>

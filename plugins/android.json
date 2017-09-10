@@ -7,6 +7,18 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-android-permissions": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-audiotoggle": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
+        "cordova-plugin-calendar": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
@@ -42,6 +54,9 @@
         "cordova-plugin-iosrtc": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
         "cordova-plugin-nativeaudio": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
@@ -74,21 +89,6 @@
         },
         "phonegap-plugin-push": {
             "SENDER_ID": "1056346035559",
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-android-permissions": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-background-mode": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-calendar": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-audiotoggle": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },

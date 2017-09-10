@@ -9,8 +9,10 @@ import { Config } from '../app/config';
 import { Platform } from 'ionic-angular';
 import { Events, ModalController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
+import { BackgroundMode } from '@ionic-native/background-mode';
 
 declare var
+	AudioToggle:any,
 	cordova:any,
 	window:any,
 	RTCSessionDescription:any,
@@ -38,7 +40,7 @@ export class CallService {
 	modal = null
 
 
-	constructor(private ref:ApplicationRef, private sanitizer:DomSanitizer, private events: Events, public modalCtrl: ModalController, public socket: SocketService, public platform: Platform, private audio: AudioService, public contactService: ContactService, public video: VideoService) {
+	constructor(private backgroundMode: BackgroundMode,private ref:ApplicationRef, private sanitizer:DomSanitizer, private events: Events, public modalCtrl: ModalController, public socket: SocketService, public platform: Platform, private audio: AudioService, public contactService: ContactService, public video: VideoService) {
 		// browser compatability for web views
 
 		window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
@@ -95,18 +97,21 @@ export class CallService {
 					this.audio.stopAudioCalling()
 					this.isInCall = true;
 					this.isCalling = false;
+					this.audio.stopAudioCalling();
 					AudioToggle.setAudioMode(AudioToggle.EARPIECE);
 					this.refreshVideos();
-
+					
 					this.call(true, this.contact.id);
 					break;
 
 				case 'ignore':
 				case 'cancel':
+					this.audio.stopAudioCalling();
 					this.end();
 					break;
 
 				case 'end':
+					this.audio.stopAudioCalling();
 					if (this.isInCall || this.isCalling || this.isAnswering) {
 						this.end();
 					}
