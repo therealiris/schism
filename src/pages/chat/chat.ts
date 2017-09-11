@@ -7,6 +7,8 @@ import { ContactAddModal } from '../../components';
 import { Config } from '../../app/config';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Observable } from 'rxjs/Observable';
+import { PeopleService } from '../../providers/people-service'
+import { RatingModal } from '../rating-modal/rating-modal'
 
 import * as marked from 'marked';
 
@@ -15,7 +17,8 @@ declare var $: any;
 
 @Component({
 	selector: 'page-chat',
-	templateUrl: 'chat.html'
+	templateUrl: 'chat.html',
+	providers: [PeopleService]
 })
 export class ChatPage {
 	@ViewChild(Content) content: Content;
@@ -35,10 +38,11 @@ export class ChatPage {
 		name: '',
 		messages: []
 	}
+	otherUserName : String;
 	messageHandleWrap = null
 	attachments = Config.attachments;
 	title :String;
-	constructor(private sanitizer: DomSanitizer, private attachment: AttachmentService, public contactService: ContactService, private modalCtrl: ModalController, private events: Events, params: NavParams, private loginService: LoginService, private chatService: ChatService, private audioService: AudioService) {
+	constructor(public people: PeopleService,private sanitizer: DomSanitizer, private attachment: AttachmentService, public contactService: ContactService, private modalCtrl: ModalController, private events: Events, params: NavParams, private loginService: LoginService, private chatService: ChatService, private audioService: AudioService) {
 		console.debug('Viewing chat: ', params.get('chatId'));
 
 		marked.setOptions({
@@ -47,7 +51,8 @@ export class ChatPage {
 		});
 
 		this.chat = this.chatService.getChatById(params.get('chatId'));
-		this.title = params.get('name')
+		this.title = params.get('name') +','+ params.get('designation')
+		this.otherUserName = params.get('username')
 		// if we refreshed on this page, then go back to chats
 		if (!loginService.user) {
 			loginService.go();
@@ -101,6 +106,13 @@ export class ChatPage {
 			}
 		}
 		console.log(this.messages.length)
+		if(this.messages.length===20 || this.messages.length===60){
+			console.log("here tracking chat count")
+			this.people.updateCurrentUser(this.otherUserName,(user)=>{
+				let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user.userObject})
+        		pendingRatingModal.present()
+			})
+		}
 	}
 
 	// send a message

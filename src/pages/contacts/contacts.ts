@@ -62,17 +62,20 @@ tutorial : boolean;
 
 	// go to a chat
 	chat(id, item:ItemSliding) {
-		let name = "" 
+		let name = "", designation= "", username = "" 
 		this.contactList.forEach(con=>{
-			if(con.id === id)
+			if(con.id === id){
 				name = con.name
+				designation = con.designation
+				username = con.username
+			}
 		})
 		item.close()
 		this.events.publish("clearUnread",{"id":id})
 		console.log(id)
 		this.chatService.getChatByContact(id).then((chat:any) => {
 			console.debug('Pushing to chat: ', chat)
-			this.navCtrl.push(ChatPage, {chatId: chat.id, "name":name}, {animate: true, direction: 'forward'});
+			this.navCtrl.push(ChatPage, {chatId: chat.id, "name":name,"designation":designation, "username":username}, {animate: true, direction: 'forward'});
 		});
 	}
 
