@@ -33,7 +33,7 @@ tutorial : boolean;
 		// 	loginService.go();
 		// });
 		
-	    
+	    this.events.publish("clearHamNotification")
 		this.events.publish("refreshContacts");
 		this.contactList = contactService.contacts
 		console.debug('Contacts: ', contactService.contacts);
@@ -68,6 +68,7 @@ tutorial : boolean;
 				name = con.name
 				designation = con.designation
 				username = con.username
+				con.unread = false
 			}
 		})
 		item.close()

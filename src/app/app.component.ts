@@ -130,6 +130,7 @@ export class MyApp {
     })
     events.subscribe('clearHamNotification',()=>{
       this.hamburgerNotification = false
+      this.unread = 0
     }) 
     events.subscribe('hamburgerOn',(data)=>{
       this.hamburgerNotification = true
