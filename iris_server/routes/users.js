@@ -153,6 +153,7 @@ router.post("/filterDiscover", function(req,res){
                     "uid": user.uid,
                     "designation": user.designation,
                     "skills": [user.skills],
+                    "industry":user.industry,
                     "currentWorkplace": user.currentWorkplace,
                     "lastLoginLocation": user.lastLoginLocation
                 }
@@ -177,6 +178,7 @@ router.post("/filterDiscover", function(req,res){
                     "uid": user.uid,
                     "designation": user.designation,
                     "skills": user.skills,
+                    "industry":user.industry,
                     "currentWorkplace": user.currentWorkplace,
                     "lastLoginLocation": user.lastLoginLocation
                 }
@@ -413,7 +415,8 @@ router.get("/connections", function(req, res) {
             }, {
                 "uid": 1,
                 "fullName": 1,
-                "pictureUrl": 1
+                "pictureUrl": 1,
+                "designation":1
             }).toArray(function(err, conn) {
                 if (!err) {
                     res.send(conn)

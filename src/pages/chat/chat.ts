@@ -100,6 +100,7 @@ export class ChatPage {
 				message.first = true;
 			}
 		}
+		console.log(this.messages.length)
 	}
 
 	// send a message

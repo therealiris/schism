@@ -50,6 +50,7 @@ export class HomePage {
   }
   slideChanged() {
     let currentIndex = this.slides.getActiveIndex();
+    console.log(currentIndex)
     if(currentIndex===2){
         this.showLogin = true;
         this.slides.lockSwipeToNext(true)
@@ -57,6 +58,7 @@ export class HomePage {
     }
     else{
         this.showLogin = false;
+        this.slides.lockSwipeToNext(false)
     }
   }
 }

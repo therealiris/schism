@@ -43,7 +43,7 @@ export class ContactService {
 				people.getConnections(this.user.username,(data=>{
 					this.contacts = []
 					data.forEach(d=>{
-						let newContactObject = {"id":d._id.toString(),"image":d.pictureUrl,"name":d.fullName,"username":d.uid,"online":true,"unread":false}
+						let newContactObject = {"id":d._id.toString(),"image":d.pictureUrl,"designation":d.designation,"name":d.fullName,"username":d.uid,"online":true,"unread":false}
 						if(unreads.indexOf(newContactObject.id)>-1)
 							newContactObject.unread = true
 						this.contacts.push(newContactObject)
