@@ -1,0 +1,3341 @@
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+Tue, 16 May 2017 03:38:48 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:47:17
+Tue, 16 May 2017 03:38:48 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:48:24
+NaN [ 'RL1CPSe4MO' ]
+[0mGET /users/discover?uid=RL1CPSe4MO [36m304 [0m29.401 ms - -[0m
+Anubhav Satpathy
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'RL1CPSe4MO',
+       email: 'anubhavsatpathy5@gmail.com',
+       pictureUrl: 'https://media.licdn.com/mpr/mprx/0_FJCU17Pvf1ZBiVBt5VhH1DAVfPgqTV9t5OnX12tErnWLYY3-w0tBgu6k3jjoGjcY6V85pwuRIOX7',
+       fullName: 'Anubhav Satpathy',
+       dob: '1991-07-02',
+       gender: 'male',
+       type: 'professional',
+       industry: [Object],
+       designation: 'Product Mnager',
+       currentWorkplace: 'Dream orbit',
+       hobbies: [Object],
+       connections: [],
+       requested: [],
+       requests: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 591a751c1460e46f41398b47 } ],
+  insertedCount: 1,
+  insertedIds: [ 591a751c1460e46f41398b47 ] }
+[0mPOST /users/data [32m200 [0m33.320 ms - 567[0m
+NaN [ 'RL1CPSe4MO' ]
+[0mGET /users/discover?uid=RL1CPSe4MO [32m200 [0m3.935 ms - 496[0m
+[0mGET http://www.baidu.com/cache/global/img/gs.gif [33m404 [0m1.029 ms - 46[0m
+Sidharth Sahu
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'GYILtCA0OJ',
+       email: 'sidharth016@gmail.com',
+       pictureUrl: 'https://media.licdn.com/mpr/mprx/0_Gbibwjm_oUxE0DvWa9Jd_dbCepZI0jsLF_BdmeECI73EsDkze9vEW0bCSaxI02WJHbRW5ueGFM7oyJULwq6U_dLaCM7wyJhJHq6keHriWZsFnfR5k5KoHyO-G2vUzJBHTBCwfnFGhpN',
+       fullName: 'Sidharth Sahu',
+       dob: '1991-07-02',
+       gender: 'male',
+       type: 'professional',
+       industry: [Object],
+       designation: 'Full Stack Developer',
+       currentWorkplace: 'Reverie Language Technologies',
+       hobbies: [Object],
+       connections: [],
+       requested: [],
+       requests: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 591a86d41460e46f41398b48 } ],
+  insertedCount: 1,
+  insertedIds: [ 591a86d41460e46f41398b48 ] }
+[0mPOST /users/data [32m200 [0m6.684 ms - 632[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m2.131 ms - 436[0m
+Ayushman Dash 
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'jTYd8zk0g4',
+       email: 'ayushmanmaku@gmail.com',
+       pictureUrl: 'https://media.licdn.com/mpr/mprx/0_CyW6eZ-caaAU3yMJhYlIQfScw78QF2Eveyj6Su29m7aFCybz5YjHdyZcewBQFjN4SDj66jRBG4gbkeJ4mfuV8uVUb4g6keiqefuLwSfnuJeEmY4eXYVwIJ3bFSb9DeNL3uHo2xsoblC',
+       fullName: 'Ayushman Dash ',
+       dob: '1991-07-02',
+       type: 'professional',
+       industry: [Object],
+       designation: 'Deep learning expery',
+       currentWorkplace: 'Nocturne Creative',
+       hobbies: [],
+       connections: [],
+       requested: [],
+       requests: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 591a8ba31460e46f41398b49 } ],
+  insertedCount: 1,
+  insertedIds: [ 591a8ba31460e46f41398b49 ] }
+[0mPOST /users/data [32m200 [0m4.205 ms - 588[0m
+NaN [ 'jTYd8zk0g4' ]
+[0mGET /users/discover?uid=jTYd8zk0g4 [32m200 [0m3.077 ms - 1020[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+Tue, 16 May 2017 11:04:46 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:47:17
+Tue, 16 May 2017 11:04:46 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:48:24
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m32.389 ms - 729[0m
+Arjun 
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'kQdXrEm-dz',
+       email: 'arjunsingh.j@gmail.com',
+       pictureUrl: 'https://media.licdn.com/mpr/mprx/0_N-oHBQh_5iop0myp99IcBX-7FCf00eyp9zOBBXGO4bRfh2wy4qVXJknrd27hy7grvAH9Z_Koj09y',
+       fullName: 'Arjun ',
+       dob: '1986-05-21',
+       gender: 'male',
+       type: 'entrepreneur',
+       industry: [Object],
+       designation: 'Co-Founder',
+       currentWorkplace: 'Iris',
+       hobbies: [Object],
+       connections: [],
+       requested: [],
+       requests: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 591ade41aac0b27531a86fa3 } ],
+  insertedCount: 1,
+  insertedIds: [ 591ade41aac0b27531a86fa3 ] }
+[0mPOST /users/data [32m200 [0m48.175 ms - 523[0m
+NaN [ 'kQdXrEm-dz' ]
+[0mGET /users/discover?uid=kQdXrEm-dz [32m200 [0m4.916 ms - 1313[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m4.755 ms - 951[0m
+Rohan Pithadiya
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'PVfYnF_dxZ',
+       email: 'rohan.pithadiya@gmail.com',
+       pictureUrl: 'https://media.licdn.com/mpr/mprx/0_XGm9LHx7WHR4coMZQC2dLw7PWWDMvoWZEQsWLwSfnuJeEmY4eXYVwIJ3bFSb9DeNL3uHo2xCCYTC',
+       fullName: 'Rohan Pithadiya',
+       dob: '1983-12-01',
+       gender: 'male',
+       type: 'professional',
+       industry: [Object],
+       designation: 'Senior Software Engineer',
+       currentWorkplace: 'Culture Machines Media Pvt Ltd',
+       hobbies: [Object],
+       connections: [],
+       requested: [],
+       requests: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 591ae31eaac0b27531a86fa4 } ],
+  insertedCount: 1,
+  insertedIds: [ 591ae31eaac0b27531a86fa4 ] }
+[0mPOST /users/data [32m200 [0m9.350 ms - 578[0m
+NaN [ 'PVfYnF_dxZ' ]
+[0mGET /users/discover?uid=PVfYnF_dxZ [32m200 [0m2.169 ms - 1535[0m
+Manish R. Gurnaney
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'v4m7PY3xJq',
+       email: 'manishgurnaney@gmail.com',
+       pictureUrl: 'https://media.licdn.com/mpr/mprx/0_RSNOt_wXYPWCdKBAJo-St3M5Y1g7WK9AMu8TthWzT9Wxnq3lBwk-p8jRKgjKoBcjVmnhgbBwARgA',
+       fullName: 'Manish R. Gurnaney',
+       dob: '1982-12-05',
+       gender: 'male',
+       type: 'professional',
+       industry: [Object],
+       designation: 'Staff Engineer',
+       currentWorkplace: 'Culture Machine media ltd.',
+       hobbies: [],
+       connections: [],
+       requested: [],
+       requests: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 591ae34baac0b27531a86fa5 } ],
+  insertedCount: 1,
+  insertedIds: [ 591ae34baac0b27531a86fa5 ] }
+[0mPOST /users/data [32m200 [0m3.568 ms - 534[0m
+NaN [ 'v4m7PY3xJq' ]
+[0mGET /users/discover?uid=v4m7PY3xJq [32m200 [0m2.765 ms - 1766[0m
+NaN [ 'PVfYnF_dxZ' ]
+[0mGET /users/discover?uid=PVfYnF_dxZ [32m200 [0m2.760 ms - 1769[0m
+NaN [ 'v4m7PY3xJq' ]
+[0mGET /users/discover?uid=v4m7PY3xJq [36m304 [0m6.510 ms - -[0m
+NaN [ 'PVfYnF_dxZ' ]
+[0mGET /users/discover?uid=PVfYnF_dxZ [36m304 [0m3.967 ms - -[0m
+NaN [ 'PVfYnF_dxZ' ]
+[0mGET /users/discover?uid=PVfYnF_dxZ [36m304 [0m2.908 ms - -[0m
+NaN [ 'v4m7PY3xJq' ]
+[0mGET /users/discover?uid=v4m7PY3xJq [36m304 [0m4.092 ms - -[0m
+NaN [ 'v4m7PY3xJq' ]
+[0mGET /users/discover?uid=v4m7PY3xJq [36m304 [0m3.536 ms - -[0m
+NaN [ 'kQdXrEm-dz' ]
+[0mGET /users/discover?uid=kQdXrEm-dz [32m200 [0m3.872 ms - 1778[0m
+NaN [ 'kQdXrEm-dz' ]
+[0mGET /users/discover?uid=kQdXrEm-dz [36m304 [0m2.803 ms - -[0m
+NaN [ 'kQdXrEm-dz' ]
+[0mGET /users/discover?uid=kQdXrEm-dz [36m304 [0m3.120 ms - -[0m
+NaN [ 'kQdXrEm-dz' ]
+[0mGET /users/discover?uid=kQdXrEm-dz [36m304 [0m3.701 ms - -[0m
+NaN [ 'kQdXrEm-dz' ]
+[0mGET /users/discover?uid=kQdXrEm-dz [36m304 [0m3.458 ms - -[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+Wed, 17 May 2017 04:13:14 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:47:17
+Wed, 17 May 2017 04:13:14 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:48:24
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m26.514 ms - 1416[0m
+NaN [ 'jTYd8zk0g4' ]
+[0mGET /users/discover?uid=jTYd8zk0g4 [32m200 [0m7.131 ms - 1707[0m
+NaN [ 'jTYd8zk0g4' ]
+[0mGET /users/discover?uid=jTYd8zk0g4 [36m304 [0m3.890 ms - -[0m
+NaN [ 'jTYd8zk0g4' ]
+[0mGET /users/discover?uid=jTYd8zk0g4 [36m304 [0m4.352 ms - -[0m
+[0mGET http://www.baidu.com/cache/global/img/gs.gif [33m404 [0m0.990 ms - 46[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [36m304 [0m2.817 ms - -[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+[0mGET /users/data?uid=GYILtCA0OJ [33m404 [0m14.905 ms - 46[0m
+[0mGET /users/data?uid=GYILtCA0OJ [33m404 [0m2.501 ms - 46[0m
+Sidharth Sahu
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'GYILtCA0OJ',
+       email: 'sidharth.sahu@reverieinc.com',
+       pictureUrl: 'https://media.licdn.com/mpr/mprx/0_Gbibwjm_oUxE0DvWa9Jd_dbCepZI0jsLF_BdmeECI73EsDkze9vEW0bCSaxI02WJHbRW5ueGFM7oyJULwq6U_dLaCM7wyJhJHq6keHriWZsFnfR5k5KoHyO-G2vUzJBHTBCwfnFGhpN',
+       fullName: 'Sidharth Sahu',
+       dob: '1991-07-02',
+       gender: 'male',
+       type: 'entrepreneur',
+       industry: [Object],
+       designation: 'Full Stack Developer',
+       currentWorkplace: 'Reverie Language Technologies',
+       hobbies: [Object],
+       connections: [],
+       requested: [],
+       requests: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 5925c8026af9e61e30ba8426 } ],
+  insertedCount: 1,
+  insertedIds: [ 5925c8026af9e61e30ba8426 ] }
+[0mPOST /users/data [32m200 [0m43.683 ms - 658[0m
+[0mGET /users/data?uid=GYILtCA0OJ [33m404 [0m1.454 ms - 46[0m
+[0mGET /users/data?uid=GYILtCA0OJ [33m404 [0m2.911 ms - 46[0m
+[0mGET /users/data?uid=GYILtCA0OJ [33m404 [0m2.373 ms - 46[0m
+Wed, 24 May 2017 17:56:35 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:47:17
+Wed, 24 May 2017 17:56:35 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:48:24
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m7.798 ms - 1416[0m
+Sidharth Sahu
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'GYILtCA0OJ',
+       email: 'sidharth016@gmail.com',
+       pictureUrl: 'https://media.licdn.com/mpr/mprx/0_Gbibwjm_oUxE0DvWa9Jd_dbCepZI0jsLF_BdmeECI73EsDkze9vEW0bCSaxI02WJHbRW5ueGFM7oyJULwq6U_dLaCM7wyJhJHq6keHriWZsFnfR5k5KoHyO-G2vUzJBHTBCwfnFGhpN',
+       fullName: 'Sidharth Sahu',
+       dob: '1991-07-02',
+       gender: 'male',
+       type: 'entrepreneur',
+       industry: [Object],
+       designation: 'Full stack developer',
+       currentWorkplace: 'iris',
+       hobbies: [Object],
+       connections: [],
+       requested: [],
+       requests: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 5925c9e36af9e61e30ba8427 } ],
+  insertedCount: 1,
+  insertedIds: [ 5925c9e36af9e61e30ba8427 ] }
+[0mPOST /users/data [32m200 [0m8.587 ms - 625[0m
+[0mGET /users/data?uid=GYILtCA0OJ [33m404 [0m2.359 ms - 46[0m
+[0mGET /users/data?uid=GYILtCA0OJ [33m404 [0m5.309 ms - 46[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m2.859 ms - 1416[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+events.js:163
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::9001
+    at Object.exports._errnoException (util.js:1050:11)
+    at exports._exceptionWithHostPort (util.js:1073:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1259:14)
+    at listenInCluster (net.js:1307:12)
+    at Server.listen (net.js:1406:7)
+    at WebSocketServer (/home/git/schism/iris_server/node_modules/ws/lib/WebSocketServer.js:77:20)
+    at Object.<anonymous> (/home/git/schism/iris_server/routes/users.js:5:13)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+
+npm ERR! Linux 4.9.15-x86_64-linode81
+npm ERR! argv "/usr/bin/node" "/usr/bin/npm" "start"
+npm ERR! node v7.10.0
+npm ERR! npm  v4.2.0
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! iris_server@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the iris_server@0.0.0 start script 'node ./bin/www'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the iris_server package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./bin/www
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs iris_server
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls iris_server
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/.npm/_logs/2017-05-24T18_05_29_048Z-debug.log
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m3.839 ms - 1416[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+events.js:163
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::9001
+    at Object.exports._errnoException (util.js:1050:11)
+    at exports._exceptionWithHostPort (util.js:1073:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1259:14)
+    at listenInCluster (net.js:1307:12)
+    at Server.listen (net.js:1406:7)
+    at WebSocketServer (/home/git/schism/iris_server/node_modules/ws/lib/WebSocketServer.js:77:20)
+    at Object.<anonymous> (/home/git/schism/iris_server/routes/users.js:5:13)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+
+npm ERR! Linux 4.9.15-x86_64-linode81
+npm ERR! argv "/usr/bin/node" "/usr/bin/npm" "start"
+npm ERR! node v7.10.0
+npm ERR! npm  v4.2.0
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! iris_server@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the iris_server@0.0.0 start script 'node ./bin/www'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the iris_server package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./bin/www
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs iris_server
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls iris_server
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/.npm/_logs/2017-05-24T18_06_47_586Z-debug.log
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+Wed, 24 May 2017 18:07:25 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:47:17
+Wed, 24 May 2017 18:07:25 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:48:24
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m33.262 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m5.260 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m3.266 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m3.901 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m2.474 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m3.439 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [36m304 [0m3.162 ms - -[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m2.379 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m2.953 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m5.398 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m4.895 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m2.710 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m4.541 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m2.252 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m1.965 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m3.649 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [32m200 [0m2.704 ms - 1869[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [36m304 [0m2.887 ms - -[0m
+NaN [ 'GYILtCA0OJ' ]
+[0mGET /users/discover?uid=GYILtCA0OJ [36m304 [0m1.873 ms - -[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+module.js:472
+    throw err;
+    ^
+
+Error: Cannot find module 'axios'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/home/git/schism/iris_server/routes/users.js:4:13)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+
+npm ERR! Linux 4.9.15-x86_64-linode81
+npm ERR! argv "/usr/bin/node" "/bin/npm" "start"
+npm ERR! node v7.10.0
+npm ERR! npm  v4.2.0
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! iris_server@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the iris_server@0.0.0 start script 'node ./bin/www'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the iris_server package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./bin/www
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs iris_server
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls iris_server
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/.npm/_logs/2017-07-06T12_18_49_300Z-debug.log
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+module.js:472
+    throw err;
+    ^
+
+Error: Cannot find module 'express-fileupload'
+    at Function.Module._resolveFilename (module.js:470:15)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/home/git/schism/iris_server/routes/users.js:7:18)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+
+npm ERR! Linux 4.9.15-x86_64-linode81
+npm ERR! argv "/usr/bin/node" "/bin/npm" "start"
+npm ERR! node v7.10.0
+npm ERR! npm  v4.2.0
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! iris_server@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the iris_server@0.0.0 start script 'node ./bin/www'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the iris_server package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./bin/www
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs iris_server
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls iris_server
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/.npm/_logs/2017-07-06T12_20_06_281Z-debug.log
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+Thu, 06 Jul 2017 12:26:53 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:71:24
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m19.751 ms - 12[0m
+Thu, 06 Jul 2017 12:28:41 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:233:18
+Thu, 06 Jul 2017 12:28:41 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:234:16
+[0mGET /users/otp?phone=919861392679&otp=9548 [32m200 [0m110.501 ms - 12[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m10.914 ms - 12[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m8.639 ms - -[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m1.651 ms - -[0m
+[0mGET /users/otp?phone=919844892679&otp=6743 [32m200 [0m31.957 ms - 12[0m
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m2.694 ms - 12[0m
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m2.114 ms - -[0m
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m7.308 ms - -[0m
+[0mGET /users/otp?phone=919861392679&otp=4918 [32m200 [0m64.284 ms - 12[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m2.676 ms - 12[0m
+Sidharth Sahu
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: '758118e811e19b9ee236d467838a977a',
+       email: 'sidharth016@gmail.com',
+       pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1499344284.jpg?alt=media',
+       fullName: 'Sidharth Sahu',
+       dob: '1989-07-02',
+       gender: 'male',
+       type: 'professional',
+       industry: [Object],
+       designation: 'Full Stack Developer',
+       currentWorkplace: 'Reverie Langauge Technologies',
+       skills: [Object],
+       connections: [],
+       requested: [],
+       requests: [],
+       notifications: [],
+       events: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 595e2dfb701f41068e71e1c9 } ],
+  insertedCount: 1,
+  insertedIds: [ 595e2dfb701f41068e71e1c9 ] }
+[0mPOST /users/data [32m200 [0m33.311 ms - 698[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m6.686 ms - 724[0m
+[0mPUT /users/updateLocation [32m200 [0m12.223 ms - 12[0m
+Thu, 06 Jul 2017 12:33:11 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:50:17
+Thu, 06 Jul 2017 12:33:11 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:51:24
+NaN [ '758118e811e19b9ee236d467838a977a' ]
+758118e811e19b9ee236d467838a977a [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [32m200 [0m9.506 ms - 1499[0m
+Thu, 06 Jul 2017 12:33:23 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:138:27
+[0mGET /users/notifications?uid=758118e811e19b9ee236d467838a977a [32m200 [0m3.262 ms - 53[0m
+Thu, 06 Jul 2017 12:33:44 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:224:16
+[0mGET /users/events?uid=758118e811e19b9ee236d467838a977a [32m200 [0m18.513 ms - 2[0m
+Thu, 06 Jul 2017 12:33:45 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:145:27
+[]
+[0mGET /users/connections?uid=758118e811e19b9ee236d467838a977a [32m200 [0m9.549 ms - 2[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m2.278 ms - 745[0m
+[0mPUT /users/updateLocation [32m200 [0m5.071 ms - 12[0m
+NaN [ '758118e811e19b9ee236d467838a977a' ]
+758118e811e19b9ee236d467838a977a [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [32m200 [0m5.209 ms - 1075[0m
+[0mGET /users/user?uid=HHT46IoxQy [36m304 [0m3.147 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.887 ms - 12[0m
+NaN [ 'HHT46IoxQy' ]
+HHT46IoxQy [ 'GYILtCA0OJ', 'HHT46IoxQy' ]
+[0mGET /users/discover?uid=HHT46IoxQy [32m200 [0m6.011 ms - 1024[0m
+{ uid: 'HHT46IoxQy',
+  id: 'kQdXrEm-dz',
+  fullName: 'Raju kale',
+  headline: 'Visual Designer at Culture Machines Media Pvt Ltd',
+  reason: 'Professional Query, ' }
+{ ok: 1, nModified: 1, n: 1 }
+[0mPUT /users/request [32m200 [0m5.732 ms - 12[0m
+{ uid: 'HHT46IoxQy',
+  id: 'kQdXrEm-dz',
+  fullName: 'Raju kale',
+  headline: 'Visual Designer at Culture Machines Media Pvt Ltd',
+  reason: 'Professional Query, ' }
+{ ok: 1, nModified: 1, n: 1 }
+[0mPUT /users/request [32m200 [0m5.640 ms - 12[0m
+[0mGET /users/notifications?uid=HHT46IoxQy [32m200 [0m2.381 ms - 254[0m
+null
+null
+[0mPOST /users/acceptConnect [32m200 [0m6.313 ms - 12[0m
+[0mGET /users/user?uid=HHT46IoxQy [32m200 [0m3.136 ms - 839[0m
+[0mPUT /users/updateLocation [32m200 [0m8.617 ms - 12[0m
+NaN [ 'HHT46IoxQy' ]
+HHT46IoxQy [ 'GYILtCA0OJ', 'kQdXrEm-dz', 'HHT46IoxQy' ]
+[0mGET /users/discover?uid=HHT46IoxQy [32m200 [0m4.391 ms - 706[0m
+[0mGET /users/otp?phone=7972600896&otp=1193 [32m200 [0m98.976 ms - 12[0m
+[0mGET /users/user?uid=b93842cc672970fa58e6a37da2c386b1 [32m200 [0m3.984 ms - 12[0m
+[0mGET /users/otp?phone=9769069091&otp=9419 [32m200 [0m34.292 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.079 ms - 12[0m
+Raju Kale
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'b93842cc672970fa58e6a37da2c386b1',
+       email: 'raju.kale119@gmail.com',
+       pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1499345731.jpg?alt=media',
+       fullName: 'Raju Kale',
+       dob: '1985-09-11',
+       gender: 'male',
+       type: 'professional',
+       industry: [Object],
+       designation: 'Visual Designer',
+       currentWorkplace: 'Culture Machines Media Pvt Ltd',
+       skills: [Object],
+       connections: [],
+       requested: [],
+       requests: [],
+       notifications: [],
+       events: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 595e33f9701f41068e71e1ca } ],
+  insertedCount: 1,
+  insertedIds: [ 595e33f9701f41068e71e1ca ] }
+[0mPOST /users/data [32m200 [0m9.410 ms - 699[0m
+[0mGET /users/user?uid=b93842cc672970fa58e6a37da2c386b1 [32m200 [0m1.960 ms - 725[0m
+[0mPUT /users/updateLocation [32m200 [0m1.958 ms - 12[0m
+NaN [ 'b93842cc672970fa58e6a37da2c386b1' ]
+b93842cc672970fa58e6a37da2c386b1 [ 'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=b93842cc672970fa58e6a37da2c386b1 [32m200 [0m6.653 ms - 1439[0m
+{ uid: 'b93842cc672970fa58e6a37da2c386b1',
+  id: 'kQdXrEm-dz',
+  fullName: 'Raju Kale',
+  headline: 'Visual Designer at Culture Machines Media Pvt Ltd',
+  reason: 'Professional Query, ' }
+{ ok: 1, nModified: 1, n: 1 }
+[0mPUT /users/request [32m200 [0m4.609 ms - 12[0m
+[0mGET /users/notifications?uid=b93842cc672970fa58e6a37da2c386b1 [32m200 [0m3.436 ms - 53[0m
+[]
+[0mGET /users/connections?uid=b93842cc672970fa58e6a37da2c386b1 [32m200 [0m3.251 ms - 2[0m
+[0mGET /users/events?uid=b93842cc672970fa58e6a37da2c386b1 [32m200 [0m3.267 ms - 2[0m
+[]
+[0mGET /users/connections?uid=b93842cc672970fa58e6a37da2c386b1 [36m304 [0m3.761 ms - -[0m
+[0mGET /users/user?uid=b93842cc672970fa58e6a37da2c386b1 [32m200 [0m5.469 ms - 758[0m
+NaN [ 'b93842cc672970fa58e6a37da2c386b1' ]
+[0mPUT /users/updateLocation [32m200 [0m5.722 ms - 12[0m
+b93842cc672970fa58e6a37da2c386b1 [ 'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=b93842cc672970fa58e6a37da2c386b1 [36m304 [0m9.534 ms - -[0m
+Arjun Singh Jamwal 
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'c0668107c590e75bb5c5361c6347e9a9',
+       email: 'arjunsingh.j@gmail.com',
+       pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1499345888.jpg?alt=media',
+       fullName: 'Arjun Singh Jamwal ',
+       dob: '1987-05-27',
+       gender: 'male',
+       type: 'entrepreneur',
+       industry: [Object],
+       designation: 'Co-Founder',
+       currentWorkplace: 'Iris',
+       skills: [],
+       connections: [],
+       requested: [],
+       requests: [],
+       notifications: [],
+       events: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 595e3452701f41068e71e1cb } ],
+  insertedCount: 1,
+  insertedIds: [ 595e3452701f41068e71e1cb ] }
+[0mPOST /users/data [32m200 [0m10.813 ms - 570[0m
+Arjun Singh Jamwal 
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'c0668107c590e75bb5c5361c6347e9a9',
+       email: 'arjunsingh.j@gmail.com',
+       pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1499345888.jpg?alt=media',
+       fullName: 'Arjun Singh Jamwal ',
+       dob: '1987-05-27',
+       gender: 'male',
+       type: 'entrepreneur',
+       industry: [Object],
+       designation: 'Co-Founder',
+       currentWorkplace: 'Iris',
+       skills: [],
+       connections: [],
+       requested: [],
+       requests: [],
+       notifications: [],
+       events: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 595e3452701f41068e71e1cc } ],
+  insertedCount: 1,
+  insertedIds: [ 595e3452701f41068e71e1cc ] }
+[0mPOST /users/data [32m200 [0m19.210 ms - 570[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.173 ms - 596[0m
+[0mPUT /users/updateLocation [32m200 [0m5.128 ms - 12[0m
+NaN [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+c0668107c590e75bb5c5361c6347e9a9 [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m9.321 ms - 1796[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+Thu, 06 Jul 2017 13:17:25 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:71:24
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m28.570 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m23.003 ms - 12[0m
+Thu, 06 Jul 2017 13:17:28 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:50:17
+Thu, 06 Jul 2017 13:17:28 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:51:24
+NaN [ '758118e811e19b9ee236d467838a977a' ]
+758118e811e19b9ee236d467838a977a [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [32m200 [0m10.750 ms - 1767[0m
+Thu, 06 Jul 2017 13:17:53 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:138:27
+[0mGET /users/notifications?uid=758118e811e19b9ee236d467838a977a [36m304 [0m26.789 ms - -[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m7.982 ms - -[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m2.737 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m7.069 ms - 12[0m
+NaN [ '758118e811e19b9ee236d467838a977a' ]
+758118e811e19b9ee236d467838a977a [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [32m200 [0m11.676 ms - 694[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m3.387 ms - 617[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.508 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m4.048 ms - 12[0m
+NaN [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+c0668107c590e75bb5c5361c6347e9a9 [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m3.767 ms - 723[0m
+{ uid: 'c0668107c590e75bb5c5361c6347e9a9',
+  id: 'b93842cc672970fa58e6a37da2c386b1',
+  fullName: 'Arjun Singh Jamwal ',
+  headline: 'Co-Founder at Iris',
+  reason: 'Ideation and Planning, ' }
+{ ok: 1, nModified: 1, n: 1 }
+[0mPUT /users/request [32m200 [0m4.461 ms - 12[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+Fri, 07 Jul 2017 05:32:34 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:233:18
+Fri, 07 Jul 2017 05:32:34 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:234:16
+[0mGET /users/otp?phone=919861392679&otp=1809 [32m200 [0m141.537 ms - 12[0m
+Fri, 07 Jul 2017 05:32:53 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:71:24
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m26.337 ms - 745[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m7.156 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m60.068 ms - 12[0m
+Fri, 07 Jul 2017 05:33:05 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:50:17
+Fri, 07 Jul 2017 05:33:05 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:51:24
+NaN [ '758118e811e19b9ee236d467838a977a' ]
+758118e811e19b9ee236d467838a977a [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [32m200 [0m43.800 ms - 693[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m6.406 ms - 745[0m
+NaN [ '758118e811e19b9ee236d467838a977a' ]
+758118e811e19b9ee236d467838a977a [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m9.792 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m20.256 ms - 12[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m5.590 ms - 745[0m
+NaN [ '758118e811e19b9ee236d467838a977a' ]
+[0mPUT /users/updateLocation [32m200 [0m7.951 ms - 12[0m
+758118e811e19b9ee236d467838a977a [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [32m200 [0m16.083 ms - 693[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m2.769 ms - 745[0m
+[0mPUT /users/updateLocation [32m200 [0m2.462 ms - 12[0m
+NaN [ '758118e811e19b9ee236d467838a977a' ]
+758118e811e19b9ee236d467838a977a [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.692 ms - -[0m
+[0mGET /users/otp?phone=9769069091&otp=1126 [32m200 [0m1215.993 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m3.427 ms - 650[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.302 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.639 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.313 ms - -[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m2.729 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.769 ms - 12[0m
+NaN [ '758118e811e19b9ee236d467838a977a' ]
+758118e811e19b9ee236d467838a977a [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m11.033 ms - -[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.396 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.899 ms - 12[0m
+NaN [ '758118e811e19b9ee236d467838a977a' ]
+758118e811e19b9ee236d467838a977a [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.777 ms - -[0m
+[0mGET /users/otp?phone=9769069091&otp=9190 [32m200 [0m4428.536 ms - 12[0m
+[0mGET /users/otp?phone=9769069091&otp=4639 [32m200 [0m5135.893 ms - 12[0m
+[0mGET /users/otp?phone=9769069091&otp=4725 [32m200 [0m4496.015 ms - 12[0m
+[0mGET /users/otp?phone=9769069091&otp=9835 [32m200 [0m8559.847 ms - 12[0m
+[0mGET /users/otp?phone=9769069091&otp=4635 [32m200 [0m16565.130 ms - 12[0m
+[0mGET /users/otp?phone=9769069091&otp=5675 [32m200 [0m96785.321 ms - 12[0m
+[0mGET /users/otp?phone=9769069091&otp=4013 [0m- [0m- ms - -[0m
+[0mGET /users/otp?phone=9769069091&otp=4010 [32m200 [0m6734.894 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m4.515 ms - 650[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.736 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.043 ms - 12[0m
+NaN [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+c0668107c590e75bb5c5361c6347e9a9 [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m4.497 ms - 723[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m4.720 ms - 651[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.305 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m16.085 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.949 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m8.153 ms - 12[0m
+NaN [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+c0668107c590e75bb5c5361c6347e9a9 [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m15.621 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.669 ms - 12[0m
+NaN [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+c0668107c590e75bb5c5361c6347e9a9 [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m8.036 ms - -[0m
+Fri, 07 Jul 2017 06:15:47 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:138:27
+[0mGET /users/notifications?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.686 ms - 53[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.257 ms - 651[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m4.200 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.464 ms - 12[0m
+NaN [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+c0668107c590e75bb5c5361c6347e9a9 [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m4.524 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m10.415 ms - 651[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.688 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.796 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m6.815 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.546 ms - 12[0m
+NaN [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+c0668107c590e75bb5c5361c6347e9a9 [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m10.363 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.540 ms - 12[0m
+NaN [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+c0668107c590e75bb5c5361c6347e9a9 [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m4.525 ms - -[0m
+[0mGET /users/notifications?uid=undefined [32m200 [0m1.879 ms - -[0m
+[0mGET /users/notifications?uid=undefined [32m200 [0m1.340 ms - -[0m
+[0mGET /users/notifications?uid=758118e811e19b9ee236d467838a977a [32m200 [0m2.837 ms - 53[0m
+[0mGET /users/notifications?uid=758118e811e19b9ee236d467838a977a [36m304 [0m4.884 ms - -[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+Fri, 07 Jul 2017 08:18:11 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:138:27
+[0mGET /users/notifications?uid=758118e811e19b9ee236d467838a977a [32m200 [0m39.831 ms - 53[0m
+[0mGET /users/notifications?uid=758118e811e19b9ee236d467838a977a [36m304 [0m5.262 ms - -[0m
+[0mGET /users/notifications?uid=758118e811e19b9ee236d467838a977a [32m200 [0m3.512 ms - 53[0m
+[0mGET /users/notifications?uid=758118e811e19b9ee236d467838a977a [32m200 [0m4.182 ms - 53[0m
+[0mGET /users/notifications?uid=758118e811e19b9ee236d467838a977a [32m200 [0m1.681 ms - 53[0m
+[0mGET /users/notifications?uid=758118e811e19b9ee236d467838a977a [32m200 [0m2.183 ms - 53[0m
+[0mGET /users/notifications?uid=758118e811e19b9ee236d467838a977a [36m304 [0m2.095 ms - -[0m
+[0mGET /users/notifications?uid=758118e811e19b9ee236d467838a977a [36m304 [0m2.494 ms - -[0m
+Fri, 07 Jul 2017 09:13:19 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:233:18
+Fri, 07 Jul 2017 09:13:19 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:234:16
+[0mGET /users/otp?phone=9011642250&otp=8963 [32m200 [0m265.329 ms - 12[0m
+Fri, 07 Jul 2017 09:13:38 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:71:24
+[0mGET /users/user?uid=60d24a0ccd79cecdc3524a9981601c7e [32m200 [0m4.073 ms - 12[0m
+[0mGET /users/user?uid=60d24a0ccd79cecdc3524a9981601c7e [36m304 [0m2.305 ms - -[0m
+[0mGET /users/otp?phone=9011642250&otp=1493 [32m200 [0m134.357 ms - 12[0m
+[0mGET /users/user?uid=60d24a0ccd79cecdc3524a9981601c7e [32m200 [0m8.762 ms - 12[0m
+Raju kale
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: '60d24a0ccd79cecdc3524a9981601c7e',
+       email: 'raju.kale119@gmail.com',
+       pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1499419055.jpg?alt=media',
+       fullName: 'Raju kale',
+       dob: '1985-09-11',
+       gender: 'male',
+       type: 'professional',
+       industry: [],
+       currentWorkplace: 'Culture machine',
+       skills: [],
+       connections: [],
+       requested: [],
+       requests: [],
+       notifications: [],
+       events: [],
+       lastLoginLocation: '',
+       chatId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       _id: 595f522f33f2fa23710dc111 } ],
+  insertedCount: 1,
+  insertedIds: [ 595f522f33f2fa23710dc111 ] }
+[0mPOST /users/data [32m200 [0m49.022 ms - 505[0m
+[0mGET /users/user?uid=60d24a0ccd79cecdc3524a9981601c7e [32m200 [0m2.935 ms - 531[0m
+[0mPUT /users/updateLocation [32m200 [0m3.661 ms - 12[0m
+Fri, 07 Jul 2017 09:19:54 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:50:17
+Fri, 07 Jul 2017 09:19:54 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:51:24
+NaN [ '60d24a0ccd79cecdc3524a9981601c7e' ]
+60d24a0ccd79cecdc3524a9981601c7e [ '60d24a0ccd79cecdc3524a9981601c7e' ]
+[0mGET /users/discover?uid=60d24a0ccd79cecdc3524a9981601c7e [32m200 [0m6.219 ms - 1059[0m
+{ uid: '60d24a0ccd79cecdc3524a9981601c7e',
+  id: '758118e811e19b9ee236d467838a977a',
+  fullName: 'Raju kale',
+  headline: 'undefined at Culture machine',
+  reason: 'Professional Query, ' }
+{ ok: 1, nModified: 1, n: 1 }
+[0mPUT /users/request [32m200 [0m5.843 ms - 12[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+Mon, 17 Jul 2017 06:20:48 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:467:21
+Mon, 17 Jul 2017 06:20:48 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:468:19
+[0mGET /users/otp?phone=919844892679&otp=6953 [0m- [0m- ms - -[0m
+[0mGET /users/otp?phone=919844892679&otp=3405 [32m200 [0m388.946 ms - 12[0m
+Mon, 17 Jul 2017 06:25:45 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:93:27
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m18.355 ms - 12[0m
+kangkan bora
+[0mPOST /users/data [32m200 [0m41.358 ms - 218[0m
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m2.390 ms - 12[0m
+string
+/home/git/schism/iris_server/node_modules/mongodb/lib/utils.js:123
+    process.nextTick(function() { throw err; });
+                                  ^
+
+TypeError: Cannot read property 'pushId' of undefined
+    at /home/git/schism/iris_server/routes/users.js:487:24
+    at handleCallback (/home/git/schism/iris_server/node_modules/mongodb/lib/utils.js:120:56)
+    at /home/git/schism/iris_server/node_modules/mongodb/lib/cursor.js:860:16
+    at handleCallback (/home/git/schism/iris_server/node_modules/mongodb-core/lib/cursor.js:171:5)
+    at setCursorNotified (/home/git/schism/iris_server/node_modules/mongodb-core/lib/cursor.js:515:3)
+    at /home/git/schism/iris_server/node_modules/mongodb-core/lib/cursor.js:590:16
+    at queryCallback (/home/git/schism/iris_server/node_modules/mongodb-core/lib/cursor.js:232:18)
+    at /home/git/schism/iris_server/node_modules/mongodb-core/lib/connection/pool.js:461:18
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+
+npm ERR! Linux 4.9.15-x86_64-linode81
+npm ERR! argv "/usr/bin/node" "/usr/bin/npm" "start"
+npm ERR! node v7.10.0
+npm ERR! npm  v4.2.0
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! iris_server@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the iris_server@0.0.0 start script 'node ./bin/www'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the iris_server package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./bin/www
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs iris_server
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls iris_server
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/.npm/_logs/2017-07-17T06_27_50_107Z-debug.log
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+Mon, 17 Jul 2017 06:51:31 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:93:27
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m34.471 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m41.504 ms - 12[0m
+Mon, 17 Jul 2017 06:51:31 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:49:20
+Mon, 17 Jul 2017 06:51:31 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:50:27
+{ _id: 5960a89b25409e345552304b,
+  connections: 
+   [ 'c0668107c590e75bb5c5361c6347e9a9',
+     'd84663503b36562bcec35faad622b7a1' ],
+  requested: [ 'b93842cc672970fa58e6a37da2c386b1' ],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'c0668107c590e75bb5c5361c6347e9a9',
+  'd84663503b36562bcec35faad622b7a1',
+  'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [32m200 [0m22.749 ms - 697[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m5.229 ms - 1195[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m4.350 ms - 12[0m
+[0mPUT /users/updateLocation [32m200 [0m3.928 ms - 12[0m
+{ _id: 5960a89b25409e345552304b,
+  connections: 
+   [ 'c0668107c590e75bb5c5361c6347e9a9',
+     'd84663503b36562bcec35faad622b7a1' ],
+  requested: [ 'b93842cc672970fa58e6a37da2c386b1' ],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'c0668107c590e75bb5c5361c6347e9a9',
+  'd84663503b36562bcec35faad622b7a1',
+  'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m9.397 ms - -[0m
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m14.032 ms - -[0m
+string
+/home/git/schism/iris_server/node_modules/mongodb/lib/utils.js:123
+    process.nextTick(function() { throw err; });
+                                  ^
+
+TypeError: Cannot read property 'pushId' of undefined
+    at /home/git/schism/iris_server/routes/users.js:487:24
+    at handleCallback (/home/git/schism/iris_server/node_modules/mongodb/lib/utils.js:120:56)
+    at /home/git/schism/iris_server/node_modules/mongodb/lib/cursor.js:860:16
+    at handleCallback (/home/git/schism/iris_server/node_modules/mongodb-core/lib/cursor.js:171:5)
+    at setCursorNotified (/home/git/schism/iris_server/node_modules/mongodb-core/lib/cursor.js:515:3)
+    at /home/git/schism/iris_server/node_modules/mongodb-core/lib/cursor.js:590:16
+    at queryCallback (/home/git/schism/iris_server/node_modules/mongodb-core/lib/cursor.js:232:18)
+    at /home/git/schism/iris_server/node_modules/mongodb-core/lib/connection/pool.js:461:18
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+
+npm ERR! Linux 4.9.15-x86_64-linode81
+npm ERR! argv "/usr/bin/node" "/usr/bin/npm" "start"
+npm ERR! node v7.10.0
+npm ERR! npm  v4.2.0
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! iris_server@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the iris_server@0.0.0 start script 'node ./bin/www'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the iris_server package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./bin/www
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs iris_server
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls iris_server
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/.npm/_logs/2017-07-17T08_48_12_797Z-debug.log
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m87.369 ms - 12[0m
+Mon, 17 Jul 2017 08:49:45 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:93:27
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m37.473 ms - 963[0m
+[0mPUT /users/updateLocation [32m200 [0m14.384 ms - 12[0m
+Mon, 17 Jul 2017 08:49:45 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:49:20
+Mon, 17 Jul 2017 08:49:45 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:50:27
+{ _id: 596bb0e6cb6fe50472f84e67,
+  connections: [],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m52.321 ms - 1580[0m
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m5.603 ms - 977[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m4.883 ms - 12[0m
+[0mPUT /users/updateLocation [32m200 [0m3.976 ms - 12[0m
+{ _id: 596bb0e6cb6fe50472f84e67,
+  connections: [],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m8.610 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m7.906 ms - 12[0m
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m5.279 ms - 1011[0m
+[0mPUT /users/updateLocation [32m200 [0m6.122 ms - 12[0m
+{ _id: 596bb0e6cb6fe50472f84e67,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m19.490 ms - 1125[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m3.706 ms - 12[0m
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m3.671 ms - 1011[0m
+[0mPUT /users/updateLocation [32m200 [0m1.578 ms - 12[0m
+{ _id: 596bb0e6cb6fe50472f84e67,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m3.674 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.716 ms - 12[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m2.540 ms - 1195[0m
+[0mPUT /users/updateLocation [32m200 [0m3.639 ms - 12[0m
+{ _id: 5960a89b25409e345552304b,
+  connections: 
+   [ 'c0668107c590e75bb5c5361c6347e9a9',
+     'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [ 'b93842cc672970fa58e6a37da2c386b1' ],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'c0668107c590e75bb5c5361c6347e9a9',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [32m200 [0m4.286 ms - 321[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m3.366 ms - 12[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.598 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.013 ms - 12[0m
+{ _id: 5960a89b25409e345552304b,
+  connections: 
+   [ 'c0668107c590e75bb5c5361c6347e9a9',
+     'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [ 'b93842cc672970fa58e6a37da2c386b1' ],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'c0668107c590e75bb5c5361c6347e9a9',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m4.479 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m3.923 ms - 12[0m
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m3.673 ms - 1011[0m
+[0mPUT /users/updateLocation [32m200 [0m2.449 ms - 12[0m
+{ _id: 596bb0e6cb6fe50472f84e67,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m11.106 ms - -[0m
+Mon, 17 Jul 2017 09:23:17 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:467:21
+Mon, 17 Jul 2017 09:23:17 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:468:19
+[0mGET /users/otp?phone=9769069091&otp=4310 [32m200 [0m213.357 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.314 ms - 1091[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.691 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.368 ms - 12[0m
+{ _id: 59631f831495e11dee65d27b,
+  connections: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '758118e811e19b9ee236d467838a977a' ],
+  requested: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '60d24a0ccd79cecdc3524a9981601c7e' ],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '758118e811e19b9ee236d467838a977a',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '60d24a0ccd79cecdc3524a9981601c7e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m4.133 ms - 377[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+string
+Mon, 17 Jul 2017 09:35:00 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:93:27
+[0mPOST /users/updatePushRegistration [32m200 [0m48.678 ms - 12[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m72.153 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m31.330 ms - 12[0m
+Mon, 17 Jul 2017 09:35:03 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:49:20
+Mon, 17 Jul 2017 09:35:03 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:50:27
+{ _id: 5960a89b25409e345552304b,
+  connections: 
+   [ 'c0668107c590e75bb5c5361c6347e9a9',
+     'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [ 'b93842cc672970fa58e6a37da2c386b1' ],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'c0668107c590e75bb5c5361c6347e9a9',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m51.429 ms - -[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m7.319 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m5.726 ms - 12[0m
+{ _id: 5960a89b25409e345552304b,
+  connections: 
+   [ 'c0668107c590e75bb5c5361c6347e9a9',
+     'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [ 'b93842cc672970fa58e6a37da2c386b1' ],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'c0668107c590e75bb5c5361c6347e9a9',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m13.720 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m6.093 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.987 ms - 12[0m
+[0mPUT /users/updateLocation [32m200 [0m8.149 ms - 12[0m
+{ _id: 59631f831495e11dee65d27b,
+  connections: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '758118e811e19b9ee236d467838a977a' ],
+  requested: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '60d24a0ccd79cecdc3524a9981601c7e' ],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '758118e811e19b9ee236d467838a977a',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '60d24a0ccd79cecdc3524a9981601c7e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m10.163 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m4.890 ms - 12[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.266 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m8.817 ms - 12[0m
+{ _id: 5960a89b25409e345552304b,
+  connections: 
+   [ 'c0668107c590e75bb5c5361c6347e9a9',
+     'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [ 'b93842cc672970fa58e6a37da2c386b1' ],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'c0668107c590e75bb5c5361c6347e9a9',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m25.599 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.497 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m3.196 ms - 1091[0m
+[0mPUT /users/updateLocation [32m200 [0m6.530 ms - 12[0m
+{ _id: 59631f831495e11dee65d27b,
+  connections: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '758118e811e19b9ee236d467838a977a' ],
+  requested: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '60d24a0ccd79cecdc3524a9981601c7e' ],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '758118e811e19b9ee236d467838a977a',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '60d24a0ccd79cecdc3524a9981601c7e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m14.511 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.976 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m3.105 ms - 12[0m
+[0mPUT /users/updateLocation [32m200 [0m2.294 ms - 12[0m
+{ _id: 59631f831495e11dee65d27b,
+  connections: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '758118e811e19b9ee236d467838a977a' ],
+  requested: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '60d24a0ccd79cecdc3524a9981601c7e' ],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '758118e811e19b9ee236d467838a977a',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '60d24a0ccd79cecdc3524a9981601c7e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m7.831 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.902 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.963 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.206 ms - 12[0m
+{ _id: 59631f831495e11dee65d27b,
+  connections: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '758118e811e19b9ee236d467838a977a' ],
+  requested: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '60d24a0ccd79cecdc3524a9981601c7e' ],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '758118e811e19b9ee236d467838a977a',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '60d24a0ccd79cecdc3524a9981601c7e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m5.443 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m5.762 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m5.764 ms - 12[0m
+[0mPUT /users/updateLocation [32m200 [0m2.434 ms - 12[0m
+{ _id: 59631f831495e11dee65d27b,
+  connections: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '758118e811e19b9ee236d467838a977a' ],
+  requested: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '60d24a0ccd79cecdc3524a9981601c7e' ],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '758118e811e19b9ee236d467838a977a',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '60d24a0ccd79cecdc3524a9981601c7e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m5.570 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.265 ms - 12[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m6.722 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m4.272 ms - 12[0m
+{ _id: 5960a89b25409e345552304b,
+  connections: 
+   [ 'c0668107c590e75bb5c5361c6347e9a9',
+     'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [ 'b93842cc672970fa58e6a37da2c386b1' ],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'c0668107c590e75bb5c5361c6347e9a9',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.470 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.408 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m4.315 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m11.929 ms - 12[0m
+{ _id: 59631f831495e11dee65d27b,
+  connections: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '758118e811e19b9ee236d467838a977a' ],
+  requested: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '60d24a0ccd79cecdc3524a9981601c7e' ],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '758118e811e19b9ee236d467838a977a',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '60d24a0ccd79cecdc3524a9981601c7e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.236 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m5.612 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.061 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.997 ms - 12[0m
+{ _id: 59631f831495e11dee65d27b,
+  connections: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '758118e811e19b9ee236d467838a977a' ],
+  requested: 
+   [ 'b93842cc672970fa58e6a37da2c386b1',
+     '60d24a0ccd79cecdc3524a9981601c7e' ],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '758118e811e19b9ee236d467838a977a',
+  'b93842cc672970fa58e6a37da2c386b1',
+  '60d24a0ccd79cecdc3524a9981601c7e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m6.487 ms - -[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m64.869 ms - 12[0m
+Mon, 17 Jul 2017 14:07:28 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:93:27
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m26.481 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m7.784 ms - 12[0m
+Mon, 17 Jul 2017 14:07:31 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:49:20
+Mon, 17 Jul 2017 14:07:31 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:50:27
+{ _id: 5960a89b25409e345552304b,
+  connections: 
+   [ 'c0668107c590e75bb5c5361c6347e9a9',
+     'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [ 'b93842cc672970fa58e6a37da2c386b1' ],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'c0668107c590e75bb5c5361c6347e9a9',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m13.030 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m15.104 ms - 12[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m9.030 ms - 1195[0m
+[0mPUT /users/updateLocation [32m200 [0m5.164 ms - 12[0m
+{ _id: 5960a89b25409e345552304b,
+  connections: 
+   [ 'c0668107c590e75bb5c5361c6347e9a9',
+     'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [ 'b93842cc672970fa58e6a37da2c386b1' ],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'c0668107c590e75bb5c5361c6347e9a9',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m22.258 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m5.877 ms - 12[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m4.344 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m4.815 ms - 12[0m
+{ _id: 5960a89b25409e345552304b,
+  connections: 
+   [ 'c0668107c590e75bb5c5361c6347e9a9',
+     'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [ 'b93842cc672970fa58e6a37da2c386b1' ],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'c0668107c590e75bb5c5361c6347e9a9',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  'b93842cc672970fa58e6a37da2c386b1' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m14.529 ms - -[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+Sat, 29 Jul 2017 07:25:04 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:539:21
+Sat, 29 Jul 2017 07:25:04 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:540:19
+[0mGET /users/otp?phone=919861392679&otp=6813 [32m200 [0m135.692 ms - 12[0m
+Sat, 29 Jul 2017 07:25:19 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:165:27
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [0m- [0m- ms - -[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [0m- [0m- ms - -[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [0m- [0m- ms - -[0m
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [0m- [0m- ms - -[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m51.843 ms - 12[0m
+Sat, 29 Jul 2017 08:55:29 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:165:27
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m15.329 ms - 1056[0m
+Sat, 29 Jul 2017 08:55:29 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:121:20
+Sat, 29 Jul 2017 08:55:29 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:122:27
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m30.242 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m7.429 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m3.782 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919791,77.649552',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m4.997 ms - 1056[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m6.092 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.714 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919371,77.6495967',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m4.703 ms - 1060[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m6.228 ms - 3858[0m
+[0mPUT /users/updateLocation [32m200 [0m8.526 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.816 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919791,77.649552',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.413 ms - -[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [32m200 [0m4.384 ms - 3850[0m
+[0mPUT /users/updateLocation [32m200 [0m1.722 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.197 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919326,77.6494776',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m5.448 ms - 1094[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m9.310 ms - 3405[0m
+[0mPUT /users/updateLocation [32m200 [0m15.441 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.198 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919466,77.6495632',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m2.800 ms - 1057[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [32m200 [0m11.044 ms - 3849[0m
+[0mPUT /users/updateLocation [32m200 [0m2.749 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.976 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m2.703 ms - 1056[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.719 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.530 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m5.372 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.211 ms - -[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.184 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.123 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.355 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m8.155 ms - 1090[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [32m200 [0m6.574 ms - 3405[0m
+[0mPUT /users/updateLocation [32m200 [0m1.940 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m29.979 ms - 1093[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m3.633 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.066 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.906 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m7.858 ms - -[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.160 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.283 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.728 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919361,77.6495743',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m2.922 ms - 1091[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.866 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.748 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m2.738 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.453 ms - 12[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m6.513 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m5.009 ms - 12[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m70.146 ms - 12[0m
+Sat, 29 Jul 2017 10:43:40 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:165:27
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.891956,77.6495296',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m45.191 ms - 1090[0m
+Sat, 29 Jul 2017 10:43:40 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:121:20
+Sat, 29 Jul 2017 10:43:40 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:122:27
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m20.649 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m12.440 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m5.545 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919581,77.6495743',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m6.585 ms - 1094[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m6.549 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m3.607 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.088 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919557,77.64956',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m4.303 ms - 1089[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.921 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.340 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m3.494 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m10.650 ms - 1093[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m5.637 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.743 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m3.314 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.216 ms - 12[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m3.103 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.913 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m4.409 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m4.521 ms - 1090[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.351 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.034 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.628 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919557,77.64956',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m3.394 ms - 1089[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m4.018 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.781 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.733 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m2.853 ms - -[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m7.126 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.842 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m25.005 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.473 ms - 12[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m3.339 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.777 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m4.686 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.605 ms - 12[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m2.727 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m4.793 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m4.705 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.465 ms - 12[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m5.376 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.824 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919466,77.6495632',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m2.357 ms - 1094[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.499 ms - 12[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m2.659 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m3.135 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m3.155 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919791,77.649552',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m4.717 ms - 1093[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m3.073 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.340 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.762 ms - 12[0m
+null [ { _id: 59748598f17f0d24502a9d9f,
+    uid: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    username: 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+    email: 'f',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1500808524.jpg?alt=media',
+    fullName: 'ffd',
+    dob: '1997-01-01',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Change and Sustainibility Services', 'Advisory Services' ],
+    designation: 'hunter',
+    currentWorkplace: 'iris',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ '758118e811e19b9ee236d467838a977a' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'cO0W9id72cg:APA91bEQBtYJTflKFzaal5trUQe3Ax_AiwpeezP4A5QYVveq_z3AY-44yXPfob7RL-1F0p6OFGHXyDY5N2Ij_aVWkld1N4rKO-ASkFTrqBuKl7CS6ZDANGQDFM9u93rQ7iUDtPFpho8w',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [32m200 [0m3.033 ms - 1093[0m
+{ _id: 59748598f17f0d24502a9d9f,
+  connections: [ '758118e811e19b9ee236d467838a977a' ],
+  requested: [],
+  requests: [] } [ 'd8b9033e2f57f05364a5b6e6e6cb83e8',
+  '758118e811e19b9ee236d467838a977a' ]
+[0mGET /users/discover?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m3.357 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.542 ms - 12[0m
+Sat, 29 Jul 2017 18:21:44 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:527:19
+[0mGET /users/events?uid=d8b9033e2f57f05364a5b6e6e6cb83e8 [36m304 [0m2.149 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.119 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m4.315 ms - 1090[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m4.442 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.561 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.176 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [36m304 [0m5.418 ms - -[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.172 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.523 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m5.712 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919466,77.6495632',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m3.958 ms - 1091[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m4.432 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.589 ms - 12[0m
+null [ { _id: 597c49c9dc0c6618c0af11cc,
+    uid: '758118e811e19b9ee236d467838a977a',
+    username: '758118e811e19b9ee236d467838a977a',
+    email: 'sidharth016@gmail.com',
+    pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1501317476.jpg?alt=media',
+    fullName: 'Sidharth Sahu',
+    dob: '1991-07-02',
+    gender: 'male',
+    type: [ 'professional' ],
+    industry: [ 'Information Technology' ],
+    designation: 'Develooer',
+    currentWorkplace: 'IRIS',
+    skills: [ [Object], [Object], [Object] ],
+    connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+    requested: [],
+    requests: [],
+    notifications: [],
+    events: [],
+    lastLoginLocation: '12.8919571,77.649552',
+    chatId: '',
+    pushId: 'eCviTHAXmmo:APA91bEPkqwbB-Yw0SIreyKfVYN8ze73UHTv5chq0SSW6DqTEH3jEaMcgYwkq4BtQrJeyLIxcr9bTA0G_9uxEY3UFRLtH1JeBHy9530A-WaRFzRNEItkOWyTgSqZuAj8G3qtde6tLDGa',
+    rating: 0,
+    ranking: 0,
+    score: 0,
+    password: '',
+    pendingRatings: [] } ]
+[0mGET /users/user?uid=758118e811e19b9ee236d467838a977a [32m200 [0m2.256 ms - 1090[0m
+{ _id: 597c49c9dc0c6618c0af11cc,
+  connections: [ 'd8b9033e2f57f05364a5b6e6e6cb83e8' ],
+  requested: [],
+  requests: [] } [ '758118e811e19b9ee236d467838a977a',
+  'd8b9033e2f57f05364a5b6e6e6cb83e8' ]
+[0mGET /users/discover?uid=758118e811e19b9ee236d467838a977a [36m304 [0m3.117 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.937 ms - 12[0m
+
+> iris_server@0.0.0 start /home/git/schism/iris_server
+> node ./bin/www
+
+Connected successfully to server
+Sat, 19 Aug 2017 05:16:54 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:558:21
+Sat, 19 Aug 2017 05:16:54 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:559:19
+[0mGET /users/otp?phone=9861392679&otp=9293 [32m200 [0m230.956 ms - 12[0m
+Sat, 19 Aug 2017 05:17:13 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:179:27
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m13.252 ms - 12[0m
+Sidharth Sahu
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'b30f9c20bf82ac5226e3f6d27118b17e',
+       username: 'b30f9c20bf82ac5226e3f6d27118b17e',
+       email: 'sidharth016@gmail.com',
+       pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1503119855.jpg?alt=media',
+       image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1503119855.jpg?alt=media',
+       fullName: 'Sidharth Sahu',
+       dob: '1989-07-02',
+       gender: 'male',
+       type: [Object],
+       industry: [Object],
+       designation: 'Full Stack Developer',
+       currentWorkplace: 'Iris',
+       skills: [Object],
+       connections: [],
+       requested: [],
+       requests: [],
+       notifications: [],
+       events: [],
+       lastLoginLocation: '',
+       chatId: '',
+       pushId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       password: '',
+       pendingRatings: [],
+       unread: [],
+       _id: 5997ca6a5b8e5a7657685f73 } ],
+  insertedCount: 1,
+  insertedIds: [ 5997ca6a5b8e5a7657685f73 ] }
+[0mPOST /users/data [32m200 [0m34.459 ms - 918[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m6.431 ms - 944[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m3.183 ms - -[0m
+Sat, 19 Aug 2017 05:19:40 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:315:20
+[]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m5.205 ms - 2[0m
+Sat, 19 Aug 2017 05:19:40 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:135:20
+Sat, 19 Aug 2017 05:19:40 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:136:27
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: [],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m26.891 ms - 3801[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m5.888 ms - 12[0m
+[0mPUT /users/updateLocation [32m200 [0m2.270 ms - 12[0m
+{ ok: 1, nModified: 1, n: 1 }
+[0mPUT /users/request [32m200 [0m146.449 ms - 12[0m
+Pushed Notification
+Sat, 19 Aug 2017 05:20:59 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:545:19
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m4.886 ms - 2[0m
+Sat, 19 Aug 2017 05:21:05 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:33:19
+[0mPOST /users/clearUnread?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.407 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.243 ms - 1151[0m
+[]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m3.622 ms - -[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.128 ms - -[0m
+[0mPOST /users/clearUnread?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m1.372 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.317 ms - -[0m
+[]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m3.977 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.742 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: [],
+  requested: [ 'd84663503b36562bcec35faad622b7a1' ],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m4.239 ms - 3336[0m
+[0mPUT /users/updateLocation [32m200 [0m2.734 ms - 12[0m
+[0mGET /users/user?uid=d84663503b36562bcec35faad622b7a1 [32m200 [0m4.170 ms - 1463[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.904 ms - 12[0m
+[]
+[0mGET /users/connections?uid=d84663503b36562bcec35faad622b7a1 [32m200 [0m2.573 ms - 2[0m
+[0mGET /users/user?uid=d84663503b36562bcec35faad622b7a1 [36m304 [0m2.590 ms - -[0m
+{ _id: 59904a3c26de1f4a05809001,
+  connections: [],
+  requested: [],
+  requests: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ] } [ 'd84663503b36562bcec35faad622b7a1',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=d84663503b36562bcec35faad622b7a1 [32m200 [0m16.209 ms - 3336[0m
+[0mPUT /users/updateLocation [32m200 [0m1.800 ms - 12[0m
+Sat, 19 Aug 2017 05:23:58 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:304:20
+[0mGET /users/notifications?uid=d84663503b36562bcec35faad622b7a1 [32m200 [0m2.433 ms - 362[0m
+null
+null
+[0mPOST /users/acceptConnect [32m200 [0m16.105 ms - 12[0m
+Pushed Notification
+[0mGET /users/user?uid=d84663503b36562bcec35faad622b7a1 [32m200 [0m2.487 ms - 1153[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=d84663503b36562bcec35faad622b7a1 [32m200 [0m7.024 ms - 213[0m
+[0mPOST /users/clearUnread?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m1.414 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.528 ms - 1239[0m
+[ 'd84663503b36562bcec35faad622b7a1' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.601 ms - 216[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.893 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: [ 'd84663503b36562bcec35faad622b7a1' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m4.845 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.973 ms - 12[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.958 ms - -[0m
+[0mPOST /users/clearUnread?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m1.144 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m3.652 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m5.478 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m3.413 ms - -[0m
+{ uid: 'b30f9c20bf82ac5226e3f6d27118b17e',
+  event: 
+   { from: '2017-08-19 10:58',
+     to: '2017-08-19 11:32',
+     type: 'meeting',
+     with: 
+      { uid: 'd84663503b36562bcec35faad622b7a1',
+        pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1502628328.jpg?alt=media',
+        fullName: 'Sandhya Pulaskar',
+        id: '59904a3c26de1f4a05809001' },
+     venue: 'Diamond District Workspace',
+     agenda: 'demo for iris',
+     pending: true } }
+{ uid: 'b30f9c20bf82ac5226e3f6d27118b17e',
+  pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1503119855.jpg?alt=media',
+  fullName: 'Sidharth Sahu',
+  id: '5997ca6a5b8e5a7657685f73' }
+[0mPOST /users/events [32m200 [0m9.785 ms - 12[0m
+Pushed Notification
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m3.968 ms - 389[0m
+[0mGET /users/notifications?uid=d84663503b36562bcec35faad622b7a1 [32m200 [0m2.201 ms - 490[0m
+[0mPOST /users/acceptMeeting [32m200 [0m3.269 ms - 12[0m
+Pushed Notification
+[0mGET /users/events?uid=d84663503b36562bcec35faad622b7a1 [32m200 [0m3.289 ms - 387[0m
+[0mGET /users/user?uid=d84663503b36562bcec35faad622b7a1 [32m200 [0m2.540 ms - 1538[0m
+{ _id: 59904a3c26de1f4a05809001,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'd84663503b36562bcec35faad622b7a1',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=d84663503b36562bcec35faad622b7a1 [36m304 [0m5.753 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.974 ms - 12[0m
+[0mPOST /users/clearUnread?uid=d84663503b36562bcec35faad622b7a1 [32m200 [0m1.397 ms - 12[0m
+[0mGET /users/user?uid=d84663503b36562bcec35faad622b7a1 [32m200 [0m1.992 ms - 1513[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=d84663503b36562bcec35faad622b7a1 [36m304 [0m5.088 ms - -[0m
+[0mGET /users/events?uid=d84663503b36562bcec35faad622b7a1 [36m304 [0m1.846 ms - -[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m1.662 ms - 390[0m
+Sat, 19 Aug 2017 05:28:58 GMT express deprecated req.param(name): Use req.params, req.body, or req.query instead at routes/users.js:24:46
+[0mGET /users/userById?id=59904a3c26de1f4a05809001 [32m200 [0m2.864 ms - 1487[0m
+[0mGET /users/userById?id=5997ca6a5b8e5a7657685f73 [32m200 [0m2.546 ms - 1601[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.519 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.569 ms - 1627[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.180 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: [ 'd84663503b36562bcec35faad622b7a1' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m6.951 ms - 2886[0m
+[ 'd84663503b36562bcec35faad622b7a1' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m3.368 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m11.353 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.672 ms - 1627[0m
+[ 'd84663503b36562bcec35faad622b7a1' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m6.009 ms - -[0m
+[0mGET /users/otp?phone=9769069091&otp=5548 [32m200 [0m353.692 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.141 ms - 12[0m
+Arjun 
+{ result: { ok: 1, n: 1 },
+  ops: 
+   [ { uid: 'c0668107c590e75bb5c5361c6347e9a9',
+       username: 'c0668107c590e75bb5c5361c6347e9a9',
+       email: 'arjunsingh.j@gmail.com',
+       pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1503121542.jpg?alt=media',
+       image: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1503121542.jpg?alt=media',
+       fullName: 'Arjun ',
+       dob: '1987-05-19',
+       gender: 'male',
+       type: [Object],
+       industry: [Object],
+       designation: 'CoFounder',
+       currentWorkplace: 'Iris',
+       skills: [Object],
+       connections: [],
+       requested: [],
+       requests: [],
+       notifications: [],
+       events: [],
+       lastLoginLocation: '',
+       chatId: '',
+       pushId: '',
+       rating: 0,
+       ranking: 0,
+       score: 0,
+       password: '',
+       pendingRatings: [],
+       unread: [],
+       _id: 5997d0f95b8e5a7657685f74 } ],
+  insertedCount: 1,
+  insertedIds: [ 5997d0f95b8e5a7657685f74 ] }
+[0mPOST /users/data [32m200 [0m40.253 ms - 923[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.248 ms - 949[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.308 ms - -[0m
+[]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.978 ms - 2[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m4.608 ms - 3812[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.469 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.672 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.902 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: [ 'd84663503b36562bcec35faad622b7a1' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m3.996 ms - 3323[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.841 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m15.130 ms - 12[0m
+[ 'd84663503b36562bcec35faad622b7a1' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m7.664 ms - -[0m
+{ ok: 1, nModified: 1, n: 1 }
+[0mPUT /users/request [32m200 [0m4.004 ms - 12[0m
+Pushed Notification
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m1.727 ms - 1661[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: [ 'd84663503b36562bcec35faad622b7a1' ],
+  requested: [ 'c0668107c590e75bb5c5361c6347e9a9' ],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m4.664 ms - 2886[0m
+[0mPUT /users/updateLocation [32m200 [0m1.519 ms - 12[0m
+[0mPOST /users/clearUnread?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m0.898 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.083 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m3.600 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.020 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: [ 'd84663503b36562bcec35faad622b7a1' ],
+  requested: [ 'c0668107c590e75bb5c5361c6347e9a9' ],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m8.712 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.349 ms - 12[0m
+[0mGET /users/notifications?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m1.830 ms - 375[0m
+null
+null
+[0mPOST /users/acceptConnect [32m200 [0m8.005 ms - 12[0m
+Pushed Notification
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m3.334 ms - 1135[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m4.432 ms - 213[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.994 ms - -[0m
+[0mPOST /users/clearUnread?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m0.847 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.765 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.213 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.598 ms - 421[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.321 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m3.948 ms - 3351[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.161 ms - 2[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.223 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.791 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.716 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.830 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m4.530 ms - -[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.249 ms - -[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.054 ms - -[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.542 ms - -[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.124 ms - -[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.391 ms - -[0m
+{ uid: 'b30f9c20bf82ac5226e3f6d27118b17e',
+  event: 
+   { from: '2017-08-19 11:30',
+     to: '2017-08-19 12:00',
+     type: 'meeting',
+     with: 
+      { uid: 'c0668107c590e75bb5c5361c6347e9a9',
+        pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1503121542.jpg?alt=media',
+        fullName: 'Arjun ',
+        id: '5997d0f95b8e5a7657685f74' },
+     venue: 'Diamond District Workspace',
+     agenda: 'planner demo and walkthrough',
+     pending: true } }
+{ uid: 'b30f9c20bf82ac5226e3f6d27118b17e',
+  pictureUrl: 'https://firebasestorage.googleapis.com/v0/b/iris-b029c.appspot.com/o/1503119855.jpg?alt=media',
+  fullName: 'Sidharth Sahu',
+  id: '5997ca6a5b8e5a7657685f73' }
+[0mPOST /users/events [32m200 [0m7.653 ms - 12[0m
+Pushed Notification
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.362 ms - 783[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.187 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.969 ms - 1587[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m6.681 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.028 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.657 ms - -[0m
+[0mGET /users/notifications?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m1.749 ms - 505[0m
+[0mPOST /users/acceptMeeting [32m200 [0m2.283 ms - 12[0m
+Pushed Notification
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.821 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m10.738 ms - 2135[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: 
+   [ 'd84663503b36562bcec35faad622b7a1',
+     'c0668107c590e75bb5c5361c6347e9a9' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m5.545 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.340 ms - -[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m1.833 ms - 402[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.975 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.683 ms - 12[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.059 ms - 784[0m
+[0mPOST /users/clearUnread?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m1.084 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m4.136 ms - 1535[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.632 ms - -[0m
+[0mGET /users/user?uid=d84663503b36562bcec35faad622b7a1 [36m304 [0m23.617 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=d84663503b36562bcec35faad622b7a1 [36m304 [0m3.285 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m5.237 ms - 2135[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m12.326 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.374 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: 
+   [ 'd84663503b36562bcec35faad622b7a1',
+     'c0668107c590e75bb5c5361c6347e9a9' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.891 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.732 ms - 12[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.953 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m4.249 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.788 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m3.340 ms - 2135[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: 
+   [ 'd84663503b36562bcec35faad622b7a1',
+     'c0668107c590e75bb5c5361c6347e9a9' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m7.752 ms - -[0m
+[0mPOST /users/clearUnread?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.301 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.731 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.857 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.091 ms - 12[0m
+[0mPOST /users/clearUnread?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m1.302 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.948 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.564 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.774 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.887 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.885 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.693 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.673 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.815 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m7.447 ms - -[0m
+[0mPOST /users/clearUnread?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m1.092 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.731 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.539 ms - -[0m
+[0mPOST /users/clearUnread?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m0.949 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.353 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.347 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.885 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.853 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.025 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m4.239 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: 
+   [ 'd84663503b36562bcec35faad622b7a1',
+     'c0668107c590e75bb5c5361c6347e9a9' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m4.251 ms - -[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.674 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.000 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: 
+   [ 'd84663503b36562bcec35faad622b7a1',
+     'c0668107c590e75bb5c5361c6347e9a9' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m4.458 ms - -[0m
+[0mPOST /users/clearUnread?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m0.925 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.322 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m4.457 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m2.308 ms - 12[0m
+[0mPUT /users/updateLocation [32m200 [0m1.918 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.684 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.208 ms - -[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m7.358 ms - -[0m
+[0mPOST /users/clearUnread?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.726 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.496 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m19.228 ms - -[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.921 ms - -[0m
+[0mGET /users/userById?id=5997ca6a5b8e5a7657685f73 [32m200 [0m4.538 ms - 2109[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.465 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m6.402 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.940 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.936 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.898 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.810 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.514 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.860 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.788 ms - -[0m
+[0mPOST /users/clearUnread?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m1.180 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.011 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.418 ms - -[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.759 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m10.858 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.763 ms - -[0m
+[0mGET /users/notifications?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m1.623 ms - 53[0m
+[0mPOST /users/clearUnread?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m1.000 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.841 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m9.693 ms - -[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.247 ms - -[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.132 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.793 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.979 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.669 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m4.558 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m4.079 ms - -[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.834 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.783 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.106 ms - 2135[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m3.895 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: 
+   [ 'd84663503b36562bcec35faad622b7a1',
+     'c0668107c590e75bb5c5361c6347e9a9' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.796 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.381 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.664 ms - 12[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.845 ms - -[0m
+[0mPOST /users/clearUnread?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m0.957 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m1.708 ms - 2135[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.409 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.855 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m4.986 ms - -[0m
+[0mPOST /users/clearUnread?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m0.993 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.021 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.513 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.905 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.776 ms - -[0m
+[0mPOST /users/clearUnread?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m0.766 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.174 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.045 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.644 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.838 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m13.527 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.983 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.417 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [32m200 [0m2.112 ms - 1569[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.907 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.949 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: 
+   [ 'd84663503b36562bcec35faad622b7a1',
+     'c0668107c590e75bb5c5361c6347e9a9' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m4.677 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.849 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.148 ms - 2134[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.964 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.895 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.016 ms - -[0m
+[0mGET /users/notifications?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m1.599 ms - 220[0m
+[0mPOST /users/clearUnread?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m0.938 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m1.957 ms - 2134[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.360 ms - -[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.721 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.888 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: 
+   [ 'd84663503b36562bcec35faad622b7a1',
+     'c0668107c590e75bb5c5361c6347e9a9' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.757 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.713 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m6.035 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.774 ms - -[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.311 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.167 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m3.518 ms - -[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m1.844 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.119 ms - 2134[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.869 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: 
+   [ 'd84663503b36562bcec35faad622b7a1',
+     'c0668107c590e75bb5c5361c6347e9a9' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m3.328 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.472 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.447 ms - 12[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.242 ms - -[0m
+{ _id: 5997ca6a5b8e5a7657685f73,
+  connections: 
+   [ 'd84663503b36562bcec35faad622b7a1',
+     'c0668107c590e75bb5c5361c6347e9a9' ],
+  requested: [],
+  requests: [] } [ 'b30f9c20bf82ac5226e3f6d27118b17e',
+  'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/discover?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m4.597 ms - -[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.745 ms - -[0m
+[0mPUT /users/updateLocation [32m200 [0m1.943 ms - 12[0m
+string
+[0mPOST /users/updatePushRegistration [32m200 [0m2.740 ms - 12[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.890 ms - -[0m
+[0mGET /users/user?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m1.849 ms - -[0m
+{ _id: 5997d0f95b8e5a7657685f74,
+  connections: [ 'b30f9c20bf82ac5226e3f6d27118b17e' ],
+  requested: [],
+  requests: [] } [ 'c0668107c590e75bb5c5361c6347e9a9',
+  'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/discover?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.228 ms - -[0m
+[ 'b30f9c20bf82ac5226e3f6d27118b17e' ]
+[0mGET /users/connections?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.774 ms - -[0m
+[0mGET /users/events?uid=c0668107c590e75bb5c5361c6347e9a9 [36m304 [0m2.684 ms - -[0m
+[0mGET /users/events?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.114 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m2.073 ms - 2135[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [32m200 [0m3.326 ms - 216[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.818 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.847 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.171 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.593 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.830 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.770 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.346 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.244 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m3.733 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.853 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.590 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.793 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.883 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.884 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.538 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.901 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m4.061 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m10.740 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.007 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.791 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.464 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.873 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.091 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.943 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m4.907 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.050 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.470 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.895 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.878 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.645 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m6.590 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.437 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.789 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.050 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.371 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.527 ms - -[0m
+[0mGET /users/user?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m1.926 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.103 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.369 ms - -[0m
+[ 'd84663503b36562bcec35faad622b7a1',
+  'c0668107c590e75bb5c5361c6347e9a9' ]
+[0mGET /users/connections?uid=b30f9c20bf82ac5226e3f6d27118b17e [36m304 [0m2.198 ms - -[0m

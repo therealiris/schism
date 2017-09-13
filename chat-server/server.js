@@ -61,7 +61,7 @@ var users = [];
 var db = null;
 
 // connect to the database
-mongo.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/iris_db', (err, d) => {
+mongo.connect(process.env.MONGODB_URI || 'mongodb://admin:what_a_secure_pass_!123@localhost:27017/iris_db', (err, d) => {
 	if (err) {
 		return console.log(err);
 	}

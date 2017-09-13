@@ -4,7 +4,7 @@ var MongoClient = require('mongodb').MongoClient
   , assert = require('assert');
 
 // Connection URL
-var url = 'mongodb://localhost:27017/iris_db';
+var url = 'mongodb://admin:what_a_secure_pass_!123@localhost:27017/iris_db';
 var db;
 
 //Collections Used

@@ -1,0 +1,36 @@
+npm ERR! Linux 4.9.15-x86_64-linode81
+npm ERR! argv "/usr/bin/node" "/bin/npm" "start"
+npm ERR! node v7.10.0
+npm ERR! npm  v4.2.0
+
+npm ERR! missing script: start
+npm ERR! 
+npm ERR! If you need help, you may report this error at:
+npm ERR!     <https://github.com/npm/npm/issues>
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/.npm/_logs/2017-05-16T11_00_56_788Z-debug.log
+npm ERR! Linux 4.9.15-x86_64-linode81
+npm ERR! argv "/usr/bin/node" "/bin/npm" "start"
+npm ERR! node v7.10.0
+npm ERR! npm  v4.2.0
+
+npm ERR! missing script: start
+npm ERR! 
+npm ERR! If you need help, you may report this error at:
+npm ERR!     <https://github.com/npm/npm/issues>
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/.npm/_logs/2017-07-06T18_17_38_540Z-debug.log
+npm ERR! Linux 4.9.15-x86_64-linode81
+npm ERR! argv "/usr/bin/node" "/bin/npm" "start"
+npm ERR! node v7.10.0
+npm ERR! npm  v4.2.0
+
+npm ERR! missing script: start
+npm ERR! 
+npm ERR! If you need help, you may report this error at:
+npm ERR!     <https://github.com/npm/npm/issues>
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/.npm/_logs/2017-07-07T08_17_37_087Z-debug.log
