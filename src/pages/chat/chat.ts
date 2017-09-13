@@ -84,12 +84,21 @@ export class ChatPage {
 		console.log('new message: ', name, data)
 		if (data.chat == this.chat.id) {
 			this.addMessage(data);
+
 			this.content.scrollToBottom(300);
 			setTimeout(() => {
 				this.content.scrollToBottom(300);
 				this.animateChat = true;
 			}, 100);
 			this.audioService.play('message-received-front');
+			console.log(this.messages.length)
+			if(this.messages.length===20 || this.messages.length===60){
+				console.log("here tracking chat count")
+				this.people.updateCurrentUser(this.otherUserName,(user)=>{
+					let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user.userObject})
+	        		pendingRatingModal.present()
+				})
+			}
 		} else {
 			this.audioService.play('message-received-back');
 		}
@@ -105,14 +114,7 @@ export class ChatPage {
 				message.first = true;
 			}
 		}
-		console.log(this.messages.length)
-		if(this.messages.length===20 || this.messages.length===60){
-			console.log("here tracking chat count")
-			this.people.updateCurrentUser(this.otherUserName,(user)=>{
-				let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user.userObject})
-        		pendingRatingModal.present()
-			})
-		}
+		
 	}
 
 	// send a message

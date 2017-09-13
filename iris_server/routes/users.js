@@ -708,11 +708,11 @@ function sendPush(pushId, notificationType, notificationDetail) {
 
     if (notificationType === 1) {
         title = "Connections"
-        message = notificationDetail.fullName + " wants to connect with you"
+        message = notificationDetail.fullName + " wants to connect with you. Visit Notifications --> Connections"
     }
     if (notificationType === 2) {
         title = "Meetings"
-        message = notificationDetail.fullName + " has scheduled a " + notificationDetail.eventType + " with you"
+        message = notificationDetail.fullName + " has scheduled a " + notificationDetail.eventType + " with you. Visit notifications --> Meeting"
     }
     if(notificationType === 3){
     	title = "Connections"

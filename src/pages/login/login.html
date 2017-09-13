@@ -7,7 +7,7 @@
     <h5 style="padding-top: 2em; color:#5e8af2; font-weight: 400;">Login Securely</h5>
     <h5 style="padding-top: 2em; color:#5e8af2; font-weight: 300;">Please enter your phone number</h5>
     <span style="color:#5e8af2; font-size: 1.6em">+91</span><input [(ngModel)]="phone" type="number" style="margin: 1em 1em 1em 0; color:#5e8af2;font-size: 2em; font-weight: 300;text-align:center; border:none; border-bottom: solid; border-width: thin; border-color: #5e8af2;background: none;width:70vw">
-    <button style="background: #5e8af2; border:none;border-radius: 1em; padding: 0.5em 1em; font-size: 1.2em;color: #fff;" (click)="sendNumber()">verify</button>
+    <button style="background: #5e8af2; border:none;border-radius: 1em; padding: 0.6em 1.2em; font-size: 1.4em;color: #fff;" (click)="sendNumber()">verify</button>
     <br>
     
   </div>
@@ -15,7 +15,7 @@
     <h5 style="padding-top: 2em; color:#5e8af2; font-weight: 400;">Login Securely</h5>  
     <h5 style="padding: 2em; color:#5e8af2; font-weight: 300;">Please enter the OTP sent to your mobile number.</h5>
     <input [(ngModel)]="otpField" type="number" style="margin: 1em; color:#5e8af2;font-size: 2em; font-weight: 300;text-align:center; border:none; border-bottom: solid; border-width: thin; border-color: #5e8af2;background: none; width:70vw">
-    <button style="background: #5e8af2; border:none;border-radius: 1em; padding: 0.5em 1em; font-size: 1.2em;color: #fff;margin-bottom: 1em" (click)="validate()">submit</button>
+    <button style="background: #5e8af2; border:none;border-radius: 1em; padding: 0.6em 1.2em; font-size: 1.4em;color: #fff;margin-bottom: 1em" (click)="validate()">submit</button>
     <br>
     <span style="color: #5e8af2;margin-top: 1em" *ngIf="!countDownStopped" (click)="sendNumber()">{{timer}}</span>
     <span style="color: #5e8af2;" *ngIf="countDownStopped" (click)="sendNumber()">Resend OTP</span>

@@ -131,6 +131,7 @@ export class MyApp {
     events.subscribe('clearHamNotification',()=>{
       this.hamburgerNotification = false
       this.unread = 0
+      this.people.clearUnread(this.user.uid)
     }) 
     events.subscribe('hamburgerOn',(data)=>{
       this.hamburgerNotification = true

@@ -33,10 +33,13 @@
   <ion-item>
     <ion-label>Select Reason</ion-label>
     <ion-select [(ngModel)]="reasons" (ngModelChange)='enableConnect()'>
+      <ion-option>Collaboration</ion-option>
       <ion-option>Ideation and Planning</ion-option>
       <ion-option>Professional Query</ion-option>
-      <ion-option>Experience</ion-option>
-      <ion-option>Collaboration</ion-option>
+      <ion-option>Personal Guidance</ion-option>
+      <ion-option>Recruiting</ion-option>
+      <ion-option>other</ion-option>
+      
     </ion-select>
   </ion-item>
   <ion-item *ngIf="allow">

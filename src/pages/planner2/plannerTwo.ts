@@ -51,6 +51,7 @@ export class PlannerTwo {
 
     if(this.checkValidity())
     {
+      debugger;
         let meetingObject = {
         "uid":this.user.uid,
         "event":{
@@ -73,18 +74,19 @@ export class PlannerTwo {
     }
   }
   checkValidity(){
-    let from = moment(this.eventDate + " " +this.timeStarts), to = moment(this.eventDate + " " +this.timeStops), current = moment()
+    debugger;
+    let from = moment(this.eventDate + " " +this.timeStarts), to = moment(this.eventDate + " " +this.timeStops), current =moment(moment().format("YYYY-MM-DD HH:mm"))
     console.log(from,to,current)
-    if(from.add(15,'minutes')<to)
+    if(from.add(15,'minutes')>to)
     {
       alert("Meetings should be a minimum of 15 minute duration")
       return false
     }
-    else if(from.add(10,'minutes')<current){
+    else if(from<current){
       alert("Please select an appropriate meeting time")
       return false
     }
-    else return true
+    else if(from>current) return true
   }
   selectUser(){
     let planModal = this.modalCtrl.create(PlannerOne);
