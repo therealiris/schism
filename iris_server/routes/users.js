@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
 });
 router.get('/clearGeneralNotifications', function(req, res, next) {
     let uid = req.param("uid")
-    db.users.update({"uid":uid},{"pullAll":{"notifications":[{"type":0}]}},function(err,update){
+    db.users.update({"uid":uid},{"$pull":{"notifications":{"type":0}}},function(err,update){
         if(!err){
             res.send({status:1})
         }
