@@ -20,6 +20,14 @@ wss.on('connection', function connection(ws) {
 router.get('/', function(req, res, next) {
     res.send('respond with a resource');
 });
+router.get('/clearGeneralNotifications', function(req, res, next) {
+    let uid = req.param("uid")
+    db.users.update({"uid":uid},{"pullAll":{"notifications":[{"type":0}]}},function(err,update){
+        if(!err){
+            res.send({status:1})
+        }
+    })
+});
 router.get('/rankings', function(req, res) {
     let uid = req.param("uid"), responseBody = {}, rankedUser = new Array()
     db.users.find({},{"fullName":1, "score":1, "ratings":1, "skills":1, "uid":1, "pictureUrl":1}).sort({score:-1}).toArray(function(err,users){

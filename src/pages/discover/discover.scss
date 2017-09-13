@@ -17,6 +17,12 @@ rating{
 
 
 discover-list {
+.newNotification{
+	font-size: 1.6em;
+	border-bottom-width: 4px;
+	border-color: #02ff02;
+	border-style: solid;
+}
 .content{
  background: linear-gradient(to bottom, #00a9ff 0%,#2b6ad8 45%,#ffffff 45%,#ffffff 46%,#ffffff 100%); 
 }
