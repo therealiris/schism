@@ -206,17 +206,20 @@ export class MyApp {
         {
           this.events.publish("refreshContacts")
           toast.present();
-          this.unreadNotification =true
+          this.events.publish("unread")
+          // this.unreadNotification =true
         }
         if(notification.message.indexOf("scheduled")>-1)
         {
           toast.present();
-          this.unreadNotification =true
+          this.events.publish("unread")
+          // this.unreadNotification =true
         }
         if(notification.message.indexOf("accepted")>-1)
         {
           toast.present();
-          this.unreadNotification =true
+          this.events.publish("unread")
+          // this.unreadNotification =true
         }
         
     }

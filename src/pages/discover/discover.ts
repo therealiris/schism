@@ -52,6 +52,9 @@ export class DiscoverPage {
     this.ratingCount = 0
     // If we navigated to this page, we will have an item available as a nav param
     this.showPoints = false
+    this.events.subscribe("unread",()=>{
+      this.refresh()
+    })
     // this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.RECORD_AUDIO).then(
     //   success => {
     //     this.androidPermissions.requestPermissions(this.androidPermissions.PERMISSION.RECORD_AUDIO)
@@ -88,7 +91,7 @@ export class DiscoverPage {
     if(this.ratingCount<2)
     {
       this.people.updateCurrentUser(this.pendingRatings[this.ratingCount],(user)=>{
-         let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user.userObject})
+         let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user.userObject,"alternate":false})
         pendingRatingModal.present()
         pendingRatingModal.onDidDismiss((data)=>{
           if(data.status)
@@ -209,6 +212,11 @@ export class DiscoverPage {
   }
   openNotifications(){
     this.navCtrl.push(NotificationPage,{"uid":this.user.uid})
+  }
+  refresh(){
+    this.people.updateCurrentUser(this.user.uid,(user)=>{
+      this.user = user.userObject
+    })
   }
   search(fab){
     let filterModal = this.modalCtrl.create(FilterPage,{"filter":this.filter});

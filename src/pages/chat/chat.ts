@@ -92,10 +92,10 @@ export class ChatPage {
 			}, 100);
 			this.audioService.play('message-received-front');
 			console.log(this.messages.length)
-			if(this.messages.length===20 || this.messages.length===60){
+			if(this.messages.length===10 || this.messages.length===60){
 				console.log("here tracking chat count")
 				this.people.updateCurrentUser(this.otherUserName,(user)=>{
-					let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user.userObject})
+					let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user.userObject,"alternate":true})
 	        		pendingRatingModal.present()
 				})
 			}

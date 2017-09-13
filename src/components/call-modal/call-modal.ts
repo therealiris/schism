@@ -34,7 +34,7 @@ export class CallModal {
 
 		console.log("end call called", this.callService.contact.id)
 		this.people.userById(this.callService.contact.id.toString(),(user)=>{
-	         let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user})
+	         let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user,"alternate":true})
 	        pendingRatingModal.present()
 	        
 	        this.callService.end()
