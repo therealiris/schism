@@ -33,6 +33,7 @@ export class DiscoverPage {
   localRequested : any;
   tutorial : boolean;
   constructor(private events:Events,public modalCtrl:ModalController,public navCtrl: NavController,public loadingCtrl: LoadingController, public navParams: NavParams,public people: PeopleService,public storage:Storage) {
+    this.user={"notifications":[""]}
     storage.get('discoverTutorial').then((val)=>{
       if(val)
       {

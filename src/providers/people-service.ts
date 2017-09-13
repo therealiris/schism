@@ -16,6 +16,9 @@ export class PeopleService {
   constructor(public http: Http) {
     console.log('Hello PeopleService Provider');
   }
+  clearGeneral(uid){
+    this.http.get(apiUrl+'/users/clearGeneralNotifications?uid='+uid)
+  }
   ranking(uid,callback){
     this.http.get(apiUrl+'/users/rankings?uid='+uid)
     .map(response => response.json())

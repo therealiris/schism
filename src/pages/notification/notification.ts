@@ -145,4 +145,8 @@ export class NotificationPage {
   dismiss(){
     this.navCtrl.popToRoot()
   }
+  clearGeneral(){
+    this.general = []
+    this.people.clearGeneral(this.uid)
+  }
 }
