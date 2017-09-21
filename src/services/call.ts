@@ -9,10 +9,9 @@ import { Config } from '../app/config';
 import { Platform } from 'ionic-angular';
 import { Events, ModalController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
-import { BackgroundMode } from '@ionic-native/background-mode';
 
 declare var
-	AudioToggle:any,
+	AudioToggle : any,
 	cordova:any,
 	window:any,
 	RTCSessionDescription:any,
@@ -40,7 +39,7 @@ export class CallService {
 	modal = null
 
 
-	constructor(private backgroundMode: BackgroundMode,private ref:ApplicationRef, private sanitizer:DomSanitizer, private events: Events, public modalCtrl: ModalController, public socket: SocketService, public platform: Platform, private audio: AudioService, public contactService: ContactService, public video: VideoService) {
+	constructor(private ref:ApplicationRef, private sanitizer:DomSanitizer, private events: Events, public modalCtrl: ModalController, public socket: SocketService, public platform: Platform, private audio: AudioService, public contactService: ContactService, public video: VideoService) {
 		// browser compatability for web views
 
 		window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
@@ -54,7 +53,7 @@ export class CallService {
 
 		this.socket.on('messageReceived', (name, message) => {
 
-			console.debug('Message', message);
+			// console.debug('Message', message);
 
 			switch (message.type) {
 				case 'call':
@@ -75,7 +74,7 @@ export class CallService {
 						this.ignore(false, name);
 						return;
 					}
-
+					
 					this.audio.play('calling');
 
 					this.pickupTimeout = setTimeout(() => {
@@ -97,14 +96,14 @@ export class CallService {
 					this.audio.stopAudioCalling()
 					this.isInCall = true;
 					this.isCalling = false;
-					this.audio.stopAudioCalling();
 					AudioToggle.setAudioMode(AudioToggle.EARPIECE);
 					this.refreshVideos();
-					
+
 					this.call(true, this.contact.id);
 					break;
 
 				case 'ignore':
+					this.audio.stopAudioCalling();
 				case 'cancel':
 					this.audio.stopAudioCalling();
 					this.end();
@@ -150,7 +149,10 @@ export class CallService {
 	// place a new call
 	public triggerCall(contact) {
 		this.audio.play('calling');
+		AudioToggle.setAudioMode(AudioToggle.EARPIECE);
+		
 		this.showModal();
+
 		if (this.isInCall) {
 			return;
 		}
@@ -227,6 +229,7 @@ export class CallService {
 
 	// end the call in either direction
 	end() {
+		this.audio.stopAudioCalling()
 		if (this.peerConnection) {
 			this.peerConnection.close();
 		}

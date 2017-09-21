@@ -70,6 +70,9 @@ export class RatingModal {
 	rateLater(){
 		{
 			this.peopleService.pushPendingRating({"uid":this.currentUser.uid,"user":this.user.uid}	,(status)=>{
+					if(this.alternate){
+					this.alternateRating()
+				}
 					this.viewCtrl.dismiss({status:false})
 			})
 			

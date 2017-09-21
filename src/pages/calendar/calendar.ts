@@ -44,7 +44,10 @@ export class CalendarPage {
                 if(!(now>max)){
                   if(now>=min && now<=max)
                   {
+                    if(!event.pending)
                     event["active"] = true
+                    else
+                    event["active"] = false  
                     this.eventList.push(event)
                     console.log(event)
                   }
@@ -73,7 +76,7 @@ export class CalendarPage {
     })
   }
   syncItem(i){
-    let eventObject = this.eventList[i],reminder = 5
+    let eventObject = this.eventList[i],reminder = 15
     if(eventObject.type === 'meeting')
       reminder = 40
 

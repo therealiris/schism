@@ -43,7 +43,7 @@ export class ChatPage {
 	attachments = Config.attachments;
 	title :String;
 	constructor(public people: PeopleService,private sanitizer: DomSanitizer, private attachment: AttachmentService, public contactService: ContactService, private modalCtrl: ModalController, private events: Events, params: NavParams, private loginService: LoginService, private chatService: ChatService, private audioService: AudioService) {
-		console.debug('Viewing chat: ', params.get('chatId'));
+		// console.debug('Viewing chat: ', params.get('chatId'));
 
 		marked.setOptions({
 			sanitize: true,
@@ -51,6 +51,7 @@ export class ChatPage {
 		});
 
 		this.chat = this.chatService.getChatById(params.get('chatId'));
+		this.events.publish("clearUnread",{"id":params.get('chatId')})
 		this.title = params.get('name') +','+ params.get('designation')
 		this.otherUserName = params.get('username')
 		// if we refreshed on this page, then go back to chats

@@ -5,6 +5,8 @@ import { ModalController, NavParams, Events, ViewController} from 'ionic-angular
 import { CallService } from '../../services/call';
 import { PeopleService } from '../../providers/people-service';
 import { RatingModal } from '../../pages/rating-modal/rating-modal'
+import { BackgroundMode } from '@ionic-native/background-mode';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 declare var AudioToggle:any;
 
@@ -14,11 +16,18 @@ declare var AudioToggle:any;
 })
 export class CallModal {
 	audioSwitched:boolean;
-	constructor(private modalCtrl:ModalController,private people:PeopleService, params: NavParams, private events: Events, private viewCtrl: ViewController, public callService: CallService) {
+	constructor(public localNotifications:LocalNotifications, public backgroundMode:BackgroundMode,private modalCtrl:ModalController,private people:PeopleService, params: NavParams, private events: Events, private viewCtrl: ViewController, public callService: CallService) {
 		this.audioSwitched = false
+
 		this.events.subscribe('call.trigger.hide', data => {
 			this.hide();
 		});
+		// this.localNotifications.schedule({
+  //         id: 1,
+  //         title : 'Incoming Call',
+  //         text: 'You are recieving a call. Tap to accept.',
+  //         at: new Date(new Date().getTime() + 20)
+  //       });
 	}
 
 	hide() {

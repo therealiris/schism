@@ -9,11 +9,11 @@
 
 <ion-content>
 <div style="text-align: center;padding: 1em">
-  <span style="font-size: 2em;color: #999999">
+  <span style="font-size: 1.4em;color: #999999">
     Your Feedback is valuable to us.
   </span>
 </div>
-<ion-slides pager style="height: 45vh">
+<ion-slides pager style="height: 65vh">
 
   <ion-slide>
     <ion-card>
@@ -67,7 +67,39 @@
   </ion-slide>
   <ion-slide>
     <ion-card>
+        <ion-card-content>
+          <div class="discover-thumb">
+            <img src="assets/img/ud.svg" class="discover-pic">
+          </div>
+          <ion-card-title class="discover-title">
+            Anonymous
+            </ion-card-title>
+          <p class="headline">
+            Full Stack Developer
+          </p>
+          <div style="width:80%;margin-left: 10%;padding-bottom: 1em">
+            <div  style="border-radius: 30px;display: inline-block;color: #656565;padding: 2px 7px;margin:2px; font-size:12px;background: #dadada;">Information</div>
+          </div>
+          <p class="headline">
+            Distance Unavailable
+          </p>
+          <rating [(ngModel)]="dummyrating" readOnly="true"></rating>
+          <div style="width:80%;margin-left: 10%;padding-bottom: 1em">
+            <div style="border-radius: 30px;display: inline-block;color: #656565;padding: 2px 7px;margin:2px; font-size:12px;background: #dadada;">Python</div>
+          </div>
+          
+        </ion-card-content>
+      </ion-card>
+      <div style="text-align:center">
+        <span style="font-size: 0.8em;color:#999999;"> <strong><i>Please refer to question <br>on next slide </i></strong>
+        </span>
+      </div>  
+  </ion-slide>
+  <ion-slide>
+
+    <ion-card>
       <ion-item text-wrap>
+        
         <ion-label>Would you utilize a feature, where you can connect with a person as an anonymous entity. Note: Name and distance from user are hidden. Only  industry, designation,Rating, City Location and Picture are revelead.</ion-label>
         <ion-select [(ngModel)]="anonymous">
           <ion-option value="No">No</ion-option>
@@ -75,6 +107,7 @@
           <ion-option value="Not Sure">Not Sure</ion-option>
         </ion-select>
       </ion-item>
+
       <ion-item *ngIf="anonymous=='Yes'"  text-wrap>
         <ion-label stacked>How much would you be willing to pay per anonymous connection? (in INR)</ion-label>
         <ion-input type="text" [(ngModel)]="money"></ion-input>

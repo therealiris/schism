@@ -90,8 +90,14 @@ export class DiscoverPage {
     // console.log("Pending Ratings Block")
     if(this.ratingCount<2)
     {
+      let loading = this.loadingCtrl.create({
+        spinner:"crescent",
+        content: 'Loading pending ratings'
+      });
+      loading.present()
       this.people.updateCurrentUser(this.pendingRatings[this.ratingCount],(user)=>{
          let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user.userObject,"alternate":false})
+         loading.dismiss()
         pendingRatingModal.present()
         pendingRatingModal.onDidDismiss((data)=>{
           if(data.status)

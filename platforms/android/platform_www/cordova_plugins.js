@@ -25,15 +25,6 @@ module.exports = [
         ]
     },
     {
-        "id": "cordova-plugin-background-mode.BackgroundMode",
-        "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
-        "pluginId": "cordova-plugin-background-mode",
-        "clobbers": [
-            "cordova.plugins.backgroundMode",
-            "plugin.backgroundMode"
-        ]
-    },
-    {
         "id": "cordova-plugin-calendar.Calendar",
         "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
         "pluginId": "cordova-plugin-calendar",
@@ -418,16 +409,24 @@ module.exports = [
         "clobbers": [
             "PushNotification"
         ]
+    },
+    {
+        "id": "cordova-plugin-background-mode.BackgroundMode",
+        "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
+        "pluginId": "cordova-plugin-background-mode",
+        "clobbers": [
+            "cordova.plugins.backgroundMode",
+            "plugin.backgroundMode"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "cordova-plugin-android-permissions": "1.0.0",
-    "cordova-plugin-app-event": "1.2.0",
+    "cordova-plugin-app-event": "1.2.1",
     "cordova-plugin-audiotoggle": "1.0.3",
     "cordova-plugin-device": "1.1.4",
-    "cordova-plugin-background-mode": "0.7.2",
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-calendar": "4.6.0",
     "cordova-plugin-camera": "2.4.1",
@@ -443,14 +442,15 @@ module.exports.metadata =
     "cordova-plugin-nativeaudio": "3.0.9",
     "cordova-plugin-nativestorage": "2.2.2",
     "cordova-plugin-sms-receiver": "0.1.6",
-    "cordova-plugin-splashscreen": "4.0.2",
+    "cordova-plugin-splashscreen": "4.0.3",
     "cordova-plugin-statusbar": "2.2.1",
     "cordova-plugin-whitelist": "1.3.1",
     "cordova-sms-plugin": "0.1.11",
     "cordova-sqlite-storage": "2.0.4",
     "de.appplant.cordova.plugin.local-notification": "0.8.5",
     "ionic-plugin-keyboard": "2.2.1",
-    "phonegap-plugin-push": "1.10.3"
+    "phonegap-plugin-push": "1.10.5",
+    "cordova-plugin-background-mode": "0.7.2"
 };
 // BOTTOM OF METADATA
 });

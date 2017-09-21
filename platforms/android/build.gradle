@@ -30,7 +30,7 @@ buildscript {
     // http://tools.android.com/tech-docs/new-build-system/version-compatibility
     // and https://issues.apache.org/jira/browse/CB-8143
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:2.2.1'
     }
 }
 
@@ -254,7 +254,7 @@ dependencies {
     compile "com.android.support:support-v4:24.1.1+"
     compile "com.android.support:support-v4:+"
     compile "com.android.support:support-v13:23+"
-    compile "com.google.android.gms:play-services-gcm:10.2+"
+    compile "com.google.android.gms:play-services-gcm:11+"
     compile "me.leolin:ShortcutBadger:1.1.14@aar"
     // SUB-PROJECT DEPENDENCIES END
 }

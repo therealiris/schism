@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
- * Copyright (c) 2013-2016 by appPlant UG. All rights reserved.
+ * Copyright (c) 2013-2017 by appPlant GmbH. All rights reserved.
  *
  * @APPPLANT_LICENSE_HEADER_START@
  *
@@ -26,12 +26,12 @@
 <plugin id="cordova-plugin-app-event"
         xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        version="1.2.0">
+        version="1.2.1">
 
     <name>Application Events</name>
     <description>Broadcasts various events to make them available for 3rd parties</description>
     <keywords>appplant UIApplicationDelegate didRegisterUserNotificationSettings didReceiveLocalNotification didFinishLaunchingWithOptions</keywords>
-    <repo>https://github.com/katzer/cordova-plugin-app-delegate.git</repo>
+    <repo>https://github.com/katzer/cordova-plugin-app-event.git</repo>
     <license>Apache 2.0</license>
     <author>Sebastián Katzer</author>
 

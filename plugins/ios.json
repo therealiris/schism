@@ -10,7 +10,7 @@
         "cordova-plugin-android-permissions": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
-        "cordova-plugin-background-mode": {
+        "cordova-plugin-audiotoggle": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
         "cordova-plugin-calendar": {
@@ -88,7 +88,7 @@
             "SENDER_ID": "1056346035559",
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
-        "cordova-plugin-audiotoggle": {
+        "cordova-plugin-background-mode": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },

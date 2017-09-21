@@ -21,6 +21,7 @@ export class ContactsPage {
 
 contactList: any;
 tutorial : boolean;
+clicked : boolean;
 	constructor(private storage:Storage,private people:PeopleService,public events:Events,private chatService: ChatService, private modalCtrl: ModalController, private navCtrl: NavController, private loginService: LoginService, public contactService: ContactService) {
 		// contacts / chats list state
 		// loginService.complete.then(user => {
@@ -32,7 +33,7 @@ tutorial : boolean;
 		// 	console.debug('login faile');
 		// 	loginService.go();
 		// });
-		
+		this.clicked = false
 	    this.events.publish("clearHamNotification")
 		this.events.publish("refreshContacts");
 		this.contactList = contactService.contacts
@@ -62,6 +63,9 @@ tutorial : boolean;
 
 	// go to a chat
 	chat(id, item:ItemSliding) {
+		if(!this.clicked){
+			this.clicked = true
+		
 		let name = "", designation= "", username = "" 
 		this.contactList.forEach(con=>{
 			if(con.id === id){
@@ -72,12 +76,15 @@ tutorial : boolean;
 			}
 		})
 		item.close()
-		this.events.publish("clearUnread",{"id":id})
+		
 		console.log(id)
 		this.chatService.getChatByContact(id).then((chat:any) => {
-			console.debug('Pushing to chat: ', chat)
+			this.clicked = false
+			// console.debug('Pushing to chat: ', chat)
+
 			this.navCtrl.push(ChatPage, {chatId: chat.id, "name":name,"designation":designation, "username":username}, {animate: true, direction: 'forward'});
 		});
+		}
 	}
 
 	goChats(id) {
