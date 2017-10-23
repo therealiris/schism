@@ -25,6 +25,15 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-background-mode.BackgroundMode",
+    "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
+    "pluginId": "cordova-plugin-background-mode",
+    "clobbers": [
+      "cordova.plugins.backgroundMode",
+      "plugin.backgroundMode"
+    ]
+  },
+  {
     "id": "cordova-plugin-calendar.Calendar",
     "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
     "pluginId": "cordova-plugin-calendar",
@@ -443,15 +452,6 @@ module.exports = [
     "clobbers": [
       "PushNotification"
     ]
-  },
-  {
-    "id": "cordova-plugin-background-mode.BackgroundMode",
-    "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
-    "pluginId": "cordova-plugin-background-mode",
-    "clobbers": [
-      "cordova.plugins.backgroundMode",
-      "plugin.backgroundMode"
-    ]
   }
 ];
 module.exports.metadata = 
@@ -461,6 +461,7 @@ module.exports.metadata =
   "cordova-plugin-app-event": "1.2.1",
   "cordova-plugin-audiotoggle": "1.0.3",
   "cordova-plugin-device": "1.1.4",
+  "cordova-plugin-background-mode": "0.7.2",
   "cordova-plugin-calendar": "4.6.0",
   "cordova-plugin-compat": "1.1.0",
   "cordova-plugin-camera": "2.4.1",
@@ -483,8 +484,7 @@ module.exports.metadata =
   "cordova-sqlite-storage": "2.0.4",
   "de.appplant.cordova.plugin.local-notification": "0.8.5",
   "ionic-plugin-keyboard": "2.2.1",
-  "phonegap-plugin-push": "1.10.5",
-  "cordova-plugin-background-mode": "0.7.2"
+  "phonegap-plugin-push": "1.10.5"
 };
 // BOTTOM OF METADATA
 });

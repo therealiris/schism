@@ -13,6 +13,9 @@
         "cordova-plugin-audiotoggle": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
         "cordova-plugin-calendar": {
             "CALENDAR_USAGE_DESCRIPTION": " ",
             "PACKAGE_NAME": "com.ionicframework.iris604867"
@@ -86,9 +89,6 @@
         },
         "phonegap-plugin-push": {
             "SENDER_ID": "1056346035559",
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-background-mode": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },

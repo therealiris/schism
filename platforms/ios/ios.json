@@ -17,6 +17,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"BackgroundMode\"><param name=\"ios-package\" value=\"APPBackgroundMode\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Calendar\"><param name=\"ios-package\" value=\"Calendar\" /></feature>",
                             "count": 1
                         },
@@ -99,10 +103,6 @@
                         {
                             "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"BackgroundMode\"><param name=\"ios-package\" value=\"APPBackgroundMode\" /></feature>",
-                            "count": 1
                         }
                     ]
                 }
@@ -111,11 +111,11 @@
                 "parents": {
                     "UIBackgroundModes": [
                         {
-                            "xml": "<array><string>remote-notification</string></array>",
+                            "xml": "<array><string>audio</string></array>",
                             "count": 1
                         },
                         {
-                            "xml": "<array><string>audio</string></array>",
+                            "xml": "<array><string>remote-notification</string></array>",
                             "count": 1
                         }
                     ],
@@ -208,6 +208,9 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
         "cordova-plugin-calendar": {
             "CALENDAR_USAGE_DESCRIPTION": " ",
             "PACKAGE_NAME": "com.ionicframework.iris604867"
@@ -282,9 +285,6 @@
         "phonegap-plugin-push": {
             "SENDER_ID": "1056346035559",
             "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-background-mode": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
     "dependent_plugins": {},
@@ -311,6 +311,15 @@
             "pluginId": "cordova-plugin-device",
             "clobbers": [
                 "device"
+            ]
+        },
+        {
+            "id": "cordova-plugin-background-mode.BackgroundMode",
+            "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
+            "pluginId": "cordova-plugin-background-mode",
+            "clobbers": [
+                "cordova.plugins.backgroundMode",
+                "plugin.backgroundMode"
             ]
         },
         {
@@ -732,15 +741,6 @@
             "clobbers": [
                 "PushNotification"
             ]
-        },
-        {
-            "id": "cordova-plugin-background-mode.BackgroundMode",
-            "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
-            "pluginId": "cordova-plugin-background-mode",
-            "clobbers": [
-                "cordova.plugins.backgroundMode",
-                "plugin.backgroundMode"
-            ]
         }
     ],
     "plugin_metadata": {
@@ -748,6 +748,7 @@
         "cordova-plugin-app-event": "1.2.1",
         "cordova-plugin-audiotoggle": "1.0.3",
         "cordova-plugin-device": "1.1.4",
+        "cordova-plugin-background-mode": "0.7.2",
         "cordova-plugin-calendar": "4.6.0",
         "cordova-plugin-compat": "1.1.0",
         "cordova-plugin-camera": "2.4.1",
@@ -770,7 +771,6 @@
         "cordova-sqlite-storage": "2.0.4",
         "de.appplant.cordova.plugin.local-notification": "0.8.5",
         "ionic-plugin-keyboard": "2.2.1",
-        "phonegap-plugin-push": "1.10.5",
-        "cordova-plugin-background-mode": "0.7.2"
+        "phonegap-plugin-push": "1.10.5"
     }
 }

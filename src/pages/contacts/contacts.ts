@@ -62,7 +62,7 @@ clicked : boolean;
 	}
 
 	// go to a chat
-	chat(id, item:ItemSliding) {
+	chat(id) {
 		if(!this.clicked){
 			this.clicked = true
 		
@@ -75,7 +75,7 @@ clicked : boolean;
 				con.unread = false
 			}
 		})
-		item.close()
+		// item.close()
 		
 		console.log(id)
 		this.chatService.getChatByContact(id).then((chat:any) => {

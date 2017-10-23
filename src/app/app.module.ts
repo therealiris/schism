@@ -28,6 +28,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Feedback } from '../pages/feedback/feedback';
 import { LoginPage } from '../pages/login/login';
 import { UploadPic } from '../pages/uploadPic/uploadPic';
+import { EditPic } from '../pages/editPic/editPic';
 import { File } from '@ionic-native/file';
 import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
@@ -71,6 +72,7 @@ const cloudSettings: CloudSettings = {
     Feedback,
     LoginPage,
     UploadPic,
+    EditPic,
     ChatsPage,
     AccountPage,
     CallModal,
@@ -111,6 +113,7 @@ const cloudSettings: CloudSettings = {
     Feedback,
     LoginPage,
     UploadPic,
+    EditPic,
     ChatsPage,
     ChatPage,
     AccountPage,

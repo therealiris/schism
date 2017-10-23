@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, ElementRef } from '@angular/core';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { PeopleService } from '../../providers/people-service'
 import { Storage } from '@ionic/storage';
+import  {OnboardingTwo} from '../onboarding2/on2'
+import  {OnboardingThree} from '../onboarding3/on3'
+import  {EditPic} from '../editPic/editPic'
 
 @Component({
   selector: 'profile',
@@ -22,8 +25,10 @@ export class Profile {
   pictureUrl : string;
   skill : any;
   rate : any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService) {
+  editable:boolean;
+  constructor(private elementRef:ElementRef,public modalCtrl:ModalController,public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService) {
     // If we navigated to this page, we will have an item available as a nav param
+    this.editable = false;
     this.profile = "personal"
     this.user = {"pictureUrl":"", "fullName":"", "gender":"","dob":"","hobbies":[],"email":"","designation":"","currentWorkplace":"","industry":[],"skills":[]}
     storage.ready().then(()=>{
@@ -37,4 +42,44 @@ export class Profile {
       })
     })
   }
+   
+  editMode(val){
+    console.log("Editing profile" , val)
+    this.editable = val
+  }
+  removeHobby(index){
+    console.log(this.user.skills)
+    this.user.skills.splice(index,1)
+  }
+  selectIndustry(){
+    let industryModal = this.modalCtrl.create(OnboardingTwo,{'list':this.industry});
+    // this.navCtrl.push(OnboardingTwo, {callback:this.fillIndustry})
+    industryModal.present()
+    industryModal.onDidDismiss(data => {
+     this.user.industry = data.industryList
+   });
+  }
+  removeIndustry(index){
+    this.user.industry.splice(index,1)
+  }
+  selectSkills(){
+    let skillsModal = this.modalCtrl.create(OnboardingThree);
+    // this.navCtrl.push(OnboardingTwo, {callback:this.fillIndustry})
+    skillsModal.present()
+    skillsModal.onDidDismiss(data => {
+      this.user.skills=[]
+       data.skillsList.forEach(skill=>{
+       this.user.skills.push({"skill":skill,rating:0})
+     })
+   });
+  }
+  uploadPic(){
+    if(this.editable){
+      let editPicModal = this.modalCtrl.create(EditPic,this.user);
+      editPicModal.present()
+    }
+    
+  }
+ 
 }
+

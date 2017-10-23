@@ -27,7 +27,7 @@
     		</ion-avatar>
 			<h2>{{contact.name || contact.username}}</h2>
 		</ion-item> -->
-		<ion-item-sliding #item class="conn-slide" *ngFor="let contact of contactList; let i=index" >
+		<!-- <ion-item-sliding #item class="conn-slide" *ngFor="let contact of contactList; let i=index" >
 			<ion-item [ngClass]="{online: contact.online}">
 			  <div class="conn-list-item">
 			   <div class="thumbnail">
@@ -35,7 +35,6 @@
 			   </div>
 			   <div class="conn-content">
 			     <span> <strong>{{contact.name}} </strong><ion-icon *ngIf="contact.unread" name="mail"></ion-icon></span> <br>
-			     <!-- <span>Meeting : 7:00 P.M to 10 P.M</span> -->
 			   </div> 
 			  </div>
 			</ion-item>
@@ -53,6 +52,27 @@
 			    Meeting
 			  </button>
 			</ion-item-options>
-		</ion-item-sliding>
+		</ion-item-sliding> -->
+		<ion-card *ngFor="let contact of contactList; let i=index">
+	      <ion-row>
+	      	<div style="padding:1em;display:flex">
+	      		<img src="{{contact.image}}" class="connection-image" style="opacity: 1;max-width: 14vw;max-height: 14vw">
+	      		<span style="padding: 1em"><strong>{{contact.name}} </strong></span>
+	      	</div>
+	      </ion-row>
+
+	      <ion-row>
+	        <ion-col center text-center>
+	          <span class="info-panel" (click)="schedule('call')">Schedule Call</span>
+	        </ion-col>
+	        <ion-col center text-center>
+	          <span class="info-panel" (click)="schedule('meeting')"> Schedule Meet</span>
+	        </ion-col>
+	        <ion-col center text-center>
+	          <span class="info-panel" (click)="chat(contact.id)">Chat</span>
+	        </ion-col>
+	      </ion-row>
+
+	    </ion-card>
 	</ion-list>
 </ion-content>

@@ -41,8 +41,8 @@ export class LoginPage {
             content: 'Sending OTP to your phone..'
           });
         loading.present()
-        this.otp = 5555
-        // this.otp = Math.floor(1000 + Math.random() * 9000)
+        // this.otp = 5555
+        this.otp = Math.floor(1000 + Math.random() * 9000)
         this.people.sendOtp(this.phone, this.otp, (response)=>{
           if(null!=response){
             this.numberSent = true;

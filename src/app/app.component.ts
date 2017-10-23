@@ -81,7 +81,7 @@ export class MyApp {
             });
         }
         else{
-          this.rootPage = HomePage
+          this.rootPage = DiscoverPage
 
           // this.loginService.login({"username":"c0668107c590e75bb5c5361c6347e9a9","password":"apptoken"}).then(() => {
           //   this.loginService.complete.then(user => {
@@ -152,9 +152,13 @@ export class MyApp {
       this.backgroundMode.setDefaults({silent:true})
       this.backgroundMode.enable();
       this.platform.registerBackButtonAction(()=>{
+        let view = this.nav.getActive();
         if(this.nav.canGoBack()){
               this.nav.pop();
             }
+        else if(view.component.name!="DiscoverPage"){
+          this.nav.setRoot(DiscoverPage)
+        }
         else{
           this.backgroundMode.moveToBackground()
         }
@@ -272,7 +276,7 @@ export class MyApp {
     console.log(this.nav)
   }
   showProfile(){
-    this.nav.setRoot(Profile)
+    this.nav.push(Profile)
   }
   getClicked(){
     let toast = this.toastCtrl.create({
