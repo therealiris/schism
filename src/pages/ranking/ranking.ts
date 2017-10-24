@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { PeopleService } from '../../providers/people-service'
 import { Storage } from '@ionic/storage';
 
@@ -13,11 +13,16 @@ export class Ranking {
   rankList : any;
   info: any;
   rates : number[];
-  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService) {
+  constructor(public loadingCtrl:LoadingController,public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService) {
     // If we navigated to this page, we will have an item available as a nav param
     this.user = {"pictureUrl":""}
     this.info = {"score":0, "ranking":0}
     this.rates =[];
+    let loading = this.loadingCtrl.create({
+        spinner:"crescent",
+        content: 'Loading rankings. Please wait.'
+      });
+      loading.present()
     storage.ready().then(()=>{
       storage.get('currentUser').then((data)=>{
         if(data!=null)
@@ -31,7 +36,8 @@ export class Ranking {
               this.rankList.forEach(rank=>{
                 this.rates.push(parseFloat(rank.rating))
               })
-              console.log(this.rates)
+              loading.dismiss()
+              // console.log(this.rates)
             })
         }
       })

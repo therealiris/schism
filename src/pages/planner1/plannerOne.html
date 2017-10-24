@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar (ionInput)="getItems($event)" class="search-user" style="padding-top: 2em"></ion-searchbar>
+  <!-- <ion-searchbar (ionInput)="getItems($event)" class="search-user" style="padding-top: 2em"></ion-searchbar> -->
   <ion-list class="user-list">
     <ion-item *ngFor="let connection of connections; let i=index" (click)="selectUser(i)">
       <div class="conn-list-item">

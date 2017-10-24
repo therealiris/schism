@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController, Events } from 'ionic-angular';
 import { PeopleService } from '../../providers/people-service'
 import { UserDetail } from '../userDetail/userDetail'
+import { DiscoverPage } from '../discover/discover'
 import { Storage } from '@ionic/storage';
 import { Calendar } from '@ionic-native/calendar';
 
@@ -143,10 +144,14 @@ export class NotificationPage {
     })
   }
   dismiss(){
-    this.navCtrl.popToRoot()
+    this.navCtrl.setRoot(DiscoverPage)
   }
   clearGeneral(){
+    debugger;
     this.general = []
-    this.people.clearGeneral(this.uid)
+    this.people.clearGeneral(this.uid,(status)=>{
+      console.log("clearing general notification")
+    })
+    
   }
 }

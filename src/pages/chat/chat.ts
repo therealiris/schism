@@ -43,7 +43,7 @@ export class ChatPage {
 	attachments = Config.attachments;
 	title :String;
 	constructor(public people: PeopleService,private sanitizer: DomSanitizer, private attachment: AttachmentService, public contactService: ContactService, private modalCtrl: ModalController, private events: Events, params: NavParams, private loginService: LoginService, private chatService: ChatService, private audioService: AudioService) {
-		console.debug('Viewing chat: ', params.get('chatId'));
+		// console.debug('Viewing chat: ', params.get('chatId'));
 
 		marked.setOptions({
 			sanitize: true,
@@ -51,6 +51,7 @@ export class ChatPage {
 		});
 
 		this.chat = this.chatService.getChatById(params.get('chatId'));
+		this.events.publish("clearUnread",{"id":params.get('chatId')})
 		this.title = params.get('name') +','+ params.get('designation')
 		this.otherUserName = params.get('username')
 		// if we refreshed on this page, then go back to chats
@@ -92,10 +93,10 @@ export class ChatPage {
 			}, 100);
 			this.audioService.play('message-received-front');
 			console.log(this.messages.length)
-			if(this.messages.length===20 || this.messages.length===60){
+			if(this.messages.length===10 || this.messages.length===60){
 				console.log("here tracking chat count")
 				this.people.updateCurrentUser(this.otherUserName,(user)=>{
-					let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user.userObject})
+					let pendingRatingModal = this.modalCtrl.create(RatingModal,{"userObject":user.userObject,"alternate":true})
 	        		pendingRatingModal.present()
 				})
 			}

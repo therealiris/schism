@@ -9,6 +9,7 @@ import { Tutorial } from '../tutorial/tutorial'
 import { DiscoverPage } from '../discover/discover'
 import { PlannerTwo } from '../planner2/plannerTwo'
 import { CalendarPage } from '../calendar/calendar'
+import { ViewProfile } from '../viewProfile/viewProfile'
 import { PeopleService } from '../../providers/people-service'
 import { Storage } from '@ionic/storage';
 import { ItemSliding } from 'ionic-angular';
@@ -21,22 +22,17 @@ export class ContactsPage {
 
 contactList: any;
 tutorial : boolean;
+clicked : boolean;
+connectionType:any;
+pendingList:any;
 	constructor(private storage:Storage,private people:PeopleService,public events:Events,private chatService: ChatService, private modalCtrl: ModalController, private navCtrl: NavController, private loginService: LoginService, public contactService: ContactService) {
-		// contacts / chats list state
-		// loginService.complete.then(user => {
-		// 	console.debug('login complete');
-		// 	if (!user.id) {
-		// 		loginService.go();
-		// 	}
-		// }, () => {
-		// 	console.debug('login faile');
-		// 	loginService.go();
-		// });
-		
+		this.connectionType = "active"
+		this.clicked = false
 	    this.events.publish("clearHamNotification")
 		this.events.publish("refreshContacts");
 		this.contactList = contactService.contacts
-		console.debug('Contacts: ', contactService.contacts);
+
+		// console.debug('Contacts: ', contactService.contacts);
 		storage.get('contactsTutorial').then((val)=>{
 	      if(val)
 	      {
@@ -47,6 +43,14 @@ tutorial : boolean;
 	        })
 	      }
 	    });
+	    storage.get("currentUser").then(data=>{
+	    	if(data!=null){
+	    		let user = JSON.parse(data)
+	    		this.people.getPendingConnections(user.uid,(pendingList)=>{
+	    			this.pendingList = pendingList
+	    		})
+	    	}
+	    })
 	}
 
 	// tap and hold contact card
@@ -61,7 +65,10 @@ tutorial : boolean;
 	}
 
 	// go to a chat
-	chat(id, item:ItemSliding) {
+	chat(id) {
+		if(!this.clicked){
+			this.clicked = true
+		
 		let name = "", designation= "", username = "" 
 		this.contactList.forEach(con=>{
 			if(con.id === id){
@@ -71,13 +78,16 @@ tutorial : boolean;
 				con.unread = false
 			}
 		})
-		item.close()
-		this.events.publish("clearUnread",{"id":id})
+		// item.close()
+		
 		console.log(id)
 		this.chatService.getChatByContact(id).then((chat:any) => {
-			console.debug('Pushing to chat: ', chat)
+			this.clicked = false
+			// console.debug('Pushing to chat: ', chat)
+
 			this.navCtrl.push(ChatPage, {chatId: chat.id, "name":name,"designation":designation, "username":username}, {animate: true, direction: 'forward'});
 		});
+		}
 	}
 
 	goChats(id) {
@@ -95,6 +105,14 @@ tutorial : boolean;
     planModal.onDidDismiss(()=>{
       this.navCtrl.setRoot(ContactsPage)
     })
+  }
+  viewProfile(username){
+  	console.log(username)
+  	this.people.updateCurrentUser(username,(response)=>{
+  		let viewUser = response.userObject
+  		let viewUserModal = this.modalCtrl.create(ViewProfile,{"user":viewUser})
+  		viewUserModal.present()
+  	})
   }
 
 }

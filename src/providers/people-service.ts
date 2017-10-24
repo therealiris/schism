@@ -16,8 +16,12 @@ export class PeopleService {
   constructor(public http: Http) {
     console.log('Hello PeopleService Provider');
   }
-  clearGeneral(uid){
-    this.http.get(apiUrl+'/users/clearGeneralNotifications?uid='+uid)
+  clearGeneral(uid,callback){
+    this.http.get(apiUrl+'/users/clearGeneralNotifications?uid='+uid).map(response => response.json())
+      .subscribe( response => {
+       console.log(response)
+       callback(response)  
+      });
   }
   ranking(uid,callback){
     this.http.get(apiUrl+'/users/rankings?uid='+uid)
@@ -162,6 +166,13 @@ export class PeopleService {
   }
   getConnections(uid,callback){
     this.http.get(apiUrl+'/users/connections?uid='+uid)
+    .map(response => response.json())
+    .subscribe( response => { 
+     callback(response);
+    });
+  }
+  getPendingConnections(uid,callback){
+    this.http.get(apiUrl+'/users/connections/pending?uid='+uid)
     .map(response => response.json())
     .subscribe( response => { 
      callback(response);

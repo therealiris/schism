@@ -27,3 +27,26 @@ calendar{
 		color: #fff; 
 		font-size: 0.9em;
 	}
+.info-panel-call{
+	
+		border-radius: 2em;
+		background:#31bd52;
+		padding:0.2em 1em; 
+		color: #fff; 
+		font-size: 0.9em;
+	}
+.info-panel-disabled{
+
+	border-radius: 2em;
+	background:#999999;
+	padding:0.2em 1em; 
+	color: #fff; 
+	font-size: 0.9em;
+
+}
+.status-pending{
+	color:#5e84f9
+}
+.status-confirmed{
+	color:#31bd52;
+}

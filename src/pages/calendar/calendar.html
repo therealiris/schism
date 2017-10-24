@@ -28,15 +28,18 @@
 
       <ion-row>
         <ion-col center text-center>
-          <span class="info-panel">{{event.pending?"Pending":"Confirmed"}}
+          <span *ngIf="event.pending" class="status-pending"><strong>Pending</strong>
+         </span>
+         <span *ngIf="!event.pending" class="status-confirmed"><strong>Confirmed</strong>
          </span>
         </ion-col>
         <ion-col center text-center>
           <span (click)="syncItem(i)" class="info-panel"><ion-icon name="sync"></ion-icon>  Sync</span>
         </ion-col>
         <ion-col center text-center>
-          <span *ngIf="!event.active" class="info-panel">Inactive</span>
-          <span *ngIf="event.active" class="info-panel" (click)="call(i)"><ion-icon name="call"></ion-icon> Call</span>
+          <!-- <span *ngIf="!event.active" class="info-panel">Inactive</span> -->
+          <span *ngIf="event.active" class="info-panel-call" (click)="call(i)"><ion-icon name="call"></ion-icon> Call</span>
+          <span *ngIf="!event.active" class="info-panel-disabled"><ion-icon name="call"></ion-icon> Call</span>
         </ion-col>
       </ion-row>
 

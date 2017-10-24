@@ -31,11 +31,11 @@
       </div>
       <div *ngSwitchCase="'on2'">
         <div class="typeBox">
-          <ion-item class="typeCheck" >
+          <ion-item class="typeCheck-left" >
             <ion-label>Professional</ion-label>
             <ion-checkbox [(ngModel)]="pr" class="checktick" (click)="checkType('professional')"></ion-checkbox>
           </ion-item>
-          <ion-item class="typeCheck">
+          <ion-item class="typeCheck-right">
             <ion-label>Entrepreneur</ion-label>
             <ion-checkbox [(ngModel)]="ent" class="checktick" (click)="checkType('entrepreneur')"></ion-checkbox>
           </ion-item>
@@ -92,8 +92,13 @@
     <ion-item class="onboarding-range">
       <ion-range step="1" [(ngModel)]="rangeVal" color="primary" pin="true" (ionChange)="noChange($event)" >
       </ion-range>
-
+      
     </ion-item>
+    <div style="text-align: center">
+        <span *ngIf="rangeVal===0" style="color: #999999"><i>Profile Completion %</i></span>
+        <span *ngIf="rangeVal>0 && rangeVal<80" style="color: #488aff"><strong>{{rangeVal}}% complete</strong></span>
+        <span *ngIf="rangeVal===80" style="color: #488aff"><strong>{{rangeVal}}% complete. Almost Done.</strong></span>
+      </div>
     <div class="onboarding-next">
       <button ion-button round right (click)="nextClick()">Next</button>
     </div>

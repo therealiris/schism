@@ -3,6 +3,10 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
+        <param name="onload" value="true" />
+    </feature>
     <feature name="HandleOpenUrl">
         <param name="ios-package" value="CDVHandleOpenURL" />
         <param name="onload" value="true" />
@@ -14,6 +18,9 @@
     <feature name="GestureHandler">
         <param name="ios-package" value="CDVGestureHandler" />
         <param name="onload" value="true" />
+    </feature>
+    <feature name="AudioTogglePlugin">
+        <param name="ios-package" value="AudioTogglePlugin" />
     </feature>
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
@@ -117,6 +124,7 @@
     <splash height="1024" src="resources/ios/splash/Default-Portrait~ipad.png" width="768" />
     <splash height="960" src="resources/ios/splash/Default@2x~iphone.png" width="640" />
     <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
+    <hook src="hooks/iosrtc-swift-support.js" type="after_platform_add" />
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="DisallowOverscroll" value="true" />
@@ -142,7 +150,4 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
-    <feature name="AudioTogglePlugin">
-        <param name="ios-package" value="AudioTogglePlugin" />
-    </feature>
 </widget>

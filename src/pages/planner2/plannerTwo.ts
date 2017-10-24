@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
+import { NavController, NavParams, ModalController, ViewController, LoadingController } from 'ionic-angular';
 import { PeopleService } from '../../providers/people-service'
 import { PlannerOne } from '../planner1/plannerOne'
 import { Storage } from '@ionic/storage';
@@ -26,7 +26,7 @@ export class PlannerTwo {
   user : any;
   withUser:any;
 
-  constructor(private calendar: Calendar,public viewCtrl:ViewController,public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams, public people: PeopleService, public storage: Storage) {
+  constructor( public loadingCtrl:LoadingController ,private calendar: Calendar,public viewCtrl:ViewController,public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams, public people: PeopleService, public storage: Storage) {
     storage.ready().then(()=>{
       storage.get('currentUser').then((data)=>{
         if(data!=null)
@@ -48,7 +48,11 @@ export class PlannerTwo {
 
   }
   setupMeeting(){
-
+    let loading = this.loadingCtrl.create({
+        spinner:"crescent",
+        content: 'Setting up your new event. Please wait.'
+      });
+    loading.present()
     if(this.checkValidity())
     {
       debugger;
@@ -68,6 +72,7 @@ export class PlannerTwo {
       // alert(JSON.stringify(meetingObject))
       this.people.pushEvent(meetingObject,(res)=>{
         if(res.status===1){
+          loading.dismiss()
           this.viewCtrl.dismiss()
         }
       })

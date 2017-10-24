@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
 });
 router.get('/clearGeneralNotifications', function(req, res, next) {
     let uid = req.param("uid")
-    db.users.update({"uid":uid},{"pullAll":{"notifications":[{"type":0}]}},function(err,update){
+    db.users.update({"uid":uid},{"$pull":{"notifications":{"type":0}}},function(err,update){
         if(!err){
             res.send({status:1})
         }
@@ -419,6 +419,33 @@ router.get("/connections", function(req, res) {
             db.users.find({
                 "uid": {
                     "$in": connectionList
+                }
+            }, {
+                "uid": 1,
+                "fullName": 1,
+                "pictureUrl": 1,
+                "designation":1
+            }).toArray(function(err, conn) {
+                if (!err) {
+                    res.send(conn)
+                }
+            })
+
+        }
+    })
+})
+router.get("/connections/pending", function(req, res) {
+    var list = new Array();
+    db.users.find({
+        "uid": req.param("uid")
+    }, {
+        "connections": 1
+    }).toArray(function(err, user) {
+        if (!err) {
+            var pendingList = user[0].requested
+            db.users.find({
+                "uid": {
+                    "$in": pendingList
                 }
             }, {
                 "uid": 1,

@@ -9,6 +9,10 @@
                 "parents": {
                     "/*": [
                         {
+                            "xml": "<feature name=\"AudioTogglePlugin\"><param name=\"ios-package\" value=\"AudioTogglePlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
                             "count": 1
                         },
@@ -98,10 +102,6 @@
                         },
                         {
                             "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"AudioTogglePlugin\"><param name=\"ios-package\" value=\"AudioTogglePlugin\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -202,6 +202,9 @@
         "cordova-plugin-app-event": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
+        "cordova-plugin-audiotoggle": {
+            "PACKAGE_NAME": "com.ionicframework.iris604867"
+        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.ionicframework.iris604867"
         },
@@ -282,9 +285,6 @@
         "phonegap-plugin-push": {
             "SENDER_ID": "1056346035559",
             "PACKAGE_NAME": "com.ionicframework.iris604867"
-        },
-        "cordova-plugin-audiotoggle": {
-            "PACKAGE_NAME": "com.ionicframework.iris604867"
         }
     },
     "dependent_plugins": {},
@@ -295,6 +295,14 @@
             "pluginId": "cordova-plugin-android-permissions",
             "clobbers": [
                 "cordova.plugins.permissions"
+            ]
+        },
+        {
+            "id": "cordova-plugin-audiotoggle.AudioToggle",
+            "file": "plugins/cordova-plugin-audiotoggle/www/audiotoggle.js",
+            "pluginId": "cordova-plugin-audiotoggle",
+            "clobbers": [
+                "AudioToggle"
             ]
         },
         {
@@ -733,19 +741,12 @@
             "clobbers": [
                 "PushNotification"
             ]
-        },
-        {
-            "id": "cordova-plugin-audiotoggle.AudioToggle",
-            "file": "plugins/cordova-plugin-audiotoggle/www/audiotoggle.js",
-            "pluginId": "cordova-plugin-audiotoggle",
-            "clobbers": [
-                "AudioToggle"
-            ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-android-permissions": "1.0.0",
-        "cordova-plugin-app-event": "1.2.0",
+        "cordova-plugin-app-event": "1.2.1",
+        "cordova-plugin-audiotoggle": "1.0.3",
         "cordova-plugin-device": "1.1.4",
         "cordova-plugin-background-mode": "0.7.2",
         "cordova-plugin-calendar": "4.6.0",
@@ -763,14 +764,13 @@
         "cordova-plugin-nativeaudio": "3.0.9",
         "cordova-plugin-nativestorage": "2.2.2",
         "cordova-plugin-sms-receiver": "0.1.6",
-        "cordova-plugin-splashscreen": "4.0.2",
+        "cordova-plugin-splashscreen": "4.0.3",
         "cordova-plugin-statusbar": "2.2.1",
         "cordova-plugin-whitelist": "1.3.1",
         "cordova-sms-plugin": "0.1.11",
         "cordova-sqlite-storage": "2.0.4",
         "de.appplant.cordova.plugin.local-notification": "0.8.5",
         "ionic-plugin-keyboard": "2.2.1",
-        "phonegap-plugin-push": "1.10.3",
-        "cordova-plugin-audiotoggle": "1.0.3"
+        "phonegap-plugin-push": "1.10.5"
     }
 }

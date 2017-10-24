@@ -20,6 +20,7 @@ import { Tutorial } from '../pages/tutorial/tutorial'
 import { CalendarPage } from '../pages/calendar/calendar'
 import { UserDetail } from '../pages/userDetail/userDetail'
 import { Profile } from '../pages/profile/profile'
+import { ViewProfile } from '../pages/viewProfile/viewProfile'
 import { Ranking } from '../pages/ranking/ranking'
 import { PlannerOne } from '../pages/planner1/plannerOne'
 import { PlannerTwo } from '../pages/planner2/plannerTwo'
@@ -28,6 +29,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Feedback } from '../pages/feedback/feedback';
 import { LoginPage } from '../pages/login/login';
 import { UploadPic } from '../pages/uploadPic/uploadPic';
+import { EditPic } from '../pages/editPic/editPic';
 import { File } from '@ionic-native/file';
 import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
@@ -68,9 +70,11 @@ const cloudSettings: CloudSettings = {
     PlannerOne,
     PlannerTwo,
     Profile,
+    ViewProfile,
     Feedback,
     LoginPage,
     UploadPic,
+    EditPic,
     ChatsPage,
     AccountPage,
     CallModal,
@@ -107,10 +111,11 @@ const cloudSettings: CloudSettings = {
     CalendarPage,
     PlannerOne,
     PlannerTwo,
-    Profile,
+    Profile,ViewProfile,
     Feedback,
     LoginPage,
     UploadPic,
+    EditPic,
     ChatsPage,
     ChatPage,
     AccountPage,

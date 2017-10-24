@@ -7,13 +7,13 @@ import { DiscoverPage } from '../pages/discover/discover';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { Profile } from '../pages/profile/profile';
 import { Ranking } from '../pages/ranking/ranking';
+import { OnboardingOne } from '../pages/onboarding1/on1';
 import { Feedback } from '../pages/feedback/feedback';
-import { UploadPic } from '../pages/uploadPic/uploadPic';
 import { Storage } from '@ionic/storage';
 import { Push, PushObject, PushOptions } from '@ionic-native/push';
 import { PeopleService } from '../providers/people-service'
-import { ChatsPage, ContactsPage } from '../pages';
-import { CallService, LoginService } from '../services';
+import { ContactsPage } from '../pages';
+import { CallService, LoginService,AudioService } from '../services';
 import { CallModalTrigger } from '../components';
 import * as moment from 'moment';
 import { LocalNotifications } from '@ionic-native/local-notifications';
@@ -39,7 +39,7 @@ export class MyApp {
   unreadNotification : boolean;
   hamburgerNotification : boolean;
   otherPage : boolean;
-  constructor(public nativeAudio:NativeAudio,private backgroundMode: BackgroundMode,public localNotifications:LocalNotifications,callService: CallService, private loginService: LoginService, public events: Events, callModal: CallModalTrigger,public people: PeopleService,public platform: Platform, public push: Push, public statusBar: StatusBar, public splashScreen: SplashScreen, private toastCtrl: ToastController, public storage:Storage) {
+  constructor(public audioService:AudioService,public nativeAudio:NativeAudio,private backgroundMode: BackgroundMode,public localNotifications:LocalNotifications,callService: CallService, private loginService: LoginService, public events: Events, callModal: CallModalTrigger,public people: PeopleService,public platform: Platform, public push: Push, public statusBar: StatusBar, public splashScreen: SplashScreen, private toastCtrl: ToastController, public storage:Storage) {
     moment.locale('en', {
       relativeTime: {
         future: 'now',
@@ -57,10 +57,9 @@ export class MyApp {
         yy: '%d y'
       }
     });
-    this.backgroundMode.setDefaults({silent:true})
-    this.backgroundMode.enable();
     
-
+    
+    this.audioService.stopAudioCalling()
     this.hamburgerNotification = false
     this.unread = 0
     this.unreadNotification = false
@@ -82,7 +81,7 @@ export class MyApp {
             });
         }
         else{
-          this.rootPage = HomePage
+          this.rootPage = DiscoverPage
 
           // this.loginService.login({"username":"c0668107c590e75bb5c5361c6347e9a9","password":"apptoken"}).then(() => {
           //   this.loginService.complete.then(user => {
@@ -108,8 +107,17 @@ export class MyApp {
 
     ];
     events.subscribe('call.status.isincall', status => {
-      if(this.backgroundMode.isActive())
-      this.backgroundMode.moveToForeground();
+      if(this.backgroundMode.isActive()){
+        this.backgroundMode.wakeUp()
+        // this.backgroundMode.unlock()
+        this.backgroundMode.moveToForeground();
+      
+      }
+      else{
+        this.backgroundMode.moveToForeground();
+      }
+        
+
       // console.debug('call status changed to ', status);
       this.isInCall = status;
     });
@@ -141,11 +149,16 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-
+      this.backgroundMode.setDefaults({silent:true})
+      this.backgroundMode.enable();
       this.platform.registerBackButtonAction(()=>{
+        let view = this.nav.getActive();
         if(this.nav.canGoBack()){
               this.nav.pop();
             }
+        else if(view.component.name!="DiscoverPage"){
+          this.nav.setRoot(DiscoverPage)
+        }
         else{
           this.backgroundMode.moveToBackground()
         }
@@ -154,8 +167,7 @@ export class MyApp {
       // Here we can do any higher level native things you might need.
       this.statusBar.styleBlackTranslucent()
 
-
-        this.splashScreen.hide();
+      this.splashScreen.hide();
 
       
       
@@ -206,17 +218,20 @@ export class MyApp {
         {
           this.events.publish("refreshContacts")
           toast.present();
-          this.unreadNotification =true
+          this.events.publish("unread")
+          // this.unreadNotification =true
         }
         if(notification.message.indexOf("scheduled")>-1)
         {
           toast.present();
-          this.unreadNotification =true
+          this.events.publish("unread")
+          // this.unreadNotification =true
         }
         if(notification.message.indexOf("accepted")>-1)
         {
           toast.present();
-          this.unreadNotification =true
+          this.events.publish("unread")
+          // this.unreadNotification =true
         }
         
     }
@@ -261,7 +276,7 @@ export class MyApp {
     console.log(this.nav)
   }
   showProfile(){
-    this.nav.setRoot(Profile)
+    this.nav.push(Profile)
   }
   getClicked(){
     let toast = this.toastCtrl.create({

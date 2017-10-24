@@ -24,7 +24,7 @@ export class LoginPage {
   countDownStopped : boolean;
   timer : string;
   constructor(private androidPermissions: AndroidPermissions,public events: Events,public navCtrl: NavController, public loadingCtrl: LoadingController,public navParams: NavParams, public people : PeopleService, public storage: Storage) {
-    this.androidPermissions.requestPermissions([this.androidPermissions.PERMISSION.CAMERA, this.androidPermissions.PERMISSION.RECORD_AUDIO,this.androidPermissions.PERMISSION.ACCESS_FINE_LOCATION ]);
+    this.androidPermissions.requestPermissions([this.androidPermissions.PERMISSION.CAMERA, this.androidPermissions.PERMISSION.WAKE_LOCK,this.androidPermissions.PERMISSION.MODIFY_PHONE_STATE,this.androidPermissions.PERMISSION.RECORD_AUDIO,this.androidPermissions.PERMISSION.ACCESS_FINE_LOCATION ]);
 
     this.numberSent = false;
     this.appUser = this.navParams.data
@@ -41,8 +41,8 @@ export class LoginPage {
             content: 'Sending OTP to your phone..'
           });
         loading.present()
-        this.otp = 5555
-        // this.otp = Math.floor(1000 + Math.random() * 9000)
+        // this.otp = 5555
+        this.otp = Math.floor(1000 + Math.random() * 9000)
         this.people.sendOtp(this.phone, this.otp, (response)=>{
           if(null!=response){
             this.numberSent = true;

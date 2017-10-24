@@ -16,10 +16,13 @@ export class RatingModal {
 	rate : any;
 	allowed : boolean;
 	currentUser :any;
+	alternate : boolean;
 	constructor(public storage: Storage,private peopleService: PeopleService,private viewCtrl: ViewController, private params: NavParams, private navCtrl: NavController) {
 		this.allowed = false
+		this.alternate = true
 		this.rate = []
 		this.user = params.get("userObject")
+		this.alternate = params.get("alternate")
 		console.log(this.user)
 		this.user.skills.forEach(skill=>{
 			this.rate.push({"skill":skill,"rating":0})
@@ -47,7 +50,11 @@ export class RatingModal {
 		console.log(this.rate)
 		if(this.allowed){
 			this.peopleService.pushRating({"uid":this.user.uid,"ratings":this.rate, "user":this.currentUser.uid},(status)=>{
-				console.log(status)	
+				console.log(status)
+				if(this.alternate){
+					this.alternateRating()
+				}
+				
 			})
 			this.viewCtrl.dismiss({status:true})
 		}
@@ -55,9 +62,17 @@ export class RatingModal {
 		else
 			alert("Please rate atleast one skill")
 	}
+	alternateRating(){
+		this.peopleService.pushPendingRating({"uid":this.user.uid,"user":this.currentUser.uid}	,(status)=>{
+					this.viewCtrl.dismiss({status:false})
+				})	
+	}
 	rateLater(){
 		{
 			this.peopleService.pushPendingRating({"uid":this.currentUser.uid,"user":this.user.uid}	,(status)=>{
+					if(this.alternate){
+					this.alternateRating()
+				}
 					this.viewCtrl.dismiss({status:false})
 			})
 			

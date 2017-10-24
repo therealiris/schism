@@ -20,7 +20,9 @@ export class Feedback {
 	anonymous : any;
 	money: any;
   user :any;
+  dummyrating:4;
   constructor(public people : PeopleService,public storage: Storage,public navCtrl: NavController, public navParams: NavParams){
+    this.dummyrating = 4
      storage.ready().then(()=>{
       storage.get('currentUser').then((data)=>{
         if(data!=null)
