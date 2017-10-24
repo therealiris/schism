@@ -41,7 +41,7 @@
     </ion-item>
     <ion-item>
       <ion-label stacked>E-Mail</ion-label>
-      <ion-input type="text"  value="{{user.email}}" disabled="{{!editable}}"></ion-input>
+      <ion-input type="text"  value="{{user.email}}" disabled="{{!editable}}" (input)="modify('email',$event.target.value)"></ion-input>
     </ion-item>
     <ion-item *ngIf="!editable">
       <ion-label stacked>Date Of Birth</ion-label>
@@ -60,11 +60,11 @@
   <ion-list *ngSwitchCase="'work'">
    <ion-item>
       <ion-label stacked>Designation</ion-label>
-      <ion-input type="text"  value="{{user.designation}}" disabled="{{!editable}}"></ion-input>
+      <ion-input type="text"  value="{{user.designation}}" (input)="modify('designation',$event.target.value)" disabled="{{!editable}}"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Current Workplace</ion-label>
-      <ion-input type="text" value="{{user.currentWorkplace}}" disabled="{{!editable}}"></ion-input>
+      <ion-input type="text" value="{{user.currentWorkplace}}" (input)="modify('currentWorkplace',$event.target.value)" disabled="{{!editable}}"></ion-input>
     </ion-item>
     <ion-item *ngIf="!editable">
       <ion-label stacked>Industry</ion-label>

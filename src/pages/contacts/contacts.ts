@@ -31,7 +31,7 @@ pendingList:any;
 	    this.events.publish("clearHamNotification")
 		this.events.publish("refreshContacts");
 		this.contactList = contactService.contacts
-
+		this.pendingList = []
 		// console.debug('Contacts: ', contactService.contacts);
 		storage.get('contactsTutorial').then((val)=>{
 	      if(val)
@@ -48,6 +48,7 @@ pendingList:any;
 	    		let user = JSON.parse(data)
 	    		this.people.getPendingConnections(user.uid,(pendingList)=>{
 	    			this.pendingList = pendingList
+	    			console.log(this.pendingList[0])
 	    		})
 	    	}
 	    })

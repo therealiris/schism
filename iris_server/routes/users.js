@@ -202,7 +202,7 @@ router.post('/data', function(req, res, next) {
     var userData = req.body
     console.log(userData.fullName)
     db.users.find({
-        "uid": userData.id
+        "uid": userData.uid
     }).toArray(function(err, user) {
         if (!err) {
 
@@ -218,8 +218,14 @@ router.post('/data', function(req, res, next) {
                         res.send(newuser)
                     }
                 })
-            } else
+            } else{
+                db.users.update({"uid":userData.uid},{"$set":userData},function(err,st){
+                    if(!err){
+                        res.send(userData)
+                    }
+                })
                 res.send(user[0])
+            }
 
         } else
             console.log(err)
@@ -439,7 +445,7 @@ router.get("/connections/pending", function(req, res) {
     db.users.find({
         "uid": req.param("uid")
     }, {
-        "connections": 1
+        "requested": 1
     }).toArray(function(err, user) {
         if (!err) {
             var pendingList = user[0].requested
