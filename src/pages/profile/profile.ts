@@ -26,7 +26,7 @@ export class Profile {
   skill : any;
   rate : any;
   editable:boolean;
-  constructor(private elementRef:ElementRef,public modalCtrl:ModalController,public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService) {
+  constructor( public modalCtrl:ModalController,public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public people: PeopleService) {
     // If we navigated to this page, we will have an item available as a nav param
     this.editable = false;
     this.profile = "personal"
@@ -46,6 +46,22 @@ export class Profile {
   editMode(val){
     console.log("Editing profile" , val)
     this.editable = val
+    if(!val){
+      this.saveUserMod()
+    }
+  }
+  modify(attr,val){
+    this.user[attr] = val
+  }
+  saveUserMod(){
+    this.people.sendData(this.user,(response)=>{
+              // console.log(response)
+      this.storage.ready()
+      .then(()=>{
+        this.storage.set('currentUser',JSON.stringify(this.user))
+
+      })
+    })
   }
   removeHobby(index){
     console.log(this.user.skills)

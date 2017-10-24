@@ -54,5 +54,23 @@
 			    </ion-card>
 			</ion-list>
 		</div>
+		<div *ngSwitchCase="'pending'">
+			<div *ngIf="pendingList.length===0" style="text-align: center; padding-top: 2em">
+		      <div>
+		      	<span style="color: #999999"><i>No pending requests right now.</i></span>
+		      </div>
+		    </div>
+			<ion-list class="chat-list">
+				<ion-card *ngFor="let contact of pendingList; let i=index" style="opacity:0.5">
+			      <ion-row>
+			      	<div style="padding:1em;display:flex">
+			      		<img src="{{contact.pictureUrl}}" class="connection-image" style="opacity: 1;max-width: 14vw;max-height: 14vw">
+			      		<span style="padding: 1em"><strong>{{contact.fullName}}, {{contact.designation}}  </strong></span>
+			      	</div>
+			      </ion-row>
+
+			    </ion-card>
+			</ion-list>
+		</div>
 	</div>
 </ion-content>
