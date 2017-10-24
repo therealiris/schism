@@ -171,6 +171,13 @@ export class PeopleService {
      callback(response);
     });
   }
+  getPendingConnections(uid,callback){
+    this.http.get(apiUrl+'/users/connections/pending?uid='+uid)
+    .map(response => response.json())
+    .subscribe( response => { 
+     callback(response);
+    });
+  }
   updateLocation(uid,location,callback){
     let updateObject = {"uid":uid,"location":location}
     this.http.put(apiUrl+'/users/updateLocation',updateObject)

@@ -9,6 +9,7 @@ import { Tutorial } from '../tutorial/tutorial'
 import { DiscoverPage } from '../discover/discover'
 import { PlannerTwo } from '../planner2/plannerTwo'
 import { CalendarPage } from '../calendar/calendar'
+import { ViewProfile } from '../viewProfile/viewProfile'
 import { PeopleService } from '../../providers/people-service'
 import { Storage } from '@ionic/storage';
 import { ItemSliding } from 'ionic-angular';
@@ -22,22 +23,16 @@ export class ContactsPage {
 contactList: any;
 tutorial : boolean;
 clicked : boolean;
+connectionType:any;
+pendingList:any;
 	constructor(private storage:Storage,private people:PeopleService,public events:Events,private chatService: ChatService, private modalCtrl: ModalController, private navCtrl: NavController, private loginService: LoginService, public contactService: ContactService) {
-		// contacts / chats list state
-		// loginService.complete.then(user => {
-		// 	console.debug('login complete');
-		// 	if (!user.id) {
-		// 		loginService.go();
-		// 	}
-		// }, () => {
-		// 	console.debug('login faile');
-		// 	loginService.go();
-		// });
+		this.connectionType = "active"
 		this.clicked = false
 	    this.events.publish("clearHamNotification")
 		this.events.publish("refreshContacts");
 		this.contactList = contactService.contacts
-		console.debug('Contacts: ', contactService.contacts);
+
+		// console.debug('Contacts: ', contactService.contacts);
 		storage.get('contactsTutorial').then((val)=>{
 	      if(val)
 	      {
@@ -48,6 +43,14 @@ clicked : boolean;
 	        })
 	      }
 	    });
+	    storage.get("currentUser").then(data=>{
+	    	if(data!=null){
+	    		let user = JSON.parse(data)
+	    		this.people.getPendingConnections(user.uid,(pendingList)=>{
+	    			this.pendingList = pendingList
+	    		})
+	    	}
+	    })
 	}
 
 	// tap and hold contact card
@@ -102,6 +105,14 @@ clicked : boolean;
     planModal.onDidDismiss(()=>{
       this.navCtrl.setRoot(ContactsPage)
     })
+  }
+  viewProfile(username){
+  	console.log(username)
+  	this.people.updateCurrentUser(username,(response)=>{
+  		let viewUser = response.userObject
+  		let viewUserModal = this.modalCtrl.create(ViewProfile,{"user":viewUser})
+  		viewUserModal.present()
+  	})
   }
 
 }

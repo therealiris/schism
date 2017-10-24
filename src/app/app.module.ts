@@ -20,6 +20,7 @@ import { Tutorial } from '../pages/tutorial/tutorial'
 import { CalendarPage } from '../pages/calendar/calendar'
 import { UserDetail } from '../pages/userDetail/userDetail'
 import { Profile } from '../pages/profile/profile'
+import { ViewProfile } from '../pages/viewProfile/viewProfile'
 import { Ranking } from '../pages/ranking/ranking'
 import { PlannerOne } from '../pages/planner1/plannerOne'
 import { PlannerTwo } from '../pages/planner2/plannerTwo'
@@ -69,6 +70,7 @@ const cloudSettings: CloudSettings = {
     PlannerOne,
     PlannerTwo,
     Profile,
+    ViewProfile,
     Feedback,
     LoginPage,
     UploadPic,
@@ -109,7 +111,7 @@ const cloudSettings: CloudSettings = {
     CalendarPage,
     PlannerOne,
     PlannerTwo,
-    Profile,
+    Profile,ViewProfile,
     Feedback,
     LoginPage,
     UploadPic,

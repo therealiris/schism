@@ -434,6 +434,33 @@ router.get("/connections", function(req, res) {
         }
     })
 })
+router.get("/connections/pending", function(req, res) {
+    var list = new Array();
+    db.users.find({
+        "uid": req.param("uid")
+    }, {
+        "connections": 1
+    }).toArray(function(err, user) {
+        if (!err) {
+            var pendingList = user[0].requested
+            db.users.find({
+                "uid": {
+                    "$in": pendingList
+                }
+            }, {
+                "uid": 1,
+                "fullName": 1,
+                "pictureUrl": 1,
+                "designation":1
+            }).toArray(function(err, conn) {
+                if (!err) {
+                    res.send(conn)
+                }
+            })
+
+        }
+    })
+})
 router.post("/acceptMeeting", function(req, res) {
     addPoints([{"uid":req.body.uid,"score":5},{"uid":req.body.eventObject.with.uid,"score":15}])
     db.users.update({

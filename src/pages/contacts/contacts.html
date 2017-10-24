@@ -15,64 +15,44 @@
 </ion-header>
 
 <ion-content padding>
-	<div *ngIf="contactList.length===0" style="text-align: center; padding-top: 2em">
-      <div>
-      	<span style="color: #999999"><i>Start <span style="color: #5e8af2;" (click)="goDiscover()">discovering</span> people and make new connections</i></span>
-      </div>
-    </div>
-	<ion-list class="chat-list">
-		<!-- <ion-item  class="item-remove-animate item-avatar item-icon-right" [ngClass]="{online: contact.online}" *ngFor="let contact of contactService.contacts"  (click)="chat(contact.id)" (press)="contactCard(contact)" type="item-text-wrap">
-			<ion-avatar item-left>
-				<user-image [contact]=contact></user-image>
-    		</ion-avatar>
-			<h2>{{contact.name || contact.username}}</h2>
-		</ion-item> -->
-		<!-- <ion-item-sliding #item class="conn-slide" *ngFor="let contact of contactList; let i=index" >
-			<ion-item [ngClass]="{online: contact.online}">
-			  <div class="conn-list-item">
-			   <div class="thumbnail">
-			     <img src={{contact.image}} class="connection-image">
-			   </div>
-			   <div class="conn-content">
-			     <span> <strong>{{contact.name}} </strong><ion-icon *ngIf="contact.unread" name="mail"></ion-icon></span> <br>
-			   </div> 
-			  </div>
-			</ion-item>
+	<ion-segment [(ngModel)]="connectionType" style="background:#5e8af2;padding: 0">
+	    <ion-segment-button value="active" style="color:#fff;font-weight: 600;">
+	      Active
+	    </ion-segment-button>
+	    <ion-segment-button value="pending" style="color:#fff;font-weight: 600">
+	      Pending
+	    </ion-segment-button>
+  	</ion-segment>
+  <div [ngSwitch]="connectionType">
+		<div *ngSwitchCase="'active'">
+			<div *ngIf="contactList.length===0" style="text-align: center; padding-top: 2em">
+		      <div>
+		      	<span style="color: #999999"><i>Start <span style="color: #5e8af2;" (click)="goDiscover()">discovering</span> people and make new connections</i></span>
+		      </div>
+		    </div>
+			<ion-list class="chat-list">
+				<ion-card *ngFor="let contact of contactList; let i=index" (click)="viewProfile(contact.username)">
+			      <ion-row>
+			      	<div style="padding:1em;display:flex">
+			      		<img src="{{contact.image}}" class="connection-image" style="opacity: 1;max-width: 14vw;max-height: 14vw">
+			      		<span style="padding: 1em"><strong>{{contact.name}}, {{contact.designation}}  </strong></span>
+			      	</div>
+			      </ion-row>
 
-			<ion-item-options side="right">
-			  <button class="slide-button" ion-button (click)="chat(contact.id, item)">
-			    <ion-icon name="chatboxes"></ion-icon>
-			    Chat
-			  </button>
-			  <button ion-button class="slide-button" (click)="schedule('call')">
-			    <ion-icon name="call"></ion-icon>
-			    Call
-			  </button><button class="slide-button" ion-button (click)="schedule('meeting')">
-			    <ion-icon name="calendar"></ion-icon>
-			    Meeting
-			  </button>
-			</ion-item-options>
-		</ion-item-sliding> -->
-		<ion-card *ngFor="let contact of contactList; let i=index">
-	      <ion-row>
-	      	<div style="padding:1em;display:flex">
-	      		<img src="{{contact.image}}" class="connection-image" style="opacity: 1;max-width: 14vw;max-height: 14vw">
-	      		<span style="padding: 1em"><strong>{{contact.name}} </strong></span>
-	      	</div>
-	      </ion-row>
+			      <ion-row>
+			        <ion-col center text-center>
+			          <span class="info-panel" (click)="schedule('call')">Schedule Call</span>
+			        </ion-col>
+			        <ion-col center text-center>
+			          <span class="info-panel" (click)="schedule('meeting')"> Schedule Meet</span>
+			        </ion-col>
+			        <ion-col center text-center>
+			          <span class="info-panel" (click)="chat(contact.id)">Chat</span>
+			        </ion-col>
+			      </ion-row>
 
-	      <ion-row>
-	        <ion-col center text-center>
-	          <span class="info-panel" (click)="schedule('call')">Schedule Call</span>
-	        </ion-col>
-	        <ion-col center text-center>
-	          <span class="info-panel" (click)="schedule('meeting')"> Schedule Meet</span>
-	        </ion-col>
-	        <ion-col center text-center>
-	          <span class="info-panel" (click)="chat(contact.id)">Chat</span>
-	        </ion-col>
-	      </ion-row>
-
-	    </ion-card>
-	</ion-list>
+			    </ion-card>
+			</ion-list>
+		</div>
+	</div>
 </ion-content>
