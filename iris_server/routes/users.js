@@ -219,12 +219,14 @@ router.post('/data', function(req, res, next) {
                     }
                 })
             } else{
+		delete userData["_id"]
+		console.log(userData)
                 db.users.update({"uid":userData.uid},{"$set":userData},function(err,st){
                     if(!err){
                         res.send(userData)
                     }
                 })
-                res.send(user[0])
+                
             }
 
         } else
@@ -242,15 +244,21 @@ router.get('/discover', function(req, res, next) {
     }, {
         "connections": 1,
         "requests": 1,
-        "requested": 1
+        "requested": 1,
+	"industry":1,
+	"skills":1
     }).toArray(function(err, user) {
         if (!err) {
             var dontFind = new Array()
+	    var userSkills = new Array()
+	    user[0].skills.forEach(function(sk){
+		userSkills.push(sk.skill)
+		})
             dontFind.push(currentUser)
             dontFind = dontFind.concat(user[0].connections)
             dontFind = dontFind.concat(user[0].requests)
             dontFind = dontFind.concat(user[0].requested)
-            console.log(user[0], dontFind)
+            //console.log(user[0], dontFind )
             db.users.find({
                 "uid": {
                     "$nin": dontFind
@@ -266,10 +274,24 @@ router.get('/discover', function(req, res, next) {
                 "skills": 1,
                 "industry":1,
                 "currentWorkplace": 1,
-                "lastLoginLocation": 1
+                "lastLoginLocation": 1,
+		"hideWorkplace":1
             }).limit(20).toArray(function(err, users) {
                 if (!err)
-                    res.send(users)
+                    {   console.log("finding ads")
+			db.ads.find({"$or":[{"target.industry":{"$in":user[0].industry}},{"target.skill":{"$in":userSkills}}]}).toArray(function(er,ads){
+				if(!er){
+					console.log("ads found ",ads.length)
+					ads.forEach(function(ad){
+						users.splice(5,0,ad)
+					})
+					res.send(users)
+				}else{
+				
+				console.log(er)
+			}	
+			})
+		}
             })
         }
     })
@@ -383,7 +405,7 @@ router.put("/updateLocation", function(req, res) {
         "uid": update.uid
     }, {
         "$set": {
-            "lastLoginLocation": update.location
+            "lastLoginLocation": update.location, "city":update.city
         }
     }, function(err, success) {
         if (!err)
@@ -692,7 +714,7 @@ router.get("/events", function(req, res) {
 router.get('/otp', function(req, res) {
     var phone = req.param('phone')
     var otp = req.param('otp')
-    axios.get('https://control.msg91.com/api/sendhttp.php?authkey=169994A8BUunqq5992a81d&mobiles=' + phone + '&message=Use%20OTP%20' + otp + '%20to%20successfully%20login%20to%20IRIS&sender=TMIRIS&route=4&country=0')
+    axios.get('https://control.msg91.com/api/sendhttp.php?authkey=176853AWz6S9dT759cccb27&mobiles=' + phone + '&message=Use%20OTP%20' + otp + '%20to%20successfully%20login%20to%20IRIS&sender=TMIRIS&route=4&country=0')
         .then(response => {
             if (response != null)
                 res.send({
